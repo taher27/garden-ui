@@ -1,0 +1,39 @@
+@import "../../assets/sass/variables.scss";
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+  white-space: nowrap;
+  cursor: pointer;
+  height: 25px;
+  margin: 0 0.5em;
+  padding: 0.25rem 1.4rem;
+  border-radius: 6px;
+  color: $white;
+  outline: none;
+  font-size: 0.85rem;
+  background-color: inherit;
+  &:hover {
+    transform: translateY(2px);
+  }
+  &:active {
+    transform: translateY(4px);
+  }
+}
+
+.isFill {
+  background-color: $base-color;
+  border: none;
+}
+
+.buttonContainer:hover {
+  background-color: $base-color;
+}
+
+.disable {
+  opacity: 0.5;
+  cursor: not-allowed;
+  // pointer-events:none;
+}

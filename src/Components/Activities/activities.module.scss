@@ -1,0 +1,146 @@
+@import "../../assets/sass/variables.scss";
+
+.container {
+  position: relative;
+  .indexDetails {
+    width: 90%;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px 0;
+
+    .inputOption {
+      display: flex;
+      flex: 1;
+    }
+
+    .inputOptionLong {
+      display: flex;
+      flex: 2;
+    }
+
+    .inputOptionDate {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+    }
+  }
+
+  .actionButtons {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 10px;
+
+    .button {
+      border: none;
+      color: $white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: flex;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      text-transform: uppercase;
+      background-color: $base-color;
+    }
+  }
+
+  .order {
+    display: flex;
+    justify-content: center;
+    .table {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      border: 2px solid $base-color;
+      width: 50%;
+
+      .rows {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+        .series {
+          display: flex;
+          padding: 4px 12px !important;
+          padding-left: 0.5rem !important;
+        }
+        .set {
+          display: flex;
+          flex-direction: column;
+          margin: 0 10px;
+
+          .numerator {
+            display: flex;
+            .number {
+              display: flex;
+            }
+            .size {
+              display: flex;
+            }
+          }
+          .middle {
+            display: flex;
+            .separator {
+              display: flex;
+            }
+          }
+          .denominator {
+            display: flex;
+            .number {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 60%;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(135, 134, 134);
+    box-shadow: 10px 5px 10px 2px $black;
+    .header {
+      display: flex;
+      flex-direction: row;
+      color: $white;
+      font-weight: bold;
+    }
+    .body {
+      display: block;
+      height: 300px;
+      overflow-y: auto;
+      padding: 10px 0;
+      margin-bottom: 10px;
+
+      .inputContent {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+
+        img {
+          height: 20px;
+          width: 20px;
+          margin-top: 3px;
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex: 1;
+    }
+  }
+}
