@@ -52,12 +52,14 @@
 
   .order {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     .table {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      border: 2px solid $base-color;
+      border-top: 2px solid $base-color;
       width: 50%;
 
       .rows {

@@ -1,0 +1,66 @@
+@import "../../assets/sass/variables.scss";
+
+.container {
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 60%;
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(135, 134, 134);
+    box-shadow: 10px 5px 10px 2px $black;
+    .header {
+      display: flex;
+      flex-direction: row;
+      color: $white;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+
+    .body {
+      .emptyBody {
+        color: $white;
+      }
+      display: block;
+      height: 300px;
+      overflow-y: auto;
+      padding: 5px 0;
+      margin-bottom: 10px;
+
+      .inputContent {
+        display: flex;
+        flex-direction: row;
+        margin: 10px 0;
+
+        img {
+          height: 20px;
+          width: 20px;
+          margin-top: 3px;
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      flex: 1;
+      padding-top: 10px;
+    }
+
+    .categoryButtons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .categoryModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 60%;
+    padding: 2px;
+  }
+}

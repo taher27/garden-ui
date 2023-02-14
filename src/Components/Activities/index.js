@@ -1,23 +1,30 @@
 import React, { useState } from "react";
-import deleteButton from "../../assets/svgs/icon-delete.svg";
+// import deleteButton from "../../assets/svgs/icon-delete.svg";
 import s from "./activities.module.scss";
 import * as _ from "lodash";
 import cx from "classnames";
 import InputType from "../InputType";
-import Button from "../Button";
+// import Button from "../Button";
+import CreateOrder from "../CreateOrder";
 
 function Activites(props) {
+  const d = new Date();
   const { currentActiveTab } = props;
   const [challanNo, setChallanNo] = useState("");
   const [customerName, setCustomerName] = useState("");
-  const [date, setDate] = useState("");
   const [factoryName, setFactoryName] = useState("");
-  const [order, setOrderData] = useState([]);
-  const [orderContent, setOrderDetails] = useState([]);
-  const [showAddOrderModal, setShowAddOrderModal] = useState(false);
-  // const [size, setSize] = useState("M");
-  // const [length, setLength] = useState();
-  // const [pieces, setPieces] = useState();
+  const [clothMaterial, setClothMaterial] = useState("");
+  const [clothMeter, setClothMeter] = useState("");
+  // const [order, setOrderData] = useState([]);
+  const [orderContent, setOrderDetails] = useState({
+    kids: [],
+    boys: [],
+    men: [],
+  });
+  const [showOrderModal, setShowOrderModal] = useState(false);
+  const [date, setDate] = useState(
+    `${d.getDate()} / ${parseInt(d.getMonth()) + 1} / ${d.getFullYear()}`
+  );
 
   const Inventory = () => {
     return <>Hello from Inventory</>;
@@ -46,19 +53,18 @@ function Activites(props) {
               label={"Customer Name:"}
             />
           </div>
-          <div className={cx(s.inputOption, s.inputOptionDate)}>
+          <div className={cx(s.inputOption)}>
             <InputType
-              type={"date"}
-              id={"orderDate"}
-              dataName={"orderDate"}
+              type={"text"}
               placeholder={"dd/mm/yyy"}
               value={date}
-              onChangeHandler={setDate}
+              onChangeHandler={() => {}}
               label={"Date:"}
             />
           </div>
         </div>
         <hr />
+
         <div className={s.indexDetails}>
           <div className={cx(s.inputOption, s.inputOptionLong)}>
             <InputType
@@ -67,7 +73,25 @@ function Activites(props) {
               value={factoryName}
               onChangeHandler={setFactoryName}
               label={"Factory Name:"}
-              width={"50%"}
+              width={"80%"}
+            />
+          </div>
+          <div className={cx(s.inputOption)}>
+            <InputType
+              type={"text"}
+              placeholder={"Cloth Material"}
+              value={clothMaterial}
+              onChangeHandler={setClothMaterial}
+              label={"Cloth Material:"}
+            />
+          </div>
+          <div className={cx(s.inputOption)}>
+            <InputType
+              type={"text"}
+              placeholder={"Cloth Meter"}
+              value={clothMeter}
+              onChangeHandler={setClothMeter}
+              label={"Cloth Meter:"}
             />
           </div>
         </div>
@@ -76,27 +100,32 @@ function Activites(props) {
           <div
             className={s.button}
             onClick={() => {
-              setShowAddOrderModal(true);
+              setShowOrderModal(true);
             }}
           >
             Add Order
           </div>
         </div>
 
-        <div className={s.order}>{ShowOrder()}</div>
+        <div className={s.order}>
+          {!_.isEmpty(orderContent.kids) && DisplayOrder(orderContent.kids)}
+          {!_.isEmpty(orderContent.boys) && DisplayOrder(orderContent.boys)}
+          {!_.isEmpty(orderContent.men) && DisplayOrder(orderContent.men)}
+        </div>
       </>
     );
   };
 
-  const ShowOrder = () => {
+  const DisplayOrder = (orderData) => {
     return (
       <>
         <div className={s.table}>
-          {Array.isArray(order) &&
-            order.map((ord, i) => (
+          {/* <div className={s.series}> Kids</div> */}
+
+          {Array.isArray(orderData) &&
+            orderData.map((ord, i) => (
               <>
                 <div className={s.rows}>
-                  {/* <div className={s.series}> </div> */}
                   <div className={s.set}>
                     <div className={s.numerator}>
                       <span className={s.number}>{ord.length}</span>
@@ -114,130 +143,16 @@ function Activites(props) {
     );
   };
 
-  const handleOrderChange = async (val, type, id) => {
-    let tempOrderData = _.cloneDeep(order);
-    if (type === "size") {
-      tempOrderData[id].size = val;
-    } else if (type === "length") {
-      tempOrderData[id].length = val;
-    } else if (type === "pieces") {
-      tempOrderData[id].pieces = val;
-    }
-    setOrderData([...tempOrderData]);
-  };
-
-  const addOrder = () => {
-    let tempOrderData = _.cloneDeep(order);
-
-    tempOrderData.push({
-      size: "M",
-      length: 42,
-      pieces: 1,
-    });
-
-    setOrderData([...tempOrderData]);
-  };
-
-  const deleteOrder = (id) => {
-    order.splice(id, 1);
-    setOrderData([...order]);
-  };
-
-  const orderDetails = () => {
-    return (
-      <div className={cx(s.modal)}>
-        <div className={s.header}>
-          Order Details
-          <Button
-            width={"100px"}
-            styles={{ marginLeft: "auto" }}
-            clickHandler={() => {
-              addOrder();
-            }}
-          >
-            Add Row
-          </Button>
-        </div>
-        <div className={s.body}>
-          {_.size(order) === 0 ? (
-            <div className={s.emptyBody}>No Order Detials yet.</div>
-          ) : (
-            Array.isArray(order) &&
-            order.map((ord, i) => (
-              <div className={s.inputContent}>
-                <InputType
-                  type={"text"}
-                  placeholder={`Select size ("XS", "S", "M", "L", "XL", "XXL", "XXXL")`}
-                  value={ord.size.toUpperCase()}
-                  onChangeHandler={(val) => {
-                    handleOrderChange(val, "size", i);
-                  }}
-                  label={"Select size:"}
-                  labelStyles={{ color: "white" }}
-                />
-                <InputType
-                  type={"text"}
-                  placeholder={"Length"}
-                  value={ord.length}
-                  onChangeHandler={(val) => {
-                    handleOrderChange(val, "length", i);
-                  }}
-                  label={"Enter Length:"}
-                  labelStyles={{ color: "white" }}
-                />
-
-                <InputType
-                  type={"text"}
-                  placeholder={"No. of pcs"}
-                  value={ord.pieces}
-                  onChangeHandler={(val) => {
-                    handleOrderChange(val, "pieces", i);
-                  }}
-                  label={"Enter Pieces:"}
-                  labelStyles={{ color: "white" }}
-                />
-
-                <img
-                  className={s.appImg}
-                  src={deleteButton}
-                  alt="Delete Env"
-                  onClick={() => {
-                    deleteOrder(i);
-                  }}
-                />
-              </div>
-            ))
-          )}
-        </div>
-        <div className={s.footer}>
-          <Button
-            width={"80px"}
-            clickHandler={() => {
-              setOrderData([...orderContent]);
-              setShowAddOrderModal(false);
-            }}
-          >
-            Cancel
-          </Button>
-          <Button
-            width={"80px"}
-            clickHandler={() => {
-              setOrderDetails([...order]);
-              setShowAddOrderModal(false);
-            }}
-          >
-            Save
-          </Button>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className={s.container}>
       {currentActiveTab === "inventory" && Inventory()}
       {currentActiveTab === "challan" && Challan()}
-      {showAddOrderModal && orderDetails()}
+      <CreateOrder
+        showOrderModal={showOrderModal}
+        setShowOrderModal={setShowOrderModal}
+        orderContent={orderContent}
+        setOrderDetails={setOrderDetails}
+      />
     </div>
   );
 }
