@@ -61,7 +61,13 @@
       flex-wrap: wrap;
       border-top: 2px solid $base-color;
       width: 50%;
-
+      .series {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        width: 5%;
+        border-right: 1px solid $base-color;
+      }
       .rows {
         display: flex;
         flex-direction: row;

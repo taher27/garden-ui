@@ -20,12 +20,28 @@ function Navbar(props) {
             Add Inventory
           </div>
           <div
+            className={cx(s.button, s.button1)}
+            onClick={() => {
+              setActivity("list_inventory");
+            }}
+          >
+            List Inventory
+          </div>
+          <div
             className={cx(s.button, s.button2)}
             onClick={() => {
               setActivity("challan");
             }}
           >
             Create Challan
+          </div>
+          <div
+            className={cx(s.button, s.button2)}
+            onClick={() => {
+              setActivity("list_challan");
+            }}
+          >
+            List Challans
           </div>
         </div>
       </div>

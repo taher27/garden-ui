@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-// import deleteButton from "../../assets/svgs/icon-delete.svg";
+import editIcon from "../../assets/svgs/icon-edit.svg";
+import deleteIcon from "../../assets/svgs/icon-delete.svg";
 import s from "./activities.module.scss";
 import * as _ from "lodash";
 import cx from "classnames";
 import InputType from "../InputType";
 // import Button from "../Button";
+import ShowTableData from "../ShowTableData";
 import CreateOrder from "../CreateOrder";
+import tableViewConfig from "../../utils/tableViewConfig";
 
 function Activites(props) {
   const d = new Date();
@@ -22,7 +25,7 @@ function Activites(props) {
     men: [],
   });
   const [showOrderModal, setShowOrderModal] = useState(false);
-  const [date, setDate] = useState(
+  const [date] = useState(
     `${d.getDate()} / ${parseInt(d.getMonth()) + 1} / ${d.getFullYear()}`
   );
 
@@ -108,22 +111,29 @@ function Activites(props) {
         </div>
 
         <div className={s.order}>
-          {!_.isEmpty(orderContent.kids) && DisplayOrder(orderContent.kids)}
-          {!_.isEmpty(orderContent.boys) && DisplayOrder(orderContent.boys)}
-          {!_.isEmpty(orderContent.men) && DisplayOrder(orderContent.men)}
+          {!_.isEmpty(orderContent.kids) &&
+            DisplayOrder(orderContent.kids, "Kids")}
+          {!_.isEmpty(orderContent.boys) &&
+            DisplayOrder(orderContent.boys, "Boys")}
+          {!_.isEmpty(orderContent.men) &&
+            DisplayOrder(orderContent.men, "Men")}
         </div>
       </>
     );
   };
 
-  const DisplayOrder = (orderData) => {
+  const DisplayOrder = (orderData, type) => {
+    let updatedData = [];
+    updatedData =
+      Array.isArray(orderData) && orderData.filter((item) => item.pieces !== 0);
+
     return (
       <>
         <div className={s.table}>
-          {/* <div className={s.series}> Kids</div> */}
-
-          {Array.isArray(orderData) &&
-            orderData.map((ord, i) => (
+          <div className={s.series}>{type}</div>
+          {Array.isArray(updatedData) &&
+            updatedData.length > 0 &&
+            updatedData.map((ord, i) => (
               <>
                 <div className={s.rows}>
                   <div className={s.set}>
@@ -143,10 +153,135 @@ function Activites(props) {
     );
   };
 
+  const tableData = [
+    {
+      date: "26/02/2023",
+      challan_no: "GE_001",
+      customer: "Farukh bhai Palej",
+      cloth: "White Linen",
+      factory_name: "Navsari",
+      action: [
+        {
+          src: editIcon,
+          message: "",
+          handler: () => {
+            console.log("edit");
+          },
+        },
+        {
+          src: deleteIcon,
+          message: "",
+          handler: () => {
+            console.log("delete");
+          },
+        },
+      ],
+    },
+    {
+      date: "26/02/2023",
+      challan_no: "GE_001",
+      customer: "Farukh bhai Palej",
+      cloth: "White Linen",
+      factory_name: "Navsari",
+      action: [
+        {
+          src: editIcon,
+          message: "",
+          handler: () => {
+            console.log("edit");
+          },
+        },
+        {
+          src: deleteIcon,
+          message: "",
+          handler: () => {
+            console.log("delete");
+          },
+        },
+      ],
+    },
+    {
+      date: "26/02/2023",
+      challan_no: "GE_001",
+      customer: "Farukh bhai Palej",
+      cloth: "White Linen",
+      factory_name: "Navsari",
+      action: [
+        {
+          src: editIcon,
+          message: "",
+          handler: () => {
+            console.log("edit");
+          },
+        },
+        {
+          src: deleteIcon,
+          message: "",
+          handler: () => {
+            console.log("delete");
+          },
+        },
+      ],
+    },
+    {
+      date: "26/02/2023",
+      challan_no: "GE_001",
+      customer: "Farukh bhai Palej",
+      cloth: "White Linen",
+      factory_name: "Navsari",
+      action: [
+        {
+          src: editIcon,
+          message: "",
+          handler: () => {
+            console.log("edit");
+          },
+        },
+        {
+          src: deleteIcon,
+          message: "",
+          handler: () => {
+            console.log("delete");
+          },
+        },
+      ],
+    },
+    {
+      date: "26/02/2023",
+      challan_no: "GE_001",
+      customer: "Farukh bhai Palej",
+      cloth: "White Linen",
+      factory_name: "Navsari",
+      action: [
+        {
+          src: editIcon,
+          message: "",
+          handler: () => {
+            console.log("edit");
+          },
+        },
+        {
+          src: deleteIcon,
+          message: "",
+          handler: () => {
+            console.log("delete");
+          },
+        },
+      ],
+    },
+  ];
+
   return (
     <div className={s.container}>
       {currentActiveTab === "inventory" && Inventory()}
       {currentActiveTab === "challan" && Challan()}
+      {currentActiveTab === "list_challan" && (
+        <ShowTableData
+          tableData={tableData}
+          tableHeading={tableViewConfig.challanTableList}
+          noOfRecords={10}
+        />
+      )}
       <CreateOrder
         showOrderModal={showOrderModal}
         setShowOrderModal={setShowOrderModal}

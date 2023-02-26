@@ -112,7 +112,7 @@ function CreateOrder(props) {
     return (
       <div className={cx(s.modal)}>
         <div className={s.header}>
-          Order Details
+          Order Details for {category.toUpperCase()}:
           <Button
             width={"100px"}
             styles={{ marginLeft: "auto" }}
@@ -320,7 +320,7 @@ function CreateOrder(props) {
           height={"50px"}
           width={"10px"}
           baseColor={"inherit"}
-          color={"#000"}
+          color={"#fff"}
           styles={{
             fontWeight: "bold",
             fontSize: "20px",
