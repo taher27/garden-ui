@@ -13,7 +13,7 @@ function LandingPage() {
         <Navbar setActivity={setActivity} />
       </div>
       <div className={s.bodyContainer}>
-        <Activites currentActiveTab={activityName} />
+        <Activites currentActiveTab={activityName} setActivity={setActivity} />
       </div>
     </div>
   );

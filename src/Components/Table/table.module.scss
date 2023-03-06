@@ -67,7 +67,8 @@
       vertical-align: top;
       &:hover {
         cursor: pointer;
-        background-color: $grey;
+        border: 2px solid $grey;
+        // background-color: $grey;
       }
     }
 

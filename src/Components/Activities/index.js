@@ -9,10 +9,11 @@ import InputType from "../InputType";
 import ShowTableData from "../ShowTableData";
 import CreateOrder from "../CreateOrder";
 import tableViewConfig from "../../utils/tableViewConfig";
+import SeePreview from "../SeePreview";
 
 function Activites(props) {
   const d = new Date();
-  const { currentActiveTab } = props;
+  const { currentActiveTab, setActivity } = props;
   const [challanNo, setChallanNo] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [factoryName, setFactoryName] = useState("");
@@ -79,13 +80,14 @@ function Activites(props) {
               width={"80%"}
             />
           </div>
-          <div className={cx(s.inputOption)}>
+          <div className={cx(s.inputOption, s.inputOptionLong)}>
             <InputType
               type={"text"}
               placeholder={"Cloth Material"}
               value={clothMaterial}
               onChangeHandler={setClothMaterial}
               label={"Cloth Material:"}
+              width={"80%"}
             />
           </div>
           <div className={cx(s.inputOption)}>
@@ -103,10 +105,18 @@ function Activites(props) {
           <div
             className={s.button}
             onClick={() => {
-              setShowOrderModal(true);
+              setActivity("showPreview");
             }}
           >
-            Add Order
+            See Preview
+          </div>
+          <div
+            className={s.button}
+            onClick={() => {
+              setShowOrderModal(!showOrderModal);
+            }}
+          >
+            Add Order Details
           </div>
         </div>
 
@@ -117,37 +127,6 @@ function Activites(props) {
             DisplayOrder(orderContent.boys, "Boys")}
           {!_.isEmpty(orderContent.men) &&
             DisplayOrder(orderContent.men, "Men")}
-        </div>
-      </>
-    );
-  };
-
-  const DisplayOrder = (orderData, type) => {
-    let updatedData = [];
-    updatedData =
-      Array.isArray(orderData) && orderData.filter((item) => item.pieces !== 0);
-
-    return (
-      <>
-        <div className={s.table}>
-          <div className={s.series}>{type}</div>
-          {Array.isArray(updatedData) &&
-            updatedData.length > 0 &&
-            updatedData.map((ord, i) => (
-              <>
-                <div className={s.rows}>
-                  <div className={s.set}>
-                    <div className={s.numerator}>
-                      <span className={s.number}>{ord.length}</span>
-                      <span className={s.size}>{ord.size}</span>
-                    </div>
-                    <div className={s.denominator}>
-                      <span className={s.number}>{ord.pieces}</span>
-                    </div>
-                  </div>
-                </div>
-              </>
-            ))}
         </div>
       </>
     );
@@ -288,8 +267,52 @@ function Activites(props) {
         orderContent={orderContent}
         setOrderDetails={setOrderDetails}
       />
+      {currentActiveTab === "showPreview" && (
+        <SeePreview
+          orderContent={orderContent}
+          challanDetails={{
+            challanNo,
+            customerName,
+            factoryName,
+            clothMaterial,
+            clothMeter,
+            date,
+          }}
+        />
+      )}
     </div>
   );
 }
+
+export const DisplayOrder = (orderData, type) => {
+  let updatedData = [];
+  updatedData =
+    Array.isArray(orderData) && orderData.filter((item) => item.pieces !== 0);
+
+  return (
+    <>
+      <div className={s.table}>
+        <div className={s.series}>{type}</div>
+        {Array.isArray(updatedData) &&
+          updatedData.length > 0 &&
+          updatedData.map((ord, i) => (
+            <>
+              <div className={s.rows}>
+                <div className={s.set}>
+                  <div className={s.numerator}>
+                    <span className={s.number}>{ord.length}</span>
+                    <span className={s.size}>{ord.size}</span>
+                  </div>
+                  <div className={s.denominator}>
+                    <span className={s.number}>{ord.pieces}</span>
+                  </div>
+                </div>
+              </div>
+            </>
+          ))}
+      </div>
+    </>
+  );
+};
 
 export default Activites;

@@ -42,9 +42,9 @@ function CreateOrder(props) {
     if (type === "size") {
       tempOrderData[id].size = val;
     } else if (type === "length") {
-      tempOrderData[id].length = val;
+      tempOrderData[id].length = parseInt(val);
     } else if (type === "pieces") {
-      tempOrderData[id].pieces = val;
+      tempOrderData[id].pieces = parseInt(val);
     }
 
     category === "kids"
@@ -89,7 +89,7 @@ function CreateOrder(props) {
     // setOrderData([...tempOrderData]);
   };
 
-  const deleteOrder = (id) => {
+  const deleteRow = (id) => {
     let tempOrderData = _.cloneDeep(
       category === "kids"
         ? kidsOrder
@@ -168,9 +168,9 @@ function CreateOrder(props) {
                     <img
                       className={s.appImg}
                       src={deleteButton}
-                      alt="Delete Env"
+                      alt="Delete Row"
                       onClick={() => {
-                        deleteOrder(i);
+                        deleteRow(i);
                       }}
                     />
                   </div>
@@ -214,9 +214,9 @@ function CreateOrder(props) {
                     <img
                       className={s.appImg}
                       src={deleteButton}
-                      alt="Delete Env"
+                      alt="Delete Row"
                       onClick={() => {
-                        deleteOrder(i);
+                        deleteRow(i);
                       }}
                     />
                   </div>
@@ -270,9 +270,9 @@ function CreateOrder(props) {
                     <img
                       className={s.appImg}
                       src={deleteButton}
-                      alt="Delete Env"
+                      alt="Delete Row"
                       onClick={() => {
-                        deleteOrder(i);
+                        deleteRow(i);
                       }}
                     />
                   </div>
@@ -372,6 +372,25 @@ function CreateOrder(props) {
             Men
           </Button>
         </div>
+
+        <Button
+          height={"50px"}
+          width={"10px"}
+          baseColor={"inherit"}
+          color={"#fff"}
+          styles={{
+            fontWeight: "bold",
+            fontSize: "14px",
+            marginLeft: "auto",
+            marginTop: "10%",
+            padding: "0px",
+          }}
+          clickHandler={() => {
+            setShowOrderModal(false);
+          }}
+        >
+          Ok
+        </Button>
       </div>
     );
   };
