@@ -42,9 +42,9 @@ function CreateOrder(props) {
     if (type === "size") {
       tempOrderData[id].size = val;
     } else if (type === "length") {
-      tempOrderData[id].length = parseInt(val);
+      tempOrderData[id].length = _.isNaN(parseInt(val)) ? 0 : parseInt(val);
     } else if (type === "pieces") {
-      tempOrderData[id].pieces = parseInt(val);
+      tempOrderData[id].pieces = _.isNaN(parseInt(val)) ? 0 : parseInt(val);
     }
 
     category === "kids"
@@ -316,24 +316,6 @@ function CreateOrder(props) {
   const selectCategory = () => {
     return (
       <div className={cx(s.modal, s.categoryModal)}>
-        <Button
-          height={"50px"}
-          width={"10px"}
-          baseColor={"inherit"}
-          color={"#fff"}
-          styles={{
-            fontWeight: "bold",
-            fontSize: "20px",
-            marginLeft: "auto",
-            marginBottom: "10px",
-            padding: "0px",
-          }}
-          clickHandler={() => {
-            setShowOrderModal(false);
-          }}
-        >
-          X
-        </Button>
         <div className={s.categoryButtons}>
           <Button
             width={"200px"}
@@ -374,15 +356,16 @@ function CreateOrder(props) {
         </div>
 
         <Button
-          height={"50px"}
-          width={"10px"}
-          baseColor={"inherit"}
+          width={"5px"}
+          height={"40px"}
+          baseColor={"#008cba"}
           color={"#fff"}
           styles={{
             fontWeight: "bold",
             fontSize: "14px",
             marginLeft: "auto",
-            marginTop: "10%",
+            marginTop: "2%",
+            marginBottom: "1%",
             padding: "0px",
           }}
           clickHandler={() => {

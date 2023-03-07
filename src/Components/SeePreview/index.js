@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useRef } from "react";
 import s from "./seePreview.module.scss";
 import * as _ from "lodash";
+import cx from "classnames";
+import ReactToPrint from "react-to-print";
+
 function SeePreview(props) {
-  const { orderContent, challanDetails } = props;
+  const { orderContent, challanDetails, setActivity } = props;
   const d = new Date();
+
+  const componentToPrint = useRef();
 
   console.log("challanDetails: ", challanDetails);
   const DisplayOrder = (orderData, type) => {
@@ -37,92 +42,107 @@ function SeePreview(props) {
     );
   };
   return (
-    <div className={s.container}>
-      <div className={s.header}>
-        <h1>Challan</h1>
-        {/* <div className={s.address}>
-          <p>Garden Emporium</p>
-          <p>shop no. Katopore Darwaja, Bharuch 392001</p>
-          <p>(+91) 99259 68952</p>
-        </div> */}
-      </div>
-
-      <div className={s.article}>
-        <h1>Recipient</h1>
-        <div className={s.address}>
-          <p>{_.get(challanDetails, "customerName", "Customer Name")}</p>
+    <>
+      <div className={s.actionButtons}>
+        <div
+          className={cx(s.button, s.button1)}
+          onClick={() => {
+            setActivity("challan");
+          }}
+        >
+          Back To Challan View
         </div>
-        <table className={s.meta}>
-          <tr>
-            <th>
-              <span>Challan #</span>
-            </th>
-            <td>
-              <span>{_.get(challanDetails, "challanNo", "GE_001")}</span>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <span>Date</span>
-            </th>
-            <td>
-              <span>
-                {_.get(
-                  challanDetails,
-                  "date",
-                  `${d.getDate()} / ${
-                    parseInt(d.getMonth()) + 1
-                  } / ${d.getFullYear()}`
-                )}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <span>Cloth Material</span>
-            </th>
-            <td>
-              <span>
-                {_.get(challanDetails, "clothMaterial", `White linen`)}
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <span>Cloth Meter</span>
-            </th>
-            <td>
-              <span>{_.get(challanDetails, "clothMeter", `10000`)}</span>
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <span>Factory</span>
-            </th>
-            <td>
-              <span>{_.get(challanDetails, "factoryName", `Kantharia`)}</span>
-            </td>
-          </tr>
-        </table>
-      </div>
 
-      <div className={s.order}>
-        {!_.isEmpty(orderContent.kids) &&
-          DisplayOrder(orderContent.kids, "Kids")}
-        {!_.isEmpty(orderContent.boys) &&
-          DisplayOrder(orderContent.boys, "Boys")}
-        {!_.isEmpty(orderContent.men) && DisplayOrder(orderContent.men, "Men")}
+        <ReactToPrint
+          trigger={() => (
+            <div className={cx(s.button, s.button1)}>Print / Download</div>
+          )}
+          content={() => componentToPrint.current}
+        />
       </div>
+      <div className={s.container} ref={componentToPrint}>
+        <div className={s.header}>
+          <h1>Challan</h1>
+        </div>
 
-      <div className={s.aside}>
-        <h1>
-          <span>Additional Notes</span>
-        </h1>
-        <div>
-          <p>Garden Emporium, we make the best suiting.</p>
+        <div className={s.article}>
+          <h1>Recipient</h1>
+          <div className={s.address}>
+            <p>{_.get(challanDetails, "customerName", "Customer Name")}</p>
+          </div>
+          <table className={s.meta}>
+            <tr>
+              <th>
+                <span>Challan #</span>
+              </th>
+              <td>
+                <span>{_.get(challanDetails, "challanNo", "GE_001")}</span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>Date</span>
+              </th>
+              <td>
+                <span>
+                  {_.get(
+                    challanDetails,
+                    "date",
+                    `${d.getDate()} / ${
+                      parseInt(d.getMonth()) + 1
+                    } / ${d.getFullYear()}`
+                  )}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>Cloth Material</span>
+              </th>
+              <td>
+                <span>
+                  {_.get(challanDetails, "clothMaterial", `White linen`)}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>Cloth Meter</span>
+              </th>
+              <td>
+                <span>{_.get(challanDetails, "clothMeter", `10000`)}</span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>Factory</span>
+              </th>
+              <td>
+                <span>{_.get(challanDetails, "factoryName", `Kantharia`)}</span>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div className={s.order}>
+          {!_.isEmpty(orderContent.kids) &&
+            DisplayOrder(orderContent.kids, "Kids")}
+          {!_.isEmpty(orderContent.boys) &&
+            DisplayOrder(orderContent.boys, "Boys")}
+          {!_.isEmpty(orderContent.men) &&
+            DisplayOrder(orderContent.men, "Men")}
+        </div>
+
+        <div className={s.aside}>
+          <h1>
+            <span>Garden Emporium</span>
+          </h1>
+          <div>
+            <p>We make the best suiting.</p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

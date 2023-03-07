@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import editIcon from "../../assets/svgs/icon-edit.svg";
 import deleteIcon from "../../assets/svgs/icon-delete.svg";
+import axios from "axios";
+
 import s from "./activities.module.scss";
 import * as _ from "lodash";
 import cx from "classnames";
@@ -10,6 +12,7 @@ import ShowTableData from "../ShowTableData";
 import CreateOrder from "../CreateOrder";
 import tableViewConfig from "../../utils/tableViewConfig";
 import SeePreview from "../SeePreview";
+import { getAllChallanData } from "../../utils/apiConfig.js";
 
 function Activites(props) {
   const d = new Date();
@@ -19,7 +22,17 @@ function Activites(props) {
   const [factoryName, setFactoryName] = useState("");
   const [clothMaterial, setClothMaterial] = useState("");
   const [clothMeter, setClothMeter] = useState("");
-  // const [order, setOrderData] = useState([]);
+  const [currentChallanData, setCurrentChallanData] = useState({
+    challanNo: "",
+    customerName: "",
+    factoryName: "",
+    clothMaterial: "",
+    clothMeter: "",
+    date: "",
+    orderFor: "",
+  });
+
+  const [allChallanData, setAllChallanData] = useState([]);
   const [orderContent, setOrderDetails] = useState({
     kids: [],
     boys: [],
@@ -29,6 +42,26 @@ function Activites(props) {
   const [date] = useState(
     `${d.getDate()} / ${parseInt(d.getMonth()) + 1} / ${d.getFullYear()}`
   );
+
+  useEffect(() => {
+    // fetchChallanData();
+  });
+
+  // useEffect(() => {
+  //   setChallanDetails({
+  //     ...challanDetails,
+  //     challanNo: challanNo,
+  //     customerName: customerName,
+  //     factoryName: factoryName,
+  //     clothMaterial: clothMaterial,
+  //     clothMeter: clothMeter,
+  //     date: date,
+  //   });
+  // }, [challanNo, customerName, factoryName, clothMaterial, clothMeter, date]);
+
+  useEffect(() => {
+    _.isArray(allChallanData) && allChallanData.map((item) => {});
+  }, [allChallanData]);
 
   const Inventory = () => {
     return <>Hello from Inventory</>;
@@ -132,126 +165,27 @@ function Activites(props) {
     );
   };
 
-  const tableData = [
-    {
-      date: "26/02/2023",
-      challan_no: "GE_001",
-      customer: "Farukh bhai Palej",
-      cloth: "White Linen",
-      factory_name: "Navsari",
-      action: [
-        {
-          src: editIcon,
-          message: "",
-          handler: () => {
-            console.log("edit");
-          },
-        },
-        {
-          src: deleteIcon,
-          message: "",
-          handler: () => {
-            console.log("delete");
-          },
-        },
-      ],
-    },
-    {
-      date: "26/02/2023",
-      challan_no: "GE_001",
-      customer: "Farukh bhai Palej",
-      cloth: "White Linen",
-      factory_name: "Navsari",
-      action: [
-        {
-          src: editIcon,
-          message: "",
-          handler: () => {
-            console.log("edit");
-          },
-        },
-        {
-          src: deleteIcon,
-          message: "",
-          handler: () => {
-            console.log("delete");
-          },
-        },
-      ],
-    },
-    {
-      date: "26/02/2023",
-      challan_no: "GE_001",
-      customer: "Farukh bhai Palej",
-      cloth: "White Linen",
-      factory_name: "Navsari",
-      action: [
-        {
-          src: editIcon,
-          message: "",
-          handler: () => {
-            console.log("edit");
-          },
-        },
-        {
-          src: deleteIcon,
-          message: "",
-          handler: () => {
-            console.log("delete");
-          },
-        },
-      ],
-    },
-    {
-      date: "26/02/2023",
-      challan_no: "GE_001",
-      customer: "Farukh bhai Palej",
-      cloth: "White Linen",
-      factory_name: "Navsari",
-      action: [
-        {
-          src: editIcon,
-          message: "",
-          handler: () => {
-            console.log("edit");
-          },
-        },
-        {
-          src: deleteIcon,
-          message: "",
-          handler: () => {
-            console.log("delete");
-          },
-        },
-      ],
-    },
-    {
-      date: "26/02/2023",
-      challan_no: "GE_001",
-      customer: "Farukh bhai Palej",
-      cloth: "White Linen",
-      factory_name: "Navsari",
-      action: [
-        {
-          src: editIcon,
-          message: "",
-          handler: () => {
-            console.log("edit");
-          },
-        },
-        {
-          src: deleteIcon,
-          message: "",
-          handler: () => {
-            console.log("delete");
-          },
-        },
-      ],
-    },
-  ];
+  const fetchChallanData = async () => {
+    const challanData = await axios.get(`${getAllChallanData}`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    console.log("challanData: ", challanData.data);
+    setAllChallanData(challanData.data);
+  };
+
+  const tableData = [];
 
   return (
     <div className={s.container}>
+      <CreateOrder
+        showOrderModal={showOrderModal}
+        setShowOrderModal={setShowOrderModal}
+        orderContent={orderContent}
+        setOrderDetails={setOrderDetails}
+      />
+
       {currentActiveTab === "inventory" && Inventory()}
       {currentActiveTab === "challan" && Challan()}
       {currentActiveTab === "list_challan" && (
@@ -261,15 +195,10 @@ function Activites(props) {
           noOfRecords={10}
         />
       )}
-      <CreateOrder
-        showOrderModal={showOrderModal}
-        setShowOrderModal={setShowOrderModal}
-        orderContent={orderContent}
-        setOrderDetails={setOrderDetails}
-      />
       {currentActiveTab === "showPreview" && (
         <SeePreview
           orderContent={orderContent}
+          setActivity={setActivity}
           challanDetails={{
             challanNo,
             customerName,

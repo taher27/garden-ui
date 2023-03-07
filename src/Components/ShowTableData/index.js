@@ -4,7 +4,7 @@ import s from "./showTableData.module.scss";
 // import cx from "classnames";
 import Table from "../Table";
 
-function Activites(props) {
+function ShowTableData(props) {
   const { tableData, tableHeading, noOfRecords } = props;
   return (
     <div className={s.container}>
@@ -17,4 +17,4 @@ function Activites(props) {
   );
 }
 
-export default Activites;
+export default ShowTableData;

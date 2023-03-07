@@ -15,8 +15,13 @@ export const challanTableList = [
     type: "text",
   },
   {
-    title: "Cloth",
-    key: "cloth",
+    title: "Cloth Material",
+    key: "cloth_material",
+    type: "text",
+  },
+  {
+    title: "Cloth Meter",
+    key: "cloth_meter",
     type: "text",
   },
   {

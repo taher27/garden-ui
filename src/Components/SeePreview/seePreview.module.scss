@@ -10,7 +10,7 @@
   font-weight: inherit;
   line-height: inherit;
   list-style: none;
-  margin: 5%;
+  margin: 2%;
   padding: 5px;
   text-decoration: none;
   vertical-align: top;
@@ -136,31 +136,27 @@
   .order {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-bottom: 5%;
+    height: 500px;
     .table {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      border-top: 2px solid $base-color;
       width: 50%;
+      border-bottom: 2px solid $base-color;
       .series {
         display: flex;
         align-items: center;
         padding: 5px;
-        width: 5%;
-        border-right: 1px solid $base-color;
+        width: 8%;
+        // border-right: 1px solid $base-color;
       }
       .rows {
         display: flex;
         flex-direction: row;
         margin: 10px 0;
-        .series {
-          display: flex;
-          padding: 4px 12px !important;
-          padding-left: 0.5rem !important;
-        }
+
         .set {
           display: flex;
           flex-direction: column;
@@ -190,18 +186,25 @@
         }
       }
     }
+    .table:last-child {
+      border-bottom: none;
+    }
   }
 
   /* aside */
   .aside {
+    margin-bottom: 0;
     h1 {
       border: none;
       border-width: 0 0 1px;
       margin: 0 0 1em;
-    }
-    h1 {
       border-color: #999;
       border-bottom-style: solid;
+    }
+    div {
+      p {
+        text-align: center;
+      }
     }
   }
 
@@ -234,5 +237,27 @@
 
   @page {
     margin: 0;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2%;
+
+  .button {
+    border: none;
+    color: $white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: $base-color;
   }
 }
