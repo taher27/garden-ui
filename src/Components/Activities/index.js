@@ -22,15 +22,8 @@ function Activites(props) {
   const [factoryName, setFactoryName] = useState("");
   const [clothMaterial, setClothMaterial] = useState("");
   const [clothMeter, setClothMeter] = useState("");
-  const [currentChallanData, setCurrentChallanData] = useState({
-    challanNo: "",
-    customerName: "",
-    factoryName: "",
-    clothMaterial: "",
-    clothMeter: "",
-    date: "",
-    orderFor: "",
-  });
+
+  const [isEditView, setIsEditView] = useState(false);
 
   const [allChallanData, setAllChallanData] = useState([]);
   const [orderContent, setOrderDetails] = useState({
@@ -39,13 +32,15 @@ function Activites(props) {
     men: [],
   });
   const [showOrderModal, setShowOrderModal] = useState(false);
-  const [date] = useState(
+  const [date, setDate] = useState(
     `${d.getDate()} / ${parseInt(d.getMonth()) + 1} / ${d.getFullYear()}`
   );
 
+  let challanDataArray = [];
+
   useEffect(() => {
-    // fetchChallanData();
-  });
+    fetchChallanData();
+  }, []);
 
   // useEffect(() => {
   //   setChallanDetails({
@@ -165,17 +160,70 @@ function Activites(props) {
     );
   };
 
+  const setCurrentChallanData = (challan) => {
+    console.log("isEditView: ", isEditView);
+    console.log("challan: ", challan);
+    setIsEditView(true);
+
+    if (isEditView) {
+      setChallanNo(challan.challan_no);
+      setCustomerName(challan.customer_name);
+      setFactoryName(challan.factory_name);
+      setClothMaterial(challan.cloth_material);
+      setClothMeter(challan.cloth_meter);
+      setOrderDetails(challan.order_for);
+      setDate(challan.date);
+    }
+  };
+
   const fetchChallanData = async () => {
     const challanData = await axios.get(`${getAllChallanData}`, {
       headers: {
         "Content-Type": "application/json",
       },
     });
-    console.log("challanData: ", challanData.data);
+    // console.log("challanData: ", challanData.data);
     setAllChallanData(challanData.data);
   };
 
-  const tableData = [];
+  allChallanData.getAllChallans &&
+    allChallanData.getAllChallans.forEach((challan, i) => {
+      const {
+        challan_no,
+        cloth_material,
+        cloth_meter,
+        customer_name,
+        date,
+        factory_name,
+      } = challan;
+      let obj = {
+        key: challan._id,
+        date,
+        challan_no,
+        customer_name,
+        cloth_material,
+        cloth_meter,
+        factory_name,
+        action: [
+          {
+            src: editIcon,
+            message: "Edit",
+            handler: () => {
+              setActivity("challan");
+              setCurrentChallanData(challan);
+            },
+          },
+          {
+            src: deleteIcon,
+            message: "Delete",
+            handler: () => {
+              console.log("call delete Api call");
+            },
+          },
+        ],
+      };
+      challanDataArray.push(obj);
+    });
 
   return (
     <div className={s.container}>
@@ -190,7 +238,7 @@ function Activites(props) {
       {currentActiveTab === "challan" && Challan()}
       {currentActiveTab === "list_challan" && (
         <ShowTableData
-          tableData={tableData}
+          tableData={challanDataArray}
           tableHeading={tableViewConfig.challanTableList}
           noOfRecords={10}
         />

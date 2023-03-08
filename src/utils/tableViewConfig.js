@@ -10,8 +10,8 @@ export const challanTableList = [
     type: "text",
   },
   {
-    title: "Customer",
-    key: "customer",
+    title: "Customer Name",
+    key: "customer_name",
     type: "text",
   },
   {
@@ -29,7 +29,6 @@ export const challanTableList = [
     key: "factory_name",
     type: "text",
   },
-
   {
     title: "ACTIONS",
     key: "action",

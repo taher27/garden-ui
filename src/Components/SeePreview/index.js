@@ -55,7 +55,7 @@ function SeePreview(props) {
 
         <ReactToPrint
           trigger={() => (
-            <div className={cx(s.button, s.button1)}>Print / Download</div>
+            <div className={cx(s.button, s.button1)}>Print / Create</div>
           )}
           content={() => componentToPrint.current}
         />
