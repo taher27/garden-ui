@@ -1,58 +1,65 @@
 import React, { useState, useEffect } from "react";
 import editIcon from "../../assets/svgs/icon-edit.svg";
 import deleteIcon from "../../assets/svgs/icon-delete.svg";
+import printIcon from "../../assets/svgs/file.svg";
+// import printIcon2 from "../../assets/svgs/folder.svg";
 import axios from "axios";
 
 import s from "./activities.module.scss";
 import * as _ from "lodash";
 import cx from "classnames";
 import InputType from "../InputType";
-// import Button from "../Button";
-import ShowTableData from "../ShowTableData";
 import CreateOrder from "../CreateOrder";
 import tableViewConfig from "../../utils/tableViewConfig";
 import SeePreview from "../SeePreview";
-import { getAllChallanData } from "../../utils/apiConfig.js";
+import { getAllChallanData, deleteChallanData } from "../../utils/apiConfig.js";
+import Table from "../Table";
 
 function Activites(props) {
   const d = new Date();
-  const { currentActiveTab, setActivity } = props;
+  const { currentActiveTab, setActivity, isEditView, setIsEditView } = props;
+
+  const [challanID, setChallanID] = useState("");
   const [challanNo, setChallanNo] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [factoryName, setFactoryName] = useState("");
   const [clothMaterial, setClothMaterial] = useState("");
   const [clothMeter, setClothMeter] = useState("");
-
-  const [isEditView, setIsEditView] = useState(false);
-
-  const [allChallanData, setAllChallanData] = useState([]);
   const [orderContent, setOrderDetails] = useState({
     kids: [],
     boys: [],
     men: [],
   });
-  const [showOrderModal, setShowOrderModal] = useState(false);
   const [date, setDate] = useState(
     `${d.getDate()} / ${parseInt(d.getMonth()) + 1} / ${d.getFullYear()}`
   );
 
+  const [showOrderModal, setShowOrderModal] = useState(false);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [allChallanData, setAllChallanData] = useState([]);
+
   let challanDataArray = [];
 
   useEffect(() => {
-    fetchChallanData();
-  }, []);
-
-  // useEffect(() => {
-  //   setChallanDetails({
-  //     ...challanDetails,
-  //     challanNo: challanNo,
-  //     customerName: customerName,
-  //     factoryName: factoryName,
-  //     clothMaterial: clothMaterial,
-  //     clothMeter: clothMeter,
-  //     date: date,
-  //   });
-  // }, [challanNo, customerName, factoryName, clothMaterial, clothMeter, date]);
+    if (currentActiveTab === "list_challan") fetchChallanData();
+    if (currentActiveTab === "challan") {
+      if (!isEditView) {
+        setChallanNo("");
+        setCustomerName("");
+        setFactoryName("");
+        setClothMaterial("");
+        setClothMeter("");
+        setOrderDetails({
+          kids: [],
+          boys: [],
+          men: [],
+        });
+        setDate(
+          `${d.getDate()} / ${parseInt(d.getMonth()) + 1} / ${d.getFullYear()}`
+        );
+      }
+    }
+  }, [currentActiveTab]);
 
   useEffect(() => {
     _.isArray(allChallanData) && allChallanData.map((item) => {});
@@ -154,9 +161,99 @@ function Activites(props) {
           {!_.isEmpty(orderContent.boys) &&
             DisplayOrder(orderContent.boys, "Boys")}
           {!_.isEmpty(orderContent.men) &&
-            DisplayOrder(orderContent.men, "Men")}
+            DisplayOrderForMen(orderContent.men, "Men")}
         </div>
       </>
+    );
+  };
+
+  const DisplayOrder = (orderData, type) => {
+    let updatedData = [];
+    updatedData =
+      Array.isArray(orderData) && orderData.filter((item) => item.pieces !== 0);
+
+    return (
+      <>
+        <div className={s.table}>
+          {Array.isArray(updatedData) && updatedData.length > 0 && (
+            <div className={s.series}>{type}</div>
+          )}
+          <div className={s.orderblock}>
+            {Array.isArray(updatedData) &&
+              updatedData.length > 0 &&
+              updatedData.map((ord, i) => (
+                <>
+                  <div className={s.rows}>
+                    <div className={s.set}>
+                      <div className={s.numerator}>
+                        <span className={s.number}>{ord.length}</span>
+                        <span className={s.size}>{ord.size}</span>
+                      </div>
+                      <div className={s.denominator}>
+                        <span className={s.number}>{ord.pieces}</span>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ))}
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  const DisplayOrderForMen = (orderData, type) => {
+    return (
+      <>
+        <div className={s.table}>
+          {Array.isArray(orderData) && orderData.length > 0 && (
+            <div className={s.series}>{type}</div>
+          )}
+
+          <div className={s.orderblock}>
+            {Array.isArray(orderData) &&
+              orderData.length > 0 &&
+              orderData.map((ord, i) => (
+                <>
+                  {orderData[0][i] !== 0 && dataSet("52", i, orderData[0][i])}
+                  {orderData[0][i] !== 0 && dataSet("54", i, orderData[1][i])}
+                  {orderData[0][i] !== 0 && dataSet("56", i, orderData[2][i])}
+                  {orderData[0][i] !== 0 && dataSet("58", i, orderData[3][i])}
+                  {orderData[0][i] !== 0 && dataSet("60", i, orderData[4][i])}
+                  {orderData[0][i] !== 0 && dataSet("62", i, orderData[5][i])}
+                </>
+              ))}
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  const dataSet = (length, i, pieces) => {
+    return (
+      <div className={s.rows}>
+        <div className={s.set}>
+          <div className={s.numerator}>
+            <span className={s.number}>{length}</span>
+            <span className={s.size}>
+              {i === 0
+                ? "S"
+                : i === 1
+                ? "M"
+                : i === 2
+                ? "L"
+                : i === 3
+                ? "XL"
+                : i === 4
+                ? "XXL"
+                : i === 5 && "XXXL"}
+            </span>
+          </div>
+          <div className={s.denominator}>
+            <span className={s.number}>{pieces}</span>
+          </div>
+        </div>
+      </div>
     );
   };
 
@@ -165,15 +262,14 @@ function Activites(props) {
     console.log("challan: ", challan);
     setIsEditView(true);
 
-    if (isEditView) {
-      setChallanNo(challan.challan_no);
-      setCustomerName(challan.customer_name);
-      setFactoryName(challan.factory_name);
-      setClothMaterial(challan.cloth_material);
-      setClothMeter(challan.cloth_meter);
-      setOrderDetails(challan.order_for);
-      setDate(challan.date);
-    }
+    setChallanNo(challan.challan_no);
+    setCustomerName(challan.customer_name);
+    setFactoryName(challan.factory_name);
+    setClothMaterial(challan.cloth_material);
+    setClothMeter(challan.cloth_meter);
+    setOrderDetails(challan.order_for);
+    setDate(challan.date);
+    setChallanID(challan._id);
   };
 
   const fetchChallanData = async () => {
@@ -182,8 +278,45 @@ function Activites(props) {
         "Content-Type": "application/json",
       },
     });
-    // console.log("challanData: ", challanData.data);
+    console.log("challanData: ", challanData.data);
     setAllChallanData(challanData.data);
+  };
+
+  const deleteChallan = async () => {
+    const challanDeleted = await axios.delete(`${deleteChallanData}`, {
+      _id: challanID,
+    });
+    console.log(challanDeleted);
+    fetchChallanData();
+  };
+
+  const deleteChallanModal = () => {
+    return (
+      <div className={cx(s.modal, s.deleteModal)}>
+        <div className={s.text}>
+          <span>Do you want to delete this challan ?</span>
+        </div>
+        <div className={s.actionButtons}>
+          <div
+            className={cx(s.button, s.buttonNoBgColor)}
+            onClick={() => {
+              setShowDeleteModal(false);
+            }}
+          >
+            Cancel
+          </div>
+          <div
+            className={s.button}
+            onClick={() => {
+              setShowDeleteModal(false);
+              deleteChallan();
+            }}
+          >
+            Delete
+          </div>
+        </div>
+      </div>
+    );
   };
 
   allChallanData.getAllChallans &&
@@ -197,7 +330,6 @@ function Activites(props) {
         factory_name,
       } = challan;
       let obj = {
-        key: challan._id,
         date,
         challan_no,
         customer_name,
@@ -217,7 +349,16 @@ function Activites(props) {
             src: deleteIcon,
             message: "Delete",
             handler: () => {
-              console.log("call delete Api call");
+              setShowDeleteModal(true);
+              setChallanID(challan._id);
+            },
+          },
+          {
+            src: printIcon,
+            message: "Print",
+            handler: () => {
+              setActivity("showPreview");
+              setCurrentChallanData(challan);
             },
           },
         ],
@@ -232,22 +373,26 @@ function Activites(props) {
         setShowOrderModal={setShowOrderModal}
         orderContent={orderContent}
         setOrderDetails={setOrderDetails}
+        setClothMeter={setClothMeter}
       />
 
       {currentActiveTab === "inventory" && Inventory()}
       {currentActiveTab === "challan" && Challan()}
       {currentActiveTab === "list_challan" && (
-        <ShowTableData
-          tableData={challanDataArray}
-          tableHeading={tableViewConfig.challanTableList}
-          noOfRecords={10}
+        <Table
+          data={challanDataArray}
+          head={tableViewConfig.challanTableList}
+          recordsPerPage={10}
         />
       )}
       {currentActiveTab === "showPreview" && (
         <SeePreview
           orderContent={orderContent}
           setActivity={setActivity}
+          isEditView={isEditView}
+          setIsEditView={setIsEditView}
           challanDetails={{
+            challanID,
             challanNo,
             customerName,
             factoryName,
@@ -257,39 +402,9 @@ function Activites(props) {
           }}
         />
       )}
+      {showDeleteModal && deleteChallanModal()}
     </div>
   );
 }
-
-export const DisplayOrder = (orderData, type) => {
-  let updatedData = [];
-  updatedData =
-    Array.isArray(orderData) && orderData.filter((item) => item.pieces !== 0);
-
-  return (
-    <>
-      <div className={s.table}>
-        <div className={s.series}>{type}</div>
-        {Array.isArray(updatedData) &&
-          updatedData.length > 0 &&
-          updatedData.map((ord, i) => (
-            <>
-              <div className={s.rows}>
-                <div className={s.set}>
-                  <div className={s.numerator}>
-                    <span className={s.number}>{ord.length}</span>
-                    <span className={s.size}>{ord.size}</span>
-                  </div>
-                  <div className={s.denominator}>
-                    <span className={s.number}>{ord.pieces}</span>
-                  </div>
-                </div>
-              </div>
-            </>
-          ))}
-      </div>
-    </>
-  );
-};
 
 export default Activites;

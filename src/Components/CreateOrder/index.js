@@ -12,8 +12,13 @@ import {
 } from "../../utils/constants";
 
 function CreateOrder(props) {
-  const { showOrderModal, setShowOrderModal, orderContent, setOrderDetails } =
-    props;
+  const {
+    showOrderModal,
+    setShowOrderModal,
+    orderContent,
+    setOrderDetails,
+    setClothMeter,
+  } = props;
 
   const [category, setCategory] = useState("kids");
   const [showAddOrderModal, setShowAddOrderModal] = useState(false);
@@ -21,6 +26,9 @@ function CreateOrder(props) {
   const [kidsOrder, setKidsOrder] = useState();
   const [boysOrder, setBoysOrder] = useState();
   const [menOrder, setMenOrder] = useState();
+  const [pano, setPano] = useState({});
+
+  // useEffect(() => {}, []);
 
   useEffect(() => {
     if (_.isEmpty(kidsOrder) && category === "kids")
@@ -29,15 +37,12 @@ function CreateOrder(props) {
       setBoysOrder(boysOrderStructure);
     if (_.isEmpty(menOrder) && category === "men")
       setMenOrder(menOrderStructure);
+    if (_.isEmpty(pano)) setPano({ kids: 58, boys: 58, men: 58 });
   }, [category]);
 
-  const handleOrderChange = async (val, type, id) => {
+  const handleOrderChange = (val, type, id) => {
     let tempOrderData = _.cloneDeep(
-      category === "kids"
-        ? kidsOrder
-        : category === "boys"
-        ? boysOrder
-        : menOrder
+      category === "kids" ? kidsOrder : boysOrder
     );
     if (type === "size") {
       tempOrderData[id].size = val;
@@ -49,19 +54,20 @@ function CreateOrder(props) {
 
     category === "kids"
       ? setKidsOrder([...tempOrderData])
-      : category === "boys"
-      ? setBoysOrder([...tempOrderData])
-      : setMenOrder([...tempOrderData]);
+      : setBoysOrder([...tempOrderData]);
+
     // setOrderDetails({ ...orderContent, category: tempOrderData });
+  };
+
+  const handleMenOrderChange = (row, column, val) => {
+    let tempOrderData = _.cloneDeep(menOrder);
+    tempOrderData[row][column] = _.isNaN(parseInt(val)) ? 0 : parseInt(val);
+    setMenOrder(tempOrderData);
   };
 
   const addOrder = () => {
     let tempOrderData = _.cloneDeep(
-      category === "kids"
-        ? kidsOrder
-        : category === "boys"
-        ? boysOrder
-        : menOrder
+      category === "kids" ? kidsOrder : boysOrder
     );
 
     category === "kids"
@@ -69,43 +75,50 @@ function CreateOrder(props) {
           length: 18,
           pieces: 1,
         })
-      : category === "boys"
-      ? tempOrderData.push({
-          length: 32,
-          pieces: 1,
-        })
       : tempOrderData.push({
-          size: "M",
-          length: 52,
+          length: 32,
           pieces: 1,
         });
 
     category === "kids"
       ? setKidsOrder([...tempOrderData])
-      : category === "boys"
-      ? setBoysOrder([...tempOrderData])
-      : setMenOrder([...tempOrderData]);
+      : setBoysOrder([...tempOrderData]);
 
     // setOrderData([...tempOrderData]);
   };
 
   const deleteRow = (id) => {
     let tempOrderData = _.cloneDeep(
-      category === "kids"
-        ? kidsOrder
-        : category === "boys"
-        ? boysOrder
-        : menOrder
+      category === "kids" ? kidsOrder : boysOrder
     );
     tempOrderData.splice(id, 1);
 
     category === "kids"
       ? setKidsOrder([...tempOrderData])
-      : category === "boys"
-      ? setBoysOrder([...tempOrderData])
-      : setMenOrder([...tempOrderData]);
+      : setBoysOrder([...tempOrderData]);
 
     //   setOrderData([...order]);
+  };
+
+  const getTotalClothRequired = () => {
+    let clothMeter = 0;
+    if (category === "kids") {
+      kidsOrder.map((item, i) => {
+        clothMeter += item.pieces;
+      });
+      if (pano.kids === 58) clothMeter *= 0.7;
+      else clothMeter *= 0.65;
+    } else if (category === "boys") {
+      boysOrder.map((item, i) => {
+        clothMeter += item.pieces;
+      });
+      if (pano.boys === 58) clothMeter *= 1.4;
+      else clothMeter *= 1.3;
+    }
+    console.log("clothMeter: ", clothMeter);
+    setClothMeter(clothMeter);
+
+    return clothMeter;
   };
 
   const orderDetails = () => {
@@ -129,10 +142,41 @@ function CreateOrder(props) {
             clickHandler={() => {
               addOrder();
             }}
+            isDisable={category === "men"}
           >
             Add Row
           </Button>
         </div>
+
+        {(category === "kids" || category === "boys" || category === "men") && (
+          <>
+            <div>
+              <span style={{ color: "white", fontWeight: "bold" }}>Pano: </span>
+            </div>
+            <div className={s.radiobutton}>
+              <input
+                type="radio"
+                id="pano_58"
+                name="pano"
+                checked={pano[category] === 58}
+                onChange={() => {
+                  setPano({ ...pano, [category]: 58 });
+                }}
+              />
+              <label for="pano_58">58</label>
+              <input
+                type="radio"
+                id="pano_62"
+                name="pano"
+                checked={pano[category] === 62}
+                onChange={() => {
+                  setPano({ ...pano, [category]: 62 });
+                }}
+              />
+              <label for="pano_62">62</label>
+            </div>
+          </>
+        )}
 
         {category === "kids" && (
           <>
@@ -232,55 +276,182 @@ function CreateOrder(props) {
               {_.size(menOrder) === 0 ? (
                 <div className={s.emptyBody}>No Order Detials yet.</div>
               ) : (
-                Array.isArray(menOrder) &&
-                menOrder.map((ord, i) => (
+                <>
                   <div className={s.inputContent}>
                     <InputType
                       type={"text"}
-                      placeholder={`Select size ("XS", "S", "M", "L", "XL", "XXL", "XXXL")`}
-                      value={ord.size.toUpperCase()}
-                      onChangeHandler={(val) => {
-                        handleOrderChange(val, "size", i);
+                      placeholder={""}
+                      value={""}
+                      onChangeHandler={(val) => {}}
+                      readOnly={true}
+                      styles={{
+                        border: "none",
+                        backgroundColor: "inherit",
+                        textAlign: "center",
+                        fontSize: "1.1rem",
                       }}
-                      label={"Select size:"}
-                      labelStyles={{ color: "white" }}
                     />
                     <InputType
                       type={"text"}
-                      placeholder={"Length"}
-                      value={ord.length}
-                      onChangeHandler={(val) => {
-                        handleOrderChange(val, "length", i);
+                      placeholder={""}
+                      value={52}
+                      onChangeHandler={(val) => {}}
+                      styles={{
+                        border: "none",
+                        backgroundColor: "inherit",
+                        textAlign: "center",
+                        fontSize: "1.1rem",
                       }}
-                      label={"Enter Length:"}
-                      labelStyles={{ color: "white" }}
+                      readOnly={true}
                     />
-
                     <InputType
                       type={"text"}
-                      placeholder={"No. of pcs"}
-                      value={ord.pieces}
-                      onChangeHandler={(val) => {
-                        handleOrderChange(val, "pieces", i);
+                      placeholder={""}
+                      value={54}
+                      onChangeHandler={(val) => {}}
+                      styles={{
+                        border: "none",
+                        backgroundColor: "inherit",
+                        textAlign: "center",
+                        fontSize: "1.1rem",
                       }}
-                      label={"Enter Pieces:"}
-                      labelStyles={{ color: "white" }}
                     />
-
-                    <img
-                      className={s.appImg}
-                      src={deleteButton}
-                      alt="Delete Row"
-                      onClick={() => {
-                        deleteRow(i);
+                    <InputType
+                      type={"text"}
+                      placeholder={""}
+                      value={56}
+                      onChangeHandler={(val) => {}}
+                      styles={{
+                        border: "none",
+                        backgroundColor: "inherit",
+                        textAlign: "center",
+                        fontSize: "1.1rem",
+                      }}
+                    />
+                    <InputType
+                      type={"text"}
+                      placeholder={""}
+                      value={58}
+                      onChangeHandler={(val) => {}}
+                      styles={{
+                        border: "none",
+                        backgroundColor: "inherit",
+                        textAlign: "center",
+                        fontSize: "1.1rem",
+                      }}
+                    />
+                    <InputType
+                      type={"text"}
+                      placeholder={""}
+                      value={60}
+                      onChangeHandler={(val) => {}}
+                      styles={{
+                        border: "none",
+                        backgroundColor: "inherit",
+                        textAlign: "center",
+                        fontSize: "1.1rem",
+                      }}
+                    />
+                    <InputType
+                      type={"text"}
+                      placeholder={""}
+                      value={62}
+                      onChangeHandler={(val) => {}}
+                      styles={{
+                        border: "none",
+                        backgroundColor: "inherit",
+                        textAlign: "center",
+                        fontSize: "1.1rem",
                       }}
                     />
                   </div>
-                ))
+                  {Array.isArray(menOrder) &&
+                    menOrder.map((row, i) => (
+                      <div className={s.inputContent}>
+                        <InputType
+                          type={"text"}
+                          placeholder={"No. of pcs"}
+                          value={
+                            i === 0
+                              ? "S"
+                              : i === 1
+                              ? "M"
+                              : i === 2
+                              ? "L"
+                              : i === 3
+                              ? "XL"
+                              : i === 4
+                              ? "XXL"
+                              : i === 5 && "XXXL"
+                          }
+                          onChangeHandler={(val) => {}}
+                          readOnly={true}
+                          styles={{
+                            border: "none",
+                            backgroundColor: "inherit",
+                            textAlign: "center",
+                            fontSize: "1.1rem",
+                          }}
+                        />
+                        <InputType
+                          type={"text"}
+                          placeholder={"No. of pcs"}
+                          value={menOrder[0][i]}
+                          onChangeHandler={(val) => {
+                            handleMenOrderChange(0, i, val);
+                          }}
+                        />
+                        <InputType
+                          type={"text"}
+                          placeholder={"No. of pcs"}
+                          value={menOrder[1][i]}
+                          onChangeHandler={(val) => {
+                            handleMenOrderChange(1, i, val);
+                          }}
+                        />
+                        <InputType
+                          type={"text"}
+                          placeholder={"No. of pcs"}
+                          value={menOrder[2][i]}
+                          onChangeHandler={(val) => {
+                            handleMenOrderChange(2, i, val);
+                          }}
+                        />
+                        <InputType
+                          type={"text"}
+                          placeholder={"No. of pcs"}
+                          value={menOrder[3][i]}
+                          onChangeHandler={(val) => {
+                            handleMenOrderChange(3, i, val);
+                          }}
+                        />
+                        <InputType
+                          type={"text"}
+                          placeholder={"No. of pcs"}
+                          value={menOrder[4][i]}
+                          onChangeHandler={(val) => {
+                            handleMenOrderChange(4, i, val);
+                          }}
+                        />
+                        <InputType
+                          type={"text"}
+                          placeholder={"No. of pcs"}
+                          value={menOrder[5][i]}
+                          onChangeHandler={(val) => {
+                            handleMenOrderChange(5, i, val);
+                          }}
+                        />
+                      </div>
+                    ))}
+                </>
               )}
             </div>
           </>
         )}
+
+        <div className={s.clothMeterCalculation}>
+          {`Total Cloth required: ${getTotalClothRequired()}`}
+        </div>
 
         <div className={s.footer}>
           <Button

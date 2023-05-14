@@ -25,7 +25,6 @@ class InputType extends Component {
       label,
       labelStyles = {},
     } = this.props;
-
     return (
       <div
         className={cx(s.container)}

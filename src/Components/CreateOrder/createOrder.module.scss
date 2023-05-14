@@ -44,6 +44,19 @@
       }
     }
 
+    .radiobutton {
+      display: flex;
+      color: white;
+      input[type="radio"] {
+        color: blue;
+      }
+    }
+
+    .clothMeterCalculation {
+      color: white;
+      font-weight: bold;
+    }
+
     .footer {
       display: flex;
       flex: 1;

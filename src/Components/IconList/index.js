@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import cx from "classnames";
 import s from "./iconList.module.scss";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 class IconList extends Component {
   render() {
@@ -16,10 +17,22 @@ class IconList extends Component {
       }
 
       return iconList.map((icon, i) => {
+        console.log("## icon: ", icon);
         if (icon.handler) {
           return (
             <div className={s.icons} key={i}>
-              <img src={icon.src} alt="" onClick={() => icon.handler(data)} />
+              <OverlayTrigger
+                placement="bottom"
+                delay={{ show: 250, hide: 400 }}
+                overlay={<Tooltip id="button-tooltip">{icon.message}</Tooltip>}
+              >
+                <img
+                  src={icon.src}
+                  alt=""
+                  onClick={() => icon.handler(data)}
+                  key={i}
+                />
+              </OverlayTrigger>
             </div>
           );
         } else if (icon.disabled) {

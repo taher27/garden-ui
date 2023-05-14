@@ -3,9 +3,10 @@ import s from "./navbar.module.scss";
 import cx from "classnames";
 
 function Navbar(props) {
-  const { setActivity } = props;
+  const { setActivity, setIsEditView } = props;
   const [inventoryOption, showInventoryOption] = useState(false);
   const [challanOption, showChallanOption] = useState(false);
+
   return (
     <div className={s.container}>
       <div className={s.heading}>
@@ -66,6 +67,7 @@ function Navbar(props) {
               onClick={() => {
                 setActivity("challan");
                 showChallanOption(!challanOption);
+                setIsEditView(false);
               }}
             >
               Create Challan

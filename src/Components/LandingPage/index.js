@@ -7,13 +7,24 @@ import s from "./landingPage.module.scss";
 
 function LandingPage() {
   const [activityName, setActivity] = useState("challan");
+  const [isEditView, setIsEditView] = useState(false);
+
   return (
     <div className={s.container}>
       <div className={s.navbarContainer}>
-        <Navbar setActivity={setActivity} />
+        <Navbar
+          setActivity={setActivity}
+          isEditView={isEditView}
+          setIsEditView={setIsEditView}
+        />
       </div>
       <div className={s.bodyContainer}>
-        <Activites currentActiveTab={activityName} setActivity={setActivity} />
+        <Activites
+          currentActiveTab={activityName}
+          setActivity={setActivity}
+          isEditView={isEditView}
+          setIsEditView={setIsEditView}
+        />
       </div>
     </div>
   );

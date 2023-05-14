@@ -1,15 +1,17 @@
 const URL = "http://localhost:3030";
+const challan_url = `${URL}/challan`;
+const inventory_url = `${URL}/inventory`;
 
 // Challan
-export const getAllChallanData = `${URL}/challan`;
-export const getChallanDataById = `${URL}/challan/id`;
-export const addChallanData = `${URL}/challan/add`;
-export const editChallanData = `${URL}/challan/edit`;
-export const deleteChallanData = `${URL}/challan/delete`;
+export const getAllChallanData = `${challan_url}`;
+export const getChallanDataById = `${challan_url}/id`;
+export const addChallanData = `${challan_url}/add`;
+export const editChallanData = `${challan_url}/edit`;
+export const deleteChallanData = `${challan_url}/delete`;
 
 // Inventory
-export const getAllInventoryData = `${URL}/inventory`;
-export const getInventoryDataById = `${URL}/inventory/id`;
-export const addInventoryData = `${URL}/inventory/add`;
-export const editInventoryData = `${URL}/inventory/edit`;
-export const deleteInventoryData = `${URL}/inventory/delete`;
+export const getAllInventoryData = `${inventory_url}`;
+export const getInventoryDataById = `${inventory_url}/id`;
+export const addInventoryData = `${inventory_url}/add`;
+export const editInventoryData = `${inventory_url}/edit`;
+export const deleteInventoryData = `${inventory_url}/delete`;

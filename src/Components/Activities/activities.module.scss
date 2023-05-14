@@ -68,39 +68,45 @@
         width: 5%;
         border-right: 1px solid $base-color;
       }
-      .rows {
+      .orderblock {
         display: flex;
-        flex-direction: row;
-        margin: 10px 0;
-        .series {
+        width: 90%;
+        flex-wrap: wrap;
+        .rows {
           display: flex;
-          padding: 4px 12px !important;
-          padding-left: 0.5rem !important;
-        }
-        .set {
-          display: flex;
-          flex-direction: column;
-          margin: 0 10px;
+          flex-direction: row;
+          margin: 10px 0;
 
-          .numerator {
+          // .series {
+          //   display: flex;
+          //   padding: 4px 12px !important;
+          //   padding-left: 0.5rem !important;
+          // }
+          .set {
             display: flex;
-            .number {
+            flex-direction: column;
+            margin: 0 10px;
+
+            .numerator {
               display: flex;
+              .number {
+                display: flex;
+              }
+              .size {
+                display: flex;
+              }
             }
-            .size {
+            .middle {
               display: flex;
+              .separator {
+                display: flex;
+              }
             }
-          }
-          .middle {
-            display: flex;
-            .separator {
+            .denominator {
               display: flex;
-            }
-          }
-          .denominator {
-            display: flex;
-            .number {
-              display: flex;
+              .number {
+                display: flex;
+              }
             }
           }
         }
@@ -152,6 +158,61 @@
     .footer {
       display: flex;
       flex: 1;
+    }
+  }
+
+  .deleteModal {
+    height: 100px;
+    width: 40%;
+    top: 10%;
+    left: 30%;
+    display: flex;
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $black;
+      span {
+        font-size: 18px;
+      }
+    }
+
+    .actionButtons {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      margin-right: 10px;
+      margin-top: 5%;
+
+      .button {
+        height: 30px;
+        border: none;
+        color: $white;
+        padding: 4px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        text-transform: none;
+        background-color: $red;
+        &:hover {
+          background-color: inherit;
+          color: $red;
+          border: 1px solid $red;
+        }
+      }
+      .buttonNoBgColor {
+        background-color: inherit;
+        &:hover {
+          background-color: inherit;
+          color: $white;
+          border: none;
+        }
+      }
     }
   }
 }
