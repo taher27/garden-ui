@@ -1,6 +1,6 @@
 // useContext, useRef
 import React, { useState, useEffect } from "react";
-import Activites from "../Activities";
+import Activities from "../Activities";
 import Navbar from "../Navbar";
 import s from "./landingPage.module.scss";
 // import cx from "classnames";
@@ -19,7 +19,7 @@ function LandingPage() {
         />
       </div>
       <div className={s.bodyContainer}>
-        <Activites
+        <Activities
           currentActiveTab={activityName}
           setActivity={setActivity}
           isEditView={isEditView}

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10" height="20" viewBox="0 0 10 20">
+  <path fill="none" fill-rule="evenodd" stroke="#3e4656" stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.375L5 3.625 7.75 6.375" transform="rotate(0 5 5)"/>
+  <path fill="none" fill-rule="evenodd" stroke="#3e4656" stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.375L5 3.625 7.75 6.375" transform="translate(0 10) rotate(180 5 5)"/>
+</svg>

@@ -60,7 +60,7 @@ function SeePreview(props) {
       <>
         <div className={s.table}>
           {Array.isArray(orderData) && orderData.length > 0 && (
-            <div className={s.series}>{type}</div>
+            <div className={s.series}>{`${type}`}</div>
           )}
 
           <div className={s.orderblock}>
@@ -118,7 +118,7 @@ function SeePreview(props) {
         _id: challanDetails.challanID,
         challan_no: challanDetails.challanNo,
         customer_name: challanDetails.customerName,
-        factory_name: challanDetails.factoryName,
+        factory_name: challanDetails.factoryName.key,
         cloth_material: challanDetails.clothMaterial,
         cloth_meter: challanDetails.clothMeter,
         order_for: orderContent,
@@ -137,7 +137,7 @@ function SeePreview(props) {
       new_challan: {
         challan_no: challanDetails.challanNo,
         customer_name: challanDetails.customerName,
-        factory_name: challanDetails.factoryName,
+        factory_name: challanDetails.factoryName.key,
         cloth_material: challanDetails.clothMaterial,
         cloth_meter: challanDetails.clothMeter,
         order_for: orderContent,
@@ -233,7 +233,9 @@ function SeePreview(props) {
                 <span>Factory</span>
               </th>
               <td>
-                <span>{_.get(challanDetails, "factoryName", `Kantharia`)}</span>
+                <span>
+                  {_.get(challanDetails, "factoryName.key", `Kantharia`)}
+                </span>
               </td>
             </tr>
           </table>

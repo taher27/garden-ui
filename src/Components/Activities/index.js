@@ -14,17 +14,23 @@ import tableViewConfig from "../../utils/tableViewConfig";
 import SeePreview from "../SeePreview";
 import { getAllChallanData, deleteChallanData } from "../../utils/apiConfig.js";
 import Table from "../Table";
+import DropDown from "../DropDown";
 
-function Activites(props) {
+function Activities(props) {
   const d = new Date();
   const { currentActiveTab, setActivity, isEditView, setIsEditView } = props;
 
   const [challanID, setChallanID] = useState("");
   const [challanNo, setChallanNo] = useState("");
   const [customerName, setCustomerName] = useState("");
-  const [factoryName, setFactoryName] = useState("");
+  const [factoryName, setFactoryName] = useState({
+    title: "Kantharia",
+    key: "Kantharia",
+  });
+
   const [clothMaterial, setClothMaterial] = useState("");
-  const [clothMeter, setClothMeter] = useState("");
+  const [design, setDesign] = useState("");
+  const [clothMeter, setClothMeter] = useState(0);
   const [orderContent, setOrderDetails] = useState({
     kids: [],
     boys: [],
@@ -46,8 +52,12 @@ function Activites(props) {
       if (!isEditView) {
         setChallanNo("");
         setCustomerName("");
-        setFactoryName("");
+        setFactoryName({
+          title: "Kantharia",
+          key: "Kantharia",
+        });
         setClothMaterial("");
+        setDesign("");
         setClothMeter("");
         setOrderDetails({
           kids: [],
@@ -106,6 +116,27 @@ function Activites(props) {
 
         <div className={s.indexDetails}>
           <div className={cx(s.inputOption, s.inputOptionLong)}>
+            <div className={s.heading}>
+              <label>{"Factory Name:"}</label>
+            </div>
+            {/* <DropDown
+              data={[
+                { title: "Kantharia", key: "Kantharia" },
+                { title: "Navsari", key: "Navsari" },
+                { title: "Bazar", key: "Bazar" },
+                { title: "Surat", key: "Surat" },
+              ]}
+              currentSet={{ title: "Kantharia", key: "Kantharia" }}
+              setCurrentSet={(value) => {
+                console.log("value: ", value);
+              }}
+              dropDownContanierStyles={{
+                width: "530px",
+                height: "30px",
+                fontSize: "16px",
+              }}
+            /> */}
+            {/* 
             <InputType
               type={"text"}
               placeholder={"Enter Factory Name"}
@@ -113,16 +144,24 @@ function Activites(props) {
               onChangeHandler={setFactoryName}
               label={"Factory Name:"}
               width={"80%"}
-            />
+            /> */}
           </div>
-          <div className={cx(s.inputOption, s.inputOptionLong)}>
+          <div className={cx(s.inputOption)}>
             <InputType
               type={"text"}
               placeholder={"Cloth Material"}
               value={clothMaterial}
               onChangeHandler={setClothMaterial}
               label={"Cloth Material:"}
-              width={"80%"}
+            />
+          </div>
+          <div className={cx(s.inputOption)}>
+            <InputType
+              type={"text"}
+              placeholder={"Style/Design"}
+              value={design}
+              onChangeHandler={setDesign}
+              label={"Style/Design:"}
             />
           </div>
           <div className={cx(s.inputOption)}>
@@ -264,8 +303,12 @@ function Activites(props) {
 
     setChallanNo(challan.challan_no);
     setCustomerName(challan.customer_name);
-    setFactoryName(challan.factory_name);
+    setFactoryName({
+      title: challan.factory_name,
+      key: challan.factory_name,
+    });
     setClothMaterial(challan.cloth_material);
+    setDesign(challan.design);
     setClothMeter(challan.cloth_meter);
     setOrderDetails(challan.order_for);
     setDate(challan.date);
@@ -374,6 +417,7 @@ function Activites(props) {
         orderContent={orderContent}
         setOrderDetails={setOrderDetails}
         setClothMeter={setClothMeter}
+        clothMeter={clothMeter}
       />
 
       {currentActiveTab === "inventory" && Inventory()}
@@ -407,4 +451,4 @@ function Activites(props) {
   );
 }
 
-export default Activites;
+export default Activities;

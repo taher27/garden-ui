@@ -28,8 +28,6 @@ function CreateOrder(props) {
   const [menOrder, setMenOrder] = useState();
   const [pano, setPano] = useState({});
 
-  // useEffect(() => {}, []);
-
   useEffect(() => {
     if (_.isEmpty(kidsOrder) && category === "kids")
       setKidsOrder(kidsOrderStructure);
@@ -100,25 +98,73 @@ function CreateOrder(props) {
     //   setOrderData([...order]);
   };
 
-  const getTotalClothRequired = () => {
+  const calculateTotalClothMeters = () => {
+    let sum = 0;
+    sum += getTotalClothRequired({
+      category: "kids",
+    });
+    sum += getTotalClothRequired({
+      category: "boys",
+    });
+    sum += getTotalClothRequired({
+      category: "men",
+    });
+
+    setClothMeter(sum);
+    return sum;
+  };
+
+  const getTotalClothRequired = (props) => {
     let clothMeter = 0;
-    if (category === "kids") {
-      kidsOrder.map((item, i) => {
-        clothMeter += item.pieces;
-      });
+    let extraClothMeter = 0;
+
+    if (props.category === "kids") {
+      !_.isEmpty(kidsOrder) &&
+        kidsOrder.map((item, i) => {
+          clothMeter += item.pieces;
+        });
+
+      // Doing conditionally multiplication based on Pano
       if (pano.kids === 58) clothMeter *= 0.7;
       else clothMeter *= 0.65;
-    } else if (category === "boys") {
-      boysOrder.map((item, i) => {
-        clothMeter += item.pieces;
-      });
+    } else if (props.category === "boys") {
+      !_.isEmpty(boysOrder) &&
+        boysOrder.map((item, i) => {
+          clothMeter += item.pieces;
+        });
+
+      // Doing conditionally multiplication based on Pano
       if (pano.boys === 58) clothMeter *= 1.4;
       else clothMeter *= 1.3;
-    }
-    console.log("clothMeter: ", clothMeter);
-    setClothMeter(clothMeter);
+    } else if (props.category === "men") {
+      !_.isEmpty(menOrder) &&
+        menOrder.map((item) => {
+          item.map((data, i) => {
+            if (i < 4) {
+              clothMeter += data;
+            } else if (i > 3) {
+              extraClothMeter += data;
+            }
+          });
+        });
 
-    return clothMeter;
+      // Doing conditionally multiplication based on Pano for s,m,l,xl
+      if (pano.men === 58) {
+        clothMeter *= 2.4;
+      } else {
+        clothMeter *= 2.3;
+      }
+
+      // Doing conditionally multiplication based on Pano for xxl, xxxl
+      if (pano.men === 58) {
+        extraClothMeter *= 2.75;
+      } else {
+        extraClothMeter *= 2.65;
+      }
+      clothMeter += extraClothMeter; // extraClothMeter values incase of xxl,xxxl;
+    }
+
+    return Math.ceil(clothMeter);
   };
 
   const orderDetails = () => {
@@ -163,7 +209,7 @@ function CreateOrder(props) {
                   setPano({ ...pano, [category]: 58 });
                 }}
               />
-              <label for="pano_58">58</label>
+              <label html_for="pano_58">58</label>
               <input
                 type="radio"
                 id="pano_62"
@@ -173,7 +219,7 @@ function CreateOrder(props) {
                   setPano({ ...pano, [category]: 62 });
                 }}
               />
-              <label for="pano_62">62</label>
+              <label html_for="pano_62">62</label>
             </div>
           </>
         )}
@@ -450,7 +496,7 @@ function CreateOrder(props) {
         )}
 
         <div className={s.clothMeterCalculation}>
-          {`Total Cloth required: ${getTotalClothRequired()}`}
+          {`Total Cloth required: ${calculateTotalClothMeters()}`}
         </div>
 
         <div className={s.footer}>
