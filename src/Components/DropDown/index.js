@@ -100,9 +100,7 @@ class DropDown extends Component {
       isNonSelectableLabel = false,
       dropDownTitle = "",
       showSearchOption = false,
-      isLoading = false,
       isDisable = false,
-      hideOnlyOptionAuto = false, // to show the first option if list length == 1;
       disableDropDown = true,
       labelStyles,
       classes,
@@ -180,13 +178,9 @@ class DropDown extends Component {
                   className={s.optionsBox}
                   style={{ ...this.props.styles }}
                 >
-                  {!isLoading ? (
-                    dropDownOptions()
-                  ) : (
-                    <div style={{ height: "120px" }}></div>
-                  )}
+                  {dropDownOptions()}
                 </div>,
-                document.getElementById("layout")
+                document.body
               )}
           </>
         )}

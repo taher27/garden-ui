@@ -25,6 +25,16 @@ export const challanTableList = [
     type: "text",
   },
   {
+    title: "Cloth Color",
+    key: "cloth_color",
+    type: "text",
+  },
+  {
+    title: "Design",
+    key: "design",
+    type: "text",
+  },
+  {
     title: "Factory Name",
     key: "factory_name",
     type: "text",

@@ -6,6 +6,7 @@ import ReactToPrint from "react-to-print";
 import axios from "axios";
 
 import { addChallanData, editChallanData } from "../../utils/apiConfig.js";
+import InputType from "../InputType";
 
 function SeePreview(props) {
   const {
@@ -64,7 +65,26 @@ function SeePreview(props) {
           )}
 
           <div className={s.orderblock}>
-            {Array.isArray(orderData) &&
+            <div className={s.rows}>
+              <div className={s.set}>
+                <div className={s.numerator}>
+                  <span className={s.number}>{""}</span>
+                  <span className={s.size}>{""}</span>
+                </div>
+                <div className={s.denominator}>
+                  <span className={s.number}>{""}</span>
+                </div>
+              </div>
+            </div>
+            <>
+              {dataSet("52", "", "")}
+              {dataSet("54", "", "")}
+              {dataSet("56", "", "")}
+              {dataSet("58", "", "")}
+              {dataSet("60", "", "")}
+              {dataSet("62", "", "")}
+            </>
+            {/* {Array.isArray(orderData) &&
               orderData.length > 0 &&
               orderData.map((ord, i) => (
                 <>
@@ -75,7 +95,7 @@ function SeePreview(props) {
                   {orderData[0][i] !== 0 && dataSet("60", i, orderData[4][i])}
                   {orderData[0][i] !== 0 && dataSet("62", i, orderData[5][i])}
                 </>
-              ))}
+              ))} */}
           </div>
         </div>
       </>
@@ -123,6 +143,8 @@ function SeePreview(props) {
         cloth_meter: challanDetails.clothMeter,
         order_for: orderContent,
         date: challanDetails.date,
+        design: challanDetails.design,
+        cloth_color: challanDetails.colorName,
       },
     });
     console.log("challanUpdated: ", challanUpdated);
@@ -142,6 +164,8 @@ function SeePreview(props) {
         cloth_meter: challanDetails.clothMeter,
         order_for: orderContent,
         date: challanDetails.date,
+        design: challanDetails.design,
+        cloth_color: challanDetails.colorName,
       },
     });
     console.log("challanCreated: ", challanCreated);

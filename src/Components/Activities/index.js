@@ -23,6 +23,11 @@ function Activities(props) {
   const [challanID, setChallanID] = useState("");
   const [challanNo, setChallanNo] = useState("");
   const [customerName, setCustomerName] = useState("");
+  const [colorName, setColorName] = useState("");
+  // const [colorName, setColorName] = useState({
+  //   title: "White",
+  //   key: "White",
+  // });
   const [factoryName, setFactoryName] = useState({
     title: "Kantharia",
     key: "Kantharia",
@@ -115,37 +120,39 @@ function Activities(props) {
         <hr />
 
         <div className={s.indexDetails}>
-          <div className={cx(s.inputOption, s.inputOptionLong)}>
+          <div className={cx(s.inputOption)}>
             <div className={s.heading}>
               <label>{"Factory Name:"}</label>
             </div>
-            {/* <DropDown
+            <DropDown
               data={[
                 { title: "Kantharia", key: "Kantharia" },
                 { title: "Navsari", key: "Navsari" },
                 { title: "Bazar", key: "Bazar" },
                 { title: "Surat", key: "Surat" },
               ]}
-              currentSet={{ title: "Kantharia", key: "Kantharia" }}
+              currentSet={factoryName}
               setCurrentSet={(value) => {
-                console.log("value: ", value);
+                setFactoryName(value);
               }}
               dropDownContanierStyles={{
-                width: "530px",
+                width: "200px",
                 height: "30px",
                 fontSize: "16px",
               }}
-            /> */}
-            {/* 
+            />
+          </div>
+
+          <div className={cx(s.inputOption)}>
             <InputType
               type={"text"}
-              placeholder={"Enter Factory Name"}
-              value={factoryName}
-              onChangeHandler={setFactoryName}
-              label={"Factory Name:"}
-              width={"80%"}
-            /> */}
+              placeholder={"Cloth Color"}
+              value={colorName}
+              onChangeHandler={setColorName}
+              label={"Cloth Color:"}
+            />
           </div>
+
           <div className={cx(s.inputOption)}>
             <InputType
               type={"text"}
@@ -313,6 +320,7 @@ function Activities(props) {
     setOrderDetails(challan.order_for);
     setDate(challan.date);
     setChallanID(challan._id);
+    setColorName(challan.cloth_color);
   };
 
   const fetchChallanData = async () => {
@@ -321,13 +329,15 @@ function Activities(props) {
         "Content-Type": "application/json",
       },
     });
-    console.log("challanData: ", challanData.data);
+    // console.log("challanData: ", challanData.data);
     setAllChallanData(challanData.data);
   };
 
   const deleteChallan = async () => {
     const challanDeleted = await axios.delete(`${deleteChallanData}`, {
-      _id: challanID,
+      data: {
+        _id: challanID,
+      },
     });
     console.log(challanDeleted);
     fetchChallanData();
@@ -371,6 +381,8 @@ function Activities(props) {
         customer_name,
         date,
         factory_name,
+        design,
+        cloth_color,
       } = challan;
       let obj = {
         date,
@@ -379,6 +391,8 @@ function Activities(props) {
         cloth_material,
         cloth_meter,
         factory_name,
+        design,
+        cloth_color,
         action: [
           {
             src: editIcon,
@@ -443,6 +457,8 @@ function Activities(props) {
             clothMaterial,
             clothMeter,
             date,
+            design,
+            colorName,
           }}
         />
       )}

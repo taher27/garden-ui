@@ -17,14 +17,26 @@ class IconList extends Component {
       }
 
       return iconList.map((icon, i) => {
-        console.log("## icon: ", icon);
         if (icon.handler) {
           return (
             <div className={s.icons} key={i}>
               <OverlayTrigger
-                placement="bottom"
+                placement="top"
                 delay={{ show: 250, hide: 400 }}
-                overlay={<Tooltip id="button-tooltip">{icon.message}</Tooltip>}
+                overlay={
+                  <Tooltip
+                    id="button-tooltip"
+                    style={{
+                      backgroundColor: "black",
+                      color: "white",
+                      padding: "0 5px",
+                      borderRadius: "5px",
+                      fontSize: "14px",
+                    }}
+                  >
+                    {icon.message}
+                  </Tooltip>
+                }
               >
                 <img
                   src={icon.src}
