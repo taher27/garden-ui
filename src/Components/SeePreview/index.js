@@ -6,7 +6,6 @@ import ReactToPrint from "react-to-print";
 import axios from "axios";
 
 import { addChallanData, editChallanData } from "../../utils/apiConfig.js";
-import InputType from "../InputType";
 
 function SeePreview(props) {
   const {
@@ -64,69 +63,43 @@ function SeePreview(props) {
             <div className={s.series}>{`${type}`}</div>
           )}
 
-          <div className={s.orderblock}>
-            <div className={s.rows}>
-              <div className={s.set}>
-                <div className={s.numerator}>
-                  <span className={s.number}>{""}</span>
-                  <span className={s.size}>{""}</span>
-                </div>
-                <div className={s.denominator}>
-                  <span className={s.number}>{""}</span>
-                </div>
-              </div>
+          <div className={s.dataContent}>
+            <div className={s.inputContent}>
+              <span>{""}</span>
+              <span className={s.boldContent}>{"52"}</span>
+              <span className={s.boldContent}>{"54"}</span>
+              <span className={s.boldContent}>{"56"}</span>
+              <span className={s.boldContent}>{"58"}</span>
+              <span className={s.boldContent}>{"60"}</span>
+              <span className={s.boldContent}>{"62"}</span>
             </div>
-            <>
-              {dataSet("52", "", "")}
-              {dataSet("54", "", "")}
-              {dataSet("56", "", "")}
-              {dataSet("58", "", "")}
-              {dataSet("60", "", "")}
-              {dataSet("62", "", "")}
-            </>
-            {/* {Array.isArray(orderData) &&
-              orderData.length > 0 &&
-              orderData.map((ord, i) => (
-                <>
-                  {orderData[0][i] !== 0 && dataSet("52", i, orderData[0][i])}
-                  {orderData[0][i] !== 0 && dataSet("54", i, orderData[1][i])}
-                  {orderData[0][i] !== 0 && dataSet("56", i, orderData[2][i])}
-                  {orderData[0][i] !== 0 && dataSet("58", i, orderData[3][i])}
-                  {orderData[0][i] !== 0 && dataSet("60", i, orderData[4][i])}
-                  {orderData[0][i] !== 0 && dataSet("62", i, orderData[5][i])}
-                </>
-              ))} */}
+            {Array.isArray(orderData) &&
+              orderData.map((row, i) => (
+                <div className={s.inputContent}>
+                  <span className={s.boldContent}>
+                    {i === 0
+                      ? "S"
+                      : i === 1
+                      ? "M"
+                      : i === 2
+                      ? "L"
+                      : i === 3
+                      ? "XL"
+                      : i === 4
+                      ? "XXL"
+                      : i === 5 && "XXXL"}
+                  </span>
+                  <span>{orderData[0][i]}</span>
+                  <span>{orderData[1][i]}</span>
+                  <span>{orderData[2][i]}</span>
+                  <span>{orderData[3][i]}</span>
+                  <span>{orderData[4][i]}</span>
+                  <span>{orderData[5][i]}</span>
+                </div>
+              ))}
           </div>
         </div>
       </>
-    );
-  };
-
-  const dataSet = (length, i, pieces) => {
-    return (
-      <div className={s.rows}>
-        <div className={s.set}>
-          <div className={s.numerator}>
-            <span className={s.number}>{length}</span>
-            <span className={s.size}>
-              {i === 0
-                ? "S"
-                : i === 1
-                ? "M"
-                : i === 2
-                ? "L"
-                : i === 3
-                ? "XL"
-                : i === 4
-                ? "XXL"
-                : i === 5 && "XXXL"}
-            </span>
-          </div>
-          <div className={s.denominator}>
-            <span className={s.number}>{pieces}</span>
-          </div>
-        </div>
-      </div>
     );
   };
 
@@ -145,6 +118,7 @@ function SeePreview(props) {
         date: challanDetails.date,
         design: challanDetails.design,
         cloth_color: challanDetails.colorName,
+        additional_info: challanDetails.additionalInfo,
       },
     });
     console.log("challanUpdated: ", challanUpdated);
@@ -164,8 +138,9 @@ function SeePreview(props) {
         cloth_meter: challanDetails.clothMeter,
         order_for: orderContent,
         date: challanDetails.date,
-        design: challanDetails.design,
         cloth_color: challanDetails.colorName,
+        design: challanDetails.design,
+        additional_info: challanDetails.additionalInfo,
       },
     });
     console.log("challanCreated: ", challanCreated);
@@ -260,6 +235,14 @@ function SeePreview(props) {
                 <span>
                   {_.get(challanDetails, "factoryName.key", `Kantharia`)}
                 </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <span>Additional Info</span>
+              </th>
+              <td>
+                <span>{_.get(challanDetails, "additionalInfo", ``)}</span>
               </td>
             </tr>
           </table>

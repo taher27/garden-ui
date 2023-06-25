@@ -1,5 +1,5 @@
 // useContext, useRef
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Activities from "../Activities";
 import Navbar from "../Navbar";
 import s from "./landingPage.module.scss";

@@ -36,7 +36,7 @@ function CreateOrder(props) {
     if (_.isEmpty(menOrder) && category === "men")
       setMenOrder(menOrderStructure);
     if (_.isEmpty(pano)) setPano({ kids: 58, boys: 58, men: 58 });
-  }, [category]);
+  }, [category, kidsOrder, boysOrder, menOrder, pano]);
 
   const handleOrderChange = (val, type, id) => {
     let tempOrderData = _.cloneDeep(
@@ -120,7 +120,7 @@ function CreateOrder(props) {
 
     if (props.category === "kids") {
       !_.isEmpty(kidsOrder) &&
-        kidsOrder.map((item, i) => {
+        kidsOrder.forEach((item) => {
           clothMeter += item.pieces;
         });
 
@@ -129,7 +129,7 @@ function CreateOrder(props) {
       else clothMeter *= 0.65;
     } else if (props.category === "boys") {
       !_.isEmpty(boysOrder) &&
-        boysOrder.map((item, i) => {
+        boysOrder.forEach((item) => {
           clothMeter += item.pieces;
         });
 
@@ -138,8 +138,8 @@ function CreateOrder(props) {
       else clothMeter *= 1.3;
     } else if (props.category === "men") {
       !_.isEmpty(menOrder) &&
-        menOrder.map((item) => {
-          item.map((data, i) => {
+        menOrder.forEach((item) => {
+          item.forEach((data, i) => {
             if (i < 4) {
               clothMeter += data;
             } else if (i > 3) {
@@ -324,92 +324,21 @@ function CreateOrder(props) {
               ) : (
                 <>
                   <div className={s.inputContent}>
-                    <InputType
-                      type={"text"}
-                      placeholder={""}
-                      value={""}
-                      onChangeHandler={(val) => {}}
-                      readOnly={true}
-                      styles={{
-                        border: "none",
-                        backgroundColor: "inherit",
-                        textAlign: "center",
-                        fontSize: "1.1rem",
-                      }}
-                    />
-                    <InputType
-                      type={"text"}
-                      placeholder={""}
-                      value={52}
-                      onChangeHandler={(val) => {}}
-                      styles={{
-                        border: "none",
-                        backgroundColor: "inherit",
-                        textAlign: "center",
-                        fontSize: "1.1rem",
-                      }}
-                      readOnly={true}
-                    />
-                    <InputType
-                      type={"text"}
-                      placeholder={""}
-                      value={54}
-                      onChangeHandler={(val) => {}}
-                      styles={{
-                        border: "none",
-                        backgroundColor: "inherit",
-                        textAlign: "center",
-                        fontSize: "1.1rem",
-                      }}
-                    />
-                    <InputType
-                      type={"text"}
-                      placeholder={""}
-                      value={56}
-                      onChangeHandler={(val) => {}}
-                      styles={{
-                        border: "none",
-                        backgroundColor: "inherit",
-                        textAlign: "center",
-                        fontSize: "1.1rem",
-                      }}
-                    />
-                    <InputType
-                      type={"text"}
-                      placeholder={""}
-                      value={58}
-                      onChangeHandler={(val) => {}}
-                      styles={{
-                        border: "none",
-                        backgroundColor: "inherit",
-                        textAlign: "center",
-                        fontSize: "1.1rem",
-                      }}
-                    />
-                    <InputType
-                      type={"text"}
-                      placeholder={""}
-                      value={60}
-                      onChangeHandler={(val) => {}}
-                      styles={{
-                        border: "none",
-                        backgroundColor: "inherit",
-                        textAlign: "center",
-                        fontSize: "1.1rem",
-                      }}
-                    />
-                    <InputType
-                      type={"text"}
-                      placeholder={""}
-                      value={62}
-                      onChangeHandler={(val) => {}}
-                      styles={{
-                        border: "none",
-                        backgroundColor: "inherit",
-                        textAlign: "center",
-                        fontSize: "1.1rem",
-                      }}
-                    />
+                    {["", 52, 54, 56, 58, 60, 62].map((item) => (
+                      <InputType
+                        type={"text"}
+                        placeholder={""}
+                        value={item}
+                        onChangeHandler={(val) => {}}
+                        readOnly={true}
+                        styles={{
+                          border: "none",
+                          backgroundColor: "inherit",
+                          textAlign: "center",
+                          fontSize: "1.1rem",
+                        }}
+                      />
+                    ))}
                   </div>
                   {Array.isArray(menOrder) &&
                     menOrder.map((row, i) => (

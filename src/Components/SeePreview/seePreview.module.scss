@@ -150,6 +150,7 @@
         align-items: center;
         padding: 5px;
         width: 8%;
+        font-weight: bold;
         // border-right: 1px solid $base-color;
       }
       .orderblock {
@@ -187,6 +188,25 @@
                 display: flex;
               }
             }
+          }
+        }
+      }
+      .dataContent {
+        display: flex;
+        flex-direction: column;
+        .inputContent {
+          display: flex;
+          flex-direction: row;
+
+          .boldContent {
+            font-weight: bold;
+          }
+
+          span {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            width: 20px;
           }
         }
       }

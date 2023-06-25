@@ -24,6 +24,7 @@ function Activities(props) {
   const [challanNo, setChallanNo] = useState("");
   const [customerName, setCustomerName] = useState("");
   const [colorName, setColorName] = useState("");
+  const [additionalInfo, setAdditionalInfo] = useState("");
   // const [colorName, setColorName] = useState({
   //   title: "White",
   //   key: "White",
@@ -75,10 +76,6 @@ function Activities(props) {
       }
     }
   }, [currentActiveTab]);
-
-  useEffect(() => {
-    _.isArray(allChallanData) && allChallanData.map((item) => {});
-  }, [allChallanData]);
 
   const Inventory = () => {
     return <>Hello from Inventory</>;
@@ -178,6 +175,21 @@ function Activities(props) {
               value={clothMeter}
               onChangeHandler={setClothMeter}
               label={"Cloth Meter:"}
+            />
+          </div>
+        </div>
+        <hr />
+        <div className={s.indexDetails}>
+          <div className={s.inputOption}>
+            <InputType
+              type={"textarea"}
+              placeholder={"Zips, Buttons, threads etc"}
+              value={additionalInfo}
+              onChangeHandler={setAdditionalInfo}
+              label={"Additional Info:"}
+              rows={"4"}
+              cols={"50"}
+              styles={{ height: "70px", width: "650px", resize: "none" }}
             />
           </div>
         </div>
@@ -459,6 +471,7 @@ function Activities(props) {
             date,
             design,
             colorName,
+            additionalInfo,
           }}
         />
       )}
