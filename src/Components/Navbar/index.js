@@ -14,7 +14,7 @@ function Navbar(props) {
       </div>
       <div className={s.navbarContainer}>
         <div className={cx(s.actionButtons)}>
-          <div
+          {/* <div
             className={cx(s.button, s.button1, s.dropdownBtn1)}
             onClick={() => {
               showInventoryOption(!inventoryOption);
@@ -22,7 +22,7 @@ function Navbar(props) {
             }}
           >
             Inventory
-          </div>
+          </div> */}
           <div
             className={cx(s.dropdownContent, {
               [s.dropdownContent1]: inventoryOption,

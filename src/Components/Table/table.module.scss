@@ -107,7 +107,7 @@
       color: #4e8fc9;
     }
 
-    .roosterInfo {
+    .userInfo {
       display: flex;
       align-items: center;
     }
@@ -156,5 +156,6 @@
     height: 16px;
     font-size: 12px;
     background-color: $norecords-bg;
+    color: $white;
   }
 }
