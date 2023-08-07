@@ -1,0 +1,77 @@
+@import "../../assets/sass/variables.scss";
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .display {
+    padding: 4px 12px;
+    border-radius: 8px;
+    background-color: $dropdown-bg;
+    border: solid 1px $dropdown-border;
+    color: $text-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    height: 90%;
+    overflow: hidden;
+    .iconUpDown {
+      width: 1em;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .disableText {
+      opacity: 0.3;
+    }
+  }
+
+  .disableDropDown {
+    cursor: not-allowed;
+  }
+  .displayActive {
+    border: solid 1px $base-color;
+  }
+}
+
+.optionsBox {
+  position: absolute;
+  z-index: 1000;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: $dropdown-bg;
+  border-radius: 4px;
+  border: solid 1px $dropdown-border;
+  color: $text-color;
+  font-size: 14px;
+  transition: top 0.3s ease-out;
+
+  .searchBarContainer {
+    margin: 3px;
+  }
+  .option {
+    border-radius: 4px;
+    padding: 4px 12px;
+    margin: 2px 8px;
+    cursor: pointer;
+    text-align: center;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    background-color: $input-text-bg;
+  }
+  .option:hover {
+    background-color: $base-color;
+    color: $white;
+  }
+  .optionActive {
+    background-color: $base-color;
+    color: $white;
+  }
+}

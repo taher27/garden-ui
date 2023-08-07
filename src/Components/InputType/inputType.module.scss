@@ -16,19 +16,20 @@
     display: flex;
     flex: 1;
     input[type="text"],
-    input[type="date"] {
+    input[type="date"],
+    textarea {
       height: 100%;
       width: 100%;
       border-radius: 8px !important;
       border: 1px solid $grey;
       background-color: $white;
       color: $black;
-      font-size: 0.9rem !important;
+      font-size: 0.9rem;
       // font-weight: 600 !important;
       padding-left: 0.5rem !important;
       &:focus {
         outline: none !important;
-        box-shadow: 0 0 0 1px blue !important;
+        // box-shadow: 0 0 0 1px blue !important;
       }
     }
   }

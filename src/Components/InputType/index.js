@@ -24,6 +24,8 @@ class InputType extends Component {
       dataName,
       label,
       labelStyles = {},
+      rows = "3",
+      cols = "5",
     } = this.props;
 
     return (
@@ -61,6 +63,18 @@ class InputType extends Component {
               }}
               readOnly={readOnly}
               style={{ ...styles }}
+            />
+          )}
+          {type === "textarea" && (
+            <textarea
+              rows={rows}
+              cols={cols}
+              placeholder={placeholder}
+              value={value}
+              onChange={(e) => {
+                onChangeHandler(e.target.value);
+              }}
+              style={styles}
             />
           )}
         </div>
