@@ -58,6 +58,8 @@ function Activities(props) {
       if (!isEditView) {
         setChallanNo("");
         setCustomerName("");
+        setColorName("");
+        setAdditionalInfo("");
         setFactoryName({
           title: "Kantharia",
           key: "Kantharia",

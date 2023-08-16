@@ -29,11 +29,20 @@ function CreateOrder(props) {
   const [pano, setPano] = useState({});
 
   useEffect(() => {
-    if (_.isEmpty(kidsOrder) && category === "kids")
+    if (
+      (_.isEmpty(kidsOrder) || _.isEmpty(orderContent.kids)) &&
+      category === "kids"
+    )
       setKidsOrder(kidsOrderStructure);
-    if (_.isEmpty(boysOrder) && category === "boys")
+    if (
+      (_.isEmpty(boysOrder) || _.isEmpty(orderContent.boys)) &&
+      category === "boys"
+    )
       setBoysOrder(boysOrderStructure);
-    if (_.isEmpty(menOrder) && category === "men")
+    if (
+      (_.isEmpty(menOrder) || _.isEmpty(orderContent.men)) &&
+      category === "men"
+    )
       setMenOrder(menOrderStructure);
     if (_.isEmpty(pano)) setPano({ kids: 58, boys: 58, men: 58 });
   }, [category, kidsOrder, boysOrder, menOrder, pano]);
