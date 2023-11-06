@@ -1,0 +1,18 @@
+petId,additionalMetadata,file
+123,blue cat,cat.jpg
+456,,dog.jpg
+789,green bird,bird.jpg
+,red fish,fish.jpg
+abc,orange dog,dog2.jpg
+111,blue cat,
+xyz,,cat2.jpg
+,green bird,
+222,,
+,orange dog,dog3.jpg
+333,red fish,fish2.jpg
+def,,bird2.jpg
+444,blue cat,cat3.jpg
+,orange dog,
+555,,dog4.jpg
+,green bird,bird3.jpg
+666,red fish,fish3.jpg

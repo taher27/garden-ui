@@ -1,0 +1,11 @@
+ID,Name,Email,DOB,Phone,Address,Tags
+1,John Doe,12345,1990-01-01,9876543210,123 Street,Technology
+2,Jane Doe,,1985-12-12,1234567890,456 Lane,Science
+3,James Smith,james@domain.com,,1122334455,789 Boulevard,Mathematics
+4,Emma Johnson,emma@domain.com,1992-07-07,,101 Avenue,Arts
+5,Oliver Brown,67890,1995-05-05,5566778899,202 Street,History
+6,Isabella Williams,isabella@domain.com,1993-03-03,9988776655,,Geography
+7,Noah Davis,noah@domain.com,,2233445566,303 Lane,Physics
+8,Sophia Miller,sophia@domain.com,1991-11-11,,404 Boulevard,Literature
+9,Liam Wilson,liam@domain.com,1996-06-06,7788990011,505 Avenue,Chemistry
+10,Mia Moore,123456,1994-04-04,8899001122,606 Street,Biology

@@ -1,0 +1,11 @@
+ID,Name,Email,Phone,Date of Birth,Status
+1,John Doe,johndoe@example.com,1234567890,1990-01-01,Active
+2,Jane Doe,janedoe@example.com,0987654321,1991-02-02,Inactive
+3,,doe3@example.com,,1992-03-03,
+4,Doe 4,doe4@example.com,5678901234,1993-04-04,Active
+5,Doe 5,doe5@example.com,4567890123,1994-05-05,Inactive
+6,Doe 6,doe6@example.com,3456789012,1995-06-06,Active
+7,John Doe 7,johndoe7@example.com,2345678901,1996-07-07,Inactive
+8,Jane Doe 8,janedoe8@example.com,1234567890,1997-08-08,Active
+9,Doe 9,,9012345678,1998-09-09,Inactive
+10,Doe 10,doe10@example.com,8901234567,1999-10-10,Active
