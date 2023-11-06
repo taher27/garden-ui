@@ -1,0 +1,12 @@
+id,petId,quantity,shipDate,status,complete
+1,5678,3,2022-05-01,delivered,
+23,8910,5,2022-06-05,ordered,false
+,2234,2,2022-01-01,delivered,true
+45,5678,,2022-02-02,delivered,
+67,8910,4,2022-03-03,ordered,
+89,2234,1,2022-04-04,,
+112,5678,6,2022-05-05,delivered,false
+134,8910,7,2022-06-06,ordered,true
+156,,8,2022-01-07,delivered,
+178,2234,9,2022-02-08,delivered,false
+200,5678,,2022-03-09,ordered,

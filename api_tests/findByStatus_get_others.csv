@@ -1,0 +1,21 @@
+ID,Name,Email,DateOfBirth,PhoneNumber,Status
+1,John Doe,johndoe@example.com,1990-12-24,1234567890,Active
+2,Jane Doe,janedoe@example.com,1991-05-20,0987654321,Inactive
+3,Jim Doe,jimdoe@example.com,1992-07-15,1122334455,Active
+4,Jill Doe,,1993-09-10,5566778899,Inactive
+5,Joe Doe,joedoe@example.com,1994-11-05,,Active
+6,Jack Doe,1234567890,1995-01-31,7788991122,Inactive
+7,Judy Doe,judydoe@example.com,1996-04-26,4466889933,Active
+8,Jeff Doe,,1997-06-21,3344556677,Inactive
+9,Jerry Doe,jerrydoe@example.com,1998-08-16,,Active
+10,Jessica Doe,9876543210,1999-10-12,2233445566,Inactive
+11,Justin Doe,justindoe@example.com,,1122334455,Active
+12,Julia Doe,juliadoe@example.com,2001-02-06,5566778899,Inactive
+13,Joan Doe,1234567890,2002-04-03,,Active
+14,Jacob Doe,jacobdoe@example.com,2003-05-29,7788991122,Inactive
+15,Jasmine Doe,,2004-07-24,4466889933,Active
+16,Jason Doe,jasondoe@example.com,2005-09-18,3344556677,Inactive
+17,Jade Doe,jadedoe@example.com,2006-11-14,,Active
+18,Jiminy Doe,9876543210,2007-01-10,2233445566,Inactive
+19,Jenna Doe,jennadoe@example.com,,1122334455,Active
+20,Jared Doe,jareddoe@example.com,2009-05-06,5566778899,Inactive
