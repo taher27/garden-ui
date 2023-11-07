@@ -1,0 +1,21 @@
+ID,Name,Email,Phone,Date_of_Birth,Address,Tag
+1,John Doe,johndoe@gmail.com,1234567890,1990-01-01,123 Main St,Admin
+2,Jane Doe,janedoe@gmail.com,0987654321,1992-02-02,456 Maple Ave,User
+3,James Smith,,9876543210,1994-03-03,789 Oak Blvd,Admin
+4,Jessica Smith,jessicasmith@gmail.com,,1996-04-04,1012 Pine Ln,
+5,Robert Johnson,robertjohnson@gmail.com,8765432109,1998-05-05,1314 Elm St,User
+6,Mary Johnson,maryjohnson@gmail.com,7654321098,2000-06-06,1516 Cedar Ave,Admin
+7,Michael Williams,michaelwilliams@gmail.com,6543210987,,1718 Birch Blvd,User
+8,,lindabrown@gmail.com,5432109876,2002-08-08,1920 Redwood Ln,Admin
+9,David Jones,davidjones@gmail.com,4321098765,2004-09-09,2122 Willow St,User
+10,,patriciamiller@gmail.com,3210987654,2006-10-10,2324 Sequoia Ave,Admin
+11,Patricia Miller,,2109876543,2008-11-11,2526 Spruce Blvd,User
+12,Robert Brown,robertbrown@gmail.com,1098765432,2010-12-12,2728 Maple Ln,Admin
+13,Linda Davis,lindadavis@gmail.com,9876543210,2012-01-01,2930 Oak St,User
+14,Michael Miller,michaelmiller@gmail.com,8765432109,2014-02-02,3132 Pine Ave,Admin
+15,David Anderson,,7654321098,2016-03-03,3334 Cedar Blvd,User
+16,Jessica Williams,jessicawilliams@gmail.com,6543210987,2018-04-04,3536 Birch Ln,Admin
+17,Mary Smith,marysmith@gmail.com,5432109876,2020-05-05,3738 Redwood St,User
+18,James Johnson,jamesjohnson@gmail.com,4321098765,,3930 Willow Ave,Admin
+19,Patricia Brown,patriciabrown@gmail.com,3210987654,2022-07-07,4142 Sequoia Blvd,User
+20,Robert Davis,,2109876543,2024-08-08,4344 Spruce Ln,Admin
