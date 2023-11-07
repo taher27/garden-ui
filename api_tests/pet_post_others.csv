@@ -1,0 +1,11 @@
+id,name,category_id,category_name,photoUrls,tag_id,tag_name,status
+123,John Doe,456,Furniture,http://example.com/photo1.jpg,789,Wooden,Available
+,Emma Smith,111,Clothing,http://example.com/photo2.jpg,222,Cotton,Out of Stock
+789,James Johnson,333,Electronics,http://example.com/photo3.jpg,444,Metal,Available
+456,,999,Books,,555,Paper,Discontinued
+321,Olivia Brown,666,Toys,http://example.com/photo4.jpg,777,Plastic,Available
+234,Michael Davis,,Sports,http://example.com/photo5.jpg,888,Rubber,Out of Stock
+567,Natalie Miller,222,Beauty,http://example.com/photo6.jpg,,Natural,Discontinued
+891,Liam Wilson,777,Stationery,,999,Paper,Available
+654,,333,Grocery,http://example.com/photo7.jpg,111,Organic,Out of Stock
+987,Sophia Thomas,888,Health,,222,Synthetic,Discontinued
