@@ -1,0 +1,6 @@
+additionalMetadata,petId,statusCode,scenario
+"{\n  \"code\": -64403449,\n  \"type\": \"in culpa sit sint\",\n  \"message\": \"reprehenderit laboris aute sit\"\n}",198772,200,Successful responses: OK
+{
+  "mode": "file"
+},198772,200,Successful responses: OK
+{"id":{"datatype":"integer","example":10},"petId":{"datatype":"integer","example":198772},"quantity":{"datatype":"integer","example":7},"status":{"datatype":"string","enum":["available","pending","sold"]},"username":{"datatype":"string","example":"theUser"},"street":{"datatype":"string","example":"437 Lytton"},"city":{"datatype":"string","example":"Palo Alto"},"state":{"datatype":"string","example":"CA"},"zip":{"datatype":"string","example":"94301"},"name":{"datatype":"string","example":"doggie"},"firstName":{"datatype":"string","example":"John"},"lastName":{"datatype":"string","example":"James"},"email":{"datatype":"string","example":"john@email.com"},"password":{"datatype":"string","example":"12345"},"phone":{"datatype":"string","example":"12345"},"userStatus":{"datatype":"integer","example":1}},198772,200,Successful responses: OK

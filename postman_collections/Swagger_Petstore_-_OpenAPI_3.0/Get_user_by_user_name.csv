@@ -1,0 +1,22 @@
+username,statusCode,scenario
+theUser,200,Successful responses: OK
+theUser,400,Client error responses: Bad Request
+theUser,404,Client error responses: Not Found
+John,200,Successful responses: OK
+John,400,Client error responses: Bad Request
+John,404,Client error responses: Not Found
+James,200,Successful responses: OK
+James,400,Client error responses: Bad Request
+James,404,Client error responses: Not Found
+john@email.com,200,Successful responses: OK
+john@email.com,400,Client error responses: Bad Request
+john@email.com,404,Client error responses: Not Found
+12345,200,Successful responses: OK
+12345,400,Client error responses: Bad Request
+12345,404,Client error responses: Not Found
+12345,200,Successful responses: OK
+12345,400,Client error responses: Bad Request
+12345,404,Client error responses: Not Found
+1,200,Successful responses: OK
+1,400,Client error responses: Bad Request
+1,404,Client error responses: Not Found

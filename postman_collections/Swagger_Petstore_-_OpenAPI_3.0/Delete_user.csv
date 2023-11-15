@@ -1,0 +1,3 @@
+username,statusCode,scenario
+theUser,400,Client error responses: Bad Request
+theUser,404,Client error responses: Not Found

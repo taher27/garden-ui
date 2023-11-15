@@ -1,0 +1,7 @@
+name,photoUrls,id,tags,status,statusCode,scenario
+doggie,string1;string2,10,long1;long2,available,200,Successful responses: OK
+puppy,string3;string4,20,long3;long4,pending,200,Successful responses: OK
+kitty,string5;string6,30,long5;long6,sold,200,Successful responses: OK
+bunny,string7;string8,40,long7;long8,available,405,Client error responses: Method Not Allowed
+hamster,string9;string10,50,long9;long10,pending,405,Client error responses: Method Not Allowed
+parrot,string11;string12,60,long11;long12,sold,405,Client error responses: Method Not Allowed

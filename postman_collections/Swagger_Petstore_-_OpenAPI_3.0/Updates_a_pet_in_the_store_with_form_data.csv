@@ -1,0 +1,11 @@
+name,status,petId,statusCode,scenario
+doggie,available,198772,405,Client error responses: Method Not Allowed
+John,pending,198772,405,Client error responses: Method Not Allowed
+James,sold,198772,405,Client error responses: Method Not Allowed
+theUser,available,198772,405,Client error responses: Method Not Allowed
+437 Lytton,pending,198772,405,Client error responses: Method Not Allowed
+Palo Alto,sold,198772,405,Client error responses: Method Not Allowed
+CA,available,198772,405,Client error responses: Method Not Allowed
+94301,pending,198772,405,Client error responses: Method Not Allowed
+john@email.com,sold,198772,405,Client error responses: Method Not Allowed
+12345,available,198772,405,Client error responses: Method Not Allowed

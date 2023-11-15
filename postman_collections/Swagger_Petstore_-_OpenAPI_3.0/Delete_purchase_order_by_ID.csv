@@ -1,0 +1,11 @@
+orderId,statusCode,scenario
+1,400,Client error responses: Bad Request
+2,400,Client error responses: Bad Request
+3,400,Client error responses: Bad Request
+4,404,Client error responses: Not Found
+5,404,Client error responses: Not Found
+6,404,Client error responses: Not Found
+7,400,Client error responses: Bad Request
+8,400,Client error responses: Bad Request
+9,404,Client error responses: Not Found
+10,404,Client error responses: Not Found
