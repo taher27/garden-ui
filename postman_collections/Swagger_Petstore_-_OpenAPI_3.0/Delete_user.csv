@@ -1,0 +1,13 @@
+username,statusCode,scenario
+theUser,400,Client error responses: Bad Request
+John,404,Client error responses: Not Found
+James,400,Client error responses: Bad Request
+john@email.com,404,Client error responses: Not Found
+doggie,400,Client error responses: Bad Request
+437 Lytton,404,Client error responses: Not Found
+Palo Alto,400,Client error responses: Bad Request
+CA,404,Client error responses: Not Found
+94301,400,Client error responses: Bad Request
+12345,404,Client error responses: Not Found
+12345,400,Client error responses: Bad Request
+1,404,Client error responses: Not Found
