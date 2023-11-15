@@ -1,0 +1,5 @@
+id,username,firstName,lastName,email,password,phone,userStatus,statusCode,scenario
+10,theUser,John,James,john@email.com,12345,12345,1,200,Successful responses: OK
+10,theUser,John,James,john@email.com,12345,12345,1,500,Server error responses: Internal Server Error
+10,theUser,John,James,john@email.com,12345,12345,1,200,Successful responses: OK
+10,theUser,John,James,john@email.com,12345,12345,1,500,Server error responses: Internal Server Error

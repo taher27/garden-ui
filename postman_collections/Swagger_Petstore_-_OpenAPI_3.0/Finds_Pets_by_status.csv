@@ -1,0 +1,7 @@
+status,statusCode,scenario
+available,200,Successful responses: OK
+pending,200,Successful responses: OK
+sold,200,Successful responses: OK
+available,400,Client error responses: Bad Request
+pending,400,Client error responses: Bad Request
+sold,400,Client error responses: Bad Request

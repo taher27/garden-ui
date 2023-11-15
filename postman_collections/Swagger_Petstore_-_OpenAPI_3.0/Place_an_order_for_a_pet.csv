@@ -1,0 +1,11 @@
+id,petId,quantity,shipDate,status,complete,statusCode,scenario
+10,198772,7,2022-03-22,approved,true,200,Successful responses: OK
+11,198773,8,2022-03-23,pending,true,405,Client error responses: Method Not Allowed
+12,198774,9,2022-03-24,sold,false,200,Successful responses: OK
+13,198775,10,2022-03-25,approved,true,405,Client error responses: Method Not Allowed
+14,198776,11,2022-03-26,pending,false,200,Successful responses: OK
+15,198777,12,2022-03-27,sold,true,405,Client error responses: Method Not Allowed
+16,198778,13,2022-03-28,approved,false,200,Successful responses: OK
+17,198779,14,2022-03-29,pending,true,405,Client error responses: Method Not Allowed
+18,198780,15,2022-03-30,sold,false,200,Successful responses: OK
+19,198781,16,2022-03-31,approved,true,405,Client error responses: Method Not Allowed
