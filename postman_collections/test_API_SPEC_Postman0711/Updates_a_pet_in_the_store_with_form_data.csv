@@ -1,0 +1,6 @@
+name,status,petId,statusCode,scenario
+doggie,available,198772,405,Client error responses: Method Not Allowed
+doggie,pending,198772,405,Client error responses: Method Not Allowed
+doggie,sold,198772,405,Client error responses: Method Not Allowed
+doggie,available,198772,405,Client error responses: Method Not Allowed
+doggie,pending,198772,405,Client error responses: Method Not Allowed

@@ -1,0 +1,21 @@
+tags,statusCode,scenario
+doggie,200,Successful responses: OK
+doggie,400,Client error responses: Bad Request
+Dogs,200,Successful responses: OK
+Dogs,400,Client error responses: Bad Request
+theUser,200,Successful responses: OK
+theUser,400,Client error responses: Bad Request
+John,200,Successful responses: OK
+John,400,Client error responses: Bad Request
+James,200,Successful responses: OK
+James,400,Client error responses: Bad Request
+john@email.com,200,Successful responses: OK
+john@email.com,400,Client error responses: Bad Request
+12345,200,Successful responses: OK
+12345,400,Client error responses: Bad Request
+Palo Alto,200,Successful responses: OK
+Palo Alto,400,Client error responses: Bad Request
+CA,200,Successful responses: OK
+CA,400,Client error responses: Bad Request
+94301,200,Successful responses: OK
+94301,400,Client error responses: Bad Request
