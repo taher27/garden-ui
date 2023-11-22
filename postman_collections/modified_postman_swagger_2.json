@@ -1,0 +1,3575 @@
+{
+  "item": [
+    {
+      "id": "e4b2efaa-f6f6-415d-a2d4-5647db846ff1",
+      "name": "pet",
+      "item": [
+        {
+          "id": "1f7fc2bd-d6a4-4ec4-9144-c57bdc31baf5",
+          "name": "Update an existing pet",
+          "request": {
+            "name": "Update an existing pet",
+            "description": {
+              "content": "Update an existing pet by Id",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pet"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "write:pets read:pets"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://petstore3.swagger.io/oauth/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "implicit"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "{{name}}",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "photoUrls",
+                  "value": "{{photoUrls}}",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "photoUrls",
+                  "value": "{{photoUrls}}",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "{{id}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "{{id}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "{{name}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "{{tags}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "{{tags}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "{{status}}",
+                  "description": "pet status in the store"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "66153b74-b61c-4fbe-ad89-daa8e9f2dcc1",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "pet status in the store",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "{{status}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": 10,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "37ad5067-f3ad-4b86-a389-8814cadd9672",
+              "name": "Invalid ID supplied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "pet status in the store",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "{{status}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9f5e98f0-1986-4383-9d97-08da3e9381ea",
+              "name": "Pet not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "pet status in the store",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "{{status}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c4949ba0-6297-47f4-b65c-960095edc661",
+              "name": "Validation exception",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "pet status in the store",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "{{status}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Method Not Allowed",
+              "code": 405,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"id\")){\n            if(responseData.id!=null){\n              pm.expect(typeof _.get(responseData, \"id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `name` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"name\")){\n          if(responseData.name!=null){\n            pm.expect(typeof _.get(responseData, \"name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `category` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"category\")){\n          if(responseData.category!=null){\n            pm.expect(typeof _.get(responseData, \"category\", 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n          \n\n        pm.test('Response has the `category.id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"category.id\")){\n            if(responseData.category.id!=null){\n              pm.expect(typeof _.get(responseData, \"category.id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `category.name` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"category.name\")){\n          if(responseData.category.name!=null){\n            pm.expect(typeof _.get(responseData, \"category.name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n      \n        pm.test('Response has the `photoUrls` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"photoUrls\")){\n            if(responseData.photoUrls!=null){\n              pm.expect(Array.isArray(_.get(pm.response.json(), \"photoUrls\"))).to.equal(true);\n            }\n          }\n\n        })\n          \n      \n        pm.test('Response has the `tags` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"tags\")){\n            if(responseData.tags!=null){\n              pm.expect(Array.isArray(_.get(pm.response.json(), \"tags\"))).to.equal(true);\n            }\n          }\n\n        })\n          \n\n      pm.test('Each object in the `tags` field has all the required fields',function(){         \n          pm.expect(pm.response.json()).to.have.nested.property(\"tags\");  \n          let tagsArray = _.get(pm.response.json(), \"tags\", \"\");  \n          for (let i = 0; i < tagsArray.length; i++) {  \n            \t\n        pm.test(`${i} element of array 'tags' has 'id' as number`,function(){  \n          if(pm.expect(pm.response.json().tags[i]).to.have.nested.property(\"id\")){\n            if(pm.response.json().tags[i].id != null ){\n              pm.expect(typeof _.get(pm.response.json(),`tags[${i}].id`, 200)).to.equal(\"number\");\n            }\n          }   \n        })\n\n\n      pm.test(`${i} element of array 'tags' has 'name' as 'string'`,function(){ \n        if(pm.expect(pm.response.json().tags[i]).to.have.nested.property(\"name\")){\n          if(pm.response.json().tags[i].name != null){\n            pm.expect(typeof _.get(pm.response.json(),`tags[${i}].name`, 200)).to.equal(\"string\");\n          }\n        }\n      })\n \n  \n          }\n\n      })\n\n      pm.test('Response has the `status` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"status\")){\n          if(responseData.status!=null){\n            pm.expect(typeof _.get(responseData, \"status\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n  \n        pm.expect(_.get(pm.response.json(), \"status\", \"\")).to.be.oneOf(available,pending,sold);\n});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid ID supplied\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Pet not found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");});\n}\n\nif (pm.response.code == 405){\n    pm.test(\"Validation exception\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Method Not Allowed\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5dc5478c-7960-4d62-bb3a-eb7376b779d1",
+          "name": "Add a new pet to the store",
+          "request": {
+            "name": "Add a new pet to the store",
+            "description": {
+              "content": "Add a new pet to the store",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pet"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "write:pets read:pets"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://petstore3.swagger.io/oauth/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "implicit"
+                }
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "{{name}}",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "photoUrls",
+                  "value": "{{photoUrls}}",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "photoUrls",
+                  "value": "{{photoUrls}}",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "{{id}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "{{id}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "{{name}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "{{tags}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "{{tags}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "{{status}}",
+                  "description": "pet status in the store"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "709c354c-f616-4309-b028-29c15c7bfaed",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "pet status in the store",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "{{status}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": 10,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"<string>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dd8eaecd-dce8-448c-b0cd-3ada675c2d44",
+              "name": "Invalid input",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) ",
+                        "type": "text/plain"
+                      },
+                      "key": "photoUrls",
+                      "value": "{{photoUrls}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "pet status in the store",
+                        "type": "text/plain"
+                      },
+                      "key": "status",
+                      "value": "{{status}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Method Not Allowed",
+              "code": 405,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"id\")){\n            if(responseData.id!=null){\n              pm.expect(typeof _.get(responseData, \"id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `name` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"name\")){\n          if(responseData.name!=null){\n            pm.expect(typeof _.get(responseData, \"name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `category` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"category\")){\n          if(responseData.category!=null){\n            pm.expect(typeof _.get(responseData, \"category\", 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n          \n\n        pm.test('Response has the `category.id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"category.id\")){\n            if(responseData.category.id!=null){\n              pm.expect(typeof _.get(responseData, \"category.id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `category.name` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"category.name\")){\n          if(responseData.category.name!=null){\n            pm.expect(typeof _.get(responseData, \"category.name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n      \n        pm.test('Response has the `photoUrls` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"photoUrls\")){\n            if(responseData.photoUrls!=null){\n              pm.expect(Array.isArray(_.get(pm.response.json(), \"photoUrls\"))).to.equal(true);\n            }\n          }\n\n        })\n          \n      \n        pm.test('Response has the `tags` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"tags\")){\n            if(responseData.tags!=null){\n              pm.expect(Array.isArray(_.get(pm.response.json(), \"tags\"))).to.equal(true);\n            }\n          }\n\n        })\n          \n\n      pm.test('Each object in the `tags` field has all the required fields',function(){         \n          pm.expect(pm.response.json()).to.have.nested.property(\"tags\");  \n          let tagsArray = _.get(pm.response.json(), \"tags\", \"\");  \n          for (let i = 0; i < tagsArray.length; i++) {  \n            \t\n        pm.test(`${i} element of array 'tags' has 'id' as number`,function(){  \n          if(pm.expect(pm.response.json().tags[i]).to.have.nested.property(\"id\")){\n            if(pm.response.json().tags[i].id != null ){\n              pm.expect(typeof _.get(pm.response.json(),`tags[${i}].id`, 200)).to.equal(\"number\");\n            }\n          }   \n        })\n\n\n      pm.test(`${i} element of array 'tags' has 'name' as 'string'`,function(){ \n        if(pm.expect(pm.response.json().tags[i]).to.have.nested.property(\"name\")){\n          if(pm.response.json().tags[i].name != null){\n            pm.expect(typeof _.get(pm.response.json(),`tags[${i}].name`, 200)).to.equal(\"string\");\n          }\n        }\n      })\n \n  \n          }\n\n      })\n\n      pm.test('Response has the `status` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"status\")){\n          if(responseData.status!=null){\n            pm.expect(typeof _.get(responseData, \"status\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n  \n        pm.expect(_.get(pm.response.json(), \"status\", \"\")).to.be.oneOf(available,pending,sold);\n});\n}\n\nif (pm.response.code == 405){\n    pm.test(\"Invalid input\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Method Not Allowed\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "324b9917-5445-4292-b490-b318d2ba5679",
+          "name": "Finds Pets by status",
+          "request": {
+            "name": "Finds Pets by status",
+            "description": {
+              "content": "Multiple status values can be provided with comma separated strings",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pet",
+                "findByStatus"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "status",
+                  "value": "{{status}}",
+                  "description": "Status values that need to be considered for filter"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "write:pets read:pets"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://petstore3.swagger.io/oauth/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "implicit"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b78f2dc6-6e25-4f8b-975e-2ef19ba363f7",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet",
+                    "findByStatus"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "{{status}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": 10,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Dogs\"\n    },\n    \"tags\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"status\": \"<string>\"\n  },\n  {\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": 10,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Dogs\"\n    },\n    \"tags\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"status\": \"<string>\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "95c6aa79-cbf5-4a5c-9202-041d6fc91d6c",
+              "name": "Invalid status value",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet",
+                    "findByStatus"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "status",
+                      "value": "{{status}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid status value\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a68bc8a0-db90-4dc9-a2e7-4932d4443502",
+          "name": "Finds Pets by tags",
+          "request": {
+            "name": "Finds Pets by tags",
+            "description": {
+              "content": "Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pet",
+                "findByTags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "{{tags}}",
+                  "description": "Tags to filter by"
+                },
+                {
+                  "disabled": false,
+                  "key": "tags",
+                  "value": "{{tags}}",
+                  "description": "Tags to filter by"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "scope",
+                  "value": "write:pets read:pets"
+                },
+                {
+                  "key": "authUrl",
+                  "value": "https://petstore3.swagger.io/oauth/authorize"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "implicit"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ca4b7eb2-db89-4199-87e3-c83104b1927f",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet",
+                    "findByTags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": 10,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Dogs\"\n    },\n    \"tags\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"status\": \"<string>\"\n  },\n  {\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"id\": 10,\n    \"category\": {\n      \"id\": 1,\n      \"name\": \"Dogs\"\n    },\n    \"tags\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\"\n      }\n    ],\n    \"status\": \"<string>\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d3dedad2-8e55-4213-abeb-acd6852b8eb4",
+              "name": "Invalid tag value",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pet",
+                    "findByTags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    },
+                    {
+                      "key": "tags",
+                      "value": "{{tags}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid tag value\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bb2780a6-8732-43f0-8f35-8acaea0340d4",
+          "name": "{petId}",
+          "item": [
+            {
+              "id": "f0ec50d4-f20e-4918-9cc9-1ea6b2c89ab8",
+              "name": "Find pet by ID",
+              "request": {
+                "name": "Find pet by ID",
+                "description": {
+                  "content": "Returns a single pet",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": [
+                    "pet",
+                    ":petId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{petId}}",
+                      "key": "petId",
+                      "description": "(Required) ID of pet to return"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "auth": {
+                  "type": "apikey",
+                  "apikey": [
+                    {
+                      "key": "key",
+                      "value": "api_key"
+                    },
+                    {
+                      "key": "value",
+                      "value": "{{apiKey}}"
+                    },
+                    {
+                      "key": "in",
+                      "value": "header"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "7226dce9-3ece-4211-968f-bdb274c1f355",
+                  "name": "successful operation",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "pet",
+                        ":petId"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{petId}}",
+                          "key": "petId",
+                          "description": "(Required) ID of pet to return"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: apikey",
+                          "type": "text/plain"
+                        },
+                        "key": "api_key",
+                        "value": "{{api_key}}"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": "{\n  \"name\": \"doggie\",\n  \"photoUrls\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"id\": 10,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Dogs\"\n  },\n  \"tags\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"status\": \"<string>\"\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                },
+                {
+                  "id": "30685365-18fd-4e50-8565-e5dff6618538",
+                  "name": "Invalid ID supplied",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "pet",
+                        ":petId"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{petId}}",
+                          "key": "petId",
+                          "description": "(Required) ID of pet to return"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: apikey",
+                          "type": "text/plain"
+                        },
+                        "key": "api_key",
+                        "value": "{{api_key}}"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                },
+                {
+                  "id": "3cdf0163-10f8-43cf-9007-e35ecd7fe58c",
+                  "name": "Pet not found",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "pet",
+                        ":petId"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{petId}}",
+                          "key": "petId",
+                          "description": "(Required) ID of pet to return"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: apikey",
+                          "type": "text/plain"
+                        },
+                        "key": "api_key",
+                        "value": "{{api_key}}"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"id\")){\n            if(responseData.id!=null){\n              pm.expect(typeof _.get(responseData, \"id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `name` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"name\")){\n          if(responseData.name!=null){\n            pm.expect(typeof _.get(responseData, \"name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `category` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"category\")){\n          if(responseData.category!=null){\n            pm.expect(typeof _.get(responseData, \"category\", 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n          \n\n        pm.test('Response has the `category.id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"category.id\")){\n            if(responseData.category.id!=null){\n              pm.expect(typeof _.get(responseData, \"category.id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `category.name` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"category.name\")){\n          if(responseData.category.name!=null){\n            pm.expect(typeof _.get(responseData, \"category.name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n      \n        pm.test('Response has the `photoUrls` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"photoUrls\")){\n            if(responseData.photoUrls!=null){\n              pm.expect(Array.isArray(_.get(pm.response.json(), \"photoUrls\"))).to.equal(true);\n            }\n          }\n\n        })\n          \n      \n        pm.test('Response has the `tags` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"tags\")){\n            if(responseData.tags!=null){\n              pm.expect(Array.isArray(_.get(pm.response.json(), \"tags\"))).to.equal(true);\n            }\n          }\n\n        })\n          \n\n      pm.test('Each object in the `tags` field has all the required fields',function(){         \n          pm.expect(pm.response.json()).to.have.nested.property(\"tags\");  \n          let tagsArray = _.get(pm.response.json(), \"tags\", \"\");  \n          for (let i = 0; i < tagsArray.length; i++) {  \n            \t\n        pm.test(`${i} element of array 'tags' has 'id' as number`,function(){  \n          if(pm.expect(pm.response.json().tags[i]).to.have.nested.property(\"id\")){\n            if(pm.response.json().tags[i].id != null ){\n              pm.expect(typeof _.get(pm.response.json(),`tags[${i}].id`, 200)).to.equal(\"number\");\n            }\n          }   \n        })\n\n\n      pm.test(`${i} element of array 'tags' has 'name' as 'string'`,function(){ \n        if(pm.expect(pm.response.json().tags[i]).to.have.nested.property(\"name\")){\n          if(pm.response.json().tags[i].name != null){\n            pm.expect(typeof _.get(pm.response.json(),`tags[${i}].name`, 200)).to.equal(\"string\");\n          }\n        }\n      })\n \n  \n          }\n\n      })\n\n      pm.test('Response has the `status` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"status\")){\n          if(responseData.status!=null){\n            pm.expect(typeof _.get(responseData, \"status\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n  \n        pm.expect(_.get(pm.response.json(), \"status\", \"\")).to.be.oneOf(available,pending,sold);\n});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid ID supplied\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Pet not found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");});\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "71158168-c8f0-4924-ab1c-d4a3d5fa41e5",
+              "name": "Updates a pet in the store with form data",
+              "request": {
+                "name": "Updates a pet in the store with form data",
+                "description": {
+                  "content": "",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": [
+                    "pet",
+                    ":petId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}",
+                      "description": "Name of pet that needs to be updated"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "{{status}}",
+                      "description": "Status of pet that needs to be updated"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{petId}}",
+                      "key": "petId",
+                      "description": "(Required) ID of pet that needs to be updated"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "scope",
+                      "value": "write:pets read:pets"
+                    },
+                    {
+                      "key": "authUrl",
+                      "value": "https://petstore3.swagger.io/oauth/authorize"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "implicit"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "c91e40e4-5489-4100-b01f-790f14d41aa4",
+                  "name": "Invalid input",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "pet",
+                        ":petId"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "name",
+                          "value": "{{name}}"
+                        },
+                        {
+                          "key": "status",
+                          "value": "{{status}}"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{petId}}",
+                          "key": "petId",
+                          "description": "(Required) ID of pet that needs to be updated"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: oauth2",
+                          "type": "text/plain"
+                        },
+                        "key": "Authorization",
+                        "value": "{{Authorization}}"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {}
+                  },
+                  "status": "Method Not Allowed",
+                  "code": 405,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 405){\n    pm.test(\"Invalid input\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Method Not Allowed\");});\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "ec7a6998-b515-44b4-ba8e-00921b38b6b3",
+              "name": "Deletes a pet",
+              "request": {
+                "name": "Deletes a pet",
+                "description": {
+                  "content": "delete a pet",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": [
+                    "pet",
+                    ":petId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{petId}}",
+                      "key": "petId",
+                      "description": "(Required) Pet id to delete"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "api_key",
+                    "value": "{{api_key}}",
+                    "description": ""
+                  }
+                ],
+                "method": "DELETE",
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "scope",
+                      "value": "write:pets read:pets"
+                    },
+                    {
+                      "key": "authUrl",
+                      "value": "https://petstore3.swagger.io/oauth/authorize"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "implicit"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "638a9cc6-ae02-41f9-8c4d-f7cc8c22395d",
+                  "name": "Invalid pet value",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "pet",
+                        ":petId"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{petId}}",
+                          "key": "petId",
+                          "description": "(Required) Pet id to delete"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: oauth2",
+                          "type": "text/plain"
+                        },
+                        "key": "Authorization",
+                        "value": "{{Authorization}}"
+                      },
+                      {
+                        "disabled": false,
+                        "key": "api_key",
+                        "value": "{{api_key}}",
+                        "description": ""
+                      }
+                    ],
+                    "method": "DELETE",
+                    "body": {}
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid pet value\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "b8315881-4915-4019-86bb-8b4789b53587",
+              "name": "uploads an image",
+              "request": {
+                "name": "uploads an image",
+                "description": {
+                  "content": "",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": [
+                    "pet",
+                    ":petId",
+                    "uploadImage"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "key": "additionalMetadata",
+                      "value": "{{additionalMetadata}}",
+                      "description": "Additional Metadata"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{petId}}",
+                      "key": "petId",
+                      "description": "(Required) ID of pet to update"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/octet-stream"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "auth": {
+                  "type": "oauth2",
+                  "oauth2": [
+                    {
+                      "key": "scope",
+                      "value": "write:pets read:pets"
+                    },
+                    {
+                      "key": "authUrl",
+                      "value": "https://petstore3.swagger.io/oauth/authorize"
+                    },
+                    {
+                      "key": "grant_type",
+                      "value": "implicit"
+                    }
+                  ]
+                },
+                "body": {
+                  "mode": "file"
+                }
+              },
+              "response": [
+                {
+                  "id": "faef86a6-0c31-4321-b1e1-8f5f07359653",
+                  "name": "successful operation",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "pet",
+                        ":petId",
+                        "uploadImage"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "additionalMetadata",
+                          "value": "{{additionalMetadata}}"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{petId}}",
+                          "key": "petId",
+                          "description": "(Required) ID of pet to update"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "description": {
+                          "content": "Added as a part of security scheme: oauth2",
+                          "type": "text/plain"
+                        },
+                        "key": "Authorization",
+                        "value": "{{Authorization}}"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "file"
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": "{\n  \"code\": 42587391,\n  \"type\": \"ea eiusmod esse voluptate et\",\n  \"message\": \"culpa ad\"\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"id\")){\n            if(responseData.id!=null){\n              pm.expect(typeof _.get(responseData, \"id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `name` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"name\")){\n          if(responseData.name!=null){\n            pm.expect(typeof _.get(responseData, \"name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `category` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"category\")){\n          if(responseData.category!=null){\n            pm.expect(typeof _.get(responseData, \"category\", 200)).to.equal(\"object\");\n          }\n        }\n\n      })\n          \n\n        pm.test('Response has the `category.id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"category.id\")){\n            if(responseData.category.id!=null){\n              pm.expect(typeof _.get(responseData, \"category.id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `category.name` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"category.name\")){\n          if(responseData.category.name!=null){\n            pm.expect(typeof _.get(responseData, \"category.name\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n      \n        pm.test('Response has the `photoUrls` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"photoUrls\")){\n            if(responseData.photoUrls!=null){\n              pm.expect(Array.isArray(_.get(pm.response.json(), \"photoUrls\"))).to.equal(true);\n            }\n          }\n\n        })\n          \n      \n        pm.test('Response has the `tags` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"tags\")){\n            if(responseData.tags!=null){\n              pm.expect(Array.isArray(_.get(pm.response.json(), \"tags\"))).to.equal(true);\n            }\n          }\n\n        })\n          \n\n      pm.test('Each object in the `tags` field has all the required fields',function(){         \n          pm.expect(pm.response.json()).to.have.nested.property(\"tags\");  \n          let tagsArray = _.get(pm.response.json(), \"tags\", \"\");  \n          for (let i = 0; i < tagsArray.length; i++) {  \n            \t\n        pm.test(`${i} element of array 'tags' has 'id' as number`,function(){  \n          if(pm.expect(pm.response.json().tags[i]).to.have.nested.property(\"id\")){\n            if(pm.response.json().tags[i].id != null ){\n              pm.expect(typeof _.get(pm.response.json(),`tags[${i}].id`, 200)).to.equal(\"number\");\n            }\n          }   \n        })\n\n\n      pm.test(`${i} element of array 'tags' has 'name' as 'string'`,function(){ \n        if(pm.expect(pm.response.json().tags[i]).to.have.nested.property(\"name\")){\n          if(pm.response.json().tags[i].name != null){\n            pm.expect(typeof _.get(pm.response.json(),`tags[${i}].name`, 200)).to.equal(\"string\");\n          }\n        }\n      })\n \n  \n          }\n\n      })\n\n      pm.test('Response has the `status` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"status\")){\n          if(responseData.status!=null){\n            pm.expect(typeof _.get(responseData, \"status\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n  \n        pm.expect(_.get(pm.response.json(), \"status\", \"\")).to.be.oneOf(available,pending,sold);\n});\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5f6cdafd-6034-4f9c-a658-e48e69776e3e",
+      "name": "store",
+      "item": [
+        {
+          "id": "7c4c5b1a-e2d3-4d76-9411-0b5f4fb0e6b7",
+          "name": "Returns pet inventories by status",
+          "request": {
+            "name": "Returns pet inventories by status",
+            "description": {
+              "content": "Returns a map of status codes to quantities",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "store",
+                "inventory"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "api_key"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "c48b12d6-cd89-404a-9af7-1ae5eac4438b",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "store",
+                    "inventory"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "api_key",
+                    "value": "{{api_key}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"culpa_2c\": 97426055\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "47bee56b-49e0-4905-b1e3-bf0e69b0be62",
+          "name": "order",
+          "item": [
+            {
+              "id": "b3ef5da6-530f-496f-8525-9efc91144d75",
+              "name": "Place an order for a pet",
+              "request": {
+                "name": "Place an order for a pet",
+                "description": {
+                  "content": "Place a new order in the store",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": [
+                    "store",
+                    "order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "auth": null,
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "petId",
+                      "value": "{{petId}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "quantity",
+                      "value": "{{quantity}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "shipDate",
+                      "value": "{{shipDate}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "status",
+                      "value": "{{status}}",
+                      "description": "Order Status"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "complete",
+                      "value": "{{complete}}"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "e7cfed9f-ed19-4ba2-b1e0-a944573d26a1",
+                  "name": "successful operation",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "store",
+                        "order"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "method": "POST",
+                    "body": {
+                      "mode": "urlencoded",
+                      "urlencoded": [
+                        {
+                          "disabled": false,
+                          "key": "id",
+                          "value": "{{id}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "petId",
+                          "value": "{{petId}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "quantity",
+                          "value": "{{quantity}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "shipDate",
+                          "value": "{{shipDate}}"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "Order Status",
+                            "type": "text/plain"
+                          },
+                          "key": "status",
+                          "value": "{{status}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "complete",
+                          "value": "{{complete}}"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": "{\n  \"id\": 10,\n  \"petId\": 198772,\n  \"quantity\": 7,\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"approved\",\n  \"complete\": \"<boolean>\"\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                },
+                {
+                  "id": "d2363394-fdbd-4e0b-a954-58c705de7578",
+                  "name": "Invalid input",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "store",
+                        "order"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": []
+                    },
+                    "method": "POST",
+                    "body": {
+                      "mode": "urlencoded",
+                      "urlencoded": [
+                        {
+                          "disabled": false,
+                          "key": "id",
+                          "value": "{{id}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "petId",
+                          "value": "{{petId}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "quantity",
+                          "value": "{{quantity}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "shipDate",
+                          "value": "{{shipDate}}"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "Order Status",
+                            "type": "text/plain"
+                          },
+                          "key": "status",
+                          "value": "{{status}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "complete",
+                          "value": "{{complete}}"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Method Not Allowed",
+                  "code": 405,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"id\")){\n            if(responseData.id!=null){\n              pm.expect(typeof _.get(responseData, \"id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n        pm.test('Response has the `petId` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"petId\")){\n            if(responseData.petId!=null){\n              pm.expect(typeof _.get(responseData, \"petId\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n        pm.test('Response has the `quantity` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"quantity\")){\n            if(responseData.quantity!=null){\n              pm.expect(typeof _.get(responseData, \"quantity\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `shipDate` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"shipDate\")){\n          if(responseData.shipDate!=null){\n            pm.expect(typeof _.get(responseData, \"shipDate\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `status` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"status\")){\n          if(responseData.status!=null){\n            pm.expect(typeof _.get(responseData, \"status\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n  \n        pm.expect(_.get(pm.response.json(), \"status\", \"\")).to.be.oneOf(placed,approved,delivered);\n\n      pm.test('Response has the `complete` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"complete\")){\n          if(responseData.complete!=null){\n            pm.expect(typeof _.get(responseData, \"complete\", 200)).to.equal(\"boolean\");\n          }\n        }\n\n      })\n          \n});\n}\n\nif (pm.response.code == 405){\n    pm.test(\"Invalid input\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Method Not Allowed\");});\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "db944f52-4415-499f-b98a-6d1e6683c951",
+              "name": "{orderId}",
+              "item": [
+                {
+                  "id": "919d2018-42f1-4cef-ae22-0a881b7715ac",
+                  "name": "Find purchase order by ID",
+                  "request": {
+                    "name": "Find purchase order by ID",
+                    "description": {
+                      "content": "For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.",
+                      "type": "text/plain"
+                    },
+                    "url": {
+                      "path": [
+                        "store",
+                        "order",
+                        ":orderId"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{orderId}}",
+                          "key": "orderId",
+                          "description": "(Required) ID of order that needs to be fetched"
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "method": "GET",
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "b5a573b8-2b35-4db5-8088-c093bc2a1e5c",
+                      "name": "successful operation",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "store",
+                            "order",
+                            ":orderId"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{orderId}}",
+                              "key": "orderId",
+                              "description": "(Required) ID of order that needs to be fetched"
+                            }
+                          ]
+                        },
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          }
+                        ],
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "body": "{\n  \"id\": 10,\n  \"petId\": 198772,\n  \"quantity\": 7,\n  \"shipDate\": \"<dateTime>\",\n  \"status\": \"approved\",\n  \"complete\": \"<boolean>\"\n}",
+                      "cookie": [],
+                      "_postman_previewlanguage": "json"
+                    },
+                    {
+                      "id": "b3cbd97a-2ad8-4234-b702-20d3b5e73905",
+                      "name": "Invalid ID supplied",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "store",
+                            "order",
+                            ":orderId"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{orderId}}",
+                              "key": "orderId",
+                              "description": "(Required) ID of order that needs to be fetched"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    },
+                    {
+                      "id": "c7a0f660-0c80-4553-872b-11974c55178f",
+                      "name": "Order not found",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "store",
+                            "order",
+                            ":orderId"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{orderId}}",
+                              "key": "orderId",
+                              "description": "(Required) ID of order that needs to be fetched"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"id\")){\n            if(responseData.id!=null){\n              pm.expect(typeof _.get(responseData, \"id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n        pm.test('Response has the `petId` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"petId\")){\n            if(responseData.petId!=null){\n              pm.expect(typeof _.get(responseData, \"petId\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n        pm.test('Response has the `quantity` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"quantity\")){\n            if(responseData.quantity!=null){\n              pm.expect(typeof _.get(responseData, \"quantity\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `shipDate` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"shipDate\")){\n          if(responseData.shipDate!=null){\n            pm.expect(typeof _.get(responseData, \"shipDate\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `status` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"status\")){\n          if(responseData.status!=null){\n            pm.expect(typeof _.get(responseData, \"status\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n  \n        pm.expect(_.get(pm.response.json(), \"status\", \"\")).to.be.oneOf(placed,approved,delivered);\n\n      pm.test('Response has the `complete` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"complete\")){\n          if(responseData.complete!=null){\n            pm.expect(typeof _.get(responseData, \"complete\", 200)).to.equal(\"boolean\");\n          }\n        }\n\n      })\n          \n});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid ID supplied\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Order not found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");});\n}\n"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                },
+                {
+                  "id": "a72233e1-6121-4aef-8a5b-9ebee9a40b20",
+                  "name": "Delete purchase order by ID",
+                  "request": {
+                    "name": "Delete purchase order by ID",
+                    "description": {
+                      "content": "For valid response try integer IDs with value < 1000. Anything above 1000 or nonintegers will generate API errors",
+                      "type": "text/plain"
+                    },
+                    "url": {
+                      "path": [
+                        "store",
+                        "order",
+                        ":orderId"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{orderId}}",
+                          "key": "orderId",
+                          "description": "(Required) ID of the order that needs to be deleted"
+                        }
+                      ]
+                    },
+                    "method": "DELETE",
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "3e52a98d-c21d-484c-98e7-dd9e672ff170",
+                      "name": "Invalid ID supplied",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "store",
+                            "order",
+                            ":orderId"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{orderId}}",
+                              "key": "orderId",
+                              "description": "(Required) ID of the order that needs to be deleted"
+                            }
+                          ]
+                        },
+                        "method": "DELETE",
+                        "body": {}
+                      },
+                      "status": "Bad Request",
+                      "code": 400,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    },
+                    {
+                      "id": "c214ddbc-2df5-4979-b1bd-6bdb4feb1b2c",
+                      "name": "Order not found",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "store",
+                            "order",
+                            ":orderId"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{orderId}}",
+                              "key": "orderId",
+                              "description": "(Required) ID of the order that needs to be deleted"
+                            }
+                          ]
+                        },
+                        "method": "DELETE",
+                        "body": {}
+                      },
+                      "status": "Not Found",
+                      "code": 404,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid ID supplied\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"Order not found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");});\n}\n"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                }
+              ],
+              "event": []
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "9683a8c7-364b-493a-bac6-21a1059231be",
+      "name": "user",
+      "item": [
+        {
+          "id": "6b149f44-d3f1-44fd-8691-e14109b15686",
+          "name": "Create user",
+          "request": {
+            "name": "Create user",
+            "description": {
+              "content": "This can only be done by the logged in user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "{{id}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "username",
+                  "value": "{{username}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "firstName",
+                  "value": "{{firstName}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "lastName",
+                  "value": "{{lastName}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "email",
+                  "value": "{{email}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "password",
+                  "value": "{{password}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "phone",
+                  "value": "{{phone}}"
+                },
+                {
+                  "disabled": false,
+                  "key": "userStatus",
+                  "value": "{{userStatus}}",
+                  "description": "User Status"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "45f43549-2a02-4faf-bab7-187f351be54b",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "username",
+                      "value": "{{username}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "firstName",
+                      "value": "{{firstName}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "lastName",
+                      "value": "{{lastName}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "email",
+                      "value": "{{email}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "password",
+                      "value": "{{password}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "phone",
+                      "value": "{{phone}}"
+                    },
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "User Status",
+                        "type": "text/plain"
+                      },
+                      "key": "userStatus",
+                      "value": "{{userStatus}}"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 10,\n  \"username\": \"theUser\",\n  \"firstName\": \"John\",\n  \"lastName\": \"James\",\n  \"email\": \"john@email.com\",\n  \"password\": \"12345\",\n  \"phone\": \"12345\",\n  \"userStatus\": 1\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 500){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "63efc6d6-66d5-4fc6-81bf-1010ee34b60f",
+          "name": "Creates list of users with given input array",
+          "request": {
+            "name": "Creates list of users with given input array",
+            "description": {
+              "content": "Creates list of users with given input array",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "user",
+                "createWithList"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n    {\n        \"id\": \"{{id}}\",\n        \"username\": \"{{username}}\",\n        \"firstName\": \"{{firstName}}\",\n        \"lastName\": \"{{lastName}}\",\n        \"email\": \"{{email}}\",\n        \"password\": \"{{password}}\",\n        \"phone\": \"{{phone}}\",\n        \"userStatus\": \"{{userStatus}}\"\n    },\n    {\n        \"id\": \"{{id}}\",\n        \"username\": \"{{username}}\",\n        \"firstName\": \"{{firstName}}\",\n        \"lastName\": \"{{lastName}}\",\n        \"email\": \"{{email}}\",\n        \"password\": \"{{password}}\",\n        \"phone\": \"{{phone}}\",\n        \"userStatus\": \"{{userStatus}}\"\n    }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "238855d2-e09f-4067-8342-0a17dc28b5df",
+              "name": "Successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "createWithList"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n    {\n        \"id\": 10,\n        \"username\": \"{{username}}\",\n        \"firstName\": \"{{firstName}}\",\n        \"lastName\": \"{{lastName}}\",\n        \"email\": \"{{email}}\",\n        \"password\": \"{{password}}\",\n        \"phone\": \"{{phone}}\",\n        \"userStatus\": 1\n    },\n    {\n        \"id\": 10,\n        \"username\": \"{{username}}\",\n        \"firstName\": \"{{firstName}}\",\n        \"lastName\": \"{{lastName}}\",\n        \"email\": \"{{email}}\",\n        \"password\": \"{{password}}\",\n        \"phone\": \"{{phone}}\",\n        \"userStatus\": 1\n    }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 10,\n  \"username\": \"theUser\",\n  \"firstName\": \"John\",\n  \"lastName\": \"James\",\n  \"email\": \"john@email.com\",\n  \"password\": \"12345\",\n  \"phone\": \"12345\",\n  \"userStatus\": 1\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a002c8f4-6485-4d2e-861c-a3ccdb66fcad",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "createWithList"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n    {\n        \"id\": 10,\n        \"username\": \"{{username}}\",\n        \"firstName\": \"{{firstName}}\",\n        \"lastName\": \"{{lastName}}\",\n        \"email\": \"{{email}}\",\n        \"password\": \"{{password}}\",\n        \"phone\": \"{{phone}}\",\n        \"userStatus\": 1\n    },\n    {\n        \"id\": 10,\n        \"username\": \"{{username}}\",\n        \"firstName\": \"{{firstName}}\",\n        \"lastName\": \"{{lastName}}\",\n        \"email\": \"{{email}}\",\n        \"password\": \"{{password}}\",\n        \"phone\": \"{{phone}}\",\n        \"userStatus\": 1\n    }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 500){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7f161321-5797-4a0f-8e94-2bad3eba5a43",
+          "name": "Logs user into the system",
+          "request": {
+            "name": "Logs user into the system",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "user",
+                "login"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "username",
+                  "value": "{{username}}",
+                  "description": "The user name for login"
+                },
+                {
+                  "disabled": false,
+                  "key": "password",
+                  "value": "{{password}}",
+                  "description": "The password for login in clear text"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "58d4ac19-6f14-47a3-9f39-75965f192127",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "login"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "username",
+                      "value": "{{username}}"
+                    },
+                    {
+                      "key": "password",
+                      "value": "{{password}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "calls per hour allowed by the user",
+                  "key": "X-Rate-Limit",
+                  "value": "{{X-Rate-Limit}}"
+                },
+                {
+                  "disabled": false,
+                  "description": "date in UTC when token expires",
+                  "key": "X-Expires-After",
+                  "value": "{{X-Expires-After}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"commodo proident dolore\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c9383738-687a-4911-88c5-cf388558767a",
+              "name": "Invalid username/password supplied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "login"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "username",
+                      "value": "{{username}}"
+                    },
+                    {
+                      "key": "password",
+                      "value": "{{password}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid username/password supplied\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f58d1b40-5566-48e1-ba51-82c5c09ab630",
+          "name": "Logs out current logged in user session",
+          "request": {
+            "name": "Logs out current logged in user session",
+            "description": {
+              "content": "",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "user",
+                "logout"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d9cf2c32-c430-4a86-8a3a-329bc6e11448",
+              "name": "successful operation",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "user",
+                    "logout"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 500){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");});\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "91484412-58cb-4b83-b0d5-175845ee9e69",
+          "name": "{username}",
+          "item": [
+            {
+              "id": "71ae2bd0-057d-4b98-8445-ceb11c3c3b46",
+              "name": "Get user by user name",
+              "request": {
+                "name": "Get user by user name",
+                "description": {
+                  "content": "",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": [
+                    "user",
+                    ":username"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{username}}",
+                      "key": "username",
+                      "description": "(Required) The name that needs to be fetched. Use user1 for testing. "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "76334a78-d276-4e49-9353-755767c3ef04",
+                  "name": "successful operation",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "user",
+                        ":username"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{username}}",
+                          "key": "username",
+                          "description": "(Required) The name that needs to be fetched. Use user1 for testing. "
+                        }
+                      ]
+                    },
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json"
+                    }
+                  ],
+                  "body": "{\n  \"id\": 10,\n  \"username\": \"theUser\",\n  \"firstName\": \"John\",\n  \"lastName\": \"James\",\n  \"email\": \"john@email.com\",\n  \"password\": \"12345\",\n  \"phone\": \"12345\",\n  \"userStatus\": 1\n}",
+                  "cookie": [],
+                  "_postman_previewlanguage": "json"
+                },
+                {
+                  "id": "0d5c7920-52b8-485b-b795-a006c1fb2e6d",
+                  "name": "Invalid username supplied",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "user",
+                        ":username"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{username}}",
+                          "key": "username",
+                          "description": "(Required) The name that needs to be fetched. Use user1 for testing. "
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                },
+                {
+                  "id": "f70a9c17-84b4-49a9-a85e-b8d15f01721c",
+                  "name": "User not found",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "user",
+                        ":username"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{username}}",
+                          "key": "username",
+                          "description": "(Required) The name that needs to be fetched. Use user1 for testing. "
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"OK\");\n        pm.test('Response has the `id` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"id\")){\n            if(responseData.id!=null){\n              pm.expect(typeof _.get(responseData, \"id\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n\n      pm.test('Response has the `username` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"username\")){\n          if(responseData.username!=null){\n            pm.expect(typeof _.get(responseData, \"username\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `firstName` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"firstName\")){\n          if(responseData.firstName!=null){\n            pm.expect(typeof _.get(responseData, \"firstName\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `lastName` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"lastName\")){\n          if(responseData.lastName!=null){\n            pm.expect(typeof _.get(responseData, \"lastName\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `email` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"email\")){\n          if(responseData.email!=null){\n            pm.expect(typeof _.get(responseData, \"email\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `password` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"password\")){\n          if(responseData.password!=null){\n            pm.expect(typeof _.get(responseData, \"password\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n      pm.test('Response has the `phone` field',function(){\n        const responseData = pm.response.json();\n        if(pm.expect(responseData).to.have.nested.property(\"phone\")){\n          if(responseData.phone!=null){\n            pm.expect(typeof _.get(responseData, \"phone\", 200)).to.equal(\"string\");\n          }\n        }\n\n      })\n          \n\n        pm.test('Response has the `userStatus` field',function(){\n          const responseData = pm.response.json();\n          if(pm.expect(responseData).to.have.nested.property(\"userStatus\")){\n            if(responseData.userStatus!=null){\n              pm.expect(typeof _.get(responseData, \"userStatus\", 200)).to.equal(\"number\");\n            }\n          }\n\n        })\n});\n}\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid username supplied\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"User not found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");});\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "87abe383-9fbf-49f2-91e7-bbab6933f16e",
+              "name": "Update user",
+              "request": {
+                "name": "Update user",
+                "description": {
+                  "content": "This can only be done by the logged in user.",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": [
+                    "user",
+                    ":username"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{username}}",
+                      "key": "username",
+                      "description": "(Required) name that need to be deleted"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                  }
+                ],
+                "method": "PUT",
+                "auth": null,
+                "body": {
+                  "mode": "urlencoded",
+                  "urlencoded": [
+                    {
+                      "disabled": false,
+                      "key": "id",
+                      "value": "{{id}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "username",
+                      "value": "{{username}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "firstName",
+                      "value": "{{firstName}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "lastName",
+                      "value": "{{lastName}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "email",
+                      "value": "{{email}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "password",
+                      "value": "{{password}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "phone",
+                      "value": "{{phone}}"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "userStatus",
+                      "value": "{{userStatus}}",
+                      "description": "User Status"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "21d27c82-d45f-470f-9ad1-33e199608627",
+                  "name": "successful operation",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "user",
+                        ":username"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{username}}",
+                          "key": "username",
+                          "description": "(Required) name that need to be deleted"
+                        }
+                      ]
+                    },
+                    "method": "PUT",
+                    "body": {
+                      "mode": "urlencoded",
+                      "urlencoded": [
+                        {
+                          "disabled": false,
+                          "key": "id",
+                          "value": "{{id}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "username",
+                          "value": "{{username}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "firstName",
+                          "value": "{{firstName}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "lastName",
+                          "value": "{{lastName}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "email",
+                          "value": "{{email}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "password",
+                          "value": "{{password}}"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "phone",
+                          "value": "{{phone}}"
+                        },
+                        {
+                          "disabled": false,
+                          "description": {
+                            "content": "User Status",
+                            "type": "text/plain"
+                          },
+                          "key": "userStatus",
+                          "value": "{{userStatus}}"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "Internal Server Error",
+                  "code": 500,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 500){\n    pm.test(\"successful operation\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");});\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "d3924554-dfcc-40ba-a9cf-4e63740c7c20",
+              "name": "Delete user",
+              "request": {
+                "name": "Delete user",
+                "description": {
+                  "content": "This can only be done by the logged in user.",
+                  "type": "text/plain"
+                },
+                "url": {
+                  "path": [
+                    "user",
+                    ":username"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{username}}",
+                      "key": "username",
+                      "description": "(Required) The name that needs to be deleted"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "08f48531-c288-42de-b26f-f619f42ca7e7",
+                  "name": "Invalid username supplied",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "user",
+                        ":username"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{username}}",
+                          "key": "username",
+                          "description": "(Required) The name that needs to be deleted"
+                        }
+                      ]
+                    },
+                    "method": "DELETE",
+                    "body": {}
+                  },
+                  "status": "Bad Request",
+                  "code": 400,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                },
+                {
+                  "id": "979f5f34-4af7-4199-b0aa-86d92bc31a0d",
+                  "name": "User not found",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "user",
+                        ":username"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{username}}",
+                          "key": "username",
+                          "description": "(Required) The name that needs to be deleted"
+                        }
+                      ]
+                    },
+                    "method": "DELETE",
+                    "body": {}
+                  },
+                  "status": "Not Found",
+                  "code": 404,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// Test generated by RoostGPT for test test_API_SPEC_Postman0711 using AI Type Open AI and AI Model gpt-4\n\n\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n  pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid username supplied\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Bad Request\");});\n}\n\nif (pm.response.code == 404){\n    pm.test(\"User not found\", function () {\n      pm.expect(pm.response.status).to.be.eql(\"Not Found\");});\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://petstore3.swagger.io/api/v3",
+      "key": "baseUrl"
+    },
+    {
+      "type": "integer",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "info": {
+    "_postman_id": "ca7ebfbe-8c3b-4c0f-9306-9e6a0399791b",
+    "name": "Swagger Petstore - OpenAPI 3.0",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.\n\n_If you're looking for the Swagger 2.0/OAS 2.0 version of Petstore, then click [here](https://editor.swagger.io/?url=https://petstore.swagger.io/v2/swagger.yaml). Alternatively, you can load via the `Edit > Load Petstore OAS 2.0` menu option!_\n\nSome useful links:\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\n- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)\n\nContact Support:\n Email: apiteam@swagger.io",
+      "type": "text/plain"
+    }
+  }
+}
