@@ -1,0 +1,4 @@
+petId,statusCode,scenario
+198772,200,Successful responses: OK
+198772,400,Client error responses: Bad Request
+198772,404,Client error responses: Not Found

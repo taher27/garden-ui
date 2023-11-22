@@ -1,0 +1,5 @@
+name,photoUrls,id,tags,status,statusCode,scenario
+doggie,"<string>,<string>",10,"<long>,<string>","available",200,Successful responses: OK
+doggie,"<string>,<string>",10,"<long>,<string>","pending",400,Client error responses: Bad Request
+doggie,"<string>,<string>",10,"<long>,<string>","sold",404,Client error responses: Not Found
+doggie,"<string>,<string>",10,"<long>,<string>","available",405,Client error responses: Method Not Allowed
