@@ -1,0 +1,83 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents a domain for setting cookies in the UI.",
+      "expected_format": "Domain name (e.g., example.com)"
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Provide a valid domain name to ensure cookies are properly scoped.",
+      "If this value is intentionally empty, document its purpose for clarity."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents the name for a cookie used in the UI.",
+      "expected_format": "Cookie name (e.g., session_id)"
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Provide a meaningful cookie name to identify its purpose.",
+      "If this value is intentionally empty, document its purpose for clarity."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Specifies the login type or authentication provider used in the UI.",
+      "expected_values": [
+        "okta",
+        "google",
+        "ldap",
+        "custom"
+      ]
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure the login type matches the expected authentication provider.",
+      "Document supported login types in the application's configuration guide."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost",
+    "type": "string",
+    "confidence": 0.95,
+    "metadata": {
+      "description": "Appears to be a password for the site login or authentication.",
+      "expected_format": "Strong password (e.g., alphanumeric with special characters)"
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this value in a secure secrets management system.",
+      "Ensure the password follows strong security practices and policies.",
+      "Avoid hardcoding sensitive credentials in environment variables."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 0.95,
+    "metadata": {
+      "description": "Appears to be a username in the form of an email address for site login or authentication.",
+      "expected_format": "Valid email address (e.g., user@example.com)"
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this value in a secure secrets management system if it is sensitive.",
+      "Ensure the email address is valid and corresponds to an actual user account."
+    ]
+  }
+}
