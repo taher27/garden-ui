@@ -1,0 +1,110 @@
+2025-09-25 15:32:00,316 - INFO - Roost UI Test Generator: Beginning automated test creation process.
+2025-09-25 15:32:00,317 - INFO - Using Azure OpenAI deployment
+2025-09-25 15:32:00,317 - INFO - No user scenario file found or path not set.
+2025-09-25 15:32:00,319 - INFO - Using Azure OpenAI: gpt-4o
+2025-09-25 15:32:10,324 - INFO - Filtered 5 UI_ prefixed variables for form filling from 26 total variables
+2025-09-25 15:32:10,325 - INFO - AI detected 2 form fields in environment
+2025-09-25 15:32:10,325 - INFO - Found email: SITE_USERNAME (confidence: 1.00)
+2025-09-25 15:32:10,325 - INFO - Found username: **** (confidence: 1.00)
+2025-09-25 15:32:10,325 - INFO - Using credentials for user: playwright@zb.io
+2025-09-25 15:32:10,327 - INFO - [extract_sensitive_data_from_env_analysis_json] Sensitive data extracted: ['x_site_password', 'x_site_username']
+2025-09-25 15:32:10,338 - INFO - Detected credentials. Running agent to conduct login
+2025-09-25 15:32:10,379 - INFO - 🧠 Starting a browser-use agent unknown with base_model=gpt-4o +vision extraction_model=gpt-4o +file_system
+2025-09-25 15:32:10,420 - INFO - 🚀 Starting task: 
+GOAL:
+Your mission is to perform a detailed login test for the website: https://dev.roost.ai.
+
+### --- Phase 1: Initial Page Analysis --- ###
+1.  **Navigate & Capture URL:** Go to https://dev.roost.ai and immediately capture the final URL after all initial loads and redirects. This is the `login_url`.
+2.  **Capture User Scenarios:** Before any login actions, explore the initial login page. Identify and describe 5 distinct user actions or "scenarios" a user might take on this page and format them as a JSON string.
+
+### --- Phase 2: Login Execution --- ###
+3.  **Locate & Execute Login:** Find the login form for the method "okta". Fill it with the secure credentials `x_username` and `x_password`. If you see a "Remember me" option, check it.
+4.  **Handle Third-Party Logins:** If the process involves redirects to Google, GitHub, Okta, etc., follow the flow as instructed.
+
+### --- Phase 3: Verification & State Saving --- ###
+5.  **Confirm Login Success (CRITICAL):** After submitting, you MUST determine if the login was successful by looking for POSITIVE indicators like a "Dashboard", "PROFILE" icon or a "Logout" button. A change in URL also means login has been completed, use that to confirm login. 
+6.  **Save Authentication State:** Once login is completed, you MUST immediately call the `save_auth_state` function.
+
+### --- Phase 4: Final Reporting --- ###
+7.  **Report Your Findings:** As your absolute final action, you MUST call the `report_and_save_login_results` function. You need to provide it with all the information you gathered, including the `user_scenarios_json_string` you prepared.
+
+CRITICAL RULES:
+- The 5 user scenarios must be from the initial login landing page only.
+- The scenarios must be provided as a single, valid JSON formatted string.
+- You must call `report_and_save_login_results` in all situations at the end, whether the login succeeded or failed.
+
+CLOSING CONDITIONS:
+- IF LOGIN IS SUCCESSFUL, `report_and_save_login_results` AND `save_auth_state` HAVE BEEN CALLED AT LEAST ONCE, TERMINATE THE BROWSER.
+
+2025-09-25 15:32:10,557 - WARNING - ⚠️  System overload detected: Memory: 85.6%. Consider reducing concurrent operations to prevent hanging.
+2025-09-25 15:32:13,215 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= <incognito>
+2025-09-25 15:32:15,620 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:56540/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-hds9b4sm
+2025-09-25 15:32:18,395 - INFO - 🌎 Connecting to newly spawned browser via CDP http://127.0.0.1:56540/ -> browser_pid=31788 (local)
+2025-09-25 15:32:20,275 - INFO - ➡️ Page navigation [0]about:blank took 0.58s
+2025-09-25 15:32:20,396 - WARNING - ⚠️  System overload detected: Memory: 86.6%. Consider reducing concurrent operations to prevent hanging.
+2025-09-25 15:32:20,440 - WARNING - ▫️ Sending LLM 1px placeholder instead of real screenshot of: about:blank (page empty)
+2025-09-25 15:32:20,498 - INFO - 📍 Step 2: Evaluating page with 0 interactive elements on: about:blank
+2025-09-25 15:32:25,458 - INFO - 💡 Thinking:
+The task begins with navigating to the provided URL and analyzing the page for initial scenarios before login.
+2025-09-25 15:32:25,459 - INFO - ❔ Eval: Initial state analysis complete; starting navigation.
+2025-09-25 15:32:25,459 - INFO - 🧠 Memory: Task initiated for login analysis and testing for https://dev.roost.ai.
+2025-09-25 15:32:25,459 - INFO - 🎯 Next goal: Navigate to https://dev.roost.ai to begin page analysis.
+
+2025-09-25 15:32:25,459 - INFO - ☝️ Decided next action: go_to_url(url="https://dev.roost.ai", new_tab=True)
+2025-09-25 15:32:25,561 - WARNING - ⚠️  System overload detected: Memory: 86.6%. Consider reducing concurrent operations to prevent hanging.
+2025-09-25 15:32:25,568 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m5.5k[0m | 📤 [92m90[0m
+2025-09-25 15:32:27,950 - INFO - 🔗  Opened new tab #1 with url https://dev.roost.ai
+2025-09-25 15:32:27,951 - INFO - ☑️ Executed action 1/1: go_to_url()
+2025-09-25 15:32:27,952 - INFO - 📍 Step 2: Ran 1 actions in 17.53s: ✅ 1
+2025-09-25 15:32:27,954 - INFO - --- Hook: Capturing UI state at step end ---
+2025-09-25 15:32:27,955 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/login to ensure page is fully rendered... ---
+2025-09-25 15:32:28,850 - INFO - [Depth 0] Found 14 potential interactive elements.
+2025-09-25 15:32:29,164 - INFO - --- Hook SUCCESS: Captured 14 unique elements from https://dev.roost.ai/login ---
+2025-09-25 15:32:29,740 - INFO - ➡️ Page navigation [1]dev.roost.ai/login took 0.57s
+2025-09-25 15:32:30,116 - INFO - 📍 Step 3: Evaluating page with 17 interactive elements on: https://dev.roost.ai/login
+2025-09-25 15:32:31,330 - INFO - ────────────────────────────────────────
+2025-09-25 15:32:31,331 - INFO - 🌐  View the details of this run in Browser Use Cloud:
+2025-09-25 15:32:31,331 - INFO -     👉  https://cloud.browser-use.com/hotlink?user_code=WBMCAEM9AJPPR35Q
+2025-09-25 15:32:31,331 - INFO - ────────────────────────────────────────
+
+2025-09-25 15:32:41,257 - INFO - 💡 Thinking:
+I have navigated to the target URL successfully and analyzed the visible page elements. My next step involves determining and documenting five user scenarios based on the current login page.
+2025-09-25 15:32:41,258 - INFO - 👍 Eval: Successfully navigated to the URL https://dev.roost.ai and captured the initial page state.
+2025-09-25 15:32:41,258 - INFO - 🧠 Memory: Captured the initial page state at https://dev.roost.ai. Preparing to document user scenarios based on observed interactive elements.
+2025-09-25 15:32:41,258 - INFO - 🎯 Next goal: Analyze the page and construct five distinct user scenarios based on the initial login page.
+
+2025-09-25 15:32:41,259 - INFO - ☝️ Decided next action: extract_structured_data(query=Identify five distinct user sc..., extract_links=False)
+2025-09-25 15:32:41,259 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m8.1k[0m | 📤 [92m133[0m
+2025-09-25 15:32:41,373 - WARNING - ⚠️  System overload detected: Memory: 87.0%. Consider reducing concurrent operations to prevent hanging.
+2025-09-25 15:32:43,713 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m173[0m | 📤 [92m125[0m
+2025-09-25 15:32:43,713 - INFO - 📄 Extracted content from https://dev.roost.ai/login
+<query>Identify five distinct user scenarios based on the current visible login page.
+</query>
+<extracted_content>
+Page Link: https://dev.roost.ai/login
+Query: Identify five distinct user scenarios based on the current visible login page.
+Extracted Content:
+```json
+{
+4 more lines...
+</extracted_content>
+<file_system>Extracted content saved to file extracted_content_0.md successfully.</file_system>
+2025-09-25 15:32:43,714 - INFO - ☑️ Executed action 1/1: extract_structured_data()
+2025-09-25 15:32:43,715 - INFO - 📍 Step 3: Ran 1 actions in 14.55s: ✅ 1
+2025-09-25 15:32:43,716 - INFO - --- Hook: Capturing UI state at step end ---
+2025-09-25 15:32:43,717 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/login to ensure page is fully rendered... ---
+2025-09-25 15:32:43,739 - INFO - --- Hook Skip: URL https://dev.roost.ai/login has already been captured. ---
+2025-09-25 15:32:44,706 - INFO - ➡️ Page navigation [1]dev.roost.ai/login took 0.58s
+2025-09-25 15:32:45,008 - INFO - 📍 Step 4: Evaluating page with 17 interactive elements on: https://dev.roost.ai/login
+2025-09-25 15:32:55,184 - INFO - 💡 Thinking:
+Analyzing the extracted page content and interactive elements to construct the user scenarios.
+2025-09-25 15:32:55,184 - INFO - ❔ Eval: The page content extraction revealed insufficient information for constructing user scenarios directly.
+2025-09-25 15:32:55,184 - INFO - 🧠 Memory: Extracted content from the login page lacks explicit user scenarios. Interacting with visible elements to derive scenarios.
+2025-09-25 15:32:55,185 - INFO - 🎯 Next goal: Analyze interactive elements to derive five distinct user scenarios from the login page.
+
+2025-09-25 15:32:55,186 - INFO - ☝️ Decided next action: write_file(file_name=todo.md, content=# Login Test Task
+
+## Tasks:
+-...)
+2025-09-25 15:32:55,187 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m4.3k[0m + 💾 [94m4.6k[0m | 📤 [92m206[0m
