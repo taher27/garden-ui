@@ -1,0 +1,39 @@
+{
+    "login_url": "https://dev.roost.ai",
+    "login_success": true,
+    "final_page_url": "https://dev.roost.ai/roostgpt/tests",
+    "outcome_message": "Successfully logged in and redirected to the dashboard.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "Explore the About Roost page.",
+            "steps": {
+                "1": "Click on 'About Roost' link."
+            }
+        },
+        {
+            "scenario_description": "Review Privacy Policy.",
+            "steps": {
+                "1": "Click on 'Privacy Policy' link."
+            }
+        },
+        {
+            "scenario_description": "Access Documentation.",
+            "steps": {
+                "1": "Click on 'Documentation' link."
+            }
+        },
+        {
+            "scenario_description": "Check API Reference.",
+            "steps": {
+                "1": "Click on 'API Reference' link."
+            }
+        },
+        {
+            "scenario_description": "Download CLI tool.",
+            "steps": {
+                "1": "Click on 'Download CLI' option."
+            }
+        }
+    ]
+}

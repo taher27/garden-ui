@@ -1,0 +1,51 @@
+{
+  "url": "https://dev.roost.ai/connectors",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Connectors Dashboard",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for a Connector",
+          "scenario_description": "A user searches for a specific connector using the search functionality.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Search input field with placeholder 'Search for Conn...'."
+            },
+            {
+              "action": "press_enter",
+              "element_description": "Confirms the search query with Enter key."
+            }
+          ],
+          "expected_outcome": ["Filtered connectors matching the query are displayed."]
+        },
+        {
+          "scenario_name": "Delete a Connector",
+          "scenario_description": "A user deletes a specific connector from the list.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Delete button adjacent to the connector entry."
+            },
+            {
+              "action": "confirm",
+              "element_description": "Confirm deletion in the dialog box."
+            }
+          ],
+          "expected_outcome": ["The connector is successfully removed from the list."]
+        },
+        {
+          "scenario_name": "View Connector Details",
+          "scenario_description": "A user views detailed information of a connector.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Info button adjacent to the connector entry."
+            }
+          ],
+          "expected_outcome": ["Detailed information about the connector is displayed."]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "test_name": "Verify Navigation to 'Analysis' Page and Search Functionality",
+  "description": "This test verifies that the user can navigate to the 'Analysis' page from the dashboard and use the search box to filter analysis results.",
+  "type": "navigation_and_search",
+  "pages": [
+    "https://dev.roost.ai",
+    "https://dev.roost.ai/roostgpt/analyses"
+  ],
+  "steps": [
+    "Navigate to the primary dashboard at https://dev.roost.ai.",
+    "Click on the 'RoostGPT' tab using the selector [data-testid=\"roostGPT-tab\"].",
+    "Once the 'RoostGPT' page loads, click on the 'Analysis' link using the selector //a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')].",
+    "Verify that the 'Analysis' page URL is https://dev.roost.ai/roostgpt/analyses.",
+    "Locate the search input box using the selector [data-testid=\"events-search-box\"].",
+    "Type the search term 'performance' into the search input box.",
+    "Press the Enter key to initiate the search.",
+    "Validate that the displayed results on the 'Analysis' page are filtered based on the search term 'performance'."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"roostGPT-tab\"]",
+      "text": "RoostGPT",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    },
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "text": "Analysis",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/analyses"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"events-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/roostgpt/analyses"
+    }
+  ],
+  "expected_results": [
+    "The user successfully navigates to the 'Analysis' page.",
+    "The search input box is functional and responsive.",
+    "The search results are accurately filtered based on the entered query."
+  ],
+  "edge_cases": [
+    "Search with no input and verify no results or an empty state message.",
+    "Search with special characters and ensure the system handles it gracefully.",
+    "Search with an extremely long string to check for input length limits.",
+    "Search with a term that yields no results and confirm the proper message is displayed.",
+    "Search while the page is still loading and ensure no errors occur."
+  ],
+  "data_requirements": [
+    "Access to the 'Analysis' page.",
+    "At least one analysis result containing the term 'performance'.",
+    "A functioning search feature in the 'Analysis' page.",
+    "A user with the necessary permissions to access the 'Analysis' page.",
+    "Browser and network configurations to access the site."
+  ],
+  "dependencies": [
+    "The 'RoostGPT' tab must be accessible.",
+    "The 'Analysis' link must be functional.",
+    "The search feature on the 'Analysis' page must be implemented."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "API call to fetch analysis data while navigating to the 'Analysis' page.",
+    "API call to filter analysis results based on the search query."
+  ],
+  "performance_metrics": [
+    "Measure page load time for the 'Analysis' page.",
+    "Evaluate search response time after entering a query.",
+    "Assess the rendering speed of filtered results."
+  ],
+  "accessibility_requirements": [
+    "Ensure the search box is accessible via keyboard navigation.",
+    "Verify that the 'Analysis' page is screen-reader friendly.",
+    "Confirm proper ARIA labels are applied to all interactive elements."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "9f28cc16-4b42-4401-b771-e4daf4aadaf7",
+    "created_at": "2025-09-29T06:28:42.685722Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "navigation_and_search",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "medium"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "test_name": "Verify User Role Modification to Admin",
+  "description": "This test validates the functionality of modifying a user's role to Admin and ensures that the role update reflects correctly in the system.",
+  "type": "role_management",
+  "pages": [
+    "https://dev.roost.ai/admin/app"
+  ],
+  "steps": [
+    "Navigate to the Admin View page.",
+    "Locate the user 'Aishwarya Rane' in the user table.",
+    "Click on the 'Make Admin' button next to the user's details.",
+    "Confirm the role update in the dialog box that appears.",
+    "Verify that the user now has the Admin role in the table.",
+    "Log out and log in as the modified user to confirm Admin privileges.",
+    "Check if the Admin-specific tabs are accessible to the modified user."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[4]/td[1]/div/div[2]/div[2]/a",
+      "text": "aishwarya",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    },
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"admin-tab\"]",
+      "text": "Admin",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    }
+  ],
+  "expected_results": [
+    "The user's role is successfully updated to Admin.",
+    "The Admin-specific tabs and privileges are accessible to the modified user."
+  ],
+  "edge_cases": [
+    "The 'Make Admin' button is disabled for certain users.",
+    "The confirmation dialog does not appear due to a network issue.",
+    "The role update is not saved due to a backend failure.",
+    "The user is already an Admin and the action is redundant.",
+    "The session times out before the changes are confirmed."
+  ],
+  "data_requirements": [
+    "User 'Aishwarya Rane' exists in the system.",
+    "The user has a valid non-Admin role initially.",
+    "Test data includes valid credentials for both an Admin user and the modified user.",
+    "Access to the Admin View page is enabled.",
+    "The database reflects the user roles accurately."
+  ],
+  "dependencies": [
+    "The Admin View page is accessible.",
+    "The user database is populated with valid test users.",
+    "The backend API for role modification is functional."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "Role modification API call.",
+    "User role validation API call."
+  ],
+  "performance_metrics": [
+    "Time taken for the role modification API to respond.",
+    "Page load time after the role update."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'Make Admin' button is accessible with screen readers.",
+    "Verify that the dialog box is navigable using keyboard controls.",
+    "Check for sufficient color contrast on the role update confirmation dialog."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "552ad60c-f1b1-43d6-bb39-2c2f058288b2",
+    "created_at": "2025-09-29T06:28:42.686733Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "role_management",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "high"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "test_name": "Verify User Removal Functionality",
+  "description": "This test ensures that the 'Delete User' functionality removes a user from the system and updates the user table accordingly.",
+  "type": "user_management",
+  "pages": [
+    "https://dev.roost.ai/admin/app"
+  ],
+  "steps": [
+    "Navigate to the Admin View page.",
+    "Locate the user 'Bhhavvya Sureka' in the user table.",
+    "Click on the 'Delete User' button next to the user's details.",
+    "Confirm the user deletion in the dialog box that appears.",
+    "Verify that the user is no longer listed in the user table.",
+    "Check the backend to ensure the user is removed from the database.",
+    "Attempt to log in with the deleted user's credentials to confirm removal."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div[2]/div[2]/a",
+      "text": "bhhavvya.sureka",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    },
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"admin-tab\"]",
+      "text": "Admin",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    }
+  ],
+  "expected_results": [
+    "The user is successfully removed from the system.",
+    "The user table updates to reflect the removal.",
+    "The backend database no longer contains the removed user."
+  ],
+  "edge_cases": [
+    "The 'Delete User' button is disabled for certain users.",
+    "The confirmation dialog does not appear due to a network issue.",
+    "The user removal fails due to a backend error.",
+    "The user is still visible in the table after deletion.",
+    "The session times out before the deletion is confirmed."
+  ],
+  "data_requirements": [
+    "User 'Bhhavvya Sureka' exists in the system.",
+    "Test data includes valid credentials for an Admin user.",
+    "Access to the Admin View page is enabled.",
+    "The database reflects the user details accurately.",
+    "The user has no dependencies preventing deletion."
+  ],
+  "dependencies": [
+    "The Admin View page is accessible.",
+    "The user database is populated with valid test users.",
+    "The backend API for user deletion is functional."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "User removal API call.",
+    "User list update API call."
+  ],
+  "performance_metrics": [
+    "Time taken for the user removal API to respond.",
+    "Page load time after the user is removed."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'Delete User' button is accessible with screen readers.",
+    "Verify that the dialog box is navigable using keyboard controls.",
+    "Check for sufficient color contrast on the user deletion confirmation dialog."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "7acaddd3-72f3-4982-9daa-32e65e609261",
+    "created_at": "2025-09-29T06:28:42.686733Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "ui-test",
+      "user_management"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "high"
+  }
+}

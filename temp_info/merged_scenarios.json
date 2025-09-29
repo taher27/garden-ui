@@ -1,0 +1,1135 @@
+[
+  {},
+  {
+    "https://dev.roost.ai/roostgpt/analyses": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"RoostGPT\"",
+            "stable_selector": "[data-testid=\"roostGPT-tab\"]",
+            "tag_name": "a",
+            "text_content": "RoostGPT",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Admin\"",
+            "stable_selector": "[data-testid=\"admin-tab\"]",
+            "tag_name": "a",
+            "text_content": "Admin",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Connectors\"",
+            "stable_selector": "[data-testid=\"connectors-tab\"]",
+            "tag_name": "a",
+            "text_content": "Connectors",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"PW\"",
+            "stable_selector": "#collapsible-nav-dropdown",
+            "tag_name": "a",
+            "text_content": "PW",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Test Suites\"",
+            "stable_selector": "//a[@href='/roostgpt/tests' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+            "tag_name": "a",
+            "text_content": "Test Suites",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Analysis\"",
+            "stable_selector": "//a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+            "tag_name": "a",
+            "text_content": "Analysis",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Generations\"",
+            "stable_selector": "//a[@href='/roostgpt/events' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+            "tag_name": "a",
+            "text_content": "Generations",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"events-search-box\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"About Roost\"",
+            "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "About Roost",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Privacy Policy\"",
+            "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Privacy Policy",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Documentation\"",
+            "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Documentation",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"API Reference\"",
+            "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "API Reference",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "extracted_interactive_data": null,
+      "explored_pages_and_scenarios": [
+        {
+          "page_title": "Analysis Dashboard",
+          "potential_user_journeys": [
+            {
+              "scenario_name": "Analyze Test Suite",
+              "scenario_description": "User selects a test suite and views detailed analysis results.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Select a test suite from the list."
+                },
+                {
+                  "action": "assert_visibility",
+                  "element_description": "Analysis results are shown for the selected suite."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Download the analysis report."
+                }
+              ],
+              "expected_outcome": [
+                "User obtains detailed insights into the test suite performance and downloads the report."
+              ]
+            },
+            {
+              "scenario_name": "Filter Analysis Results",
+              "scenario_description": "User applies filters to view specific analysis data.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Open the filters panel."
+                },
+                {
+                  "action": "type",
+                  "element_description": "Input filter criteria such as test type or date range."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Apply filters to update the displayed analysis results."
+                }
+              ],
+              "expected_outcome": [
+                "Filtered analysis results are displayed based on user criteria."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "https://dev.roost.ai/admin/app": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"RoostGPT\"",
+            "stable_selector": "[data-testid=\"roostGPT-tab\"]",
+            "tag_name": "a",
+            "text_content": "RoostGPT",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Admin\"",
+            "stable_selector": "[data-testid=\"admin-tab\"]",
+            "tag_name": "a",
+            "text_content": "Admin",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Connectors\"",
+            "stable_selector": "[data-testid=\"connectors-tab\"]",
+            "tag_name": "a",
+            "text_content": "Connectors",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"PW\"",
+            "stable_selector": "#collapsible-nav-dropdown",
+            "tag_name": "a",
+            "text_content": "PW",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"test\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"bhhavya.sureka\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "bhhavya.sureka",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"harish\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[2]/td[1]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "harish",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"chaitra\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[3]/td[1]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "chaitra",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"aishwarya\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[4]/td[1]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "aishwarya",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "extracted_interactive_data": {
+        "query": "Admin View functionalities and user journeys",
+        "response": {
+          "description": "The webpage appears to focus on administrative functionalities and user management within a platform called Roost.ai. It includes a tabular view of users with their associated details such as name, email, app user ID, signup date, and available actions for administrators. The actions include 'Remove Admin,' 'Override,' 'Delete User,' and 'Make Admin' (for certain users). Additionally, there is functionality for adding or inviting users ('Add Roosters,' 'Invite Rooster') and managing settings.",
+          "relevant_information": {
+            "admin_functionalities": [
+              "Remove Admin",
+              "Override",
+              "Delete User",
+              "Make Admin",
+              "Add Roosters",
+              "Invite Rooster",
+              "Reset",
+              "Apply"
+            ],
+            "user_management": {
+              "fields": [
+                "Rooster (Name)",
+                "Email",
+                "App User ID",
+                "Signed Up On",
+                "Actions"
+              ],
+              "sample_users": [
+                {
+                  "name": "Bhhavvya Sureka",
+                  "email": "bhhavvya.sureka@zb.io",
+                  "app_user_id": "2662766e-78f9-4e33-9d3f-a76626733ed6",
+                  "signed_up_on": "7/10/2023, 10:16:09 AM",
+                  "available_actions": [
+                    "Remove Admin",
+                    "Override",
+                    "Delete User"
+                  ]
+                },
+                {
+                  "name": "Aishwarya Rane",
+                  "email": "aishwarya@zb.io",
+                  "app_user_id": "a1b617fd-23e0-49ae-bdbf-bc63701c2479",
+                  "signed_up_on": "6/30/2023, 1:46:50 PM",
+                  "available_actions": [
+                    "Make Admin",
+                    "Override",
+                    "Delete User"
+                  ]
+                }
+              ]
+            }
+          },
+          "limitations": "The page provides a detailed list of admin functionalities related to user management but does not explicitly describe user journeys or workflows. If 'user journeys' were intended to refer to the sequential steps users take within the platform, this information is not available on the page."
+        }
+      },
+      "explored_pages_and_scenarios": [
+        {
+          "page_title": "Admin View",
+          "potential_user_journeys": [
+            {
+              "scenario_name": "Search for Users",
+              "scenario_description": "Allows an admin to search for a user by their details and manage their access.",
+              "steps": [
+                {
+                  "action": "type",
+                  "element_description": "Search input field for user search."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Apply button to filter search results."
+                }
+              ],
+              "expected_outcome": [
+                "Filtered user results are displayed."
+              ]
+            },
+            {
+              "scenario_name": "Modify User Role",
+              "scenario_description": "Allows an admin to change the role of a user to Admin or revoke their Admin rights.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Make Admin button next to the user's details."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Confirm role update in the dialog."
+                }
+              ],
+              "expected_outcome": [
+                "User role is updated successfully."
+              ]
+            },
+            {
+              "scenario_name": "Remove User",
+              "scenario_description": "Allows an admin to delete a user from the system.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Delete User button next to the user's details."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Confirm deletion in the dialog."
+                }
+              ],
+              "expected_outcome": [
+                "User is removed from the system."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "https://dev.roost.ai/connectors": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"RoostGPT\"",
+            "stable_selector": "[data-testid=\"roostGPT-tab\"]",
+            "tag_name": "a",
+            "text_content": "RoostGPT",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Admin\"",
+            "stable_selector": "[data-testid=\"admin-tab\"]",
+            "tag_name": "a",
+            "text_content": "Admin",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Connectors\"",
+            "stable_selector": "[data-testid=\"connectors-tab\"]",
+            "tag_name": "a",
+            "text_content": "Connectors",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"PW\"",
+            "stable_selector": "#collapsible-nav-dropdown",
+            "tag_name": "a",
+            "text_content": "PW",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"Connector-search-box\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"First\"",
+            "stable_selector": "[data-testid=\"paginator-first-page-button\"]",
+            "tag_name": "button",
+            "text_content": "First",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"\u00ab\"",
+            "stable_selector": "[data-testid=\"arrow-left\"]",
+            "tag_name": "button",
+            "text_content": "\u00ab",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"1\"",
+            "stable_selector": "//button[normalize-space()=\"1\"]",
+            "tag_name": "button",
+            "text_content": "1",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"2\"",
+            "stable_selector": "//button[normalize-space()=\"2\"]",
+            "tag_name": "button",
+            "text_content": "2",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"3\"",
+            "stable_selector": "//button[normalize-space()=\"3\"]",
+            "tag_name": "button",
+            "text_content": "3",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"4\"",
+            "stable_selector": "//button[normalize-space()=\"4\"]",
+            "tag_name": "button",
+            "text_content": "4",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"5\"",
+            "stable_selector": "//button[normalize-space()=\"5\"]",
+            "tag_name": "button",
+            "text_content": "5",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"\u00bb\"",
+            "stable_selector": "[data-testid=\"arrow-icon\"]",
+            "tag_name": "button",
+            "text_content": "\u00bb",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"Last\"",
+            "stable_selector": "[data-testid=\"paginator-last-page-button\"]",
+            "tag_name": "button",
+            "text_content": "Last",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"About Roost\"",
+            "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "About Roost",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Privacy Policy\"",
+            "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Privacy Policy",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Documentation\"",
+            "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Documentation",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"API Reference\"",
+            "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "API Reference",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "extracted_interactive_data": null,
+      "explored_pages_and_scenarios": [
+        {
+          "page_title": "Connectors Dashboard",
+          "potential_user_journeys": [
+            {
+              "scenario_name": "Search for a Connector",
+              "scenario_description": "A user searches for a specific connector using the search functionality.",
+              "steps": [
+                {
+                  "action": "type",
+                  "element_description": "Search input field with placeholder 'Search for Conn...'."
+                },
+                {
+                  "action": "press_enter",
+                  "element_description": "Confirms the search query with Enter key."
+                }
+              ],
+              "expected_outcome": [
+                "Filtered connectors matching the query are displayed."
+              ]
+            },
+            {
+              "scenario_name": "Delete a Connector",
+              "scenario_description": "A user deletes a specific connector from the list.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Delete button adjacent to the connector entry."
+                },
+                {
+                  "action": "confirm",
+                  "element_description": "Confirm deletion in the dialog box."
+                }
+              ],
+              "expected_outcome": [
+                "The connector is successfully removed from the list."
+              ]
+            },
+            {
+              "scenario_name": "View Connector Details",
+              "scenario_description": "A user views detailed information of a connector.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Info button adjacent to the connector entry."
+                }
+              ],
+              "expected_outcome": [
+                "Detailed information about the connector is displayed."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "https://dev.roost.ai/roostgpt/tests": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"RoostGPT\"",
+            "stable_selector": "[data-testid=\"roostGPT-tab\"]",
+            "tag_name": "a",
+            "text_content": "RoostGPT",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Admin\"",
+            "stable_selector": "[data-testid=\"admin-tab\"]",
+            "tag_name": "a",
+            "text_content": "Admin",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Connectors\"",
+            "stable_selector": "[data-testid=\"connectors-tab\"]",
+            "tag_name": "a",
+            "text_content": "Connectors",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"PW\"",
+            "stable_selector": "#collapsible-nav-dropdown",
+            "tag_name": "a",
+            "text_content": "PW",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Test Suites\"",
+            "stable_selector": "//a[@href='/roostgpt/tests' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+            "tag_name": "a",
+            "text_content": "Test Suites",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Analysis\"",
+            "stable_selector": "//a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+            "tag_name": "a",
+            "text_content": "Analysis",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Generations\"",
+            "stable_selector": "//a[@href='/roostgpt/events' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+            "tag_name": "a",
+            "text_content": "Generations",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"tests-search-box\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "#knowledge-base-dropdown",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"taher\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "taher",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"taher\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[2]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "taher",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"bhhavya.sureka\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[3]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "bhhavya.sureka",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"taher\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[4]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "taher",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"bhavya.shah\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[5]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "bhavya.shah",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"chaitra\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[6]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "chaitra",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"afsal\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[7]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "afsal",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"bhavya.shah\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[8]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "bhavya.shah",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"bhavya.shah\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[9]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "bhavya.shah",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"chaitra\"",
+            "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td[2]/div/div[2]/div[2]/a",
+            "tag_name": "a",
+            "text_content": "chaitra",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"First\"",
+            "stable_selector": "[data-testid=\"paginator-first-page-button\"]",
+            "tag_name": "button",
+            "text_content": "First",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"\u00ab\"",
+            "stable_selector": "[data-testid=\"arrow-left\"]",
+            "tag_name": "button",
+            "text_content": "\u00ab",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"1\"",
+            "stable_selector": "//button[normalize-space()=\"1\"]",
+            "tag_name": "button",
+            "text_content": "1",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"2\"",
+            "stable_selector": "//button[normalize-space()=\"2\"]",
+            "tag_name": "button",
+            "text_content": "2",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"3\"",
+            "stable_selector": "//button[normalize-space()=\"3\"]",
+            "tag_name": "button",
+            "text_content": "3",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"4\"",
+            "stable_selector": "//button[normalize-space()=\"4\"]",
+            "tag_name": "button",
+            "text_content": "4",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"5\"",
+            "stable_selector": "//button[normalize-space()=\"5\"]",
+            "tag_name": "button",
+            "text_content": "5",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"\u00bb\"",
+            "stable_selector": "[data-testid=\"arrow-icon\"]",
+            "tag_name": "button",
+            "text_content": "\u00bb",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"Last\"",
+            "stable_selector": "[data-testid=\"paginator-last-page-button\"]",
+            "tag_name": "button",
+            "text_content": "Last",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"About Roost\"",
+            "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "About Roost",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Privacy Policy\"",
+            "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Privacy Policy",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Documentation\"",
+            "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Documentation",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"API Reference\"",
+            "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "API Reference",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "extracted_interactive_data": {
+        "page_content": {
+          "description": "This webpage appears to belong to Roost.ai, a platform that leverages generative AI and large language models for testing automation. It seems to be a dashboard or interface for managing test suites.",
+          "key_features_and_sections": {
+            "header": {
+              "title": "Roost.ai | Your Testing Co-Pilot Powered by Generative AI and Large Language Models",
+              "note": "JavaScript is required to run this application."
+            },
+            "navigation_menu": [
+              "RoostGPT",
+              "Admin",
+              "Connectors"
+            ],
+            "main_content": {
+              "filters": {
+                "options": [
+                  "Show My Test Suites",
+                  "Add Test Suite"
+                ]
+              },
+              "test_suite_table": {
+                "columns": [
+                  "TEST SUITE NAME",
+                  "CREATED BY",
+                  "GEN AI MODEL",
+                  "TEST TYPE",
+                  "CREATED ON",
+                  "UPDATED ON",
+                  "ACTIONS"
+                ],
+                "example_entries": [
+                  {
+                    "TEST SUITE NAME": "tr-test-allowed-domains3",
+                    "CREATED BY": "Taher Mandapwala",
+                    "GEN AI MODEL": "Azure AI (inference)",
+                    "TEST TYPE": "UI Test",
+                    "CREATED ON": "Sep 25 2025 09:37",
+                    "UPDATED ON": "Sep 25 2025 09:37"
+                  },
+                  {
+                    "TEST SUITE NAME": "javaSprinAI",
+                    "CREATED BY": "Bhavya Shah",
+                    "GEN AI MODEL": "Azure AI (inference)",
+                    "TEST TYPE": "Unit (Java)",
+                    "CREATED ON": "Sep 11 2025 10:13",
+                    "UPDATED ON": "Sep 24 2025 14:34"
+                  }
+                ],
+                "pagination": {
+                  "current_page": 1,
+                  "total_entries": 2535,
+                  "navigation_buttons": [
+                    "First",
+                    "\u00ab",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "\u00bb",
+                    "Last"
+                  ]
+                }
+              }
+            },
+            "footer": [
+              "About Roost",
+              "Privacy Policy",
+              "Documentation",
+              "API Reference",
+              "Download CLI",
+              "Install VS Code extension"
+            ]
+          }
+        },
+        "query_response": {
+          "observation": "The webpage is a dashboard for managing test suites, and it provides functionalities like filtering test suites, adding new ones, and viewing details about existing test suites. Users can navigate through a paginated table to view test suites, which include details like the name, creator, generative AI model used, test type, and timestamps for creation and updates.",
+          "user_journeys_and_functionalities": [
+            {
+              "functionality": "View Test Suites",
+              "description": "Users can view a table containing information about various test suites."
+            },
+            {
+              "functionality": "Add Test Suite",
+              "description": "Users can add new test suites using the 'Add Test Suite' option."
+            },
+            {
+              "functionality": "Filter Test Suites",
+              "description": "Users can filter test suites by selecting 'Show My Test Suites'."
+            },
+            {
+              "functionality": "Pagination",
+              "description": "Users can navigate through the list of test suites using pagination controls."
+            },
+            {
+              "functionality": "Access Documentation",
+              "description": "Users can access additional resources like API references and documentation via the footer links."
+            },
+            {
+              "functionality": "Download Tools",
+              "description": "Users can download tools such as the CLI and the VS Code extension from the footer links."
+            }
+          ]
+        }
+      },
+      "explored_pages_and_scenarios": [
+        {
+          "page_title": "Roost.ai Test Suites Dashboard",
+          "potential_user_journeys": [
+            {
+              "scenario_name": "Viewing Test Suites",
+              "scenario_description": "Navigate through the table to view detailed information about various test suites.",
+              "steps": [
+                {
+                  "action": "assert_visibility",
+                  "element_description": "Table listing test suites with columns like name, creator, AI model, and timestamps."
+                },
+                {
+                  "action": "scroll",
+                  "element_description": "Scroll through the paginated test suite table."
+                }
+              ],
+              "expected_outcome": [
+                "User views detailed information about test suites."
+              ]
+            },
+            {
+              "scenario_name": "Adding a Test Suite",
+              "scenario_description": "Use the 'Add Test Suite' functionality to input details and create a new test suite.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Add Test Suite button."
+                },
+                {
+                  "action": "input_text",
+                  "element_description": "Form fields for test suite details."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Submit button to create the test suite."
+                }
+              ],
+              "expected_outcome": [
+                "New test suite is created and listed in the table."
+              ]
+            },
+            {
+              "scenario_name": "Filtering Test Suites",
+              "scenario_description": "Apply filters to view specific test suites using the provided options.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Filter options like 'Show My Test Suites'."
+                }
+              ],
+              "expected_outcome": [
+                "Filtered list of test suites is displayed."
+              ]
+            },
+            {
+              "scenario_name": "Navigating Pagination Controls",
+              "scenario_description": "Navigate between pages of the test suite table using pagination buttons.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Pagination buttons at the bottom of the table."
+                }
+              ],
+              "expected_outcome": [
+                "User accesses additional pages of test suites."
+              ]
+            },
+            {
+              "scenario_name": "Accessing Resources",
+              "scenario_description": "Download tools or access documentation using the footer links.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Footer links for CLI and VS Code extension."
+                }
+              ],
+              "expected_outcome": [
+                "User downloads tools or accesses documentation."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

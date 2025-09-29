@@ -1,0 +1,91 @@
+{
+  "test_name": "Verify Addition of a New Test Suite",
+  "description": "This scenario tests the ability to add a new test suite using the 'Add Test Suite' option.",
+  "type": "functional",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests"
+  ],
+  "steps": [
+    "Navigate to the Test Suites page.",
+    "Click on the 'Add Test Suite' option.",
+    "Verify that the 'Add Test Suite' form appears.",
+    "Fill in all required fields for the test suite (name, creator, GenAI model, test type).",
+    "Click on the 'Submit' button to create the test suite.",
+    "Verify that the new test suite appears in the table after submission.",
+    "Search for the newly created test suite using the search box.",
+    "Verify the table updates to display the newly created test suite."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"tests-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/roostgpt/tests' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "text": "Add Test Suite",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    }
+  ],
+  "expected_results": [
+    "New test suite is added successfully.",
+    "Table updates to display the new test suite."
+  ],
+  "edge_cases": [
+    "Form submission fails due to validation errors.",
+    "Backend issues prevent test suite creation.",
+    "Duplicate test suite names cause errors.",
+    "Special characters in form fields cause unexpected behavior.",
+    "Network latency delays form submission."
+  ],
+  "data_requirements": [
+    "Valid data for test suite creation.",
+    "Unique test suite names.",
+    "User permissions to add test suites."
+  ],
+  "dependencies": [
+    "Functional 'Add Test Suite' form in the UI.",
+    "Stable backend API for creating test suites.",
+    "Validation checks on form fields."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "POST /api/test-suites",
+    "GET /api/test-suites?query=<search-text>"
+  ],
+  "performance_metrics": [
+    "Time taken for form submission.",
+    "Accuracy of table updates after submission."
+  ],
+  "accessibility_requirements": [
+    "Form fields must have accessible labels.",
+    "Submit button must be keyboard-navigable."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "6702da42-ad22-47df-a8b2-cd7ad069e2e0",
+    "created_at": "2025-09-29T06:28:42.689731Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "functional",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "high"
+  }
+}

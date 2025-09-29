@@ -1,0 +1,48 @@
+{
+  "url": "https://dev.roost.ai/roostgpt/analyses",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Analysis Dashboard",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Analyze Test Suite",
+          "scenario_description": "User selects a test suite and views detailed analysis results.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Select a test suite from the list."
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Analysis results are shown for the selected suite."
+            },
+            {
+              "action": "click",
+              "element_description": "Download the analysis report."
+            }
+          ],
+          "expected_outcome": ["User obtains detailed insights into the test suite performance and downloads the report."]
+        },
+        {
+          "scenario_name": "Filter Analysis Results",
+          "scenario_description": "User applies filters to view specific analysis data.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Open the filters panel."
+            },
+            {
+              "action": "type",
+              "element_description": "Input filter criteria such as test type or date range."
+            },
+            {
+              "action": "click",
+              "element_description": "Apply filters to update the displayed analysis results."
+            }
+          ],
+          "expected_outcome": ["Filtered analysis results are displayed based on user criteria."]
+        }
+      ]
+    }
+  ]
+}
