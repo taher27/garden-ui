@@ -1,0 +1,90 @@
+{
+  "test_name": "Verify User Login via GitHub OAuth",
+  "description": "This test validates that the user can log in using GitHub OAuth and access the dashboard without errors.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://github.com/login",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Locate the GitHub login button using its stable selector.",
+    "Click the GitHub login button.",
+    "Verify redirection to the GitHub OAuth authentication page.",
+    "Enter valid GitHub account credentials.",
+    "Click the 'Sign In' button on the GitHub authentication page.",
+    "Verify redirection back to https://dev.roost.ai.",
+    "Verify that the user is on the dashboard and logged in."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the GitHub OAuth page.",
+    "User can authenticate using valid GitHub credentials.",
+    "User is redirected back to https://dev.roost.ai.",
+    "User is logged into their dashboard successfully."
+  ],
+  "edge_cases": [
+    "GitHub OAuth page fails to load.",
+    "User enters incorrect credentials.",
+    "User cancels the GitHub OAuth process.",
+    "Network issues during authentication.",
+    "Redirection to https://dev.roost.ai fails."
+  ],
+  "data_requirements": [
+    "Valid GitHub account credentials.",
+    "Access to GitHub OAuth API.",
+    "Properly configured redirect URI for https://dev.roost.ai.",
+    "Valid client ID for GitHub OAuth.",
+    "Active network connection."
+  ],
+  "dependencies": [
+    "GitHub OAuth service must be operational.",
+    "Redirection URI must be configured correctly.",
+    "User must have an active GitHub account."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GitHub OAuth API calls for authentication.",
+    "Roost backend API to validate authentication tokens."
+  ],
+  "performance_metrics": [
+    "OAuth redirection latency.",
+    "Time taken to authenticate and redirect back."
+  ],
+  "accessibility_requirements": [
+    "GitHub OAuth page should support screen readers.",
+    "Login buttons should have ARIA labels for accessibility.",
+    "Ensure keyboard accessibility for all actions."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "7eddc5d8-2c0c-4d51-81ad-43d6e5d3a78f",
+    "created_at": "2025-09-29T07:16:40.840904Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "high"
+  }
+}

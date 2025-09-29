@@ -1,0 +1,51 @@
+{
+  "url": "https://dev.roost.ai/login",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login | Software as a Service",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Login Integration",
+          "scenario_description": "User logs in using one of the authentication options available.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Login button."
+            },
+            {
+              "action": "select",
+              "element_description": "Authentication provider, e.g., Google or GitHub."
+            }
+          ],
+          "expected_outcome": ["User is authenticated and redirected to their dashboard."]
+        },
+        {
+          "scenario_name": "Access Documentation",
+          "scenario_description": "User navigates to the documentation for API integration guidance.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Documentation link."
+            }
+          ],
+          "expected_outcome": ["Documentation page loads, providing API integration details."]
+        },
+        {
+          "scenario_name": "Download Tools",
+          "scenario_description": "User downloads CLI or VS Code extension for development.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Download CLI link."
+            },
+            {
+              "action": "click",
+              "element_description": "Install VS Code extension link."
+            }
+          ],
+          "expected_outcome": ["Tools are downloaded and ready for use."]
+        }
+      ]
+    }
+  ]
+}

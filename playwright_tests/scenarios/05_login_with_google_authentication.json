@@ -1,0 +1,89 @@
+{
+  "test_name": "Login with Google Authentication",
+  "description": "Verify that a user can successfully log in using Google OAuth authentication and is redirected to their dashboard.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Verify that the Google sign-in option is visible and enabled.",
+    "Click on the Google sign-in button.",
+    "Verify that the Google OAuth login page is displayed.",
+    "Enter valid Google credentials (email and password) on the Google login page.",
+    "Click the 'Next' or 'Sign In' button on the Google login page.",
+    "Verify that the user is redirected back to the Roost application.",
+    "Check that the user lands on their dashboard at https://dev.roost.ai.",
+    "Verify that the user's dashboard displays active environments and relevant user data."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "The user is authenticated via Google OAuth.",
+    "The user is redirected to the dashboard page at https://dev.roost.ai.",
+    "The dashboard displays user-specific data such as active environments."
+  ],
+  "edge_cases": [
+    "Google OAuth service is unavailable.",
+    "User enters invalid Google credentials.",
+    "User cancels the Google OAuth process mid-way.",
+    "Redirect fails after successful authentication.",
+    "Session timeout occurs before authentication is completed."
+  ],
+  "data_requirements": [
+    "Valid Google account credentials.",
+    "Valid Google OAuth client ID and redirect URI.",
+    "Network connectivity for OAuth service.",
+    "Browser configured to accept cookies.",
+    "JavaScript enabled in the browser."
+  ],
+  "dependencies": [
+    "Google OAuth service must be operational.",
+    "Roost backend must handle OAuth tokens correctly.",
+    "The user's Google account must be active and in good standing."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "Google OAuth API for authentication.",
+    "Roost API to fetch user-specific data after login."
+  ],
+  "performance_metrics": [
+    "Time taken to redirect back to the dashboard after login.",
+    "OAuth token exchange latency.",
+    "Page load time for the dashboard."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Google sign-in button is keyboard accessible.",
+    "Verify that screen readers can announce the Google sign-in option.",
+    "Ensure color contrast ratios meet WCAG standards for the sign-in button.",
+    "Verify that focus order is logical and intuitive."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "307cf04f-9bac-46aa-b849-8d7b3b9eabaa",
+    "created_at": "2025-09-29T07:16:40.841905Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "error-handling",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 45,
+    "flakiness_potential": "high"
+  }
+}

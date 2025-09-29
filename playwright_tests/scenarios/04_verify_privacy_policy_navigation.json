@@ -1,0 +1,79 @@
+{
+  "test_name": "Verify Privacy Policy Navigation",
+  "description": "This test ensures that the user can navigate to the privacy policy page from the footer and access the content.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://roost.ai/privacy-policy"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Scroll to the footer section of the page.",
+    "Locate the 'Privacy Policy' link using its stable selector.",
+    "Click the 'Privacy Policy' link.",
+    "Verify redirection to https://roost.ai/privacy-policy.",
+    "Ensure that the privacy policy page loads successfully.",
+    "Verify the presence of key privacy policy sections."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "text": "Privacy Policy",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the privacy policy page.",
+    "Privacy policy page loads without errors.",
+    "Key privacy policy sections are accessible and visible."
+  ],
+  "edge_cases": [
+    "Privacy policy page fails to load.",
+    "Network issues during navigation.",
+    "Broken link or incorrect redirection.",
+    "Slow page load due to large content."
+  ],
+  "data_requirements": [
+    "Valid URL for the privacy policy page.",
+    "Active network connection.",
+    "Properly configured footer link."
+  ],
+  "dependencies": [
+    "Footer link must be present on the landing page.",
+    "Privacy policy page must be live and operational."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "None for this scenario."
+  ],
+  "performance_metrics": [
+    "Page load time for the privacy policy page."
+  ],
+  "accessibility_requirements": [
+    "Footer links should be keyboard accessible.",
+    "Privacy policy page should support screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "5de78ac4-196b-4ac3-b9ec-758dfb0f8fa6",
+    "created_at": "2025-09-29T07:16:40.841905Z",
+    "complexity": "medium",
+    "risk_level": "high",
+    "priority": "normal",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "keyboard-navigation",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "high"
+  }
+}
