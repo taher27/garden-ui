@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "The site provides automated and on-demand environments for software development teams to test and deploy applications efficiently.",
+        "business_requirements": [
+            "Users must be able to create on-demand environments for software testing and development.",
+            "Users must be able to integrate the platform with their existing CI/CD pipelines for seamless deployment workflows.",
+            "Administrators must be able to manage user access and permissions for team collaboration on environments.",
+            "Users must be able to monitor and analyze environment performance and logs for debugging purposes.",
+            "Users must be able to schedule the automatic termination of environments to optimize resource usage.",
+            "The platform must allow users to clone pre-configured environments to replicate testing scenarios quickly.",
+            "Users must be able to access documentation and support resources directly from the interface for troubleshooting and implementation guidance."
+        ]
+    }
+}

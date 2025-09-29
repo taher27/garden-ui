@@ -1,0 +1,88 @@
+{
+  "test_name": "Verify Okta Login Integration",
+  "description": "Test the functionality of logging in using Okta as an authentication provider and ensure the user is redirected to the dashboard upon successful login.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Locate the 'Okta' login button.",
+    "Click the 'Okta' login button.",
+    "Redirect to the Okta login page.",
+    "Enter valid Okta credentials (username and password).",
+    "Confirm and submit the login form.",
+    "Validate the redirection back to https://dev.roost.ai.",
+    "Verify the presence of a user-specific dashboard or account details."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://dev-53854943.okta.com/oauth2/default/v1/authorize?response_type=code&scope=openid%20profile%20email%20address&state=okta&client_id=0oa3x8katznHWlHeD5d7&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'okta')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is successfully redirected to the Okta login page.",
+    "User can authenticate using valid credentials.",
+    "User is redirected back to https://dev.roost.ai.",
+    "User sees a personalized dashboard or account overview."
+  ],
+  "edge_cases": [
+    "User enters invalid credentials.",
+    "User's Okta account is locked or disabled.",
+    "Network connectivity issues during redirection.",
+    "The Okta login button is disabled or missing.",
+    "Incorrect configuration of Okta redirect URL."
+  ],
+  "data_requirements": [
+    "Valid Okta credentials (username and password).",
+    "Pre-configured Okta integration for the application.",
+    "A user account with appropriate permissions.",
+    "Access to the internet.",
+    "Session cookies for maintaining login state."
+  ],
+  "dependencies": [
+    "Okta integration is properly configured.",
+    "The redirection URL is correctly set up in Okta.",
+    "User account exists and is active in the Okta system."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "Okta OAuth2 authentication API."
+  ],
+  "performance_metrics": [
+    "Measure the time taken for redirection to the Okta login page.",
+    "Measure the time taken for redirection back to the dashboard."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'Okta' button has an accessible name or ARIA label.",
+    "Confirm that keyboard navigation allows interaction with the 'Okta' button.",
+    "Validate that color contrast meets WCAG standards."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "03d1d906-3e45-4da4-acdd-82ac0e69c5f6",
+    "created_at": "2025-09-29T10:46:53.337117Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "high"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "url": "https://ping.tryroost.link/as/authorization.oauth2",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Authorization Service",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Login through Authorization Service",
+          "scenario_description": "Facilitates user authentication by redirecting to the authorization service and back to the application with credentials.",
+          "steps": [
+            {
+              "action": "navigate",
+              "element_description": "Open the authorization URL provided."
+            },
+            {
+              "action": "input",
+              "element_description": "Enter user credentials into the login form."
+            },
+            {
+              "action": "submit",
+              "element_description": "Press the login button to authenticate."
+            },
+            {
+              "action": "redirect",
+              "element_description": "Redirects back to the application with an authentication token."
+            }
+          ],
+          "expected_outcome": ["User is authenticated and redirected to the main application page."]
+        }
+      ]
+    }
+  ]
+}

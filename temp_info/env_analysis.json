@@ -1,0 +1,100 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents the domain associated with cookies for the UI.",
+      "expected_format": "Domain name (e.g., example.com)"
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure the value is correctly set to the domain your application uses.",
+      "Validate that the domain matches your production or staging environment."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Represents the name of the cookie used by the UI.",
+      "expected_format": "Cookie name (e.g., session_id, auth_token)"
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Provide a meaningful cookie name that matches your application design.",
+      "Ensure the cookie name aligns with your security and naming standards."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Indicates the login type or authentication provider used by the UI.",
+      "expected_values": [
+        "okta",
+        "oauth",
+        "ldap",
+        "saml",
+        "custom"
+      ]
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure the login type corresponds to your authentication setup.",
+      "Document supported login types to avoid misconfigurations."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Represents the password for accessing the site. This is sensitive information.",
+      "security_risks": [
+        "Exposure of passwords can lead to unauthorized access.",
+        "Passwords should be stored securely and never hardcoded."
+      ],
+      "recommended_practices": [
+        "Use environment variables instead of hardcoding sensitive data.",
+        "Consider using a secrets management tool like AWS Secrets Manager, HashiCorp Vault, or similar."
+      ]
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Ensure this password is encrypted or stored securely.",
+      "Rotate passwords periodically to improve security.",
+      "Avoid sharing passwords in plaintext or committing them to version control."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 0.95,
+    "metadata": {
+      "description": "Represents the username or email for accessing the site. This is sensitive information.",
+      "expected_format": "Email address (e.g., user@example.com)",
+      "security_risks": [
+        "Exposure of usernames or emails can lead to targeted attacks.",
+        "Should be handled securely in conjunction with passwords."
+      ],
+      "recommended_practices": [
+        "Use environment variables to store sensitive information.",
+        "Consider obscuring email addresses in logs or error messages."
+      ]
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Ensure this email is associated with a secure account.",
+      "Verify that this value matches the intended user or service account.",
+      "Avoid committing sensitive information to version control."
+    ]
+  }
+}

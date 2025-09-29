@@ -1,0 +1,25 @@
+{
+"url": "https://dev.roost.ai/gptCLIForm",
+"explored_pages_and_scenarios": [
+    {
+    "page_title": "Roost CLI Form",
+    "potential_user_journeys": [
+        {
+        "scenario_name": "Submit CLI Configuration",
+        "scenario_description": "User submits configuration details for CLI setup.",
+        "steps": [
+            {
+            "action": "click",
+            "element_description": "Submit button"
+            },
+            {
+            "action": "type",
+            "element_description": "Input fields for configuration details"
+            }
+        ],
+        "expected_outcome": ["User successfully configures and submits CLI settings."]
+        }
+    ]
+    }
+]
+}
