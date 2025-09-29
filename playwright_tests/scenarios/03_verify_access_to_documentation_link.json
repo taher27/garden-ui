@@ -1,0 +1,77 @@
+{
+  "test_name": "Verify Access to Documentation Link",
+  "description": "This test case ensures users can access Roost's documentation via the footer link.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai",
+    "https://docs.roost.ai"
+  ],
+  "steps": [
+    "Navigate to 'https://dev.roost.ai'.",
+    "Locate the 'Documentation' link in the footer using the stable selector.",
+    "Click on the 'Documentation' link.",
+    "Verify redirection to the 'https://docs.roost.ai' page.",
+    "Ensure the documentation page content is loaded successfully."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "text": "Documentation",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the 'https://docs.roost.ai' page.",
+    "The documentation page loads successfully.",
+    "Documentation content is visible and accessible."
+  ],
+  "edge_cases": [
+    "The 'Documentation' link is broken.",
+    "Network interruption during navigation.",
+    "The documentation page fails to load due to a server issue.",
+    "User clicks the link but is redirected to an incorrect URL.",
+    "Unexpected page layout on the documentation site."
+  ],
+  "data_requirements": [
+    "Active internet connection.",
+    "Valid documentation link configured in the footer.",
+    "Test environment allowing access to external documentation."
+  ],
+  "dependencies": [
+    "Documentation site must be operational.",
+    "Footer links must be configured correctly.",
+    "User must have access to external URLs."
+  ],
+  "complexity": "low",
+  "api_interactions": [],
+  "performance_metrics": [
+    "Loading time for the documentation page.",
+    "Navigation speed from the Roost site to the documentation site."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'Documentation' link is accessible via keyboard navigation.",
+    "Verify screen reader announces the purpose of the 'Documentation' link.",
+    "Ensure adequate color contrast for the footer link."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "6140ca25-a7da-46a9-bdf6-8553a53478ad",
+    "created_at": "2025-09-29T14:03:24.398671Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "auto-generated",
+      "keyboard-navigation",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 25,
+    "flakiness_potential": "high"
+  }
+}

@@ -1,0 +1,46 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": false,
+    "final_page_url": "https://dev.roost.ai/login",
+    "outcome_message": "Initial page loaded successfully.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "Login via Google",
+            "steps": {
+                "1": "Click on the Google icon",
+                "2": "Authenticate using Google credentials",
+                "3": "Return to the Roost dashboard"
+            }
+        },
+        {
+            "scenario_description": "Login via GitHub",
+            "steps": {
+                "1": "Click on the GitHub icon",
+                "2": "Authenticate using GitHub credentials",
+                "3": "Return to the Roost dashboard"
+            }
+        },
+        {
+            "scenario_description": "Access documentation",
+            "steps": {
+                "1": "Click on Documentation link",
+                "2": "Browse through the API documentation"
+            }
+        },
+        {
+            "scenario_description": "Download CLI tool",
+            "steps": {
+                "1": "Click on Download CLI",
+                "2": "Save the CLI tool locally"
+            }
+        },
+        {
+            "scenario_description": "Install VS Code extension",
+            "steps": {
+                "1": "Click on Install VS Code extension",
+                "2": "Follow the installation instructions"
+            }
+        }
+    ]
+}

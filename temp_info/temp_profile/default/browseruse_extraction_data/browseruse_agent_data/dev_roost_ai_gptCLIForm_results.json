@@ -1,0 +1,48 @@
+{
+  "url": "https://dev.roost.ai/gptCLIForm",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "GPT CLI Form",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Fill and Submit Test Suite Form",
+          "scenario_description": "User fills out the 'Test Suite' form with required details and submits it to test configurations.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Input field for 'Name' in 'Test Suite' section."
+            },
+            {
+              "action": "select",
+              "element_description": "Dropdown for 'Test Type' in 'Test Suite' section."
+            },
+            {
+              "action": "click",
+              "element_description": "Submit button in 'Test Suite' section."
+            }
+          ],
+          "expected_outcome": ["The test suite is configured and results are displayed."]
+        },
+        {
+          "scenario_name": "Configure AI Model",
+          "scenario_description": "User sets up AI model parameters in the 'Gen AI Models' section and saves configurations.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Input field for 'Open AI Base URL' in 'Gen AI Models' section."
+            },
+            {
+              "action": "type",
+              "element_description": "Input field for 'Open AI Token' in 'Gen AI Models' section."
+            },
+            {
+              "action": "click",
+              "element_description": "Save button in 'Gen AI Models' section."
+            }
+          ],
+          "expected_outcome": ["AI model configurations are saved successfully."]
+        }
+      ]
+    }
+  ]
+}

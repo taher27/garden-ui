@@ -1,0 +1,86 @@
+{
+  "test_name": "Verify Login via Google Authentication",
+  "description": "This test case validates the Google OAuth login functionality to ensure users can authenticate and access the Roost dashboard.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to 'https://dev.roost.ai/login'.",
+    "Locate the Google login button using the stable selector.",
+    "Click on the Google login button.",
+    "Authenticate using valid Google credentials.",
+    "Verify redirection back to the Roost dashboard.",
+    "Ensure the user's name is displayed on the dashboard, confirming successful login."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the Google authentication page.",
+    "User is successfully authenticated using valid credentials.",
+    "User is redirected to the Roost dashboard with access to their account."
+  ],
+  "edge_cases": [
+    "Invalid Google credentials are entered.",
+    "The Google login service is temporarily unavailable.",
+    "The user cancels the authentication process midway.",
+    "Network interruption during authentication.",
+    "Google account is locked or restricted."
+  ],
+  "data_requirements": [
+    "Valid Google account credentials.",
+    "Active internet connection.",
+    "Test environment configured to allow Google OAuth login.",
+    "Google OAuth client ID and redirect URI setup correctly.",
+    "A user account linked with Roost."
+  ],
+  "dependencies": [
+    "Google OAuth service must be operational.",
+    "Roost application must support OAuth redirection.",
+    "User account must exist in the Roost system."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "Google OAuth API for token exchange.",
+    "Roost backend API for user authentication and session creation."
+  ],
+  "performance_metrics": [
+    "Response time for Google OAuth redirection.",
+    "Loading time for the Roost dashboard post-login."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Google login button is accessible via keyboard navigation.",
+    "Verify screen reader announces the purpose of the Google login button.",
+    "Ensure adequate color contrast for the Google login button."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "06196e86-925d-4d9b-9669-76735956d1fd",
+    "created_at": "2025-09-29T14:03:24.397666Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "high"
+  }
+}

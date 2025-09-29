@@ -1,0 +1,32 @@
+{
+  "url": "https://dev.roost.ai/login",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Login via Google",
+          "scenario_description": "User clicks on the Google login button to authenticate using their Google account.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Google login button"
+            }
+          ],
+          "expected_outcome": ["User is redirected to Google for authentication and upon success, is logged into Roost.ai."]
+        },
+        {
+          "scenario_name": "Access Documentation",
+          "scenario_description": "User navigates to the documentation section to understand API functionalities.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Documentation link in the footer"
+            }
+          ],
+          "expected_outcome": ["Documentation page is displayed with relevant information."]
+        }
+      ]
+    }
+  ]
+}
