@@ -1,0 +1,59 @@
+{
+  "url": "https://dev.roost.ai/docs/api",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost.ai API Documentation",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Access API Documentation",
+          "scenario_description": "A user accesses the API documentation to understand the available endpoints and their usage.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "API Docs link"
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Documentation content"
+            }
+          ],
+          "expected_outcome": ["User understands the API endpoints provided."]
+        },
+        {
+          "scenario_name": "Download OpenAPI Specification",
+          "scenario_description": "A user downloads the OpenAPI specification file for development purposes.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Download OpenAPI specification link"
+            },
+            {
+              "action": "confirm_download",
+              "element_description": "OpenAPI specification file"
+            }
+          ],
+          "expected_outcome": ["User successfully downloads the specification file for API integration."]
+        },
+        {
+          "scenario_name": "Create Test Application",
+          "scenario_description": "A developer creates a new test application using the provided API configuration.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Create a Test App button"
+            },
+            {
+              "action": "input_text",
+              "element_description": "Application name input field"
+            },
+            {
+              "action": "submit",
+              "element_description": "Create button"
+            }
+          ],
+          "expected_outcome": ["The test application is created successfully and appears in the user’s account."]
+        }
+      ]
+    }
+  ]
+}

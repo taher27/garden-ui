@@ -1,0 +1,32 @@
+{
+"url": "https://dev.roost.ai/",
+"explored_pages_and_scenarios": [
+    {
+    "page_title": "Roost Enterprise Platform",
+    "potential_user_journeys": [
+        {
+        "scenario_name": "Access Documentation",
+        "scenario_description": "User navigates to the documentation section to learn more about the platform's functionalities.",
+        "steps": [
+            {
+            "action": "click",
+            "element_description": "Documentation link located in the footer area"
+            }
+        ],
+        "expected_outcome": ["User accesses the documentation page and views detailed information about the platform."]
+        },
+        {
+        "scenario_name": "Install VS Code Extension",
+        "scenario_description": "User installs the Roost platform extension for Visual Studio Code to streamline their workflow.",
+        "steps": [
+            {
+            "action": "click",
+            "element_description": "Install VS Code Extension link under the footer area"
+            }
+        ],
+        "expected_outcome": ["User successfully installs the VS Code extension and integrates it with their development environment."]
+        }
+    ]
+    }
+]
+}

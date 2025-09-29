@@ -1,0 +1,40 @@
+{
+  "url": "https://dev.roost.ai/login",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Login Using External Provider",
+          "scenario_description": "User logs into the platform using one of the available external identity providers such as Google or Github.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Login button for Google integration"
+            },
+            {
+              "action": "input_text",
+              "element_description": "Email field for Google credentials"
+            },
+            {
+              "action": "click",
+              "element_description": "Submit button"
+            }
+          ],
+          "expected_outcome": ["User successfully logs into the platform with their Google account."]
+        },
+        {
+          "scenario_name": "Access Documentation",
+          "scenario_description": "User accesses the platform documentation to learn about API usage and integration.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Documentation link in the footer"
+            }
+          ],
+          "expected_outcome": ["User is navigated to the documentation page."]
+        }
+      ]
+    }
+  ]
+}

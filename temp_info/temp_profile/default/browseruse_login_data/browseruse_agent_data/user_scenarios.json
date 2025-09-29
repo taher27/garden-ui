@@ -1,0 +1,38 @@
+[
+  {
+    "scenario_description": "User signs in using Okta integration.",
+    "steps": {
+      "1": "User clicks on the 'Okta' sign-in button.",
+      "2": "User enters Okta credentials in the redirected page.",
+      "3": "User confirms and logs in, returning to the dashboard."
+    }
+  },
+  {
+    "scenario_description": "User accesses documentation resources.",
+    "steps": {
+      "1": "User clicks on the 'Documentation' link.",
+      "2": "User explores API and setup guides for Roost.ai."
+    }
+  },
+  {
+    "scenario_description": "User downloads CLI for Roost.ai.",
+    "steps": {
+      "1": "User clicks 'Download CLI' option.",
+      "2": "User installs the CLI following the provided instructions."
+    }
+  },
+  {
+    "scenario_description": "User installs the VS Code extension.",
+    "steps": {
+      "1": "User clicks 'Install VS Code extension'.",
+      "2": "User follows the installation process and configures the extension."
+    }
+  },
+  {
+    "scenario_description": "User reviews privacy policy.",
+    "steps": {
+      "1": "User clicks the 'Privacy Policy' link.",
+      "2": "User reads the privacy terms provided by Roost.ai."
+    }
+  }
+]
