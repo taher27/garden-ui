@@ -1,0 +1,25 @@
+{
+  "url": "https://dev.roost.ai/docs/api",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "API Documentation",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Explore API Documentation",
+          "scenario_description": "User explores and navigates through the API documentation provided by RoostAI.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "API Docs link in the sidebar"
+            },
+            {
+              "action": "scroll",
+              "element_description": "Scroll through the detailed API specifications"
+            }
+          ],
+          "expected_outcome": ["User has a clear understanding of API capabilities and how to integrate them."]
+        }
+      ]
+    }
+  ]
+}

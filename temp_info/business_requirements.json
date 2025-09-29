@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "The site provides intelligent, automated solutions for managing and deploying cloud environments for development and testing, enabling users to streamline workflows and accelerate software delivery processes.",
+        "business_requirements": [
+            "Users must be able to create and manage cloud-based environments tailored for development and testing purposes.",
+            "Users must be able to deploy applications to cloud environments with minimal manual configuration.",
+            "The system must provide real-time monitoring and insights into the status and performance of deployed environments.",
+            "Users must be able to schedule automated environment creation and teardown based on predefined rules or timelines.",
+            "Access control must be available to ensure that only authorized users can modify or manage specific environments.",
+            "Users must be able to integrate existing CI/CD pipelines with the platform for seamless deployment workflows.",
+            "The system must offer options for resource optimization, ensuring cost-effective utilization of cloud infrastructure."
+        ]
+    }
+}

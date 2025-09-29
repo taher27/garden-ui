@@ -1,0 +1,75 @@
+Page Link: https://dev.roost.ai/docs/api
+Query: Extract all visible information related to API documentation and use cases.
+Extracted Content:
+```json
+{
+  "query": "Extract all visible information related to API documentation and use cases",
+  "response": {
+    "api_documentation": {
+      "overview": "This document is an OpenAPI reference for the RoostAI APIs that you can explore.",
+      "openapi_specification_download_link": "https://dev.roost.ai/api/swagger-json",
+      "api_provider": "Redocly",
+      "api_topics": [
+        "RoostGPT",
+        "TestGptController_getAllTest",
+        "TestGptController_createTestPlan",
+        "TestGptController_getAllTestPlan",
+        "TestGptController_editTest",
+        "TestGptController_deleteTest",
+        "TestGptController_getOneTest",
+        "TestGptController_editTriggerEvent",
+        "TestGptController_getOneEvent",
+        "TestGptController_deleteEvent",
+        "TestGptController_verifyTestName",
+        "TestGptController_triggerTest",
+        "TestGptController_triggerTestWithLicenseKey",
+        "TestGptController_retrigger",
+        "TestGptController_abortTrigger",
+        "TestGptController_getAllEvent",
+        "TestGptController_getLogs",
+        "TestGptController_deleteTestPlans",
+        "TestGptController_executeTest",
+        "TestGptController_testExecutionReport",
+        "TestGptController_testExecutionFileStatus",
+        "TestGptController_abortTestExecute",
+        "TestGptController_sendEventDiagnosisToSlack"
+      ]
+    },
+    "use_cases": {
+      "automated_test_case_generation": {
+        "description": "Automated Test Case Generation using Large Language Models (LLMs).",
+        "sample_use_case": {
+          "create_test_app": {
+            "functionality": "Creates a new application with its configuration.",
+            "authorizations": ["bearer"],
+            "request_body_schema": {
+              "app_id": "string",
+              "test_name": "string",
+              "trigger_events": ["push", "pr_create"],
+              "git_ops": "boolean",
+              "git_type": ["github", "gitlab", "bitbucket", "azure"],
+              "ai_model_info": "object",
+              "git_info": "object",
+              "integration_info": "object",
+              "additional_info": "object",
+              "ui_test_info": "object",
+              "test_timeout": "number",
+              "test_framework": "string",
+              "source_repo": "string",
+              "source_branch": "string",
+              "test_scope": "object",
+              "test_type": "string",
+              "license_key": "string"
+            },
+            "responses": {
+              "201": "Resource created successfully",
+              "default": "Error response"
+            }
+          }
+        }
+      }
+    },
+    "note": "The webpage contains detailed API documentation and explanations of use cases, especially in the context of automated test generation using LLMs. Full technical specifications are provided for various endpoints and their respective parameters."
+  }
+}
+```
