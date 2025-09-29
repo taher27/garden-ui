@@ -1,0 +1,44 @@
+{
+  "url": "https://dev.roost.ai/",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login | Software as a Service",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Login via third-party providers",
+          "scenario_description": "Users can log in using third-party authentication providers like Google, GitHub, or Microsoft.",
+          "steps": [
+            {"action": "click", "element_description": "Login button"},
+            {"action": "select_provider", "element_description": "Choose a third-party authentication provider"},
+            {"action": "authenticate", "element_description": "Complete login process on provider's site"}
+          ],
+          "expected_outcome": ["User is successfully logged into the platform."]
+        },
+        {
+          "scenario_name": "Accessing Documentation",
+          "scenario_description": "Users navigate to the Documentation section to learn more about the platform capabilities.",
+          "steps": [
+            {"action": "click", "element_description": "Documentation link in footer"}
+          ],
+          "expected_outcome": ["User is directed to the documentation page containing extensive resources."]
+        },
+        {
+          "scenario_name": "Downloading CLI tools",
+          "scenario_description": "Users download Command Line Interface tools to integrate with their development environment.",
+          "steps": [
+            {"action": "click", "element_description": "Download CLI link"}
+          ],
+          "expected_outcome": ["CLI tools are downloaded to the user's device."]
+        },
+        {
+          "scenario_name": "Installing VS Code Extension",
+          "scenario_description": "Users install an extension for their VS Code editor to enhance development experience.",
+          "steps": [
+            {"action": "click", "element_description": "Install VS Code Extension link"}
+          ],
+          "expected_outcome": ["VS Code extension installation file is downloaded."]
+        }
+      ]
+    }
+  ]
+}

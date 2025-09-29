@@ -1,0 +1,74 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Likely used to specify the domain for cookies in the application.",
+      "usage": "A blank value may indicate that this needs to be configured properly for cookies to work within the correct domain."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Consider setting this value explicitly to the application's domain, e.g., 'example.com'."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Likely used to specify the name of the cookie for session management or tracking.",
+      "usage": "A blank value may lead to cookie mismanagement or conflicts."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Consider assigning a unique and meaningful name, e.g., 'session_cookie'."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Specifies the login mechanism or provider being used for authentication.",
+      "usage": "Common values might include 'okta', 'oauth', 'saml', etc."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure this value matches the authentication provider configured in your application."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "The password associated with a site or system user, likely used for authentication.",
+      "security": "Storing passwords in plain text within environment variables is considered insecure."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Consider encrypting this value or storing it in a secure secrets management tool like AWS Secrets Manager, HashiCorp Vault, or similar.",
+      "Use strong password policies and rotate this password regularly."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "The username or email associated with a site or system user, likely used for authentication.",
+      "usage": "This appears to be an email address, which might be tied to a specific account in the application."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Consider securing this value to prevent unauthorized access.",
+      "Ensure this account is protected with strong authentication mechanisms (e.g., MFA)."
+    ]
+  }
+}

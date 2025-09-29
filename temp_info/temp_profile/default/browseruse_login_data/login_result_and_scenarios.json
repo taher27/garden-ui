@@ -1,0 +1,44 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": false,
+    "final_page_url": "https://dev.roost.ai/login",
+    "outcome_message": "Initial URL captured.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "Click 'Login' to access the sign-in form.",
+            "steps": {
+                "1": "Navigate to https://dev.roost.ai.",
+                "2": "Locate and click the 'Login' button."
+            }
+        },
+        {
+            "scenario_description": "Use Google for login.",
+            "steps": {
+                "1": "Navigate to https://dev.roost.ai.",
+                "2": "Click the 'Google' button for login."
+            }
+        },
+        {
+            "scenario_description": "Use GitHub for login.",
+            "steps": {
+                "1": "Navigate to https://dev.roost.ai.",
+                "2": "Click the 'GitHub' button for login."
+            }
+        },
+        {
+            "scenario_description": "Use Okta for login.",
+            "steps": {
+                "1": "Navigate to https://dev.roost.ai.",
+                "2": "Click the 'Okta' button for login."
+            }
+        },
+        {
+            "scenario_description": "Access documentation for support.",
+            "steps": {
+                "1": "Navigate to https://dev.roost.ai.",
+                "2": "Click the 'Documentation' link at the bottom."
+            }
+        }
+    ]
+}

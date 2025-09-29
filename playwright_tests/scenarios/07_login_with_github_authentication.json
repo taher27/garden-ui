@@ -1,0 +1,90 @@
+{
+  "test_name": "Login with GitHub Authentication",
+  "description": "Validate that a user can log in using GitHub OAuth and access their dashboard.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Verify that the GitHub sign-in option is visible and enabled.",
+    "Click on the GitHub sign-in button.",
+    "Verify that the GitHub login page is displayed.",
+    "Enter valid GitHub credentials (username and password) on the GitHub login page.",
+    "Click the 'Sign In' or 'Authorize' button on the GitHub login page.",
+    "Verify that the user is redirected back to the Roost application.",
+    "Check that the user lands on their dashboard at https://dev.roost.ai and sees relevant data."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "The user is authenticated via GitHub OAuth.",
+    "The user is redirected to the dashboard page at https://dev.roost.ai.",
+    "The dashboard displays user-specific data."
+  ],
+  "edge_cases": [
+    "GitHub OAuth service is unavailable.",
+    "User enters invalid GitHub credentials.",
+    "User denies authorization on the GitHub login page.",
+    "Redirect fails after successful authentication.",
+    "Session timeout occurs before authentication is completed."
+  ],
+  "data_requirements": [
+    "Valid GitHub account credentials.",
+    "Valid GitHub OAuth client ID and redirect URI.",
+    "Network connectivity for OAuth service.",
+    "Browser configured to accept cookies.",
+    "JavaScript enabled in the browser."
+  ],
+  "dependencies": [
+    "GitHub OAuth service must be operational.",
+    "Roost backend must handle OAuth tokens correctly.",
+    "The user's GitHub account must be active and in good standing."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "GitHub OAuth API for authentication.",
+    "Roost API to fetch user-specific data after login."
+  ],
+  "performance_metrics": [
+    "Time taken to redirect back to the dashboard after login.",
+    "OAuth token exchange latency.",
+    "Page load time for the dashboard."
+  ],
+  "accessibility_requirements": [
+    "Ensure the GitHub sign-in button is keyboard accessible.",
+    "Verify that screen readers can announce the GitHub sign-in option.",
+    "Ensure color contrast ratios meet WCAG standards for the sign-in button.",
+    "Verify that focus order is logical and intuitive."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "4f2be612-a521-40e1-b55e-8530012b3670",
+    "created_at": "2025-09-29T07:16:40.842907Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "network-resilience",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "high"
+  }
+}
