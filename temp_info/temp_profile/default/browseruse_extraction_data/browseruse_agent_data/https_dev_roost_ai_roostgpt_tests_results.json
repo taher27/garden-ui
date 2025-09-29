@@ -1,0 +1,53 @@
+{
+  "url": "https://dev.roost.ai/roostgpt/tests",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost.ai Test Suites Dashboard",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Viewing Test Suites",
+          "scenario_description": "Navigate through the table to view detailed information about various test suites.",
+          "steps": [
+            {"action": "assert_visibility", "element_description": "Table listing test suites with columns like name, creator, AI model, and timestamps."},
+            {"action": "scroll", "element_description": "Scroll through the paginated test suite table."}
+          ],
+          "expected_outcome": ["User views detailed information about test suites."]
+        },
+        {
+          "scenario_name": "Adding a Test Suite",
+          "scenario_description": "Use the 'Add Test Suite' functionality to input details and create a new test suite.",
+          "steps": [
+            {"action": "click", "element_description": "Add Test Suite button."},
+            {"action": "input_text", "element_description": "Form fields for test suite details."},
+            {"action": "click", "element_description": "Submit button to create the test suite."}
+          ],
+          "expected_outcome": ["New test suite is created and listed in the table."]
+        },
+        {
+          "scenario_name": "Filtering Test Suites",
+          "scenario_description": "Apply filters to view specific test suites using the provided options.",
+          "steps": [
+            {"action": "click", "element_description": "Filter options like 'Show My Test Suites'."}
+          ],
+          "expected_outcome": ["Filtered list of test suites is displayed."]
+        },
+        {
+          "scenario_name": "Navigating Pagination Controls",
+          "scenario_description": "Navigate between pages of the test suite table using pagination buttons.",
+          "steps": [
+            {"action": "click", "element_description": "Pagination buttons at the bottom of the table."}
+          ],
+          "expected_outcome": ["User accesses additional pages of test suites."]
+        },
+        {
+          "scenario_name": "Accessing Resources",
+          "scenario_description": "Download tools or access documentation using the footer links.",
+          "steps": [
+            {"action": "click", "element_description": "Footer links for CLI and VS Code extension."}
+          ],
+          "expected_outcome": ["User downloads tools or accesses documentation."]
+        }
+      ]
+    }
+  ]
+}

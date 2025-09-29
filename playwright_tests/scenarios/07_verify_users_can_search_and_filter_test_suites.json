@@ -1,0 +1,91 @@
+{
+  "test_name": "Verify Users Can Search and Filter Test Suites",
+  "description": "This scenario tests the ability of users to search for specific test suites using the search box and apply filters to narrow down results.",
+  "type": "functional",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests"
+  ],
+  "steps": [
+    "Navigate to the Test Suites page.",
+    "Verify the visibility of the search box with placeholder text.",
+    "Type a valid test suite name into the search box.",
+    "Press the 'Enter' key to initiate the search.",
+    "Observe the filtered results displayed in the test suites table.",
+    "Verify that the table updates with results matching the search query.",
+    "Click on the 'Show My Test Suites' filter option.",
+    "Verify the table updates and only displays test suites created by the logged-in user.",
+    "Clear the search box input and verify the table resets to display all test suites."
+  ],
+  "selectors": [
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"tests-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/roostgpt/tests' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "text": "Test Suites",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    }
+  ],
+  "expected_results": [
+    "Search results display test suites matching the query.",
+    "Filter updates the table to show only relevant test suites."
+  ],
+  "edge_cases": [
+    "Empty search query results in no filtering applied.",
+    "Search query matches no test suites, displaying an empty table.",
+    "Filter option fails to update results due to backend issues.",
+    "User enters special characters in the search box.",
+    "Simultaneous use of filters and search query causes unexpected behavior."
+  ],
+  "data_requirements": [
+    "Existing test suites in the database.",
+    "User with appropriate permissions to perform filters.",
+    "Test suite names that include special characters.",
+    "A list of test suites created by the logged-in user."
+  ],
+  "dependencies": [
+    "Stable backend API for fetching test suite data.",
+    "Working filters functionality in the UI.",
+    "Correct implementation of the search feature."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET /api/test-suites?query=<search-text>",
+    "GET /api/test-suites?filter=created-by-current-user"
+  ],
+  "performance_metrics": [
+    "Time taken for search results to appear.",
+    "Time taken for filters to update the table."
+  ],
+  "accessibility_requirements": [
+    "Search box must have an accessible label.",
+    "Filter options must be keyboard-navigable."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "d66ed3f0-3660-4ea5-98be-b178a677bac6",
+    "created_at": "2025-09-29T06:28:42.688735Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "concurrency",
+      "form-submission",
+      "functional",
+      "keyboard-navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 45,
+    "flakiness_potential": "medium"
+  }
+}

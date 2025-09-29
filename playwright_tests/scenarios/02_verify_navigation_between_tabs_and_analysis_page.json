@@ -1,0 +1,103 @@
+{
+  "test_name": "Verify Navigation Between Tabs and Analysis Page",
+  "description": "This test ensures seamless navigation between the 'RoostGPT', 'Connectors', and 'Analysis' tabs to confirm proper functionality and URL handling.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai",
+    "https://dev.roost.ai/roostgpt/analyses",
+    "https://dev.roost.ai/roostgpt/connectors"
+  ],
+  "steps": [
+    "Open the primary dashboard at https://dev.roost.ai.",
+    "Click on the 'RoostGPT' tab using the selector [data-testid=\"roostGPT-tab\"].",
+    "Verify that the 'RoostGPT' page loads successfully.",
+    "Click on the 'Connectors' tab using the selector [data-testid=\"connectors-tab\"].",
+    "Validate the URL changes to https://dev.roost.ai/roostgpt/connectors.",
+    "Click on the 'Analysis' link using the selector //a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')].",
+    "Confirm the URL changes to https://dev.roost.ai/roostgpt/analyses.",
+    "Verify visible content matches the 'Analysis' page description."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"roostGPT-tab\"]",
+      "text": "RoostGPT",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    },
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"connectors-tab\"]",
+      "text": "Connectors",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/connectors"
+    },
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "text": "Analysis",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/analyses"
+    }
+  ],
+  "expected_results": [
+    "Navigation between tabs and pages functions correctly.",
+    "URLs update accurately based on user interaction.",
+    "Content on each page loads as expected."
+  ],
+  "edge_cases": [
+    "Attempt to click tabs repeatedly to check for UI glitches.",
+    "Navigate to tabs with slow network conditions.",
+    "Access tabs without being logged in (if applicable).",
+    "Click tabs while the page is still loading.",
+    "Test for proper focus management after navigation for accessibility."
+  ],
+  "data_requirements": [
+    "Access to all relevant tabs.",
+    "Properly configured navigation links.",
+    "A browser with JavaScript enabled.",
+    "Functional URLs for all tabs.",
+    "Test data populating the pages."
+  ],
+  "dependencies": [
+    "The 'RoostGPT' tab must be functional.",
+    "The 'Connectors' tab must be operational.",
+    "The 'Analysis' link must work as expected."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "API calls to load data for each tab.",
+    "API calls to fetch real-time data for the 'Analysis' page."
+  ],
+  "performance_metrics": [
+    "Measure tab-switching latency.",
+    "Evaluate content loading time for each tab.",
+    "Monitor API response time during navigation."
+  ],
+  "accessibility_requirements": [
+    "Ensure keyboard navigation is supported for tab switching.",
+    "Verify each tab is labeled appropriately for screen readers.",
+    "Confirm focus state is visually distinguishable."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "3f7f47a4-046c-41f3-ada9-33643191da34",
+    "created_at": "2025-09-29T06:28:42.685722Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "keyboard-navigation",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "high"
+  }
+}

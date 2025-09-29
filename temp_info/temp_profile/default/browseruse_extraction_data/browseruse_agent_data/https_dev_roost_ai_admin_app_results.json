@@ -1,0 +1,37 @@
+{
+  "url": "https://dev.roost.ai/admin/app",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Admin View",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for Users",
+          "scenario_description": "Allows an admin to search for a user by their details and manage their access.",
+          "steps": [
+            {"action": "type", "element_description": "Search input field for user search."},
+            {"action": "click", "element_description": "Apply button to filter search results."}
+          ],
+          "expected_outcome": ["Filtered user results are displayed."]
+        },
+        {
+          "scenario_name": "Modify User Role",
+          "scenario_description": "Allows an admin to change the role of a user to Admin or revoke their Admin rights.",
+          "steps": [
+            {"action": "click", "element_description": "Make Admin button next to the user's details."},
+            {"action": "click", "element_description": "Confirm role update in the dialog."}
+          ],
+          "expected_outcome": ["User role is updated successfully."]
+        },
+        {
+          "scenario_name": "Remove User",
+          "scenario_description": "Allows an admin to delete a user from the system.",
+          "steps": [
+            {"action": "click", "element_description": "Delete User button next to the user's details."},
+            {"action": "click", "element_description": "Confirm deletion in the dialog."}
+          ],
+          "expected_outcome": ["User is removed from the system."]
+        }
+      ]
+    }
+  ]
+}

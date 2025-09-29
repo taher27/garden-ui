@@ -1,0 +1,79 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely the domain for setting cookies in the application.",
+      "usage": "Typically used for defining the scope of cookies for the web application."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure the value is properly set to the domain of the application (e.g., 'example.com').",
+      "Avoid leaving this value empty to prevent potential cookie misconfiguration."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely the name of the cookie used by the application.",
+      "usage": "Defines the identifier for the cookie stored in the user's browser."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Provide a meaningful cookie name (e.g., 'session_id' or 'auth_token').",
+      "Avoid leaving this value empty to ensure proper cookie handling."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Specifies the login mechanism or identity provider for the application.",
+      "usage": "Could indicate integration with Okta for authentication and user management."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Confirm the login type corresponds to the configured authentication provider.",
+      "Document supported login types for clarity."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Represents a password used for site authentication or configuration.",
+      "usage": "Sensitive information that should be securely stored and accessed."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store the password in a secure secrets management system (e.g., AWS Secrets Manager, Vault).",
+      "Avoid hardcoding sensitive values directly in environment variables.",
+      "Consider rotating the password regularly for security purposes."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 0.95,
+    "metadata": {
+      "description": "Represents a username, likely an email address, for site authentication or configuration.",
+      "usage": "Sensitive information that should be protected, especially if used for authentication."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store the username in a secure secrets management system.",
+      "Document its purpose and ensure it aligns with the application's authentication strategy.",
+      "Avoid hardcoding sensitive values directly in environment variables."
+    ]
+  }
+}

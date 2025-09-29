@@ -1,0 +1,90 @@
+{
+  "test_name": "Verify Pagination Functionality in Test Suites Table",
+  "description": "This scenario tests the ability of users to navigate through the paginated test suite table using pagination controls.",
+  "type": "functional",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests"
+  ],
+  "steps": [
+    "Navigate to the Test Suites page.",
+    "Verify the visibility of pagination controls at the bottom of the table.",
+    "Click on the '2' button to navigate to page 2.",
+    "Verify that the table updates to display test suites from page 2.",
+    "Click on the 'Next' button to navigate to page 3.",
+    "Verify that the table updates to display test suites from page 3.",
+    "Click on the 'Last' button to navigate to the last page.",
+    "Verify the table updates to display test suites from the last page.",
+    "Click the 'First' button to navigate back to the first page.",
+    "Verify the table updates to display test suites from the first page."
+  ],
+  "selectors": [
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()=\"2\"]",
+      "text": "2",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"paginator-last-page-button\"]",
+      "text": "Last",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    }
+  ],
+  "expected_results": [
+    "Table updates correctly based on the selected page.",
+    "Pagination controls navigate between pages as expected."
+  ],
+  "edge_cases": [
+    "Clicking 'Next' on the last page does nothing.",
+    "Clicking 'Previous' on the first page does nothing.",
+    "Rapid clicking of pagination buttons causes UI glitches.",
+    "Network latency delays page loading.",
+    "Pagination buttons are disabled due to backend errors."
+  ],
+  "data_requirements": [
+    "Test suites data spanning multiple pages.",
+    "Total count of test suites for pagination calculations.",
+    "User permissions to view test suites."
+  ],
+  "dependencies": [
+    "Correct implementation of pagination in the backend.",
+    "Functional pagination controls in the UI.",
+    "Stable database with test suite entries."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET /api/test-suites?page=<page-number>"
+  ],
+  "performance_metrics": [
+    "Time taken to load a new page.",
+    "Smoothness of UI transitions between pages."
+  ],
+  "accessibility_requirements": [
+    "Pagination buttons must have aria-label attributes.",
+    "Buttons must be keyboard-navigable."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "505edada-f9b1-4be0-8de3-c2ae51776165",
+    "created_at": "2025-09-29T06:28:42.689731Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "functional",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "high"
+  }
+}

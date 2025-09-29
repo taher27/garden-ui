@@ -1,0 +1,255 @@
+{
+  "https://dev.roost.ai/admin/app": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Admin View",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Search for Users",
+            "scenario_description": "Allows an admin to search for a user by their details and manage their access.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Search input field for user search."
+              },
+              {
+                "action": "click",
+                "element_description": "Apply button to filter search results."
+              }
+            ],
+            "expected_outcome": [
+              "Filtered user results are displayed."
+            ]
+          },
+          {
+            "scenario_name": "Modify User Role",
+            "scenario_description": "Allows an admin to change the role of a user to Admin or revoke their Admin rights.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Make Admin button next to the user's details."
+              },
+              {
+                "action": "click",
+                "element_description": "Confirm role update in the dialog."
+              }
+            ],
+            "expected_outcome": [
+              "User role is updated successfully."
+            ]
+          },
+          {
+            "scenario_name": "Remove User",
+            "scenario_description": "Allows an admin to delete a user from the system.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Delete User button next to the user's details."
+              },
+              {
+                "action": "click",
+                "element_description": "Confirm deletion in the dialog."
+              }
+            ],
+            "expected_outcome": [
+              "User is removed from the system."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/connectors": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Connectors Dashboard",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Search for a Connector",
+            "scenario_description": "A user searches for a specific connector using the search functionality.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Search input field with placeholder 'Search for Conn...'."
+              },
+              {
+                "action": "press_enter",
+                "element_description": "Confirms the search query with Enter key."
+              }
+            ],
+            "expected_outcome": [
+              "Filtered connectors matching the query are displayed."
+            ]
+          },
+          {
+            "scenario_name": "Delete a Connector",
+            "scenario_description": "A user deletes a specific connector from the list.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Delete button adjacent to the connector entry."
+              },
+              {
+                "action": "confirm",
+                "element_description": "Confirm deletion in the dialog box."
+              }
+            ],
+            "expected_outcome": [
+              "The connector is successfully removed from the list."
+            ]
+          },
+          {
+            "scenario_name": "View Connector Details",
+            "scenario_description": "A user views detailed information of a connector.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Info button adjacent to the connector entry."
+              }
+            ],
+            "expected_outcome": [
+              "Detailed information about the connector is displayed."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/roostgpt/analyses": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Analysis Dashboard",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Analyze Test Suite",
+            "scenario_description": "User selects a test suite and views detailed analysis results.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Select a test suite from the list."
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "Analysis results are shown for the selected suite."
+              },
+              {
+                "action": "click",
+                "element_description": "Download the analysis report."
+              }
+            ],
+            "expected_outcome": [
+              "User obtains detailed insights into the test suite performance and downloads the report."
+            ]
+          },
+          {
+            "scenario_name": "Filter Analysis Results",
+            "scenario_description": "User applies filters to view specific analysis data.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Open the filters panel."
+              },
+              {
+                "action": "type",
+                "element_description": "Input filter criteria such as test type or date range."
+              },
+              {
+                "action": "click",
+                "element_description": "Apply filters to update the displayed analysis results."
+              }
+            ],
+            "expected_outcome": [
+              "Filtered analysis results are displayed based on user criteria."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/roostgpt/tests": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost.ai Test Suites Dashboard",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Viewing Test Suites",
+            "scenario_description": "Navigate through the table to view detailed information about various test suites.",
+            "steps": [
+              {
+                "action": "assert_visibility",
+                "element_description": "Table listing test suites with columns like name, creator, AI model, and timestamps."
+              },
+              {
+                "action": "scroll",
+                "element_description": "Scroll through the paginated test suite table."
+              }
+            ],
+            "expected_outcome": [
+              "User views detailed information about test suites."
+            ]
+          },
+          {
+            "scenario_name": "Adding a Test Suite",
+            "scenario_description": "Use the 'Add Test Suite' functionality to input details and create a new test suite.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Add Test Suite button."
+              },
+              {
+                "action": "input_text",
+                "element_description": "Form fields for test suite details."
+              },
+              {
+                "action": "click",
+                "element_description": "Submit button to create the test suite."
+              }
+            ],
+            "expected_outcome": [
+              "New test suite is created and listed in the table."
+            ]
+          },
+          {
+            "scenario_name": "Filtering Test Suites",
+            "scenario_description": "Apply filters to view specific test suites using the provided options.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Filter options like 'Show My Test Suites'."
+              }
+            ],
+            "expected_outcome": [
+              "Filtered list of test suites is displayed."
+            ]
+          },
+          {
+            "scenario_name": "Navigating Pagination Controls",
+            "scenario_description": "Navigate between pages of the test suite table using pagination buttons.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Pagination buttons at the bottom of the table."
+              }
+            ],
+            "expected_outcome": [
+              "User accesses additional pages of test suites."
+            ]
+          },
+          {
+            "scenario_name": "Accessing Resources",
+            "scenario_description": "Download tools or access documentation using the footer links.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Footer links for CLI and VS Code extension."
+              }
+            ],
+            "expected_outcome": [
+              "User downloads tools or accesses documentation."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
