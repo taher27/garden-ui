@@ -1,0 +1,92 @@
+{
+  "test_name": "Verify Google Login Integration",
+  "description": "This test verifies the integration and functionality of the Google login option on the login page. It ensures that users are directed to the Google authentication page, can authenticate successfully, and are redirected back to the application.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://accounts.google.com/"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Locate the Google login button on the page.",
+    "Click on the Google login button.",
+    "Verify the redirection to Google's OAuth2 authentication page.",
+    "Enter valid Google credentials on the authentication form.",
+    "Click the 'Next' button to proceed.",
+    "Complete any additional Google verification steps if prompted, such as 2FA.",
+    "Verify redirection back to the https://dev.roost.ai domain.",
+    "Check if the user is successfully logged in by verifying the presence of the dashboard or user-specific elements.",
+    "Capture and log the authentication token returned by Google."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the Google authentication page.",
+    "Authentication is successful with valid credentials.",
+    "User is redirected back to the application's dashboard.",
+    "Google authentication token is captured and validated."
+  ],
+  "edge_cases": [
+    "User enters incorrect Google credentials.",
+    "Google account has 2FA enabled, and the user fails the verification.",
+    "User cancels the authentication process on the Google page.",
+    "Google authentication service is temporarily unavailable.",
+    "Token expiration or invalidation upon redirection back to the application."
+  ],
+  "data_requirements": [
+    "Valid Google account credentials.",
+    "Google OAuth2 client ID associated with the application.",
+    "Redirect URI registered with Google.",
+    "Access to a Google account with 2FA enabled for testing.",
+    "Test account in the Roost.ai application linked to the Google account."
+  ],
+  "dependencies": [
+    "Google OAuth2 API availability.",
+    "Roost.ai application backend supporting Google OAuth2 login.",
+    "Network connectivity for redirection and API calls."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "Google OAuth2 token exchange endpoint.",
+    "Roost.ai backend API to validate and store the OAuth2 token."
+  ],
+  "performance_metrics": [
+    "Time taken to load the Google authentication page.",
+    "Redirection time back to the application.",
+    "Response time for token validation by the backend."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Google login button is accessible via keyboard navigation.",
+    "Verify ARIA labels are present and descriptive for the Google login button.",
+    "Check that color contrast for the Google login button meets WCAG standards.",
+    "Ensure the authentication flow is usable with screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "18a0b589-97c6-41c4-9633-38175641f4fc",
+    "created_at": "2025-09-30T08:50:36.980995Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "medium"
+  }
+}

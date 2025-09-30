@@ -1,0 +1,48 @@
+{
+  "url": "https://dev.roost.ai/connectors",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Connectors Configuration",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Configure a New Connector",
+          "scenario_description": "This flow enables users to add and configure a new connector to integrate with external services such as databases or APIs.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Add Connector button"
+            },
+            {
+              "action": "type",
+              "element_description": "Input field for connector name"
+            },
+            {
+              "action": "select",
+              "element_description": "Dropdown for choosing connector type"
+            },
+            {
+              "action": "click",
+              "element_description": "Save configuration button"
+            }
+          ],
+          "expected_outcome": [
+            "The new connector is added and ready to use for integration purposes."
+          ]
+        },
+        {
+          "scenario_name": "View Connector Details",
+          "scenario_description": "This flow allows users to view detailed information about a configured connector.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Connector name link"
+            }
+          ],
+          "expected_outcome": [
+            "Detailed information about the selected connector is displayed."
+          ]
+        }
+      ]
+    }
+  ]
+}

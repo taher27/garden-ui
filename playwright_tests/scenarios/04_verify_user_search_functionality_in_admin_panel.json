@@ -1,0 +1,94 @@
+{
+  "test_name": "Verify User Search Functionality in Admin Panel",
+  "description": "This test ensures that an admin can search for users in the user list using the search functionality.",
+  "type": "search",
+  "pages": [
+    "https://dev.roost.ai/admin/app"
+  ],
+  "steps": [
+    "Log in as an admin user.",
+    "Navigate to the Admin tab using the 'Admin' link.",
+    "Locate the search input field.",
+    "Type 'harish' into the search input field.",
+    "Press Enter or click the 'Search' button.",
+    "Verify that the user list updates to show only users matching the search term.",
+    "Clear the search input field.",
+    "Verify that the full user list is displayed again."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"admin-tab\"]",
+      "text": "Admin",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"test\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    }
+  ],
+  "expected_results": [
+    "Only users matching the search term are displayed.",
+    "The full user list is restored when the search term is cleared."
+  ],
+  "edge_cases": [
+    "Search term matches multiple users.",
+    "Search term matches no users.",
+    "Search term is empty and Enter is pressed.",
+    "Search term includes special characters.",
+    "Search input field is disabled or inaccessible."
+  ],
+  "data_requirements": [
+    "A user named 'harish' in the user list.",
+    "At least one other user in the user list.",
+    "Search functionality implemented.",
+    "Search input field accessible.",
+    "Database access to validate search results."
+  ],
+  "dependencies": [
+    "Admin user must be logged in.",
+    "User list must be loaded correctly.",
+    "Search input field must be visible.",
+    "API call for search functionality must be working.",
+    "The database must contain user data."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "API call to fetch search results."
+  ],
+  "performance_metrics": [
+    "Time taken to display search results.",
+    "Response time of the search API."
+  ],
+  "accessibility_requirements": [
+    "Verify the search input field has a proper ARIA label.",
+    "Ensure search results are navigable using the keyboard.",
+    "Check for a visible focus indicator on the search field.",
+    "Ensure error messages for invalid inputs are accessible.",
+    "Verify that placeholder text in the search field is descriptive."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "3fadab67-8ba1-4e39-bb22-d08f6a960d64",
+    "created_at": "2025-09-30T08:50:36.983009Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "form-submission",
+      "keyboard-navigation",
+      "performance",
+      "search",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "medium"
+  }
+}

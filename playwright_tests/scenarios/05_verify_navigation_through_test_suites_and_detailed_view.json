@@ -1,0 +1,105 @@
+{
+  "test_name": "Verify Navigation Through Test Suites and Detailed View",
+  "description": "Ensure users can navigate through the list of test suites, search for a specific suite, and view detailed information about the selected suite.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests"
+  ],
+  "steps": [
+    "Navigate to the URL https://dev.roost.ai/roostgpt/tests.",
+    "Locate and click on the 'Test Suites' link using its stable selector.",
+    "Verify the page loads successfully with the list of test suites.",
+    "Identify the search bar using its stable selector.",
+    "Type the name of the test suite to be searched into the search bar.",
+    "Wait for the search results to update dynamically.",
+    "Locate the specific test suite row in the table.",
+    "Click on the test suite row using its stable selector.",
+    "Verify the detailed view of the test suite is displayed.",
+    "Check that the details include creation and modification history."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/roostgpt/tests' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "text": "Test Suites",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"tests-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "a",
+      "selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[2]/div/div[2]/div[2]/a",
+      "text": "taher",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    }
+  ],
+  "expected_results": [
+    "The user can see the list of test suites.",
+    "Search functionality filters the list based on the input.",
+    "The selected test suite's detailed view is displayed correctly.",
+    "Details include creation and modification history."
+  ],
+  "edge_cases": [
+    "Search bar input is empty.",
+    "Search term does not match any test suites.",
+    "Network latency causes delayed search results.",
+    "Test suite row is clicked but does not load details.",
+    "User navigates away from the page before the detailed view loads."
+  ],
+  "data_requirements": [
+    "Test suite names for search.",
+    "Valid URLs for navigation.",
+    "Test suite details such as creation and modification history.",
+    "Test suite row identifiers.",
+    "Search bar functionality setup."
+  ],
+  "dependencies": [
+    "Test suites are already created and listed on the page.",
+    "Search bar functionality is implemented.",
+    "Detailed view feature is fully operational."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "API call to fetch test suite details.",
+    "API call to filter test suites during search.",
+    "API call to retrieve detailed view data."
+  ],
+  "performance_metrics": [
+    "Time taken for search results to update.",
+    "Page load time for detailed view.",
+    "Response time of API calls for test suite details."
+  ],
+  "accessibility_requirements": [
+    "Search bar must be navigable via keyboard.",
+    "Test suite rows must have ARIA labels for screen readers.",
+    "Detailed view must conform to WCAG 2.1 AA standards."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "eba67ec8-ac15-4c89-9282-f9b6faea8d5f",
+    "created_at": "2025-09-30T08:50:36.983009Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "form-submission",
+      "keyboard-navigation",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "high"
+  }
+}

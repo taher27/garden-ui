@@ -1,0 +1,55 @@
+{
+  "url": "https://dev.roost.ai/roostgpt",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "RoostGPT Test Suites",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search Test Suites",
+          "scenario_description": "User searches for specific test suites using the search functionality.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Search input box to type keywords for test suites."
+            },
+            {
+              "action": "click",
+              "element_description": "Submit search query."
+            }
+          ],
+          "expected_outcome": ["Relevant test suites matching the keywords are displayed."]
+        },
+        {
+          "scenario_name": "Apply Filters",
+          "scenario_description": "User applies filters to narrow down test suite results.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Filters button to open filtering options."
+            },
+            {
+              "action": "select",
+              "element_description": "Filter criteria such as test type or creation date."
+            },
+            {
+              "action": "click",
+              "element_description": "Apply filters."
+            }
+          ],
+          "expected_outcome": ["Filtered test suite results are displayed."]
+        },
+        {
+          "scenario_name": "View Test Suite Details",
+          "scenario_description": "User views detailed information of a test suite.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Test suite name to access details."
+            }
+          ],
+          "expected_outcome": ["Detailed test suite page is opened."]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "url": "https://dev.roost.ai/admin/app",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Zbio Admin View",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "User Management",
+          "scenario_description": "Admin manages user roles and permissions through the administrative panel.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Remove Admin button beside a user name"
+            },
+            {
+              "action": "click",
+              "element_description": "Make Admin button beside a user name"
+            },
+            {
+              "action": "click",
+              "element_description": "Delete User button beside a user name"
+            }
+          ],
+          "expected_outcome": [
+            "User's role is updated or account is removed based on the action."
+          ]
+        },
+        {
+          "scenario_name": "Search for a User",
+          "scenario_description": "Admin searches for a specific user using the search functionality.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Search input field"
+            },
+            {
+              "action": "click",
+              "element_description": "Apply button"
+            }
+          ],
+          "expected_outcome": [
+            "List updates to show matching user profiles."
+          ]
+        },
+        {
+          "scenario_name": "Add a New Rooster",
+          "scenario_description": "Admin invites a new user to join by sending an invitation.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Invite Rooster button"
+            },
+            {
+              "action": "type",
+              "element_description": "Email input field in the invitation form"
+            },
+            {
+              "action": "click",
+              "element_description": "Send Invitation button"
+            }
+          ],
+          "expected_outcome": [
+            "User receives an invitation email to join the platform."
+          ]
+        }
+      ]
+    }
+  ]
+}
