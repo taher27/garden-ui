@@ -1,0 +1,100 @@
+{
+  "test_name": "Verify User Role Management in Admin Panel",
+  "description": "This test ensures that an admin can manage user roles by making a user an admin, revoking admin rights, and deleting a user.",
+  "type": "user_management",
+  "pages": [
+    "https://dev.roost.ai/admin/app"
+  ],
+  "steps": [
+    "Log in as an admin user.",
+    "Navigate to the Admin tab using the 'Admin' link.",
+    "Locate the user 'bhhavya.sureka' in the user list.",
+    "Click the 'Make Admin' button beside the user 'bhhavya.sureka'.",
+    "Verify that the user role changes to 'Admin'.",
+    "Click the 'Remove Admin' button beside the user 'bhhavya.sureka'.",
+    "Verify that the user role changes back to 'User'.",
+    "Click the 'Delete User' button beside the user 'bhhavya.sureka'.",
+    "Confirm deletion in the confirmation dialog.",
+    "Verify that the user 'bhhavya.sureka' is removed from the user list."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"admin-tab\"]",
+      "text": "Admin",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    },
+    {
+      "element_type": "a",
+      "selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div[2]/div[2]/a",
+      "text": "bhhavya.sureka",
+      "action": "locate",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    }
+  ],
+  "expected_results": [
+    "User role is updated to 'Admin' when 'Make Admin' is clicked.",
+    "User role is reverted to 'User' when 'Remove Admin' is clicked.",
+    "User is successfully deleted from the user list."
+  ],
+  "edge_cases": [
+    "Verify what happens if the 'Make Admin' button is clicked for a user already an admin.",
+    "Check behavior when trying to delete the currently logged-in admin.",
+    "Ensure proper error handling if the user list fails to load.",
+    "Test what happens if the confirmation dialog for deletion is dismissed.",
+    "Verify if changes persist after refreshing the page."
+  ],
+  "data_requirements": [
+    "A user named 'bhhavya.sureka' in the user list.",
+    "Admin credentials for login.",
+    "Proper role assignments in the database before starting the test.",
+    "Database access to verify user roles.",
+    "Confirmation dialog for user deletion."
+  ],
+  "dependencies": [
+    "Admin user must be logged in.",
+    "The user list must be loaded correctly.",
+    "The 'Make Admin', 'Remove Admin', and 'Delete User' buttons must be visible.",
+    "The database must be accessible to verify changes.",
+    "Confirmation dialog functionality must be implemented."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "API call to fetch the user list.",
+    "API call to update user roles.",
+    "API call to delete a user."
+  ],
+  "performance_metrics": [
+    "Time taken to update user roles.",
+    "Time taken to delete a user.",
+    "Response time of API calls for fetching the user list."
+  ],
+  "accessibility_requirements": [
+    "Verify that all buttons have proper ARIA labels.",
+    "Ensure the user list is navigable using the keyboard.",
+    "Check color contrast for role status indicators.",
+    "Ensure confirmation dialogs are screen-reader friendly.",
+    "Verify that focus is appropriately managed on page navigation."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "29c44b1a-1db9-4b8d-812d-b7834b842a3c",
+    "created_at": "2025-09-30T08:50:36.983009Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "keyboard-navigation",
+      "performance",
+      "ui-test",
+      "user_management"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "medium"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "test_name": "Verify Okta Login Integration",
+  "description": "This test verifies the integration and functionality of the Okta login option on the login page. It ensures that users are directed to the Okta authentication page, can authenticate successfully, and are redirected back to the application.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev-53854943.okta.com/oauth2/"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Locate the Okta login button on the page.",
+    "Click on the Okta login button.",
+    "Verify the redirection to Okta's authentication page.",
+    "Enter valid Okta credentials on the authentication form.",
+    "Click the 'Sign In' button to proceed.",
+    "Complete any additional Okta verification steps if prompted, such as 2FA.",
+    "Verify redirection back to the https://dev.roost.ai domain.",
+    "Check if the user is successfully logged in by verifying the presence of the dashboard or user-specific elements.",
+    "Capture and log the authentication token returned by Okta."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://dev-53854943.okta.com/oauth2/default/v1/authorize?response_type=code&scope=openid%20profile%20email%20address&state=okta&client_id=0oa3x8katznHWlHeD5d7&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'okta')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the Okta authentication page.",
+    "Authentication is successful with valid credentials.",
+    "User is redirected back to the application's dashboard.",
+    "Okta authentication token is captured and validated."
+  ],
+  "edge_cases": [
+    "User enters incorrect Okta credentials.",
+    "Okta account has 2FA enabled, and the user fails the verification.",
+    "User cancels the authentication process on the Okta page.",
+    "Okta authentication service is temporarily unavailable.",
+    "Token expiration or invalidation upon redirection back to the application."
+  ],
+  "data_requirements": [
+    "Valid Okta account credentials.",
+    "Okta OAuth2 client ID associated with the application.",
+    "Redirect URI registered with Okta.",
+    "Access to an Okta account with 2FA enabled for testing.",
+    "Test account in the Roost.ai application linked to the Okta account."
+  ],
+  "dependencies": [
+    "Okta OAuth2 API availability.",
+    "Roost.ai application backend supporting Okta OAuth2 login.",
+    "Network connectivity for redirection and API calls."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "Okta OAuth2 token exchange endpoint.",
+    "Roost.ai backend API to validate and store the OAuth2 token."
+  ],
+  "performance_metrics": [
+    "Time taken to load the Okta authentication page.",
+    "Redirection time back to the application.",
+    "Response time for token validation by the backend."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Okta login button is accessible via keyboard navigation.",
+    "Verify ARIA labels are present and descriptive for the Okta login button.",
+    "Check that color contrast for the Okta login button meets WCAG standards.",
+    "Ensure the authentication flow is usable with screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "2c00e1a6-ff08-4e47-ad95-2cb391a02b05",
+    "created_at": "2025-09-30T08:50:36.983009Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "medium"
+  }
+}

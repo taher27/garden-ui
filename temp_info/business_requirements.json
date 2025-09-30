@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "Roost.ai provides a platform for efficient and automated creation, management, and deployment of ephemeral environments for software testing and development.",
+        "business_requirements": [
+            "Users must be able to create on-demand ephemeral environments based on predefined configurations.",
+            "Users must have the ability to integrate the platform with existing CI/CD pipelines for seamless deployment processes.",
+            "Users must be able to monitor the status and performance of active environments via a dashboard.",
+            "Users must have access to role-based permissions to control who can create, manage, or delete environments.",
+            "Users must be able to schedule automatic cleanup or expiration of ephemeral environments to optimize resource usage.",
+            "Users must be able to clone production environments for testing purposes while maintaining data isolation.",
+            "Users must receive notifications or alerts for environment failures or resource limit breaches."
+        ]
+    }
+}

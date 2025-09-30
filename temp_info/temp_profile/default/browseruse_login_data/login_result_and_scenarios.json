@@ -1,0 +1,59 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": true,
+    "final_page_url": "https://dev.roost.ai/dashboard",
+    "outcome_message": "Successfully logged in",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "Login with Okta",
+            "steps": {
+                "1": "Navigate to login URL",
+                "2": "Select Okta login option",
+                "3": "Enter credentials",
+                "4": "Submit login form",
+                "5": "Verify login success"
+            }
+        },
+        {
+            "scenario_description": "Login with Google",
+            "steps": {
+                "1": "Navigate to login URL",
+                "2": "Select Google login option",
+                "3": "Authenticate via Google",
+                "4": "Redirect back",
+                "5": "Verify login success"
+            }
+        },
+        {
+            "scenario_description": "Login with Microsoft",
+            "steps": {
+                "1": "Navigate to login URL",
+                "2": "Select Microsoft option",
+                "3": "Authenticate via Microsoft",
+                "4": "Redirect back",
+                "5": "Verify login success"
+            }
+        },
+        {
+            "scenario_description": "Login with GitHub",
+            "steps": {
+                "1": "Navigate to login URL",
+                "2": "Select GitHub option",
+                "3": "Authenticate via GitHub",
+                "4": "Redirect back",
+                "5": "Verify login success"
+            }
+        },
+        {
+            "scenario_description": "Login with PingID",
+            "steps": {
+                "1": "Navigate to login URL",
+                "2": "Select PingID option",
+                "3": "Authenticate via PingID",
+                "4": "Redirect back",
+                "5": "Verify login success"
+            }
+        }
+    ]
+}

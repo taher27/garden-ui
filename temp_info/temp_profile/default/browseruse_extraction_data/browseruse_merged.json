@@ -1,0 +1,271 @@
+{
+  "https://dev.roost.ai/admin/app": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Zbio Admin View",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "User Management",
+            "scenario_description": "Admin manages user roles and permissions through the administrative panel.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Remove Admin button beside a user name"
+              },
+              {
+                "action": "click",
+                "element_description": "Make Admin button beside a user name"
+              },
+              {
+                "action": "click",
+                "element_description": "Delete User button beside a user name"
+              }
+            ],
+            "expected_outcome": [
+              "User's role is updated or account is removed based on the action."
+            ]
+          },
+          {
+            "scenario_name": "Search for a User",
+            "scenario_description": "Admin searches for a specific user using the search functionality.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Search input field"
+              },
+              {
+                "action": "click",
+                "element_description": "Apply button"
+              }
+            ],
+            "expected_outcome": [
+              "List updates to show matching user profiles."
+            ]
+          },
+          {
+            "scenario_name": "Add a New Rooster",
+            "scenario_description": "Admin invites a new user to join by sending an invitation.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Invite Rooster button"
+              },
+              {
+                "action": "type",
+                "element_description": "Email input field in the invitation form"
+              },
+              {
+                "action": "click",
+                "element_description": "Send Invitation button"
+              }
+            ],
+            "expected_outcome": [
+              "User receives an invitation email to join the platform."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/connectors": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Connectors Configuration",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Configure a New Connector",
+            "scenario_description": "This flow enables users to add and configure a new connector to integrate with external services such as databases or APIs.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Add Connector button"
+              },
+              {
+                "action": "type",
+                "element_description": "Input field for connector name"
+              },
+              {
+                "action": "select",
+                "element_description": "Dropdown for choosing connector type"
+              },
+              {
+                "action": "click",
+                "element_description": "Save configuration button"
+              }
+            ],
+            "expected_outcome": [
+              "The new connector is added and ready to use for integration purposes."
+            ]
+          },
+          {
+            "scenario_name": "View Connector Details",
+            "scenario_description": "This flow allows users to view detailed information about a configured connector.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Connector name link"
+              }
+            ],
+            "expected_outcome": [
+              "Detailed information about the selected connector is displayed."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/roostgpt/events": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "RoostGPT Test Events",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Search for tests",
+            "scenario_description": "Users can search for specific test suites using the search functionality.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Search input box labeled 'Search for Test...'."
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "Filtered test results displayed based on search input."
+              }
+            ],
+            "expected_outcome": [
+              "Filtered test results matching the search keyword."
+            ]
+          },
+          {
+            "scenario_name": "Navigate to test details",
+            "scenario_description": "Users can view detailed information about a test suite by clicking on its name.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Clickable element showing the name of the test suite."
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "Detailed test suite page appears."
+              }
+            ],
+            "expected_outcome": [
+              "Detailed information about the selected test suite is displayed."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/roostgpt": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "RoostGPT Test Suites",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Search Test Suites",
+            "scenario_description": "User searches for specific test suites using the search functionality.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Search input box to type keywords for test suites."
+              },
+              {
+                "action": "click",
+                "element_description": "Submit search query."
+              }
+            ],
+            "expected_outcome": [
+              "Relevant test suites matching the keywords are displayed."
+            ]
+          },
+          {
+            "scenario_name": "Apply Filters",
+            "scenario_description": "User applies filters to narrow down test suite results.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Filters button to open filtering options."
+              },
+              {
+                "action": "select",
+                "element_description": "Filter criteria such as test type or creation date."
+              },
+              {
+                "action": "click",
+                "element_description": "Apply filters."
+              }
+            ],
+            "expected_outcome": [
+              "Filtered test suite results are displayed."
+            ]
+          },
+          {
+            "scenario_name": "View Test Suite Details",
+            "scenario_description": "User views detailed information of a test suite.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Test suite name to access details."
+              }
+            ],
+            "expected_outcome": [
+              "Detailed test suite page is opened."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/roostgpt/tests": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "RoostGPT Test Suites Overview",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "View Test Suites",
+            "scenario_description": "Navigate through the list of test suites to find specific details about each one.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "The 'Test Suites' link in the navigation bar."
+              },
+              {
+                "action": "type",
+                "element_description": "Search bar to input the test suite name."
+              },
+              {
+                "action": "click",
+                "element_description": "Specific test suite row in the table."
+              }
+            ],
+            "expected_outcome": [
+              "User views comprehensive details of the selected test suite, including creation and modification history."
+            ]
+          },
+          {
+            "scenario_name": "Add New Test Suite",
+            "scenario_description": "Create a new test suite using the 'Add Test Suite' button and fill out required details.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "The 'Add Test Suite' button on the page."
+              },
+              {
+                "action": "type",
+                "element_description": "Form fields for test suite name and description."
+              },
+              {
+                "action": "click",
+                "element_description": "Submit button to save the new test suite."
+              }
+            ],
+            "expected_outcome": [
+              "A new test suite is created and appears in the list with the provided details."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

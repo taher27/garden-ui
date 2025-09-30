@@ -1,0 +1,40 @@
+{
+  "url": "https://dev.roost.ai/roostgpt/events",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "RoostGPT Test Events",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for tests",
+          "scenario_description": "Users can search for specific test suites using the search functionality.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Search input box labeled 'Search for Test...'."
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Filtered test results displayed based on search input."
+            }
+          ],
+          "expected_outcome": ["Filtered test results matching the search keyword."]
+        },
+        {
+          "scenario_name": "Navigate to test details",
+          "scenario_description": "Users can view detailed information about a test suite by clicking on its name.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Clickable element showing the name of the test suite."
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Detailed test suite page appears."
+            }
+          ],
+          "expected_outcome": ["Detailed information about the selected test suite is displayed."]
+        }
+      ]
+    }
+  ]
+}
