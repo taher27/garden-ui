@@ -1,0 +1,1265 @@
+{
+  "https://dev.roost.ai/login": [
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"RoostGPT Config\"",
+      "stable_selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+      "tag_name": "a",
+      "text_content": "RoostGPT Config",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Login\"",
+      "stable_selector": "//a[@href='/login' and contains(@class, 'nav-link')]",
+      "tag_name": "a",
+      "text_content": "Login",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://login.microsoftonline.com/common/oauth2/v2.0/authorize?response_type=code&scope=user.read&state=azure&client_id=946156a9-5142-4469-b79f-bdcc9e76cf7f&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'azure')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://dev-53854943.okta.com/oauth2/default/v1/authorize?response_type=code&scope=openid%20profile%20email%20address&state=okta&client_id=0oa3x8katznHWlHeD5d7&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'okta')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://dev-mhrflm8cktpvkqq5.us.auth0.com/authorize?response_type=code&scope=openid%20profile%20email&state=auth0&client_id=1IoDt4wUDOKHcpnYKCaNVhG4XWl3jJHR&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'auth0')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://ping.tryroost.link/as/authorization.oauth2?response_type=code&scope=openid%20profile%20email&state=pingFederate&client_id=roost-dev&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'pingFederate')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"About Roost\"",
+      "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "About Roost",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Privacy Policy\"",
+      "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Privacy Policy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Documentation\"",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Documentation",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API Reference\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "API Reference",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/gptCLIForm": [
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"RoostGPT Config\"",
+      "stable_selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+      "tag_name": "a",
+      "text_content": "RoostGPT Config",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Login\"",
+      "stable_selector": "//a[@href='/login' and contains(@class, 'nav-link')]",
+      "tag_name": "a",
+      "text_content": "Login",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "//div[@id='roostToken']/div[2]/div/div[2]/div/input",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"test-name-input\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"openai-token\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button",
+      "stable_selector": "[data-testid=\"openai-token-unMask-icon\"]",
+      "tag_name": "button",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://platform.openai.com/account/api-keys' and contains(@class, 'section_infoIcon__ttsMx')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"cloud-git-type-radio-button-selected\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": true
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"server-git-type-radio-button\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"github-source-token\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button",
+      "stable_selector": "[data-testid=\"github-source-token-unMask-icon\"]",
+      "tag_name": "button",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "label with text \"Traverse to all sub-directories\"",
+      "stable_selector": "//div[@id='advanced']/div[2]/div[4]/div[2]/div/div/label",
+      "tag_name": "label",
+      "text_content": "Traverse to all sub-directories",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "label with text \"Check for Vulnerabilty\"",
+      "stable_selector": "//div[@id='advanced']/div[2]/div[5]/div[2]/div/div/label",
+      "tag_name": "label",
+      "text_content": "Check for Vulnerabilty",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"radio-button\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": true
+    },
+    {
+      "description": "textarea",
+      "stable_selector": "[data-testid=\"Feedback-form\"]",
+      "tag_name": "textarea",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"functions-to-test\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"new-custom-tag-input\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"About Roost\"",
+      "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "About Roost",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Privacy Policy\"",
+      "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Privacy Policy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Documentation\"",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Documentation",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API Reference\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "API Reference",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/docs/api": [
+    {
+      "description": "a with text \"roost.ai\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'logo')]",
+      "tag_name": "a",
+      "text_content": "roost.ai",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_addTest": [
+    {
+      "description": "a with text \"roost.ai\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'logo')]",
+      "tag_name": "a",
+      "text_content": "roost.ai",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input with text \"Search\"",
+      "stable_selector": "input[aria-label=\"Search\"]",
+      "tag_name": "input",
+      "text_content": "Search",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API docs by Redocly\"",
+      "stable_selector": "//div[@id='redoc-container']/div/div[1]/div[2]/div[1]/a",
+      "tag_name": "a",
+      "text_content": "API docs by Redocly",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Download\"",
+      "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger-json' and contains(@class, 'sc-ktJbId')]",
+      "tag_name": "a",
+      "text_content": "Download",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_addTest\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_addTest' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_addTest",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"ai_model_info\"",
+      "stable_selector": "//button[normalize-space()=\"ai_model_info\"]",
+      "tag_name": "button",
+      "text_content": "ai_model_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"git_info\"",
+      "stable_selector": "//button[normalize-space()=\"git_info\"]",
+      "tag_name": "button",
+      "text_content": "git_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"integration_info\"",
+      "stable_selector": "//button[normalize-space()=\"integration_info\"]",
+      "tag_name": "button",
+      "text_content": "integration_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"additional_info\"",
+      "stable_selector": "//button[normalize-space()=\"additional_info\"]",
+      "tag_name": "button",
+      "text_content": "additional_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"ui_test_info\"",
+      "stable_selector": "//button[normalize-space()=\"ui_test_info\"]",
+      "tag_name": "button",
+      "text_content": "ui_test_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"201\"",
+      "stable_selector": "//button[normalize-space()=\"201\"]",
+      "tag_name": "button",
+      "text_content": "201",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"default\"",
+      "stable_selector": "//button[normalize-space()=\"default\"]",
+      "tag_name": "button",
+      "text_content": "default",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"POST\n/test\"",
+      "stable_selector": "//button[normalize-space()=\"POST\n/test\"]",
+      "tag_name": "button",
+      "text_content": "POST\n/test",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Copy\"",
+      "stable_selector": "//button[normalize-space()=\"Copy\"]",
+      "tag_name": "button",
+      "text_content": "Copy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Expand all\"",
+      "stable_selector": "//button[normalize-space()=\"Expand all\"]",
+      "tag_name": "button",
+      "text_content": "Expand all",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Collapse all\"",
+      "stable_selector": "//button[normalize-space()=\"Collapse all\"]",
+      "tag_name": "button",
+      "text_content": "Collapse all",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"collapse\"",
+      "stable_selector": "button[aria-label=\"collapse\"]",
+      "tag_name": "button",
+      "text_content": "collapse",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"expand\"",
+      "stable_selector": "button[aria-label=\"expand\"]",
+      "tag_name": "button",
+      "text_content": "expand",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_getAllTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTest' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_getAllTest",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"200\"",
+      "stable_selector": "//button[normalize-space()=\"200\"]",
+      "tag_name": "button",
+      "text_content": "200",
+      "is_enabled": false,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"GET\n/test\"",
+      "stable_selector": "//button[normalize-space()=\"GET\n/test\"]",
+      "tag_name": "button",
+      "text_content": "GET\n/test",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_createTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_createTestPlan' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_createTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"aiModelConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"aiModelConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "aiModelConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"gitConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"gitConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "gitConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"integrationConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"integrationConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "integrationConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"testConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"testConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "testConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"POST\n/test/createTestPlan\"",
+      "stable_selector": "//button[normalize-space()=\"POST\n/test/createTestPlan\"]",
+      "tag_name": "button",
+      "text_content": "POST\n/test/createTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_getAllTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTestPlan' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_getAllTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest": [
+    {
+      "description": "a with text \"roost.ai\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'logo')]",
+      "tag_name": "a",
+      "text_content": "roost.ai",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input with text \"Search\"",
+      "stable_selector": "input[aria-label=\"Search\"]",
+      "tag_name": "input",
+      "text_content": "Search",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API docs by Redocly\"",
+      "stable_selector": "//div[@id='redoc-container']/div/div[1]/div[2]/div[1]/a",
+      "tag_name": "a",
+      "text_content": "API docs by Redocly",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Download\"",
+      "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger-json' and contains(@class, 'sc-ktJbId')]",
+      "tag_name": "a",
+      "text_content": "Download",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_addTest\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_addTest' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_addTest",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"ai_model_info\"",
+      "stable_selector": "//button[normalize-space()=\"ai_model_info\"]",
+      "tag_name": "button",
+      "text_content": "ai_model_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"git_info\"",
+      "stable_selector": "//button[normalize-space()=\"git_info\"]",
+      "tag_name": "button",
+      "text_content": "git_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"integration_info\"",
+      "stable_selector": "//button[normalize-space()=\"integration_info\"]",
+      "tag_name": "button",
+      "text_content": "integration_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"additional_info\"",
+      "stable_selector": "//button[normalize-space()=\"additional_info\"]",
+      "tag_name": "button",
+      "text_content": "additional_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"ui_test_info\"",
+      "stable_selector": "//button[normalize-space()=\"ui_test_info\"]",
+      "tag_name": "button",
+      "text_content": "ui_test_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"201\"",
+      "stable_selector": "//button[normalize-space()=\"201\"]",
+      "tag_name": "button",
+      "text_content": "201",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"default\"",
+      "stable_selector": "//button[normalize-space()=\"default\"]",
+      "tag_name": "button",
+      "text_content": "default",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"POST\n/test\"",
+      "stable_selector": "//button[normalize-space()=\"POST\n/test\"]",
+      "tag_name": "button",
+      "text_content": "POST\n/test",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Copy\"",
+      "stable_selector": "//button[normalize-space()=\"Copy\"]",
+      "tag_name": "button",
+      "text_content": "Copy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Expand all\"",
+      "stable_selector": "//button[normalize-space()=\"Expand all\"]",
+      "tag_name": "button",
+      "text_content": "Expand all",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Collapse all\"",
+      "stable_selector": "//button[normalize-space()=\"Collapse all\"]",
+      "tag_name": "button",
+      "text_content": "Collapse all",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"collapse\"",
+      "stable_selector": "button[aria-label=\"collapse\"]",
+      "tag_name": "button",
+      "text_content": "collapse",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"expand\"",
+      "stable_selector": "button[aria-label=\"expand\"]",
+      "tag_name": "button",
+      "text_content": "expand",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_getAllTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTest' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_getAllTest",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"200\"",
+      "stable_selector": "//button[normalize-space()=\"200\"]",
+      "tag_name": "button",
+      "text_content": "200",
+      "is_enabled": false,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"GET\n/test\"",
+      "stable_selector": "//button[normalize-space()=\"GET\n/test\"]",
+      "tag_name": "button",
+      "text_content": "GET\n/test",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_createTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_createTestPlan' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_createTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"aiModelConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"aiModelConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "aiModelConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"gitConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"gitConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "gitConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"integrationConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"integrationConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "integrationConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"testConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"testConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "testConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"POST\n/test/createTestPlan\"",
+      "stable_selector": "//button[normalize-space()=\"POST\n/test/createTestPlan\"]",
+      "tag_name": "button",
+      "text_content": "POST\n/test/createTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "div with text \"https://dev.roost.ai/api/test/createTestPlan\"",
+      "stable_selector": "//div[@id='operation/TestGptController_createTestPlan']/div[2]/div[1]/div/div/div[2]",
+      "tag_name": "div",
+      "text_content": "https://dev.roost.ai/api/test/createTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_getAllTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTestPlan' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_getAllTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan": [
+    {
+      "description": "a with text \"roost.ai\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'logo')]",
+      "tag_name": "a",
+      "text_content": "roost.ai",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger' and contains(@class, 'roost-icon')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input with text \"Search\"",
+      "stable_selector": "input[aria-label=\"Search\"]",
+      "tag_name": "input",
+      "text_content": "Search",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API docs by Redocly\"",
+      "stable_selector": "//div[@id='redoc-container']/div/div[1]/div[2]/div[1]/a",
+      "tag_name": "a",
+      "text_content": "API docs by Redocly",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Download\"",
+      "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger-json' and contains(@class, 'sc-ktJbId')]",
+      "tag_name": "a",
+      "text_content": "Download",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_addTest\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_addTest' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_addTest",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"ai_model_info\"",
+      "stable_selector": "//button[normalize-space()=\"ai_model_info\"]",
+      "tag_name": "button",
+      "text_content": "ai_model_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"git_info\"",
+      "stable_selector": "//button[normalize-space()=\"git_info\"]",
+      "tag_name": "button",
+      "text_content": "git_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"integration_info\"",
+      "stable_selector": "//button[normalize-space()=\"integration_info\"]",
+      "tag_name": "button",
+      "text_content": "integration_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"additional_info\"",
+      "stable_selector": "//button[normalize-space()=\"additional_info\"]",
+      "tag_name": "button",
+      "text_content": "additional_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"ui_test_info\"",
+      "stable_selector": "//button[normalize-space()=\"ui_test_info\"]",
+      "tag_name": "button",
+      "text_content": "ui_test_info",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"201\"",
+      "stable_selector": "//button[normalize-space()=\"201\"]",
+      "tag_name": "button",
+      "text_content": "201",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"default\"",
+      "stable_selector": "//button[normalize-space()=\"default\"]",
+      "tag_name": "button",
+      "text_content": "default",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"POST\n/test\"",
+      "stable_selector": "//button[normalize-space()=\"POST\n/test\"]",
+      "tag_name": "button",
+      "text_content": "POST\n/test",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Copy\"",
+      "stable_selector": "//button[normalize-space()=\"Copy\"]",
+      "tag_name": "button",
+      "text_content": "Copy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Expand all\"",
+      "stable_selector": "//button[normalize-space()=\"Expand all\"]",
+      "tag_name": "button",
+      "text_content": "Expand all",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Collapse all\"",
+      "stable_selector": "//button[normalize-space()=\"Collapse all\"]",
+      "tag_name": "button",
+      "text_content": "Collapse all",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"collapse\"",
+      "stable_selector": "button[aria-label=\"collapse\"]",
+      "tag_name": "button",
+      "text_content": "collapse",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"expand\"",
+      "stable_selector": "button[aria-label=\"expand\"]",
+      "tag_name": "button",
+      "text_content": "expand",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_getAllTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTest' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_getAllTest",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"200\"",
+      "stable_selector": "//button[normalize-space()=\"200\"]",
+      "tag_name": "button",
+      "text_content": "200",
+      "is_enabled": false,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"GET\n/test\"",
+      "stable_selector": "//button[normalize-space()=\"GET\n/test\"]",
+      "tag_name": "button",
+      "text_content": "GET\n/test",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_createTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_createTestPlan' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_createTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"aiModelConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"aiModelConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "aiModelConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"gitConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"gitConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "gitConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"integrationConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"integrationConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "integrationConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"testConfiguration\"",
+      "stable_selector": "//button[normalize-space()=\"testConfiguration\"]",
+      "tag_name": "button",
+      "text_content": "testConfiguration",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"POST\n/test/createTestPlan\"",
+      "stable_selector": "//button[normalize-space()=\"POST\n/test/createTestPlan\"]",
+      "tag_name": "button",
+      "text_content": "POST\n/test/createTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "div with text \"https://dev.roost.ai/api/test/createTestPlan\"",
+      "stable_selector": "//div[@id='operation/TestGptController_createTestPlan']/div[2]/div[1]/div/div/div[2]",
+      "tag_name": "div",
+      "text_content": "https://dev.roost.ai/api/test/createTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"tag/RoostGPT/operation/TestGptController_getAllTes\"",
+      "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTestPlan' and contains(@class, 'sc-jlZhew')]",
+      "tag_name": "a",
+      "text_content": "tag/RoostGPT/operation/TestGptController_getAllTestPlan",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ]
+}

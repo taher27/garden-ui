@@ -1,0 +1,10 @@
+Page Link: https://dev.roost.ai/gptCLIForm
+Query: Extract all visible information and semantic context from the page.
+Extracted Content:
+```json
+{
+  "content": "The webpage appears to be the interface for Roost.ai, a platform leveraging generative AI and large language models for testing. The visible content includes sections and fields related to configuration, test suite setup, integration options, and advanced testing features. The page mentions tools and technologies such as Java, Maven, JUnit5, OpenAI, and GitHub integration. Key elements include fields for setting up tokens, test suites, AI models, code repositories, integration types, and advanced testing preferences. The interface includes user input options for environment variables, testing vulnerabilities, and handling custom annotations. There are also links to additional resources like Privacy Policy, Documentation, API Reference, CLI download, and VS Code extension installation. The webpage also provides configuration options and settings for environment variables, user language, testing iterations, and timeout adjustments.",
+  "semantic_context": "The webpage is structured to configure and manage testing workflows using Roost.ai's capabilities. It provides an interface to set up various testing parameters, connect with code repositories, integrate AI models, and define advanced testing options. The semantic context revolves around enabling automated testing and integration with developer tools and services.",
+  "query_result": "The query requests extraction of 'all visible information and semantic context,' both of which are addressed above. However, as much of the functionality and interaction on the page requires enabling JavaScript, detailed dynamic content and functionality are not accessible or extractable from the static view of the page."
+}
+```

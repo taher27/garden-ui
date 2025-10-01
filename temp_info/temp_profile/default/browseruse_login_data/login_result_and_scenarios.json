@@ -1,0 +1,47 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": false,
+    "final_page_url": "https://dev.roost.ai/login",
+    "outcome_message": "Initial login scenarios documented and login testing pending.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "Authenticate using Okta login.",
+            "steps": {
+                "1": "Click on the Okta button.",
+                "2": "Enter username and password.",
+                "3": "Submit credentials.",
+                "4": "Complete any multi-factor authentication."
+            }
+        },
+        {
+            "scenario_description": "Authenticate using Google login.",
+            "steps": {
+                "1": "Click on the Google button.",
+                "2": "Enter Google account credentials.",
+                "3": "Submit credentials."
+            }
+        },
+        {
+            "scenario_description": "Access documentation.",
+            "steps": {
+                "1": "Click on the 'Documentation' link.",
+                "2": "Browse available topics."
+            }
+        },
+        {
+            "scenario_description": "Install the VS Code extension.",
+            "steps": {
+                "1": "Click on the 'Install VS Code Extension' link.",
+                "2": "Follow installation instructions."
+            }
+        },
+        {
+            "scenario_description": "Review privacy policy.",
+            "steps": {
+                "1": "Click on the 'Privacy Policy' link.",
+                "2": "Read through the policy details."
+            }
+        }
+    ]
+}

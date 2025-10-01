@@ -1,0 +1,152 @@
+{
+  "https://dev.roost.ai/docs/api": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "API Documentation",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Explore API Endpoints",
+            "scenario_description": "A user navigates through the API documentation to understand available endpoints and their functionalities.",
+            "steps": [
+              {
+                "action": "navigate",
+                "element_description": "API documentation navigation menu containing endpoint categories."
+              },
+              {
+                "action": "select",
+                "element_description": "Specific endpoint to view details."
+              },
+              {
+                "action": "read",
+                "element_description": "Detailed information about the endpoint, including request and response schemas."
+              }
+            ],
+            "expected_outcome": [
+              "User understands the functionalities and requirements of the selected endpoint."
+            ]
+          },
+          {
+            "scenario_name": "Download OpenAPI Specification",
+            "scenario_description": "A user downloads the OpenAPI specification for integration into their project.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Download OpenAPI Specification button."
+              },
+              {
+                "action": "confirm",
+                "element_description": "File download confirmation dialog."
+              }
+            ],
+            "expected_outcome": [
+              "OpenAPI specification file is downloaded successfully."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "API Documentation for Create Test Plan",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Create a New Test Plan",
+            "scenario_description": "User accesses the API endpoint to configure and create a new test plan including integration details and AI model configurations.",
+            "steps": [
+              {
+                "action": "input_text",
+                "element_description": "Enter test plan name in the input field."
+              },
+              {
+                "action": "select_dropdown_option",
+                "element_description": "Choose AI model configuration from the dropdown."
+              },
+              {
+                "action": "click",
+                "element_description": "Submit the test plan creation request using the API POST method."
+              }
+            ],
+            "expected_outcome": [
+              "A new test plan is successfully created and available for further configurations."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/gptCLIForm": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "RoostGPT Configuration | Generative AI Testing",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Configure RoostGPT",
+            "scenario_description": "A user configures the RoostGPT for testing their AI models.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Enter the Roost Token in the text field."
+              },
+              {
+                "action": "click",
+                "element_description": "Select the test suite configurations."
+              },
+              {
+                "action": "click",
+                "element_description": "Save configuration button."
+              }
+            ],
+            "expected_outcome": [
+              "Test suite is set up for execution."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/login": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost Enterprise Login | Software as a Service",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Logging in with third-party integration",
+            "scenario_description": "A user logs in using one of the third-party OAuth providers integrated on the platform (e.g., Google, Github, Microsoft).",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Login button for Google OAuth integration"
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "User's dashboard after successful login"
+              }
+            ],
+            "expected_outcome": [
+              "User is logged into their account and redirected to the dashboard."
+            ]
+          },
+          {
+            "scenario_name": "Accessing the API documentation",
+            "scenario_description": "A user navigates to the API Reference section to get details of API endpoints and usage guidelines.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "API Reference link in the navigation bar"
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "API documentation page"
+              }
+            ],
+            "expected_outcome": [
+              "User accesses detailed API documentation for integration purposes."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

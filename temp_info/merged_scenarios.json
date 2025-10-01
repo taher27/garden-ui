@@ -1,0 +1,1146 @@
+[
+  {
+    "https://dev.roost.ai/login": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"RoostGPT Config\"",
+            "stable_selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+            "tag_name": "a",
+            "text_content": "RoostGPT Config",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Login\"",
+            "stable_selector": "//a[@href='/login' and contains(@class, 'nav-link')]",
+            "tag_name": "a",
+            "text_content": "Login",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://login.microsoftonline.com/common/oauth2/v2.0/authorize?response_type=code&scope=user.read&state=azure&client_id=946156a9-5142-4469-b79f-bdcc9e76cf7f&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'azure')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://dev-53854943.okta.com/oauth2/default/v1/authorize?response_type=code&scope=openid%20profile%20email%20address&state=okta&client_id=0oa3x8katznHWlHeD5d7&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'okta')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://dev-mhrflm8cktpvkqq5.us.auth0.com/authorize?response_type=code&scope=openid%20profile%20email&state=auth0&client_id=1IoDt4wUDOKHcpnYKCaNVhG4XWl3jJHR&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'auth0')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://ping.tryroost.link/as/authorization.oauth2?response_type=code&scope=openid%20profile%20email&state=pingFederate&client_id=roost-dev&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'pingFederate')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"About Roost\"",
+            "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "About Roost",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Privacy Policy\"",
+            "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Privacy Policy",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Documentation\"",
+            "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Documentation",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"API Reference\"",
+            "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "API Reference",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "agent_suggested_login_scenarios": [
+        {
+          "scenario_description": "Authenticate using Okta login.",
+          "steps": {
+            "1": "Click on the Okta button.",
+            "2": "Enter username and password.",
+            "3": "Submit credentials.",
+            "4": "Complete any multi-factor authentication."
+          }
+        },
+        {
+          "scenario_description": "Authenticate using Google login.",
+          "steps": {
+            "1": "Click on the Google button.",
+            "2": "Enter Google account credentials.",
+            "3": "Submit credentials."
+          }
+        },
+        {
+          "scenario_description": "Access documentation.",
+          "steps": {
+            "1": "Click on the 'Documentation' link.",
+            "2": "Browse available topics."
+          }
+        },
+        {
+          "scenario_description": "Install the VS Code extension.",
+          "steps": {
+            "1": "Click on the 'Install VS Code Extension' link.",
+            "2": "Follow installation instructions."
+          }
+        },
+        {
+          "scenario_description": "Review privacy policy.",
+          "steps": {
+            "1": "Click on the 'Privacy Policy' link.",
+            "2": "Read through the policy details."
+          }
+        }
+      ]
+    }
+  },
+  {
+    "https://dev.roost.ai/login": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"RoostGPT Config\"",
+            "stable_selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+            "tag_name": "a",
+            "text_content": "RoostGPT Config",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Login\"",
+            "stable_selector": "//a[@href='/login' and contains(@class, 'nav-link')]",
+            "tag_name": "a",
+            "text_content": "Login",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://login.microsoftonline.com/common/oauth2/v2.0/authorize?response_type=code&scope=user.read&state=azure&client_id=946156a9-5142-4469-b79f-bdcc9e76cf7f&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'azure')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://dev-53854943.okta.com/oauth2/default/v1/authorize?response_type=code&scope=openid%20profile%20email%20address&state=okta&client_id=0oa3x8katznHWlHeD5d7&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'okta')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://dev-mhrflm8cktpvkqq5.us.auth0.com/authorize?response_type=code&scope=openid%20profile%20email&state=auth0&client_id=1IoDt4wUDOKHcpnYKCaNVhG4XWl3jJHR&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'auth0')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://ping.tryroost.link/as/authorization.oauth2?response_type=code&scope=openid%20profile%20email&state=pingFederate&client_id=roost-dev&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'pingFederate')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"About Roost\"",
+            "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "About Roost",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Privacy Policy\"",
+            "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Privacy Policy",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Documentation\"",
+            "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Documentation",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"API Reference\"",
+            "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "API Reference",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "extracted_interactive_data": {
+        "page_summary": {
+          "title": "Roost Enterprise Login | Software as a Service",
+          "description": "The webpage appears to be a login interface for Roost Enterprise, a Software as a Service (SaaS) platform.",
+          "content_description": "The page facilitates user sign-in with third-party integrations such as Google, Github, Microsoft, Okta, Auth0, and PingID. The page also includes links to documentation, API reference, privacy policy, and additional tools like a CLI download and VS Code extension installation.",
+          "key_features": [
+            "Sign-in options via Google, Github, Microsoft, Okta, Auth0, PingID.",
+            "Links to important resources: Privacy Policy, Documentation, API Reference.",
+            "Tools available for download: CLI and VS Code extension."
+          ],
+          "note_on_functionality": "JavaScript is required to run the application."
+        },
+        "query_response": {
+          "extracted_information": {
+            "visible_text": [
+              "Roost Enterprise Login | Software as a Service",
+              "You need to enable JavaScript to run this app.",
+              "RoostGPT Config",
+              "Login",
+              "Sign-in is made easy via Google, Github, Microsoft, Okta, Auth0, PingID integrations.",
+              "About Roost",
+              "Privacy Policy",
+              "Documentation",
+              "API Reference",
+              "Download CLI",
+              "Install VS Code extension"
+            ],
+            "semantic_context": {
+              "purpose": "User authentication and access to resources for Roost Enterprise SaaS platform.",
+              "tools": [
+                "CLI download",
+                "VS Code extension installation"
+              ],
+              "external integrations": [
+                "Google",
+                "Github",
+                "Microsoft",
+                "Okta",
+                "Auth0",
+                "PingID"
+              ],
+              "additional resources": [
+                {
+                  "name": "Privacy Policy",
+                  "link": "https://roost.ai/privacy-policy"
+                },
+                {
+                  "name": "Documentation",
+                  "link": "https://docs.roost.ai"
+                },
+                {
+                  "name": "API Reference",
+                  "link": "/docs/api"
+                }
+              ]
+            }
+          },
+          "query_status": "completed",
+          "notes": "The extracted information was based on visible text and semantic context from the webpage. The webpage does not appear to provide any detailed structured data beyond the visible content described."
+        }
+      },
+      "explored_pages_and_scenarios": [
+        {
+          "page_title": "Roost Enterprise Login | Software as a Service",
+          "potential_user_journeys": [
+            {
+              "scenario_name": "Logging in with third-party integration",
+              "scenario_description": "A user logs in using one of the third-party OAuth providers integrated on the platform (e.g., Google, Github, Microsoft).",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Login button for Google OAuth integration"
+                },
+                {
+                  "action": "assert_visibility",
+                  "element_description": "User's dashboard after successful login"
+                }
+              ],
+              "expected_outcome": [
+                "User is logged into their account and redirected to the dashboard."
+              ]
+            },
+            {
+              "scenario_name": "Accessing the API documentation",
+              "scenario_description": "A user navigates to the API Reference section to get details of API endpoints and usage guidelines.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "API Reference link in the navigation bar"
+                },
+                {
+                  "action": "assert_visibility",
+                  "element_description": "API documentation page"
+                }
+              ],
+              "expected_outcome": [
+                "User accesses detailed API documentation for integration purposes."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a with text \"roost.ai\"",
+            "stable_selector": "//a[@href='/docs/api' and contains(@class, 'logo')]",
+            "tag_name": "a",
+            "text_content": "roost.ai",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'roost-icon')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'roost-icon')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger' and contains(@class, 'roost-icon')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input with text \"Search\"",
+            "stable_selector": "input[aria-label=\"Search\"]",
+            "tag_name": "input",
+            "text_content": "Search",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"API docs by Redocly\"",
+            "stable_selector": "//div[@id='redoc-container']/div/div[1]/div[2]/div[1]/a",
+            "tag_name": "a",
+            "text_content": "API docs by Redocly",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Download\"",
+            "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger-json' and contains(@class, 'sc-ktJbId')]",
+            "tag_name": "a",
+            "text_content": "Download",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"tag/RoostGPT\"",
+            "stable_selector": "//a[@href='#tag/RoostGPT' and contains(@class, 'sc-jlZhew')]",
+            "tag_name": "a",
+            "text_content": "tag/RoostGPT",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"tag/RoostGPT/operation/TestGptController_addTest\"",
+            "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_addTest' and contains(@class, 'sc-jlZhew')]",
+            "tag_name": "a",
+            "text_content": "tag/RoostGPT/operation/TestGptController_addTest",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"ai_model_info\"",
+            "stable_selector": "//button[normalize-space()=\"ai_model_info\"]",
+            "tag_name": "button",
+            "text_content": "ai_model_info",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"git_info\"",
+            "stable_selector": "//button[normalize-space()=\"git_info\"]",
+            "tag_name": "button",
+            "text_content": "git_info",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"integration_info\"",
+            "stable_selector": "//button[normalize-space()=\"integration_info\"]",
+            "tag_name": "button",
+            "text_content": "integration_info",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"additional_info\"",
+            "stable_selector": "//button[normalize-space()=\"additional_info\"]",
+            "tag_name": "button",
+            "text_content": "additional_info",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"ui_test_info\"",
+            "stable_selector": "//button[normalize-space()=\"ui_test_info\"]",
+            "tag_name": "button",
+            "text_content": "ui_test_info",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"201\"",
+            "stable_selector": "//button[normalize-space()=\"201\"]",
+            "tag_name": "button",
+            "text_content": "201",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"default\"",
+            "stable_selector": "//button[normalize-space()=\"default\"]",
+            "tag_name": "button",
+            "text_content": "default",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"POST\n/test\"",
+            "stable_selector": "//button[normalize-space()=\"POST\n/test\"]",
+            "tag_name": "button",
+            "text_content": "POST\n/test",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"Copy\"",
+            "stable_selector": "//button[normalize-space()=\"Copy\"]",
+            "tag_name": "button",
+            "text_content": "Copy",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"Expand all\"",
+            "stable_selector": "//button[normalize-space()=\"Expand all\"]",
+            "tag_name": "button",
+            "text_content": "Expand all",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"Collapse all\"",
+            "stable_selector": "//button[normalize-space()=\"Collapse all\"]",
+            "tag_name": "button",
+            "text_content": "Collapse all",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"collapse\"",
+            "stable_selector": "button[aria-label=\"collapse\"]",
+            "tag_name": "button",
+            "text_content": "collapse",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"expand\"",
+            "stable_selector": "button[aria-label=\"expand\"]",
+            "tag_name": "button",
+            "text_content": "expand",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"tag/RoostGPT/operation/TestGptController_getAllTes\"",
+            "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTest' and contains(@class, 'sc-jlZhew')]",
+            "tag_name": "a",
+            "text_content": "tag/RoostGPT/operation/TestGptController_getAllTest",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"200\"",
+            "stable_selector": "//button[normalize-space()=\"200\"]",
+            "tag_name": "button",
+            "text_content": "200",
+            "is_enabled": false,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"GET\n/test\"",
+            "stable_selector": "//button[normalize-space()=\"GET\n/test\"]",
+            "tag_name": "button",
+            "text_content": "GET\n/test",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"tag/RoostGPT/operation/TestGptController_createTes\"",
+            "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_createTestPlan' and contains(@class, 'sc-jlZhew')]",
+            "tag_name": "a",
+            "text_content": "tag/RoostGPT/operation/TestGptController_createTestPlan",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"aiModelConfiguration\"",
+            "stable_selector": "//button[normalize-space()=\"aiModelConfiguration\"]",
+            "tag_name": "button",
+            "text_content": "aiModelConfiguration",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"gitConfiguration\"",
+            "stable_selector": "//button[normalize-space()=\"gitConfiguration\"]",
+            "tag_name": "button",
+            "text_content": "gitConfiguration",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"integrationConfiguration\"",
+            "stable_selector": "//button[normalize-space()=\"integrationConfiguration\"]",
+            "tag_name": "button",
+            "text_content": "integrationConfiguration",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"testConfiguration\"",
+            "stable_selector": "//button[normalize-space()=\"testConfiguration\"]",
+            "tag_name": "button",
+            "text_content": "testConfiguration",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button with text \"POST\n/test/createTestPlan\"",
+            "stable_selector": "//button[normalize-space()=\"POST\n/test/createTestPlan\"]",
+            "tag_name": "button",
+            "text_content": "POST\n/test/createTestPlan",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "div with text \"https://dev.roost.ai/api/test/createTestPlan\"",
+            "stable_selector": "//div[@id='operation/TestGptController_createTestPlan']/div[2]/div[1]/div/div/div[2]",
+            "tag_name": "div",
+            "text_content": "https://dev.roost.ai/api/test/createTestPlan",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"tag/RoostGPT/operation/TestGptController_getAllTes\"",
+            "stable_selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTestPlan' and contains(@class, 'sc-jlZhew')]",
+            "tag_name": "a",
+            "text_content": "tag/RoostGPT/operation/TestGptController_getAllTestPlan",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "extracted_interactive_data": {
+        "explanation": "The query 'Extract all visible information and semantic context from the page' is vague and does not provide specific instructions. However, based on the provided content, the page appears to be an API documentation for Roost.ai's testing platform. The documentation includes details about endpoints, request and response schemas, and supported operations for automated testing using generative AI and large language models. Semantic context revolves around automated test case generation, test plan creation, execution, and related functionalities. If there's a different or more specific aspect of the page you wish to explore, please update the query."
+      },
+      "explored_pages_and_scenarios": [
+        {
+          "page_title": "API Documentation for Create Test Plan",
+          "potential_user_journeys": [
+            {
+              "scenario_name": "Create a New Test Plan",
+              "scenario_description": "User accesses the API endpoint to configure and create a new test plan including integration details and AI model configurations.",
+              "steps": [
+                {
+                  "action": "input_text",
+                  "element_description": "Enter test plan name in the input field."
+                },
+                {
+                  "action": "select_dropdown_option",
+                  "element_description": "Choose AI model configuration from the dropdown."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Submit the test plan creation request using the API POST method."
+                }
+              ],
+              "expected_outcome": [
+                "A new test plan is successfully created and available for further configurations."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "https://dev.roost.ai/docs/api": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a with text \"roost.ai\"",
+            "stable_selector": "//a[@href='/docs/api' and contains(@class, 'logo')]",
+            "tag_name": "a",
+            "text_content": "roost.ai",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'roost-icon')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'roost-icon')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://dev.roost.ai/api/swagger' and contains(@class, 'roost-icon')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "extracted_interactive_data": {
+        "explanation": {
+          "context": "The webpage appears to be an API documentation page for RoostAI, which provides tools for automated testing using Generative AI and Large Language Models. It includes references to various API endpoints related to creating, editing, retrieving, and managing tests and test plans.",
+          "reason_information_unavailable": [
+            "The query to 'Extract all visible information and semantic context' is overly broad and does not specify what kind of information or context is required, making it vague.",
+            "While the page contains structured API documentation, it is not designed for general semantic context extraction or broader informational queries.",
+            "The webpage primarily focuses on API endpoints, their parameters, request/response formats, and schemas. It does not contain semantic context beyond this technical documentation."
+          ]
+        },
+        "structured_information": {
+          "page_title": "Roost.ai | Your Testing Co-Pilot Powered by Generative AI",
+          "main_content": [
+            {
+              "section": "RoostGPT",
+              "description": "Automated Test Case Generation using Large Language Models (LLMs)."
+            },
+            {
+              "section": "API Documentation",
+              "overview": "The page provides API references for RoostAI, including endpoints for managing test applications, test plans, trigger events, execution reports, and integration configurations."
+            },
+            {
+              "section": "Key API Endpoints",
+              "list": [
+                {
+                  "endpoint": "Create a Test App",
+                  "method": "POST",
+                  "description": "Creates a new application with its configuration."
+                },
+                {
+                  "endpoint": "Get All Tests",
+                  "method": "GET",
+                  "description": "Retrieve all tests based on specific filters."
+                },
+                {
+                  "endpoint": "Create Test Plan",
+                  "method": "POST",
+                  "description": "Creates a new test plan with specified configurations."
+                },
+                {
+                  "endpoint": "Edit Test",
+                  "method": "PATCH",
+                  "description": "Modify an existing test using its ID."
+                },
+                {
+                  "endpoint": "Delete Test",
+                  "method": "DELETE",
+                  "description": "Remove a specific test using its ID."
+                }
+              ]
+            }
+          ],
+          "additional_information": {
+            "technology": "Generative AI and Large Language Models",
+            "authorization_required": "Bearer token for API access",
+            "available_endpoints": [
+              "Create Test App",
+              "Get All Tests",
+              "Create Test Plan",
+              "Edit Test",
+              "Delete Test",
+              "Trigger Test",
+              "Abort Test Execution",
+              "Send Event Diagnosis to Slack"
+            ]
+          }
+        }
+      },
+      "explored_pages_and_scenarios": [
+        {
+          "page_title": "API Documentation",
+          "potential_user_journeys": [
+            {
+              "scenario_name": "Explore API Endpoints",
+              "scenario_description": "A user navigates through the API documentation to understand available endpoints and their functionalities.",
+              "steps": [
+                {
+                  "action": "navigate",
+                  "element_description": "API documentation navigation menu containing endpoint categories."
+                },
+                {
+                  "action": "select",
+                  "element_description": "Specific endpoint to view details."
+                },
+                {
+                  "action": "read",
+                  "element_description": "Detailed information about the endpoint, including request and response schemas."
+                }
+              ],
+              "expected_outcome": [
+                "User understands the functionalities and requirements of the selected endpoint."
+              ]
+            },
+            {
+              "scenario_name": "Download OpenAPI Specification",
+              "scenario_description": "A user downloads the OpenAPI specification for integration into their project.",
+              "steps": [
+                {
+                  "action": "click",
+                  "element_description": "Download OpenAPI Specification button."
+                },
+                {
+                  "action": "confirm",
+                  "element_description": "File download confirmation dialog."
+                }
+              ],
+              "expected_outcome": [
+                "OpenAPI specification file is downloaded successfully."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "https://dev.roost.ai/gptCLIForm": {
+      "extracted_json": {
+        "elements": [
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"RoostGPT Config\"",
+            "stable_selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+            "tag_name": "a",
+            "text_content": "RoostGPT Config",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Login\"",
+            "stable_selector": "//a[@href='/login' and contains(@class, 'nav-link')]",
+            "tag_name": "a",
+            "text_content": "Login",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "//div[@id='roostToken']/div[2]/div/div[2]/div/input",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"test-name-input\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"openai-token\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button",
+            "stable_selector": "[data-testid=\"openai-token-unMask-icon\"]",
+            "tag_name": "button",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='https://platform.openai.com/account/api-keys' and contains(@class, 'section_infoIcon__ttsMx')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"cloud-git-type-radio-button-selected\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": true
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"server-git-type-radio-button\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"github-source-token\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "button",
+            "stable_selector": "[data-testid=\"github-source-token-unMask-icon\"]",
+            "tag_name": "button",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "label with text \"Traverse to all sub-directories\"",
+            "stable_selector": "//div[@id='advanced']/div[2]/div[4]/div[2]/div/div/label",
+            "tag_name": "label",
+            "text_content": "Traverse to all sub-directories",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "label with text \"Check for Vulnerabilty\"",
+            "stable_selector": "//div[@id='advanced']/div[2]/div[5]/div[2]/div/div/label",
+            "tag_name": "label",
+            "text_content": "Check for Vulnerabilty",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"radio-button\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": true
+          },
+          {
+            "description": "textarea",
+            "stable_selector": "[data-testid=\"Feedback-form\"]",
+            "tag_name": "textarea",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"functions-to-test\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "input",
+            "stable_selector": "[data-testid=\"new-custom-tag-input\"]",
+            "tag_name": "input",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a",
+            "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"About Roost\"",
+            "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "About Roost",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Privacy Policy\"",
+            "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Privacy Policy",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"Documentation\"",
+            "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "Documentation",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          },
+          {
+            "description": "a with text \"API Reference\"",
+            "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+            "tag_name": "a",
+            "text_content": "API Reference",
+            "is_enabled": true,
+            "is_editable": false,
+            "is_checked": false
+          }
+        ]
+      },
+      "extracted_interactive_data": {
+        "content": "The webpage appears to be the interface for Roost.ai, a platform leveraging generative AI and large language models for testing. The visible content includes sections and fields related to configuration, test suite setup, integration options, and advanced testing features. The page mentions tools and technologies such as Java, Maven, JUnit5, OpenAI, and GitHub integration. Key elements include fields for setting up tokens, test suites, AI models, code repositories, integration types, and advanced testing preferences. The interface includes user input options for environment variables, testing vulnerabilities, and handling custom annotations. There are also links to additional resources like Privacy Policy, Documentation, API Reference, CLI download, and VS Code extension installation. The webpage also provides configuration options and settings for environment variables, user language, testing iterations, and timeout adjustments.",
+        "semantic_context": "The webpage is structured to configure and manage testing workflows using Roost.ai's capabilities. It provides an interface to set up various testing parameters, connect with code repositories, integrate AI models, and define advanced testing options. The semantic context revolves around enabling automated testing and integration with developer tools and services.",
+        "query_result": "The query requests extraction of 'all visible information and semantic context,' both of which are addressed above. However, as much of the functionality and interaction on the page requires enabling JavaScript, detailed dynamic content and functionality are not accessible or extractable from the static view of the page."
+      },
+      "explored_pages_and_scenarios": [
+        {
+          "page_title": "RoostGPT Configuration | Generative AI Testing",
+          "potential_user_journeys": [
+            {
+              "scenario_name": "Configure RoostGPT",
+              "scenario_description": "A user configures the RoostGPT for testing their AI models.",
+              "steps": [
+                {
+                  "action": "type",
+                  "element_description": "Enter the Roost Token in the text field."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Select the test suite configurations."
+                },
+                {
+                  "action": "click",
+                  "element_description": "Save configuration button."
+                }
+              ],
+              "expected_outcome": [
+                "Test suite is set up for execution."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

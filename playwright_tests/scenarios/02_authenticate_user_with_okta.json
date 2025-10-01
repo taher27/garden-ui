@@ -1,0 +1,92 @@
+{
+  "test_name": "Authenticate User with Okta",
+  "description": "This test verifies that a user can successfully authenticate using Okta, ensuring the integration with Okta's identity provider service is functional.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login"
+  ],
+  "steps": [
+    "Navigate to the https://dev.roost.ai/login page.",
+    "Locate the Okta authentication button.",
+    "Click on the Okta authentication button.",
+    "Verify that the user is redirected to Okta's login page.",
+    "Input a valid Okta username in the username field.",
+    "Input the correct password in the password field.",
+    "Click the 'Sign In' button.",
+    "Verify that the user is redirected back to https://dev.roost.ai/login with a valid session.",
+    "Verify that the user is logged in and redirected to the primary application dashboard."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://dev-53854943.okta.com/oauth2/default/v1/authorize?response_type=code&scope=openid%20profile%20email%20address&state=okta&client_id=0oa3x8katznHWlHeD5d7&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'okta')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to Okta's login page.",
+    "User successfully logs in with valid Okta credentials.",
+    "User is redirected back to the Roost application dashboard.",
+    "A valid user session is created and maintained."
+  ],
+  "edge_cases": [
+    "User enters an invalid username.",
+    "User enters an incorrect password.",
+    "User cancels the login process at Okta's page.",
+    "Okta's service is temporarily unavailable.",
+    "User's Okta account does not have the required permissions."
+  ],
+  "data_requirements": [
+    "A valid Okta account with active credentials.",
+    "Access to Okta's identity provider service.",
+    "Test credentials for an Okta account.",
+    "Redirect URI set up correctly in the application.",
+    "Session management configured in the application."
+  ],
+  "dependencies": [
+    "Okta identity provider service must be operational.",
+    "The Roost application must have a valid Okta client ID and secret.",
+    "Network connectivity must be stable.",
+    "The login page must be accessible.",
+    "The OAuth redirect URI must be correctly configured."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "Okta OAuth token exchange endpoint",
+    "Okta user information endpoint"
+  ],
+  "performance_metrics": [
+    "Time taken to redirect to Okta's login page.",
+    "Time taken to authenticate and redirect back to the application.",
+    "Load time of the login page."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Okta login button is accessible via keyboard navigation.",
+    "Verify that the button has appropriate ARIA roles and labels.",
+    "Ensure the login page is screen-reader friendly.",
+    "Verify contrast ratios on the login page meet WCAG standards."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "55c7618c-849f-4205-b7bf-a00a291b67e5",
+    "created_at": "2025-10-01T12:05:32.977413Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "error-handling",
+      "form-submission",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 45,
+    "flakiness_potential": "medium"
+  }
+}
