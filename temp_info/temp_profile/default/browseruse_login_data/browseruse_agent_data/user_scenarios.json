@@ -1,0 +1,41 @@
+[
+  {
+    "scenario_description": "Login with Google account",
+    "steps": {
+      "1": "Click on the Google login button",
+      "2": "Authorize with Google account credentials",
+      "3": "Return to the application as a logged-in user"
+    }
+  },
+  {
+    "scenario_description": "Login with GitHub account",
+    "steps": {
+      "1": "Click on the GitHub login button",
+      "2": "Authorize with GitHub account credentials",
+      "3": "Return to the application as a logged-in user"
+    }
+  },
+  {
+    "scenario_description": "Login with Okta SSO",
+    "steps": {
+      "1": "Click on the Okta login button",
+      "2": "Enter Okta domain and credentials in the redirected page",
+      "3": "Complete multi-factor authentication if prompted",
+      "4": "Return to the application as a logged-in user"
+    }
+  },
+  {
+    "scenario_description": "Access RoostGPT configuration",
+    "steps": {
+      "1": "Click on the RoostGPT Config link",
+      "2": "Review or modify RoostGPT settings on the redirected page"
+    }
+  },
+  {
+    "scenario_description": "Access documentation",
+    "steps": {
+      "1": "Click on the Documentation link",
+      "2": "Review the available resources and guides provided"
+    }
+  }
+]

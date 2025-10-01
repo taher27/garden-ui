@@ -1,0 +1,79 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.7,
+    "metadata": {
+      "description": "Likely a domain name where cookies are set.",
+      "notes": "The value is currently empty, which may lead to issues if required."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure this variable is set to a valid domain if cookies are required for the application.",
+      "Validate the domain format to avoid misconfigurations."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.7,
+    "metadata": {
+      "description": "The name of the cookie used in the application.",
+      "notes": "The value is currently empty, which may result in issues if an application relies on a specific cookie name."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Set this variable to a meaningful and unique cookie name.",
+      "Avoid generic or default cookie names to prevent conflicts."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Indicates the login type being used, such as 'okta', 'google', etc.",
+      "notes": "This is a configuration setting and does not appear to contain sensitive information."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Document supported login types and ensure this value matches one of them.",
+      "Consider defaulting to a secure provider if the variable is unset."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Password for a site or application user.",
+      "notes": "Contains sensitive information and should not be exposed in plaintext."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this value securely using a secrets management tool.",
+      "Avoid hardcoding passwords in environment variables.",
+      "Ensure the password policy enforces complexity and rotation."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Username for the site or application, likely an email address.",
+      "notes": "Contains sensitive information and should be protected."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this value securely using a secrets management tool.",
+      "Obfuscate sensitive usernames in logs and error messages.",
+      "Validate the email format to ensure correctness."
+    ]
+  }
+}

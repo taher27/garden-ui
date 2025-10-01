@@ -1,0 +1,30 @@
+{
+  "url": "https://dev.roost.ai/gptCLIForm",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Testing Co-Pilot",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Configure and Execute AI Models",
+          "scenario_description": "A user configures generative AI models for testing purposes.",
+          "steps": [
+            {"action": "click", "element_description": "RoostGPT Config link to access AI configurations."},
+            {"action": "type", "element_description": "Open AI Token input field."},
+            {"action": "click", "element_description": "Verify button to authenticate token."}
+          ],
+          "expected_outcome": ["AI configurations are saved and verified."]
+        },
+        {
+          "scenario_name": "Setup Test Suite",
+          "scenario_description": "Setting up a test suite with specific configurations.",
+          "steps": [
+            {"action": "type", "element_description": "Name input field for test suite name."},
+            {"action": "select", "element_description": "Test Framework dropdown to choose JUnit."},
+            {"action": "click", "element_description": "Save button to save test suite configurations."}
+          ],
+          "expected_outcome": ["Test suite is configured and ready for execution."]
+        }
+      ]
+    }
+  ]
+}
