@@ -1,0 +1,36 @@
+{
+  "url": "https://dev.roost.ai/docs/api",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "API Documentation",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Explore API Endpoints",
+          "scenario_description": "User accesses the API documentation to understand available endpoints and their configurations.",
+          "steps": [
+            {
+              "action": "navigate",
+              "element_description": "Click on API Docs link to enter documentation."
+            },
+            {
+              "action": "read",
+              "element_description": "Go through details of each endpoint and their corresponding request samples."
+            }
+          ],
+          "expected_outcome": ["User gains understanding of API functionalities and usage."]
+        },
+        {
+          "scenario_name": "Download OpenAPI Specification",
+          "scenario_description": "User downloads the OpenAPI specification file for integration purposes.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Click on the 'Download OpenAPI specification' button."
+            }
+          ],
+          "expected_outcome": ["User obtains the OpenAPI specification file."]
+        }
+      ]
+    }
+  ]
+}

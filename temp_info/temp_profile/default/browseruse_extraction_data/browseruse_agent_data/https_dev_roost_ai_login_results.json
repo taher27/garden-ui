@@ -1,0 +1,30 @@
+{
+  "url": "https://dev.roost.ai/login",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "User Login via Third-Party Integration",
+          "scenario_description": "A user accesses the page to log in using a third-party identity provider such as Google or Microsoft.",
+          "steps": [
+            {"action": "click", "element_description": "Google login integration"},
+            {"action": "assert_visibility", "element_description": "Redirection to Google authentication page for login"},
+            {"action": "input", "element_description": "User credentials on Google authentication page"},
+            {"action": "assert_visibility", "element_description": "Successful login and redirection back to Roost platform"}
+          ],
+          "expected_outcome": ["User is authenticated and logged into the Roost platform by using Google credentials."]
+        },
+        {
+          "scenario_name": "Access Documentation",
+          "scenario_description": "A user navigates to read documentation to understand more about the platform.",
+          "steps": [
+            {"action": "click", "element_description": "Documentation link in the footer"},
+            {"action": "assert_visibility", "element_description": "Navigation to the documentation page"}
+          ],
+          "expected_outcome": ["The documentation page is displayed with relevant details for the user."]
+        }
+      ]
+    }
+  ]
+}
