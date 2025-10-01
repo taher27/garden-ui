@@ -1,0 +1,20 @@
+{
+  "url": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "API Documentation for Create Test Plan",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Create a New Test Plan",
+          "scenario_description": "User accesses the API endpoint to configure and create a new test plan including integration details and AI model configurations.",
+          "steps": [
+            {"action": "input_text", "element_description": "Enter test plan name in the input field."},
+            {"action": "select_dropdown_option", "element_description": "Choose AI model configuration from the dropdown."},
+            {"action": "click", "element_description": "Submit the test plan creation request using the API POST method."}
+          ],
+          "expected_outcome": ["A new test plan is successfully created and available for further configurations."]
+        }
+      ]
+    }
+  ]
+}

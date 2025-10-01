@@ -1,0 +1,40 @@
+{
+ "url": "https://dev.roost.ai/login",
+ "explored_pages_and_scenarios": [
+     {
+     "page_title": "Roost Enterprise Login | Software as a Service",
+     "potential_user_journeys": [
+         {
+         "scenario_name": "Logging in with third-party integration",
+         "scenario_description": "A user logs in using one of the third-party OAuth providers integrated on the platform (e.g., Google, Github, Microsoft).",
+         "steps": [
+             {
+             "action": "click",
+             "element_description": "Login button for Google OAuth integration"
+             },
+             {
+             "action": "assert_visibility",
+             "element_description": "User's dashboard after successful login"
+             }
+         ],
+         "expected_outcome": ["User is logged into their account and redirected to the dashboard."]
+         },
+         {
+         "scenario_name": "Accessing the API documentation",
+         "scenario_description": "A user navigates to the API Reference section to get details of API endpoints and usage guidelines.",
+         "steps": [
+             {
+             "action": "click",
+             "element_description": "API Reference link in the navigation bar"
+             },
+             {
+             "action": "assert_visibility",
+             "element_description": "API documentation page"
+             }
+         ],
+         "expected_outcome": ["User accesses detailed API documentation for integration purposes."]
+         }
+     ]
+     }
+ ]
+}

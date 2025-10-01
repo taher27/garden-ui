@@ -1,0 +1,90 @@
+{
+  "test_name": "Verify OpenAPI Specification File Download",
+  "description": "This test checks that a user can successfully download the OpenAPI specification file for integration into their project.",
+  "type": "file_download",
+  "pages": [
+    "https://dev.roost.ai/docs/api"
+  ],
+  "steps": [
+    "Open the API Documentation page at https://dev.roost.ai/docs/api.",
+    "Locate the 'Download OpenAPI Specification' button.",
+    "Click the 'Download OpenAPI Specification' button.",
+    "Verify that the browser prompts for file download confirmation.",
+    "Confirm the file download and verify the file is saved to the default downloads directory.",
+    "Open the downloaded file and validate its contents against the expected OpenAPI specification format."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://dev.roost.ai/api/swagger' and contains(@class, 'roost-icon')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api"
+    }
+  ],
+  "expected_results": [
+    "The 'Download OpenAPI Specification' button is visible and clickable.",
+    "The browser's file download prompt is triggered.",
+    "The OpenAPI specification file is downloaded and saved successfully.",
+    "The contents of the downloaded file are valid and match the OpenAPI format."
+  ],
+  "edge_cases": [
+    "The 'Download OpenAPI Specification' button is disabled or missing.",
+    "The file fails to download due to a server error.",
+    "The downloaded file is corrupted or incomplete.",
+    "The browser blocks the file download due to security settings.",
+    "The OpenAPI specification file is outdated or does not match the current API."
+  ],
+  "data_requirements": [
+    "A valid URL for the 'Download OpenAPI Specification' button.",
+    "A server hosting the OpenAPI specification file.",
+    "Expected contents of the OpenAPI specification file.",
+    "Browser permissions for file downloads.",
+    "Disk space available for file storage."
+  ],
+  "dependencies": [
+    "The 'Download OpenAPI Specification' button must be functional.",
+    "The server hosting the OpenAPI specification file must be available.",
+    "The user must have browser permissions to download files.",
+    "The OpenAPI specification file must be correctly formatted.",
+    "The browser must support file downloads."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "No direct API interactions are required."
+  ],
+  "performance_metrics": [
+    "Time taken to initiate the file download.",
+    "Download speed for the OpenAPI specification file."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'Download OpenAPI Specification' button is accessible via keyboard.",
+    "Verify that the button has a clear and descriptive label for screen readers.",
+    "Check that the file download process is indicated to the user."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "d0a04bef-8677-4b0e-8ea7-e49d26fc7344",
+    "created_at": "2025-10-01T12:05:32.979406Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "cross-browser",
+      "data-validation",
+      "error-handling",
+      "file-download",
+      "file-upload",
+      "file_download",
+      "form-submission",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "medium"
+  }
+}

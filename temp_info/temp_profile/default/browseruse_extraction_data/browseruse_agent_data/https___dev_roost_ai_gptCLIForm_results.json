@@ -1,0 +1,20 @@
+{
+  "url": "https://dev.roost.ai/gptCLIForm",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "RoostGPT Configuration | Generative AI Testing",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Configure RoostGPT",
+          "scenario_description": "A user configures the RoostGPT for testing their AI models.",
+          "steps": [
+            {"action": "type", "element_description": "Enter the Roost Token in the text field."},
+            {"action": "click", "element_description": "Select the test suite configurations."},
+            {"action": "click", "element_description": "Save configuration button."}
+          ],
+          "expected_outcome": ["Test suite is set up for execution."]
+        }
+      ]
+    }
+  ]
+}

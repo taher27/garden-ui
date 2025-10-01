@@ -1,0 +1,89 @@
+{
+  "test_name": "Verify Navigation to API Documentation and Detailed Endpoint Information",
+  "description": "This test validates that the user can navigate to the API Documentation page, explore available API endpoints, and view detailed information about a specific endpoint.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai",
+    "https://dev.roost.ai/docs/api"
+  ],
+  "steps": [
+    "Open the homepage at https://dev.roost.ai.",
+    "Locate and click on the 'roost.ai' logo to navigate to the API Documentation page.",
+    "Verify that the API Documentation page loads successfully.",
+    "Locate the navigation menu for API endpoint categories on the API Documentation page.",
+    "Select the 'Create Test App' endpoint from the menu.",
+    "Verify the endpoint details are displayed, including the HTTP method (POST), description, request parameters, and response schemas.",
+    "Scroll to the 'Get All Tests' endpoint in the documentation.",
+    "Verify the endpoint details for 'Get All Tests', including filters and expected responses."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/docs/api' and contains(@class, 'logo')]",
+      "text": "roost.ai",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    }
+  ],
+  "expected_results": [
+    "User is successfully navigated to the API Documentation page.",
+    "All available API endpoints are listed in the navigation menu.",
+    "The details of the selected API endpoint are displayed, including method, URL, request/response schemas, and description."
+  ],
+  "edge_cases": [
+    "User clicks on the 'roost.ai' logo but the page fails to load due to a network issue.",
+    "The API Documentation page loads, but the navigation menu for endpoints is missing.",
+    "User selects an endpoint, but the endpoint details fail to load.",
+    "The displayed API endpoint details contain incorrect or outdated information.",
+    "The page fails to render properly on different browser versions."
+  ],
+  "data_requirements": [
+    "A valid URL for the homepage.",
+    "A valid URL for the API Documentation page.",
+    "A navigation menu listing available API endpoints.",
+    "Detailed information for each API endpoint, including request/response schemas.",
+    "Descriptions of each API endpoint's functionality."
+  ],
+  "dependencies": [
+    "The 'roost.ai' logo must be clickable and linked to the correct page.",
+    "The API Documentation page must be live and accessible.",
+    "The navigation menu for API endpoints must be functional.",
+    "Endpoint details must be configured and available in the backend.",
+    "The user must have access to the page without authentication."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "No direct API calls are expected for this test scenario."
+  ],
+  "performance_metrics": [
+    "Page load time for the API Documentation page.",
+    "Time taken to load endpoint details after selection."
+  ],
+  "accessibility_requirements": [
+    "Ensure that all navigation elements are accessible via keyboard.",
+    "Verify that text descriptions for endpoint details have sufficient contrast.",
+    "Check that the page structure follows semantic HTML for screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "91029a36-cb50-435b-bc29-c483839d8d8a",
+    "created_at": "2025-10-01T12:05:32.979406Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "cross-browser",
+      "data-validation",
+      "form-submission",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "high"
+  }
+}

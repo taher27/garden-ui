@@ -1,0 +1,362 @@
+{
+    "cookies": [
+        {
+            "name": "NID",
+            "value": "525=ITje6dmPx3krXKdfXio-HwEtIiwEPfzbVUzQZ8RBZhLn8KkXPloYcBKJiAnHN2JNIFOVNyW1L-72-9f3LQO0haoRyjqtVfJrQrnFhLKVk524f69nA_q7pCtCS3pYKHGMpn3qPfZXHAmrJnxBTIsxykvsgNma8OX7OhkrAn1N0OR88yR9Accet4XtgdC37KjkuA",
+            "domain": ".google.com",
+            "path": "/",
+            "expires": 1775130899.649255,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "theme",
+            "value": "dark",
+            "domain": ".dev.roost.ai",
+            "path": "/",
+            "expires": 1759924647.64116,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Strict"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "qE25SMTw23iNHzCMgP4WCpPohNB9qfDnuw15bW12Mqc-1759319707-1.0.1.1-HikSnSEb1Dcj1CjpjfLJzmA7ffxUM6UgUbU1GvczKphUBxyfMCnGoR1oUrZWZxHhQp7LXAscz_zREypzWpsa0zTjSS0vGxTFoHykqSIBQTs",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1759321508.018187,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_cfuvid",
+            "value": "HZUVnXdV3kZwFqUCAu89fKQB_04HQIdS7sF2U3.TVpw-1759319707202-0.0.1.1-604800000",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "PruWCRcYkcTqOjPdfFXgFjih_075NkYnterSGVSt1aI-1759319836-1.0.1.1-sW5PwWlRNja_wDVYMihQljeUIpkTgDx53WAq4i2wHRTFyrM0TUkQOmuwh16mLSyIzmULwUB_4rP12Y9vYElUcDSIP7RLTwxQWrUlr9S7AF8",
+            "domain": ".design-assets.hubspot.com",
+            "path": "/",
+            "expires": 1759321637.762799,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_cfuvid",
+            "value": "m.bMy9XiBQXHD.T6kYfgu.ymAWdamxqJKB1pqs_eex0-1759319836945-0.0.1.1-604800000",
+            "domain": ".design-assets.hubspot.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_gcl_au",
+            "value": "1.1.300985193.1759319838",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1767095838,
+            "httpOnly": false,
+            "secure": false,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "_hjSessionUser_3130009",
+            "value": "eyJpZCI6ImYzOTI0M2ZmLTkyZDQtNWY5Yi05ZGM3LTAyMTM0YzEwZTgzZiIsImNyZWF0ZWQiOjE3NTkzMTk4MzgzOTIsImV4aXN0aW5nIjp0cnVlfQ==",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1790855838,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "test_cookie",
+            "value": "CheckForPermission",
+            "domain": ".doubleclick.net",
+            "path": "/",
+            "expires": 1759320738.452439,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_hjSession_3130009",
+            "value": "eyJpZCI6IjAwNWRjMzdiLTMxOTYtNGNjYS1iYjRiLTYyM2M3Y2ViZWFlMiIsImMiOjE3NTkzMTk4MzgzOTMsInMiOjEsInIiOjEsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1759321638,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_gid",
+            "value": "GA1.2.1254217323.1759319839",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1759406238,
+            "httpOnly": false,
+            "secure": false,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "TnzArry2ctFxHoowPicdplGpSNmIVC3iUbEKf7MqkP8-1759319837-1.0.1.1-MS195fhk1Fur8l2XtObhI7Su0hu5SKlebwF8S0hje7O49SrhQgUmNkyb0Q36t84lHaGcoxF6WFq3D985w2MMu6LYBPABfZwPExDBdtQEpnY",
+            "domain": ".hubspot.com",
+            "path": "/",
+            "expires": 1759321638.586066,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_cfuvid",
+            "value": "64CPck8vYYCLal4asbWrfoMB2hP3cMDTWEWzUmI9hqI-1759319837769-0.0.1.1-604800000",
+            "domain": ".hubspot.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_ga_C3G6BX9MRL",
+            "value": "GS2.1.s1759319838$o1$g0$t1759319838$j60$l0$h0",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1793879838.696899,
+            "httpOnly": false,
+            "secure": false,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "_ga",
+            "value": "GA1.1.1174578789.1759319839",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1793879838.697338,
+            "httpOnly": false,
+            "secure": false,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "lu264NxbLvCk2auoSFSLgwcxoVMPrEbkc8x.GV5OFHQ-1759319838-1.0.1.1-69T9u_odPEHIGr0WUjBo9CUH.2mIOdJP0J_mHX7L5XUlCmL3FmBNTNN74x1A9UHY6YOlkCrmV8MRfHNnnqJCj6Tt8.FNs8jMULMnDMep7gs",
+            "domain": ".hsadspixel.net",
+            "path": "/",
+            "expires": 1759321638.877027,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "LkECHQHlYwlNrp3nhThCYQLCr3RDIyT90VMeRLU7kGU-1759319838-1.0.1.1-sBUZFwzjlB5nu70UIDK2IwaKzPCR47cGUzktFHD4yjbnGaGBP41AuTSR7dhv2wjKBduPYZyWGk4EToBZIFL_aYuPDkeUt1KJ9SczOBqkPt8",
+            "domain": ".usemessages.com",
+            "path": "/",
+            "expires": 1759321638.886802,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "Oe2NCL0EPy2nBs_ZfWiOaFx_4PzfeFP9kzRxyJaJ8g0-1759319838-1.0.1.1-eS4oUQ30V35VevvFoCjIb7zhD2wSgqzMC33_zTDCrcWsilQfUtCnRQHPhUN2d0TJ_VxDMai29G42qW3QuyRN2CYtP0JUxgAtMMyrGcMyBs4",
+            "domain": ".hs-banner.com",
+            "path": "/",
+            "expires": 1759321639.160476,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "qeCRvloRi59hqMq2cqrEn0guwcAirTyRAwyNZZ4IBmg-1759319838-1.0.1.1-SFYg.CYVtIGnv_wEZLGOQXByiMgaULVSI8DzWH_ywhDbSvzb.bZaBiW_NG5RYzQ8EayqkPNbDdyawNwUEujGCp9i5a8vUXKnsL8PHpJSiHg",
+            "domain": ".hs-analytics.net",
+            "path": "/",
+            "expires": 1759321639.195998,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "84HmTaA5eFIVChMKzFV9LOAaDzX.bB0WreafvrtsO88-1759319839-1.0.1.1-0zhnr2J8e9t8.g3NsfZsZZqvlr1jWr9BG55AM3ZAlUu13ccszS36kzcacDkYdbTILRsV1E_qYTTcm71JSbGT9lXQGnmbf1USbfmh5z0LM3Y",
+            "domain": ".hsappstatic.net",
+            "path": "/",
+            "expires": 1759321639.963784,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "_n5dPQnywtLtq5qP7rX2yEdb4S41PxEY8fAF1cWcgNs-1759319839-1.0.1.1-Fu.bliWsLYlCgXyTf70jGMMslgyUMVp.hH.VB9NTlc.RzVqa1WtgWwFOi.kg79IPFMm8O3Tj08wR_.kV.LJlkngP4W_Sv4jxQYmbxVbPs0E",
+            "domain": ".hsforms.com",
+            "path": "/",
+            "expires": 1759321640.101929,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_cfuvid",
+            "value": "nrzl1Et83FdlRYhFej7RmpUSYo29Z3ZIcrb0iAwwSlU-1759319839286-0.0.1.1-604800000",
+            "domain": ".hsforms.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "messagesUtk",
+            "value": "336b3b96d8354ddea18d0ee5fb4527a6",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1774871840,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "li_sugr",
+            "value": "2dee8c65-d3f4-4070-82fd-f47125b033d4",
+            "domain": ".linkedin.com",
+            "path": "/",
+            "expires": 1767095842.556424,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "lidc",
+            "value": "\"b=TGST07:s=T:r=T:a=T:p=T:g=3192:u=1:x=1:i=1759319839:t=1759406239:v=2:sig=AQFwVET8Ew6duEQh4PmfNbtGz4yjPxwJ\"",
+            "domain": ".linkedin.com",
+            "path": "/",
+            "expires": 1759406240.681648,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "UserMatchHistory",
+            "value": "AQKy4mmloFF35QAAAZmfolUu2WHmSg31jmDHOz2Ow4PCEhUA5VjYCwcop9Ksj7-i5WxEG2jXudy2jQ",
+            "domain": ".linkedin.com",
+            "path": "/",
+            "expires": 1761911840.959459,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "AnalyticsSyncHistory",
+            "value": "AQJH7uQNlXzwtQAAAZmfolUuV8nVZ25lHkQI8cZG7eiJobARboqDuIymPrvjrIP-8MEgUlKoR7crgZmvboEGGA",
+            "domain": ".linkedin.com",
+            "path": "/",
+            "expires": 1761911840.959478,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "bcookie",
+            "value": "\"v=2&8faa9147-380b-416c-89e0-d4ec45974343\"",
+            "domain": ".linkedin.com",
+            "path": "/",
+            "expires": 1790855842.556532,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "bscookie",
+            "value": "\"v=1&20251001115720232d0182-37ff-4197-8d22-75d3fda98d44AQGgOjQF1mP_ZZxkEZWbP6ePROSL_y0X\"",
+            "domain": ".www.linkedin.com",
+            "path": "/",
+            "expires": 1790855842.31612,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "__hstc",
+            "value": "21242532.16dd5e6fadc8d9876386e51a7ec8f250.1759319842564.1759319842564.1759319842564.1",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1774871842,
+            "httpOnly": false,
+            "secure": false,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "hubspotutk",
+            "value": "16dd5e6fadc8d9876386e51a7ec8f250",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1774871842,
+            "httpOnly": false,
+            "secure": false,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "__hssrc",
+            "value": "1",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": false,
+            "secure": false,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "__hssc",
+            "value": "21242532.1.1759319842564",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1759321642,
+            "httpOnly": false,
+            "secure": false,
+            "sameSite": "Lax"
+        }
+    ],
+    "origins": [
+        {
+            "origin": "https://dev.roost.ai",
+            "localStorage": [
+                {
+                    "name": "redirectUrl",
+                    "value": "/gptCLIForm"
+                }
+            ]
+        },
+        {
+            "origin": "https://roost.ai",
+            "localStorage": [
+                {
+                    "name": "li_adsId",
+                    "value": "76207372-c1ab-44aa-b62e-f58b46400cca"
+                },
+                {
+                    "name": "hjActiveViewportIds",
+                    "value": "[{\"id\":\"825fcc9f-2703-4491-9fd9-8946170724e6\",\"expireTimestamp\":1759341439277}]"
+                },
+                {
+                    "name": "_gcl_ls",
+                    "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"timeouts\":0,\"creationTimeMs\":1759319838244},\"expires\":1767095838244}}"
+                }
+            ]
+        }
+    ]
+}

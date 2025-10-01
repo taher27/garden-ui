@@ -1,0 +1,86 @@
+{
+  "test_name": "Verify Navigation to API Reference Page",
+  "description": "This test ensures that users can successfully navigate to the API Reference page from the login screen.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev.roost.ai/docs/api"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Assert that the page title is 'Roost Enterprise Login | Software as a Service'.",
+    "Scroll down to the footer of the page.",
+    "Locate the 'API Reference' link using its stable selector.",
+    "Click on the 'API Reference' link.",
+    "Verify that the browser navigates to the API Reference page.",
+    "Assert that the API Reference page title includes 'API Reference'.",
+    "Verify that the API documentation content is visible on the page."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+      "text": "API Reference",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "The user is navigated to the API Reference page.",
+    "The API documentation content is displayed."
+  ],
+  "edge_cases": [
+    "The API Reference page link is broken.",
+    "The API Reference page takes too long to load.",
+    "The link is not visible due to a CSS issue.",
+    "The user clicks the link but the page navigation does not occur.",
+    "JavaScript is disabled, and the link fails to work."
+  ],
+  "data_requirements": [
+    "A valid link to the API Reference page.",
+    "API documentation accessible on the target page.",
+    "Correct URL configuration for the 'API Reference' link.",
+    "Active network connection.",
+    "Page loading functionality."
+  ],
+  "dependencies": [
+    "The API Reference page must be published and accessible.",
+    "The 'API Reference' link must be configured correctly.",
+    "The browser must support JavaScript.",
+    "Network connectivity must be stable.",
+    "The footer must be visible on the login page."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "None for this navigation test."
+  ],
+  "performance_metrics": [
+    "Page load time for the API Reference page."
+  ],
+  "accessibility_requirements": [
+    "The 'API Reference' link must be accessible via keyboard navigation.",
+    "The link must have appropriate ARIA labels.",
+    "Screen reader compatibility must be verified for the link."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "2aa9540a-4bc4-4c0a-bfd1-817004321591",
+    "created_at": "2025-10-01T12:05:32.978414Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "cross-browser",
+      "keyboard-navigation",
+      "navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "medium"
+  }
+}

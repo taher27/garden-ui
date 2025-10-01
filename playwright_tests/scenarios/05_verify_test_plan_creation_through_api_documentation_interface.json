@@ -1,0 +1,131 @@
+{
+  "test_name": "Verify Test Plan Creation through API Documentation Interface",
+  "description": "This test case verifies the process of navigating to the 'Create Test Plan' API endpoint, configuring test parameters, and executing a POST request to create a test plan through the API documentation interface.",
+  "type": "functional",
+  "pages": [
+    "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan"
+  ],
+  "steps": [
+    "Navigate to the API documentation page at the provided URL.",
+    "Verify the presence of the 'Create Test Plan' API section link with text 'tag/RoostGPT/operation/TestGptController_createTestPlan'.",
+    "Click on the 'tag/RoostGPT/operation/TestGptController_createTestPlan' link to expand the create test plan API details.",
+    "Locate the 'POST /test/createTestPlan' button and click it to expand the request details.",
+    "Verify the display of the endpoint URL 'https://dev.roost.ai/api/test/createTestPlan'.",
+    "Click on the 'Expand all' button to reveal all available options in the API documentation section.",
+    "Locate the 'aiModelConfiguration' button and click on it to view AI model configuration details.",
+    "Verify the presence of the 'gitConfiguration' button and click to expand Git configuration details.",
+    "Click on the 'integrationConfiguration' button and verify the displayed integration configuration details.",
+    "Locate and click the 'testConfiguration' button to view test configuration options.",
+    "Ensure all required input fields and configurations are visible and properly labeled.",
+    "Locate and verify the presence of the 'Copy' button to copy API payload examples.",
+    "Click the 'Copy' button and confirm that the API payload is copied to the clipboard.",
+    "Verify that the 'aiModelConfiguration' and 'integrationConfiguration' buttons remain interactable after expanding.",
+    "Click the 'POST /test/createTestPlan' button again to collapse the section.",
+    "Click the 'Collapse all' button to collapse all expanded API sections.",
+    "Ensure the page returns to its initial state with only top-level API sections visible."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_createTestPlan' and contains(@class, 'sc-jlZhew')]",
+      "text": "tag/RoostGPT/operation/TestGptController_createTestPlan",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan"
+    },
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()=\"POST\n/test/createTestPlan\"]",
+      "text": "POST\n/test/createTestPlan",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan"
+    },
+    {
+      "element_type": "div",
+      "selector": "//div[@id='operation/TestGptController_createTestPlan']/div[2]/div[1]/div/div/div[2]",
+      "text": "https://dev.roost.ai/api/test/createTestPlan",
+      "action": "verify",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan"
+    },
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()=\"Expand all\"]",
+      "text": "Expand all",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan"
+    },
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()=\"Collapse all\"]",
+      "text": "Collapse all",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_createTestPlan"
+    }
+  ],
+  "expected_results": [
+    "The user can expand the 'Create Test Plan' API section details.",
+    "The endpoint URL 'https://dev.roost.ai/api/test/createTestPlan' is displayed correctly.",
+    "All configuration buttons, such as 'aiModelConfiguration', are visible and functional.",
+    "The 'Copy' button copies the payload example to the clipboard.",
+    "'Expand all' and 'Collapse all' buttons function as expected to control the visibility of sections."
+  ],
+  "edge_cases": [
+    "Verify behavior when the 'Collapse all' button is clicked repeatedly.",
+    "Check if the 'Copy' button is disabled when no payload is available.",
+    "Ensure API section links work correctly if the page is reloaded mid-interaction.",
+    "Validate that the 'Expand all' button does not break if sections are already expanded.",
+    "Confirm the page's behavior if the API documentation fails to load."
+  ],
+  "data_requirements": [
+    "Test data for AI model configurations.",
+    "Example payload for the create test plan endpoint.",
+    "Valid API keys or authentication details.",
+    "Integration details for Git and other external systems.",
+    "Sample test plan names and descriptions."
+  ],
+  "dependencies": [
+    "Stable internet connection to load the API documentation.",
+    "Access to the API documentation page at the given URL.",
+    "Availability of the 'Create Test Plan' API endpoint.",
+    "Valid user permissions to access the documentation.",
+    "Properly configured backend services for API interaction."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "POST /test/createTestPlan",
+    "GET /test/configurations",
+    "GET /test/integration-details"
+  ],
+  "performance_metrics": [
+    "Response time for expanding/collapsing API sections.",
+    "Time taken to load the 'Create Test Plan' details.",
+    "Latency in copying payload examples to clipboard."
+  ],
+  "accessibility_requirements": [
+    "Ensure all buttons have appropriate ARIA labels.",
+    "Verify high-contrast mode compatibility for visually impaired users.",
+    "Check keyboard-only navigation functionality.",
+    "Ensure screen readers read out the API section details correctly.",
+    "Verify tooltip descriptions for interactive elements."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "fb6ab590-4903-48ae-bba2-883c17756a12",
+    "created_at": "2025-10-01T12:05:32.979406Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "form-submission",
+      "functional",
+      "keyboard-navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 85,
+    "flakiness_potential": "medium"
+  }
+}

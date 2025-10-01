@@ -1,0 +1,160 @@
+{
+  "test_name": "Verify RoostGPT Configuration with Valid Inputs",
+  "description": "This test verifies that a user can successfully configure the RoostGPT platform with valid inputs, including setting tokens, selecting repository types, and saving the configuration.",
+  "type": "configuration",
+  "pages": [
+    "https://dev.roost.ai/gptCLIForm"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai.",
+    "Click on the 'RoostGPT Config' link in the navigation bar.",
+    "Verify that the Roost Token input field is displayed.",
+    "Enter a valid Roost Token in the input field with stable selector '[data-testid=\"test-name-input\"]'.",
+    "Enter a valid OpenAI Token in the input field with stable selector '[data-testid=\"openai-token\"]'.",
+    "Click the 'Unmask' button to verify the OpenAI Token value entered.",
+    "Select the 'Cloud' option in the Git type radio button group using '[data-testid=\"cloud-git-type-radio-button-selected\"]'.",
+    "Enter a valid GitHub source token in the input field with stable selector '[data-testid=\"github-source-token\"]'.",
+    "Click the 'Unmask' button to verify the GitHub source token value entered.",
+    "Check the 'Traverse to all sub-directories' option using the label with stable selector '//div[@id=\"advanced\"]/div[2]/div[4]/div[2]/div/div/label'.",
+    "Check the 'Check for Vulnerability' option using the label with stable selector '//div[@id=\"advanced\"]/div[2]/div[5]/div[2]/div/div/label'.",
+    "Enter a valid value for custom functions to test in the input field with stable selector '[data-testid=\"functions-to-test\"]'.",
+    "Click the 'Save Configuration' button.",
+    "Verify that a success message is displayed confirming the configuration was saved."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+      "text": "RoostGPT Config",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"test-name-input\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"openai-token\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"openai-token-unMask-icon\"]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"cloud-git-type-radio-button-selected\"]",
+      "text": "",
+      "action": "select",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"github-source-token\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"github-source-token-unMask-icon\"]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "label",
+      "selector": "//div[@id='advanced']/div[2]/div[4]/div[2]/div/div/label",
+      "text": "Traverse to all sub-directories",
+      "action": "check",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "label",
+      "selector": "//div[@id='advanced']/div[2]/div[5]/div[2]/div/div/label",
+      "text": "Check for Vulnerability",
+      "action": "check",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"functions-to-test\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    }
+  ],
+  "expected_results": [
+    "The user is able to navigate to the RoostGPT Config page.",
+    "The Roost Token and OpenAI Token fields are editable.",
+    "The 'Cloud' Git type option is selected by default.",
+    "The user is able to check additional options like 'Traverse to all sub-directories' and 'Check for Vulnerability'.",
+    "Configuration changes are successfully saved, and a success message is displayed."
+  ],
+  "edge_cases": [
+    "What happens if the Roost Token is left empty?",
+    "What happens if an invalid OpenAI Token is entered?",
+    "What if the 'Save Configuration' button is clicked without selecting any Git type?",
+    "What happens if the GitHub source token is invalid?",
+    "What if the user tries to save without checking any advanced options?"
+  ],
+  "data_requirements": [
+    "A valid Roost Token.",
+    "A valid OpenAI Token.",
+    "A valid GitHub source token.",
+    "A test function name to input in '[data-testid=\"functions-to-test\"]'.",
+    "Custom configuration data for advanced options."
+  ],
+  "dependencies": [
+    "The RoostGPT Config page must be accessible.",
+    "The user must have valid tokens for OpenAI and GitHub.",
+    "The 'Save Configuration' backend API must be functional."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "POST request to save the configuration data.",
+    "Validation of tokens via API.",
+    "Fetch request to load existing configuration data on page load."
+  ],
+  "performance_metrics": [
+    "Time taken to save the configuration.",
+    "API response time for token validation.",
+    "Page load time for the RoostGPT Config page."
+  ],
+  "accessibility_requirements": [
+    "All interactive elements must be accessible via keyboard navigation.",
+    "Labels for input fields must be properly associated.",
+    "ARIA roles and attributes must be verified for screen reader support."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "30fd00bf-3474-4799-af05-e70830410146",
+    "created_at": "2025-10-01T12:05:32.980554Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "configuration",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 70,
+    "flakiness_potential": "medium"
+  }
+}
