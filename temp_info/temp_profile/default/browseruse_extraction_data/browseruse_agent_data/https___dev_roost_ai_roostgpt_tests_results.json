@@ -1,0 +1,48 @@
+{
+  "url": "https://dev.roost.ai/roostgpt/tests",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Tests Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Filter Test Suites",
+          "scenario_description": "A user filters test suites by a specific criteria to find relevant tests.",
+          "steps": [
+            {
+              "action": "Click",
+              "element_description": "Filter button located near test suites table."
+            },
+            {
+              "action": "Type",
+              "element_description": "Enter filter criteria in the search box."
+            },
+            {
+              "action": "Assert_visibility",
+              "element_description": "Verify relevant test suites are displayed."
+            }
+          ],
+          "expected_outcome": ["Filtered test suites matching criteria are displayed."]
+        },
+        {
+          "scenario_name": "Add New Test Suite",
+          "scenario_description": "A user creates a new test suite for a specific AI model and test type.",
+          "steps": [
+            {
+              "action": "Click",
+              "element_description": "Add Test Suite button."
+            },
+            {
+              "action": "Type",
+              "element_description": "Fill out test suite details in the form."
+            },
+            {
+              "action": "Click",
+              "element_description": "Submit button to save the test suite."
+            }
+          ],
+          "expected_outcome": ["Test suite appears in the list with the provided details."]
+        }
+      ]
+    }
+  ]
+}

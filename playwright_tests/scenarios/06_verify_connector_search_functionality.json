@@ -1,0 +1,96 @@
+{
+  "test_name": "Verify Connector Search Functionality",
+  "description": "This test verifies that the search functionality on the Connectors page correctly filters the displayed connectors based on the search term entered by the user.",
+  "type": "search",
+  "pages": [
+    "https://dev.roost.ai/connectors"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/connectors.",
+    "Locate the search input field using the stable selector '[data-testid=\"Connector-search-box\"]'.",
+    "Type a valid connector name into the search input field.",
+    "Verify that the search results update dynamically to match the search term.",
+    "Clear the search input field.",
+    "Type a partial connector name into the search input field.",
+    "Verify that the search results include all connectors matching the partial term.",
+    "Type a connector name that does not exist into the search input field.",
+    "Verify that no results are displayed.",
+    "Click the 'First' button using the stable selector '[data-testid=\"paginator-first-page-button\"]' to ensure pagination works with filtered results."
+  ],
+  "selectors": [
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"Connector-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/connectors"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"paginator-first-page-button\"]",
+      "text": "First",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/connectors"
+    }
+  ],
+  "expected_results": [
+    "Search results dynamically update based on the inputted search term.",
+    "Results include partial matches when a partial term is entered.",
+    "No connectors are displayed when an invalid name is searched.",
+    "Pagination functionality works correctly with filtered results."
+  ],
+  "edge_cases": [
+    "Entering special characters or numbers in the search box.",
+    "Searching with leading or trailing spaces.",
+    "Searching while the page is loading.",
+    "Clearing the search input without clicking outside of it.",
+    "Searching with a term that matches multiple connectors across different pages."
+  ],
+  "data_requirements": [
+    "A list of predefined connectors with unique names.",
+    "At least one connector name containing special characters.",
+    "At least one connector name with numbers.",
+    "A connector dataset larger than one page of results.",
+    "A connector name that partially matches other connectors."
+  ],
+  "dependencies": [
+    "Connectors must already exist in the system.",
+    "The search functionality must be implemented and active.",
+    "The pagination system must be preconfigured and functional."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET /connectors to fetch filtered results.",
+    "POST /search-logs to log the user's search activity."
+  ],
+  "performance_metrics": [
+    "Time taken for search results to update after input.",
+    "Latency of API calls for fetching filtered results.",
+    "Accuracy of displayed results compared to the search term."
+  ],
+  "accessibility_requirements": [
+    "Ensure the search input field has ARIA attributes for accessibility.",
+    "Verify that the search results are readable by screen readers.",
+    "Check color contrast between search results and background."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "5330ad89-1336-497d-8a0d-b0fdfcdca3e4",
+    "created_at": "2025-10-01T12:45:57.125370Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "form-submission",
+      "keyboard-navigation",
+      "performance",
+      "search",
+      "ui-test"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "medium"
+  }
+}

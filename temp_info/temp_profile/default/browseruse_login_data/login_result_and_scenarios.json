@@ -1,0 +1,49 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": true,
+    "final_page_url": "https://dev.roost.ai/roostgpt/tests",
+    "outcome_message": "Successfully logged in.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "User logs in via Okta",
+            "steps": {
+                "1": "Navigate to the login page.",
+                "2": "Click on the Okta login option.",
+                "3": "Enter Okta credentials and submit."
+            }
+        },
+        {
+            "scenario_description": "User accesses privacy policy",
+            "steps": {
+                "1": "Navigate to the login page.",
+                "2": "Click on Privacy Policy link.",
+                "3": "Read the policy."
+            }
+        },
+        {
+            "scenario_description": "User checks documentation",
+            "steps": {
+                "1": "Navigate to the login page.",
+                "2": "Click on Documentation link.",
+                "3": "Explore documentation."
+            }
+        },
+        {
+            "scenario_description": "User installs CLI tool",
+            "steps": {
+                "1": "Navigate to the login page.",
+                "2": "Click on Download CLI link.",
+                "3": "Follow installation instructions."
+            }
+        },
+        {
+            "scenario_description": "User installs VS Code extension",
+            "steps": {
+                "1": "Navigate to the login page.",
+                "2": "Click on Install VS Code Extension link.",
+                "3": "Follow installation instructions."
+            }
+        }
+    ]
+}

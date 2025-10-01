@@ -1,0 +1,104 @@
+{
+  "test_name": "Verify Pagination Workflow for Test Suites",
+  "description": "Tests the navigation between pages using pagination controls.",
+  "type": "functional",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests"
+  ],
+  "steps": [
+    "Navigate to the 'Test Suites' page.",
+    "Verify the presence of pagination controls (First, Last, Arrow Left, Arrow Right).",
+    "Click on the 'Next' button and verify that the next page is displayed.",
+    "Click on the 'Previous' button and verify that the previous page is displayed.",
+    "Click on the 'First' button and verify that the first page is displayed.",
+    "Click on the 'Last' button and verify that the last page is displayed.",
+    "Click on a specific page number and verify that the corresponding page is displayed.",
+    "Attempt rapid navigation through pages and verify no UI glitches occur."
+  ],
+  "selectors": [
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"paginator-first-page-button\"]",
+      "text": "First",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"arrow-left\"]",
+      "text": "\u00ab",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"arrow-icon\"]",
+      "text": "\u00bb",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"paginator-last-page-button\"]",
+      "text": "Last",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    }
+  ],
+  "expected_results": [
+    "Pagination buttons correctly navigate to the intended pages.",
+    "No UI glitches or errors during navigation.",
+    "The table updates dynamically to display the corresponding page's content."
+  ],
+  "edge_cases": [
+    "Clicking 'First' on the first page should not reload the page.",
+    "Clicking 'Last' on the last page should not reload the page.",
+    "Navigating rapidly through pages should not cause performance issues.",
+    "UI should handle scenarios where there is only one page of test suites.",
+    "Invalid page numbers should not crash the application."
+  ],
+  "data_requirements": [
+    "Multiple pages of test suites available in the database.",
+    "A test setup with only one page of test suites.",
+    "Test suite data distributed across pages for testing navigation."
+  ],
+  "dependencies": [
+    "Pagination implementation in the backend.",
+    "Availability of test suite data across multiple pages.",
+    "Proper API endpoints for fetching paginated data."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET requests to fetch data for specific pages during navigation.",
+    "Error handling for API failures during pagination."
+  ],
+  "performance_metrics": [
+    "Time taken to load a new page of test suites.",
+    "Memory usage while navigating through multiple pages rapidly."
+  ],
+  "accessibility_requirements": [
+    "Ensure all pagination buttons are keyboard accessible.",
+    "ARIA labels for pagination controls to aid screen readers.",
+    "Focus indication for each pagination button."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "9ab70024-ce28-460a-a61f-b9ef1ae8f5c9",
+    "created_at": "2025-10-01T12:45:57.125692Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "form-submission",
+      "functional",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "medium"
+  }
+}

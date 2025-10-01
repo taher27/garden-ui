@@ -1,0 +1,86 @@
+{
+  "test_name": "Verify Test Suite Search Functionality",
+  "description": "Tests the ability to search for a specific test suite using the search box.",
+  "type": "functional",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests"
+  ],
+  "steps": [
+    "Navigate to the 'Test Suites' page.",
+    "Verify the presence of the search box using its selector.",
+    "Click on the search box to focus.",
+    "Type a specific test suite name into the search box.",
+    "Press 'Enter' or wait for the results to auto-populate.",
+    "Verify that the test suite matching the search query is displayed in the table.",
+    "Scroll through the table and confirm that only relevant results are shown.",
+    "Clear the search box and validate that the full list of test suites reappears."
+  ],
+  "selectors": [
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"tests-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    }
+  ],
+  "expected_results": [
+    "Test suite matching the search query is displayed.",
+    "The table updates dynamically to reflect the search results.",
+    "Clearing the search box restores the full list of test suites."
+  ],
+  "edge_cases": [
+    "Entering a non-existent test suite name should display no results.",
+    "Special characters in the search query should not break the functionality.",
+    "Very long search queries should not cause UI or performance issues.",
+    "Empty search queries should restore the full list of test suites.",
+    "Case-insensitive search should match test suites correctly."
+  ],
+  "data_requirements": [
+    "A valid test suite name present in the database.",
+    "At least one test suite without a matching name for negative testing.",
+    "Test suite names with special characters.",
+    "A large dataset of test suites to test performance.",
+    "Clear instructions for the expected format of search queries."
+  ],
+  "dependencies": [
+    "Search functionality implementation in the backend.",
+    "Access to the test suites database.",
+    "Proper indexing of test suite names for fast retrieval."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET request to fetch filtered test suite data based on the search query.",
+    "Error handling for API failures during the search."
+  ],
+  "performance_metrics": [
+    "Time taken to update the table after entering a search query.",
+    "Memory usage while handling large datasets in the search results."
+  ],
+  "accessibility_requirements": [
+    "Ensure the search box has appropriate ARIA labels.",
+    "Keyboard navigation should allow users to focus and type in the search box.",
+    "The search results should be easily readable with screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "cbb8356b-efe4-40a7-b253-79d7a515f484",
+    "created_at": "2025-10-01T12:45:57.125692Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "form-submission",
+      "functional",
+      "keyboard-navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "medium"
+  }
+}

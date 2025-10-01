@@ -1,0 +1,98 @@
+{
+  "test_name": "Verify Admin User Search and Permission Management",
+  "description": "This test verifies that an admin can search for a user, view their details, and manage their permissions (e.g., removing admin rights).",
+  "type": "user_management",
+  "pages": [
+    "https://dev.roost.ai/admin/app"
+  ],
+  "steps": [
+    "Navigate to the Admin Dashboard page.",
+    "Locate the user search input field.",
+    "Type the username 'bhhavya.sureka' into the search input field.",
+    "Click the 'Apply' button to filter the results.",
+    "Verify that the user 'bhhavya.sureka' appears in the search results.",
+    "Click on the username 'bhhavya.sureka' to open the user details.",
+    "Locate the 'Remove Admin' button under permissions.",
+    "Click the 'Remove Admin' button.",
+    "Confirm the removal action in the modal dialog (if applicable).",
+    "Verify that the user's admin rights have been successfully removed by checking their updated role in the user list."
+  ],
+  "selectors": [
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"test\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    },
+    {
+      "element_type": "a",
+      "selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div[2]/div[2]/a",
+      "text": "bhhavya.sureka",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    }
+  ],
+  "expected_results": [
+    "The user list is filtered to show 'bhhavya.sureka'.",
+    "Admin rights for 'bhhavya.sureka' are successfully removed."
+  ],
+  "edge_cases": [
+    "User does not exist in the database.",
+    "Search input accepts special characters or invalid input.",
+    "Admin is unable to remove rights due to insufficient permissions.",
+    "Network latency causes delays in filtering results.",
+    "Modal confirmation dialog does not appear."
+  ],
+  "data_requirements": [
+    "Valid username data for search (e.g., 'bhhavya.sureka').",
+    "Admin role assigned to the test user.",
+    "Existing user records in the database.",
+    "Permissions data for validating admin rights.",
+    "Mocked backend data for testing network failures."
+  ],
+  "dependencies": [
+    "Admin user must be logged into the dashboard.",
+    "User 'bhhavya.sureka' must exist in the system.",
+    "Admin user must have permission to manage roles."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET request to fetch user list.",
+    "POST request to update user permissions.",
+    "PUT request to confirm admin removal."
+  ],
+  "performance_metrics": [
+    "Time taken to filter search results.",
+    "Response time for permission update API.",
+    "Page load speed for user details."
+  ],
+  "accessibility_requirements": [
+    "Ensure screen reader compatibility for the search input field.",
+    "Verify keyboard navigation for search and action buttons.",
+    "Check color contrast ratios for error messages and modal dialogs."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "e9fd2b39-dfd1-4c30-8e9c-ba562a2de1df",
+    "created_at": "2025-10-01T12:45:57.120051Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "security",
+      "ui-test",
+      "user_management"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "high"
+  }
+}

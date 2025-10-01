@@ -1,0 +1,87 @@
+{
+  "test_name": "Verify Login via GitHub OAuth",
+  "description": "Tests the login functionality using GitHub OAuth integration, ensuring the user can authenticate and access their dashboard.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Locate and click on the GitHub login option.",
+    "Redirect to GitHub's authentication page.",
+    "Enter valid GitHub credentials (username and password).",
+    "Grant access to the application if prompted.",
+    "Redirect back to the primary application dashboard upon successful authentication.",
+    "Verify that the dashboard loads with user-specific data and environment management options."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is successfully redirected to GitHub's authentication page.",
+    "Upon entering valid credentials, user is redirected back to the application dashboard.",
+    "Dashboard displays user-specific options such as environment creation and monitoring."
+  ],
+  "edge_cases": [
+    "Invalid GitHub credentials result in an error message.",
+    "User denies access to the application on GitHub's page.",
+    "Network issues during redirection to GitHub's page.",
+    "Session timeout on GitHub during login.",
+    "GitHub integration fails due to API downtime."
+  ],
+  "data_requirements": [
+    "Valid GitHub credentials.",
+    "User account linked to the application.",
+    "Pre-configured environments for the user.",
+    "API tokens for GitHub integration.",
+    "Session data to track user login state."
+  ],
+  "dependencies": [
+    "GitHub OAuth API must be operational.",
+    "User account must be pre-registered in the application.",
+    "Network connectivity must be stable."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "Retrieve OAuth tokens from GitHub API.",
+    "Session validation API call upon successful login.",
+    "Environment listing API call to load dashboard data."
+  ],
+  "performance_metrics": [
+    "Response time for GitHub redirection.",
+    "Time taken to load the dashboard post-login.",
+    "API response time for environment retrieval."
+  ],
+  "accessibility_requirements": [
+    "Ensure all login-related links and buttons are keyboard-navigable.",
+    "Validate ARIA roles and labels on the GitHub login button.",
+    "Provide screen reader-compatible error messages for failed login attempts."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "eef71fc8-9dc2-4ea4-8f5b-c8f67b49f8a2",
+    "created_at": "2025-10-01T12:45:57.120051Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "error-handling",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "high"
+  }
+}

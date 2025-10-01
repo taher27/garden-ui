@@ -1,0 +1,160 @@
+{
+  "https://dev.roost.ai/admin/app": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost.ai Admin Dashboard",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Search and Manage Users",
+            "scenario_description": "Admin searches for a user and manages their permissions or deletes their account.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Search input field to find users by name or ID."
+              },
+              {
+                "action": "click",
+                "element_description": "Apply button to filter the search results."
+              },
+              {
+                "action": "click",
+                "element_description": "Remove Admin button for the selected user."
+              }
+            ],
+            "expected_outcome": [
+              "The user list is filtered to show relevant users based on the search criteria.",
+              "The user's admin privileges are successfully removed."
+            ]
+          },
+          {
+            "scenario_name": "Add Roosters",
+            "scenario_description": "Admin navigates to add a new user to the system.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Add Roosters button to initiate adding a new user."
+              },
+              {
+                "action": "type",
+                "element_description": "Fill out the user details form."
+              },
+              {
+                "action": "click",
+                "element_description": "Submit button to finalize adding the user."
+              }
+            ],
+            "expected_outcome": [
+              "A new user is successfully added to the system."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/connectors": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost.ai Connectors Management",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Manage Connectors",
+            "scenario_description": "Users can view and manage existing connectors, including editing and deleting them.",
+            "steps": [
+              {
+                "action": "Click",
+                "element_description": "The 'Show My Connectors' button."
+              },
+              {
+                "action": "Click",
+                "element_description": "The 'Edit' button next to a connector."
+              },
+              {
+                "action": "Type",
+                "element_description": "Modify the connector details in the displayed form."
+              },
+              {
+                "action": "Click",
+                "element_description": "The 'Save' button to confirm changes."
+              }
+            ],
+            "expected_outcome": [
+              "The connector details are updated and visible in the list."
+            ]
+          },
+          {
+            "scenario_name": "Add a New Connector",
+            "scenario_description": "Users can add new connectors to integrate additional services or tools.",
+            "steps": [
+              {
+                "action": "Click",
+                "element_description": "The 'Add Connector' button."
+              },
+              {
+                "action": "Type",
+                "element_description": "Fill in the connector name and type in the provided form."
+              },
+              {
+                "action": "Click",
+                "element_description": "The 'Save' button to add the connector."
+              }
+            ],
+            "expected_outcome": [
+              "A new connector is successfully added and displayed in the list."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/roostgpt/tests": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Tests Management",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Filter Test Suites",
+            "scenario_description": "A user filters test suites by a specific criteria to find relevant tests.",
+            "steps": [
+              {
+                "action": "Click",
+                "element_description": "Filter button located near test suites table."
+              },
+              {
+                "action": "Type",
+                "element_description": "Enter filter criteria in the search box."
+              },
+              {
+                "action": "Assert_visibility",
+                "element_description": "Verify relevant test suites are displayed."
+              }
+            ],
+            "expected_outcome": [
+              "Filtered test suites matching criteria are displayed."
+            ]
+          },
+          {
+            "scenario_name": "Add New Test Suite",
+            "scenario_description": "A user creates a new test suite for a specific AI model and test type.",
+            "steps": [
+              {
+                "action": "Click",
+                "element_description": "Add Test Suite button."
+              },
+              {
+                "action": "Type",
+                "element_description": "Fill out test suite details in the form."
+              },
+              {
+                "action": "Click",
+                "element_description": "Submit button to save the test suite."
+              }
+            ],
+            "expected_outcome": [
+              "Test suite appears in the list with the provided details."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

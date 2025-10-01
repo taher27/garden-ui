@@ -1,0 +1,97 @@
+{
+  "test_name": "Validate Adding a New Rooster User",
+  "description": "This test verifies that an admin can successfully add a new user by filling out a form and submitting it.",
+  "type": "user_creation",
+  "pages": [
+    "https://dev.roost.ai/admin/app"
+  ],
+  "steps": [
+    "Navigate to the Admin Dashboard page.",
+    "Locate and click on the 'Add Roosters' button.",
+    "Verify that the user creation form is displayed.",
+    "Fill out the username field with 'new_user'.",
+    "Fill out the email field with 'new_user@example.com'.",
+    "Select 'Developer' from the role dropdown.",
+    "Click the 'Submit' button to add the user.",
+    "Verify that a success message appears after submission.",
+    "Check that the new user 'new_user' is visible in the user list."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"admin-tab\"]",
+      "text": "Admin",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"test\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    }
+  ],
+  "expected_results": [
+    "User creation form is displayed.",
+    "Admin successfully adds a new user.",
+    "New user appears in the user list."
+  ],
+  "edge_cases": [
+    "Form validation fails due to missing required fields.",
+    "Email format is invalid.",
+    "Role dropdown does not load options.",
+    "Duplicate username error occurs.",
+    "Backend API fails during submission."
+  ],
+  "data_requirements": [
+    "Valid username and email data.",
+    "List of predefined roles for dropdown.",
+    "Mocked backend responses for user creation.",
+    "Existing user list for validation.",
+    "Error handling data for validation testing."
+  ],
+  "dependencies": [
+    "Admin user must be logged in.",
+    "Form elements must be functional and visible.",
+    "Backend API must support user creation."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "POST request for user creation.",
+    "GET request to refresh user list.",
+    "Validation API for duplicate entries."
+  ],
+  "performance_metrics": [
+    "Form load time.",
+    "API response time for submission.",
+    "Page refresh speed after user addition."
+  ],
+  "accessibility_requirements": [
+    "Ensure form labels are accessible via screen readers.",
+    "Verify keyboard navigation for form fields.",
+    "Check error message visibility and contrast."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "9dd7105c-c575-488e-9cae-43d36e7c540f",
+    "created_at": "2025-10-01T12:45:57.120051Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "drag-and-drop",
+      "error-handling",
+      "form-submission",
+      "performance",
+      "ui-test",
+      "user_creation"
+    ],
+    "estimated_execution_time": 45,
+    "flakiness_potential": "medium"
+  }
+}
