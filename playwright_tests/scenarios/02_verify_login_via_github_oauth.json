@@ -1,0 +1,83 @@
+{
+  "test_name": "Verify Login via GitHub OAuth",
+  "description": "Tests the ability of the user to log in using GitHub OAuth and verifies successful redirection to the dashboard post-authentication.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://github.com/login/oauth/authorize"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Locate and click on the GitHub OAuth login button.",
+    "Verify that the user is redirected to the GitHub authentication page.",
+    "Enter valid GitHub credentials and submit.",
+    "Check if authentication is successful and if the user is redirected back to https://dev.roost.ai.",
+    "Verify that the user is now logged in and can access the dashboard features."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the GitHub authentication page.",
+    "User successfully authenticates and is redirected back to https://dev.roost.ai.",
+    "Dashboard features are available after login."
+  ],
+  "edge_cases": [
+    "User enters incorrect GitHub credentials.",
+    "GitHub OAuth service is down or unreachable.",
+    "Network interruptions during redirection.",
+    "User cancels the login process on the GitHub page.",
+    "Invalid redirect URI configured in the application."
+  ],
+  "data_requirements": [
+    "Valid GitHub account credentials.",
+    "Configured redirect URI for GitHub OAuth.",
+    "Access to the GitHub OAuth service."
+  ],
+  "dependencies": [
+    "GitHub OAuth API must be functional.",
+    "Roost.ai server must accept GitHub OAuth tokens.",
+    "Valid configurations for GitHub OAuth credentials in the application."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GitHub OAuth token exchange API.",
+    "Roost.ai backend validation of OAuth tokens."
+  ],
+  "performance_metrics": [
+    "Time taken for redirection from GitHub to Roost.ai.",
+    "Response time for token validation."
+  ],
+  "accessibility_requirements": [
+    "Ensure the GitHub OAuth button is accessible via keyboard navigation.",
+    "Verify proper ARIA roles for the GitHub login button.",
+    "Ensure color contrast meets WCAG standards."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "146300df-c05f-4a14-8c01-668d90a3a485",
+    "created_at": "2025-10-01T10:31:37.033294Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "error-handling",
+      "form-submission",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "high"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "test_name": "Verify Documentation Link Navigation",
+  "description": "Tests the ability of the user to navigate to the documentation page from the footer link and ensures the page loads correctly.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://docs.roost.ai"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Locate and click on the 'Documentation' footer link.",
+    "Verify that the user is redirected to https://docs.roost.ai.",
+    "Check if the documentation page loads correctly with all expected elements visible."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "text": "Documentation",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to https://docs.roost.ai.",
+    "Documentation page loads successfully with all resources accessible."
+  ],
+  "edge_cases": [
+    "Documentation page URL is invalid or unreachable.",
+    "Network interruptions during navigation.",
+    "Footer link is not visible due to UI rendering issues.",
+    "User attempts navigation from an unsupported browser."
+  ],
+  "data_requirements": [
+    "Valid URL for the documentation page.",
+    "Access to the internet."
+  ],
+  "dependencies": [
+    "Documentation page must be functional and accessible.",
+    "Footer links must be properly configured.",
+    "Network connectivity must be stable."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "No API interactions required."
+  ],
+  "performance_metrics": [
+    "Page load time for the documentation page."
+  ],
+  "accessibility_requirements": [
+    "Ensure the footer link is accessible via keyboard navigation.",
+    "Verify proper ARIA roles for the 'Documentation' link.",
+    "Ensure readable font size and color contrast on the documentation page."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "be81a70a-5aa6-4019-b6a7-45b2a6db67f5",
+    "created_at": "2025-10-01T10:31:37.034294Z",
+    "complexity": "medium",
+    "risk_level": "high",
+    "priority": "normal",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "cross-browser",
+      "error-handling",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 20,
+    "flakiness_potential": "high"
+  }
+}

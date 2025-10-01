@@ -1,0 +1,77 @@
+{
+  "test_name": "Verify Privacy Policy Link Navigation",
+  "description": "Tests the ability of the user to navigate to the Privacy Policy page from the footer link and ensures the page content is accessible.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://roost.ai/privacy-policy"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Locate and click on the 'Privacy Policy' footer link.",
+    "Verify that the user is redirected to https://roost.ai/privacy-policy.",
+    "Check if the Privacy Policy page loads correctly with all expected content visible."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "text": "Privacy Policy",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to https://roost.ai/privacy-policy.",
+    "Privacy Policy page loads successfully with all content accessible."
+  ],
+  "edge_cases": [
+    "Privacy Policy page URL is invalid or unreachable.",
+    "Network interruptions during navigation.",
+    "Footer link is not visible due to UI rendering issues.",
+    "User attempts navigation from an unsupported browser."
+  ],
+  "data_requirements": [
+    "Valid URL for the Privacy Policy page.",
+    "Access to the internet."
+  ],
+  "dependencies": [
+    "Privacy Policy page must be functional and accessible.",
+    "Footer links must be properly configured.",
+    "Network connectivity must be stable."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "No API interactions required."
+  ],
+  "performance_metrics": [
+    "Page load time for the Privacy Policy page."
+  ],
+  "accessibility_requirements": [
+    "Ensure the footer link is accessible via keyboard navigation.",
+    "Verify proper ARIA roles for the 'Privacy Policy' link.",
+    "Ensure readable font size and color contrast on the Privacy Policy page."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "a8c77794-6b33-4f53-8ec4-aac2d74f5551",
+    "created_at": "2025-10-01T10:31:37.034294Z",
+    "complexity": "medium",
+    "risk_level": "high",
+    "priority": "normal",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "cross-browser",
+      "error-handling",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 20,
+    "flakiness_potential": "high"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "test_name": "Verify Privacy Policy Link Navigation",
+  "description": "This test confirms that users can access the Privacy Policy page from the footer link.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://roost.ai/privacy-policy"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Scroll down to the footer section of the page.",
+    "Locate the Privacy Policy link in the footer.",
+    "Click on the Privacy Policy link.",
+    "Assert that the Privacy Policy page loads successfully."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "text": "Privacy Policy",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "The Privacy Policy page is loaded successfully."
+  ],
+  "edge_cases": [
+    "Privacy Policy link is broken.",
+    "Page load fails due to server downtime.",
+    "User's browser blocks the navigation.",
+    "The Privacy Policy link is not visible."
+  ],
+  "data_requirements": [
+    "Functional Privacy Policy link in the footer.",
+    "Active internet connection."
+  ],
+  "dependencies": [
+    "Footer section is correctly rendered on the login page.",
+    "Privacy Policy page is accessible."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "None for this test case."
+  ],
+  "performance_metrics": [
+    "Time taken to load the Privacy Policy page."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Privacy Policy link is accessible via keyboard navigation.",
+    "Provide descriptive text for the Privacy Policy link.",
+    "Verify that the Privacy Policy page meets accessibility standards."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "89fa3f6c-9356-4c8c-a860-d877c17c3d3c",
+    "created_at": "2025-10-01T10:31:37.035291Z",
+    "complexity": "medium",
+    "risk_level": "high",
+    "priority": "normal",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "cross-browser",
+      "navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 25,
+    "flakiness_potential": "medium"
+  }
+}
