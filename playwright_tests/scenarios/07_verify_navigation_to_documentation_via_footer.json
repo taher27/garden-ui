@@ -1,0 +1,78 @@
+{
+  "test_name": "Verify Navigation to Documentation via Footer",
+  "description": "Tests the ability of a user to access the Roost documentation by clicking the footer link.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://docs.roost.ai"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Scroll down to the footer section.",
+    "Verify the visibility of the 'Documentation' link.",
+    "Click on the 'Documentation' link.",
+    "Wait for the https://docs.roost.ai page to load.",
+    "Verify the title and content of the documentation page."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "text": "Documentation",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the documentation page.",
+    "Documentation page content is loaded correctly."
+  ],
+  "edge_cases": [
+    "Documentation link is not visible in the footer.",
+    "Clicking the link does not redirect to the documentation page.",
+    "Documentation page fails to load.",
+    "Network issues prevent navigation to the documentation page.",
+    "Page load is excessively slow."
+  ],
+  "data_requirements": [
+    "Access to the https://dev.roost.ai/login page.",
+    "Valid URL for the documentation page.",
+    "Active internet connection.",
+    "Functional footer links."
+  ],
+  "dependencies": [
+    "Roost documentation server is operational.",
+    "Footer links are properly configured.",
+    "User has access to the internet."
+  ],
+  "complexity": "low",
+  "api_interactions": [],
+  "performance_metrics": [
+    "Redirection time to the documentation page.",
+    "Time taken to load the documentation page content."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'Documentation' link is labeled appropriately for screen readers.",
+    "Verify color contrast ratios for the link text.",
+    "Test keyboard accessibility for the link."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "562469c3-fef3-4fa0-b508-213b23c909ff",
+    "created_at": "2025-10-01T13:13:38.325228Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "authentication",
+      "auto-generated",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "high"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "url": "https://dev.roost.ai/login",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login | Software as a Service",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "User Login via Google",
+          "scenario_description": "A user logs in using their Google account credentials.",
+          "steps": [
+            {"action": "click", "element_description": "Google login button"},
+            {"action": "assert_visibility", "element_description": "Google account selection interface"}
+          ],
+          "expected_outcome": ["User is authenticated and redirected to their dashboard."]
+        },
+        {
+          "scenario_name": "Download CLI Tool",
+          "scenario_description": "A user navigates to download the CLI tool for automation tasks.",
+          "steps": [
+            {"action": "click", "element_description": "Download CLI link"},
+            {"action": "assert_visibility", "element_description": "CLI download completion notification"}
+          ],
+          "expected_outcome": ["CLI tool is downloaded successfully to the user's computer."]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "url": "https://dev.roost.ai/gptCLIForm",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost.ai | Your Testing Co-Pilot Powered by Generative AI and Large Language Models",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Configure and Save RoostGPT Test Suite",
+          "scenario_description": "A user configures a test suite by entering details and selecting appropriate options, then saves the configuration.",
+          "steps": [
+            {"action": "type", "element_description": "Input the test suite name in the text field."},
+            {"action": "select", "element_description": "Choose 'Unit Test' as the test type from the options."},
+            {"action": "select", "element_description": "Set 'Java' as the code language from the dropdown."},
+            {"action": "click", "element_description": "Click on the 'Save Configuration' button."}
+          ],
+          "expected_outcome": ["The test suite configuration is saved successfully."]
+        },
+        {
+          "scenario_name": "Integrate with Github Repository",
+          "scenario_description": "User provides Github credentials and integrates the repository for version control.",
+          "steps": [
+            {"action": "type", "element_description": "Enter the Github token in the password field."},
+            {"action": "click", "element_description": "Click the 'Verify' button to authenticate the integration."}
+          ],
+          "expected_outcome": ["The Github repository is successfully integrated with the platform."]
+        }
+      ]
+    }
+  ]
+}

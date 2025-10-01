@@ -1,0 +1,83 @@
+{
+  "test_name": "Access Privacy Policy",
+  "description": "Tests the ability of a user to navigate to and view the Privacy Policy from the login page.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://roost.ai/privacy-policy"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Verify the presence of the Privacy Policy link in the footer.",
+    "Click on the Privacy Policy link.",
+    "Wait for the Privacy Policy page to load.",
+    "Verify that the page URL is https://roost.ai/privacy-policy.",
+    "Ensure the content of the Privacy Policy page is displayed correctly."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "text": "Privacy Policy",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User should be redirected to the Privacy Policy page.",
+    "Page content should load properly.",
+    "Correct URL should be displayed in the browser."
+  ],
+  "edge_cases": [
+    "Privacy Policy page fails to load due to server issues.",
+    "Link is not clickable due to rendering issues.",
+    "Incorrect content is displayed on the Privacy Policy page.",
+    "Network latency causes slow page load.",
+    "User is redirected to an incorrect URL."
+  ],
+  "data_requirements": [
+    "Valid URL for the Privacy Policy page.",
+    "Footer element with Privacy Policy link.",
+    "Content for the Privacy Policy page.",
+    "Network connectivity."
+  ],
+  "dependencies": [
+    "Privacy Policy page exists and is up-to-date.",
+    "Footer link is correctly configured.",
+    "Roost server is operational.",
+    "User has access to the internet."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "None."
+  ],
+  "performance_metrics": [
+    "Time taken to load the Privacy Policy page.",
+    "Latency for redirection to the Privacy Policy page."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Privacy Policy link has appropriate ARIA labels.",
+    "Verify keyboard navigation for the footer link.",
+    "Check the text contrast ratio on the Privacy Policy page."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "d4d729bf-6085-40bc-a6c7-3ba060b994de",
+    "created_at": "2025-10-01T13:13:38.321207Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "high"
+  }
+}

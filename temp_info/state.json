@@ -1,0 +1,55 @@
+{
+    "cookies": [
+        {
+            "name": "NID",
+            "value": "525=BFJrpmKiDHlxYvBEqGVxOh0yEzIWMHK5_jR8QAitcIPK3DYWrUWBze8dISDkCuByp4Ci-bmq9Yjfh4JrwYK6skv2FeCiFJF0E4I9s43Qgc5DIhk_kWPZkuGyMpEKXK6XLc55hPPAGQ4W34VFLpb166u4i3lG_9nakBdYhUcOegsI8X5b59Tdeq1I2q9pT8RV",
+            "domain": ".google.com",
+            "path": "/",
+            "expires": 1775135309.839883,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "theme",
+            "value": "dark",
+            "domain": ".dev.roost.ai",
+            "path": "/",
+            "expires": 1759929018.92477,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Strict"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "3FJhhspLUN9sEquuQ_uaRBAKh2ccFkQ5FRJcndJdHA8-1759324122-1.0.1.1-x.j1TylE2zDo3REil9Di4VBZQo_Ge5kA0rusyL1n5DGNClT8RZmGm74GVlM2DMHcvdsLi4HadSURtPoiXymlf2f2mDBZ98t.ETtMSAACWO4",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1759325921.564442,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_cfuvid",
+            "value": "v26gMS4Bvc8pCBVk80PsM2moEieUsyk.C3FHLDa0SPI-1759324122486-0.0.1.1-604800000",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        }
+    ],
+    "origins": [
+        {
+            "origin": "https://dev.roost.ai",
+            "localStorage": [
+                {
+                    "name": "redirectUrl",
+                    "value": "/gptCLIForm"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+  "test_name": "Login via GitHub OAuth",
+  "description": "Tests the ability of a user to authenticate using the GitHub OAuth option from the login page.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Verify the presence of the GitHub OAuth login option.",
+    "Click on the GitHub OAuth login link.",
+    "Wait for the GitHub login page to load.",
+    "Enter valid GitHub account credentials (username and password).",
+    "Authorize the application on the GitHub page.",
+    "Verify that the user is redirected back to https://dev.roost.ai/login.",
+    "Verify the presence of a session token indicating successful login.",
+    "Confirm that the user is redirected to the primary application dashboard at https://dev.roost.ai."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User should be redirected to the GitHub login page.",
+    "User should successfully authorize the application.",
+    "User should be redirected back to the application dashboard.",
+    "A session token should be generated."
+  ],
+  "edge_cases": [
+    "Invalid GitHub credentials result in an error message.",
+    "GitHub authorization is denied by the user.",
+    "GitHub OAuth API returns an unexpected response.",
+    "Network failure during redirection interrupts the login process.",
+    "Session token is not generated upon successful authorization."
+  ],
+  "data_requirements": [
+    "Valid GitHub account credentials.",
+    "Access to the GitHub OAuth API.",
+    "Valid client ID and redirect URI for integration.",
+    "Session token storage mechanism.",
+    "User account in Roost platform linked to GitHub."
+  ],
+  "dependencies": [
+    "GitHub OAuth API is operational.",
+    "Valid client ID is registered with GitHub.",
+    "User has an existing GitHub account.",
+    "Roost platform supports GitHub OAuth integration."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GitHub OAuth API for authentication.",
+    "Roost backend API for session token generation.",
+    "Redirection mechanism handling between GitHub and Roost."
+  ],
+  "performance_metrics": [
+    "Time taken to load the GitHub OAuth login page.",
+    "Time taken for redirection back to Roost after login.",
+    "Session token generation latency."
+  ],
+  "accessibility_requirements": [
+    "GitHub login page must be accessible for screen readers.",
+    "Ensure the GitHub OAuth login link has appropriate ARIA labels.",
+    "Verify keyboard navigation for the login link."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "ef7d2c7d-0b29-4b75-9821-a1c9cbaa66f2",
+    "created_at": "2025-10-01T13:13:38.321207Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "error-handling",
+      "network-resilience",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 45,
+    "flakiness_potential": "high"
+  }
+}

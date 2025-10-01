@@ -1,0 +1,155 @@
+{
+  "test_name": "Configure RoostGPT Test Suite with Advanced Options",
+  "description": "This test verifies the process of configuring a RoostGPT test suite with advanced options, including specifying environment variables, traversing subdirectories, and vulnerability checks.",
+  "type": "configuration",
+  "pages": [
+    "https://dev.roost.ai/gptCLIForm"
+  ],
+  "steps": [
+    "Navigate to the RoostGPT Config page by clicking on the 'RoostGPT Config' link.",
+    "Enter the test suite name in the input field '[data-testid=\"test-name-input\"]'.",
+    "Enter the OpenAI token in the input field '[data-testid=\"openai-token\"]'.",
+    "Click the unmask icon '[data-testid=\"openai-token-unMask-icon\"]' to verify the token visibility.",
+    "Select 'Cloud' as the Git type by clicking the radio button '[data-testid=\"cloud-git-type-radio-button-selected\"]'.",
+    "Enter the GitHub source token in the input field '[data-testid=\"github-source-token\"]'.",
+    "Click the unmask icon '[data-testid=\"github-source-token-unMask-icon\"]' to verify the token visibility.",
+    "Enable 'Traverse to all sub-directories' by clicking the checkbox '//div[@id='advanced']/div[2]/div[4]/div[2]/div/div/label'.",
+    "Enable 'Check for Vulnerability' by clicking the checkbox '//div[@id='advanced']/div[2]/div[5]/div[2]/div/div/label'.",
+    "Enter custom environment variables in the input field '[data-testid=\"new-custom-tag-input\"]'.",
+    "Click the 'Save Configuration' button to save the test suite settings.",
+    "Verify the success notification indicating the test suite configuration has been saved."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+      "text": "RoostGPT Config",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"test-name-input\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"openai-token\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"openai-token-unMask-icon\"]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"cloud-git-type-radio-button-selected\"]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"github-source-token\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"github-source-token-unMask-icon\"]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "label",
+      "selector": "//div[@id='advanced']/div[2]/div[4]/div[2]/div/div/label",
+      "text": "Traverse to all sub-directories",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "label",
+      "selector": "//div[@id='advanced']/div[2]/div[5]/div[2]/div/div/label",
+      "text": "Check for Vulnerability",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"new-custom-tag-input\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    }
+  ],
+  "expected_results": [
+    "The test suite configuration is saved successfully.",
+    "All advanced options are correctly enabled and saved.",
+    "Environment variables are added without errors."
+  ],
+  "edge_cases": [
+    "Invalid OpenAI token results in an error message.",
+    "GitHub token is invalid and prevents saving the configuration.",
+    "The 'Traverse to all sub-directories' option is enabled but not saved.",
+    "Checkboxes for advanced settings are disabled due to missing dependencies.",
+    "Attempting to save configuration without entering a test name results in an error."
+  ],
+  "data_requirements": [
+    "Valid OpenAI token.",
+    "Valid GitHub source token.",
+    "Custom environment variables.",
+    "Test suite name.",
+    "Configuration details for advanced options."
+  ],
+  "dependencies": [
+    "User is logged into the platform.",
+    "OpenAI account exists and is accessible.",
+    "GitHub repository is accessible with a valid token."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "Validate OpenAI token via API call.",
+    "Validate GitHub token via API call.",
+    "Save test suite configuration using the platform's API."
+  ],
+  "performance_metrics": [
+    "Time taken to save the configuration.",
+    "Latency during token validation API calls.",
+    "Platform responsiveness during advanced option selection."
+  ],
+  "accessibility_requirements": [
+    "All elements are accessible via keyboard navigation.",
+    "Advanced settings are labeled with ARIA roles.",
+    "Contrast ratios meet WCAG standards."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "e7825d3c-0958-4937-bdea-b7151478547a",
+    "created_at": "2025-10-01T13:13:38.325228Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "configuration",
+      "error-handling",
+      "form-submission",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 60,
+    "flakiness_potential": "medium"
+  }
+}

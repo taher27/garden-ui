@@ -1,0 +1,39 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": false,
+    "final_page_url": "https://dev.roost.ai/login",
+    "outcome_message": "Initial page analysis completed without login.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "Access the API Documentation.",
+            "steps": {
+                "1": "Click on the API Reference link."
+            }
+        },
+        {
+            "scenario_description": "View Privacy Policy.",
+            "steps": {
+                "1": "Click on the Privacy Policy link."
+            }
+        },
+        {
+            "scenario_description": "Download CLI tools.",
+            "steps": {
+                "1": "Click on the Download CLI link."
+            }
+        },
+        {
+            "scenario_description": "Install VS Code Extension.",
+            "steps": {
+                "1": "Click on the Install VS Code Extension link."
+            }
+        },
+        {
+            "scenario_description": "Proceed to login using Okta.",
+            "steps": {
+                "1": "Click on the Okta login option."
+            }
+        }
+    ]
+}
