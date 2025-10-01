@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "The site provides a platform for automated cloud-based development and testing environments, enabling developers and teams to create, manage, and scale isolated environments efficiently.",
+        "business_requirements": [
+            "Users must be able to create isolated development or testing environments on demand.",
+            "Users must be able to integrate the platform with version control systems like Git for automated environment setup.",
+            "Users must be able to manage and monitor active environments, including starting, stopping, and deleting them.",
+            "Users must be able to collaborate by sharing environment access with team members or stakeholders.",
+            "Users must be able to configure environment specifications, such as CPU, memory, and software dependencies, to meet project requirements.",
+            "Users must be notified of the status of their environment creation, updates, or any errors encountered during the process.",
+            "The platform must ensure environments are secure and isolated to prevent interference or data breaches between projects."
+        ]
+    }
+}
