@@ -1,0 +1,48 @@
+{
+  "url": "https://dev.roost.ai/admin/app",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost.ai Admin Dashboard",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search and Manage Users",
+          "scenario_description": "Admin searches for a user and manages their permissions or deletes their account.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Search input field to find users by name or ID."
+            },
+            {
+              "action": "click",
+              "element_description": "Apply button to filter the search results."
+            },
+            {
+              "action": "click",
+              "element_description": "Remove Admin button for the selected user."
+            }
+          ],
+          "expected_outcome": ["The user list is filtered to show relevant users based on the search criteria.", "The user's admin privileges are successfully removed."]
+        },
+        {
+          "scenario_name": "Add Roosters",
+          "scenario_description": "Admin navigates to add a new user to the system.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Add Roosters button to initiate adding a new user."
+            },
+            {
+              "action": "type",
+              "element_description": "Fill out the user details form."
+            },
+            {
+              "action": "click",
+              "element_description": "Submit button to finalize adding the user."
+            }
+          ],
+          "expected_outcome": ["A new user is successfully added to the system."]
+        }
+      ]
+    }
+  ]
+}

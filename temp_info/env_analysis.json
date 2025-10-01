@@ -1,0 +1,84 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents the domain for cookies used by the UI.",
+      "usage": "Should be set to the domain where cookies are valid, e.g., 'example.com'."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure this is set to a valid domain if cookies are used in the application.",
+      "If not required, clarify its purpose and remove unused variables."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Represents the name of the cookie used by the UI.",
+      "usage": "Typically used to identify a specific session or tracking cookie."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Assign a meaningful cookie name to avoid conflicts and ensure proper functionality.",
+      "If unused, consider removing this variable."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Indicates the type of login/authentication mechanism used by the UI.",
+      "expected_values": [
+        "okta",
+        "oauth",
+        "local",
+        "saml"
+      ]
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure that the login type matches the authentication provider configured for the system.",
+      "Document valid options for this variable to avoid misconfiguration."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Represents a password used for site access. This is sensitive information.",
+      "security": "Should be stored securely using encryption or secret management systems."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Move this value to a secure secrets manager (e.g., AWS Secrets Manager, HashiCorp Vault).",
+      "Avoid hardcoding sensitive credentials in environment variables.",
+      "Rotate this password regularly to enhance security."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Represents the username or email used for site access. This is sensitive information.",
+      "format": "Valid email address format detected."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this value securely using secret management systems.",
+      "Avoid exposing email addresses in environment variables to minimize risk of leakage.",
+      "Consider using role-based accounts instead of individual email addresses for automation tools."
+    ]
+  }
+}

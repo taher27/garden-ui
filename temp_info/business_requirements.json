@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "The site provides automated environments for software development, testing, and deployment, enabling teams to streamline workflows and reduce turnaround times for application delivery.",
+        "business_requirements": [
+            "Users must be able to quickly create isolated, automated environments for software development and testing.",
+            "Users must have the ability to manage and monitor active environments, including starting, stopping, and deleting them as needed.",
+            "The system must allow integration with popular version control platforms (e.g., GitHub) to pull code repositories directly into environments.",
+            "Users must be able to configure environment specifications, such as resource allocation and runtime settings, prior to deployment.",
+            "The platform must support role-based access control to ensure team members have appropriate permissions for managing environments.",
+            "Users must have access to real-time environment utilization metrics and logs for troubleshooting and optimization purposes.",
+            "The system must offer templates or preconfigured environments for common use cases to accelerate the setup process."
+        ]
+    }
+}

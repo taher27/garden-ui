@@ -1,0 +1,7 @@
+[
+  {"scenario_description": "User logs in via Okta", "steps": {"1": "Navigate to the login page.", "2": "Click on the Okta login option.", "3": "Enter Okta credentials and submit."}},
+  {"scenario_description": "User accesses privacy policy", "steps": {"1": "Navigate to the login page.", "2": "Click on 'Privacy Policy' link.", "3": "Review the privacy policy content."}},
+  {"scenario_description": "User downloads CLI tool", "steps": {"1": "Navigate to the login page.", "2": "Click on 'Download CLI' option.", "3": "Follow instructions to download and install CLI."}},
+  {"scenario_description": "User reviews documentation", "steps": {"1": "Navigate to the login page.", "2": "Click on 'Documentation' link.", "3": "Browse and read the provided documents."}},
+  {"scenario_description": "User installs VS Code extension", "steps": {"1": "Navigate to the login page.", "2": "Click on 'Install VS Code extension' option.", "3": "Follow the instructions to install the extension."}}
+]

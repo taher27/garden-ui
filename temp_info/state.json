@@ -1,0 +1,251 @@
+{
+    "cookies": [
+        {
+            "name": "NID",
+            "value": "525=mh9peIIJoHoXUppfUzIHs0L_SYo9SDdVHhyJAX-SicV-KvcXxLNa6vLqPDFdtlm-ME1g6aYus8xOkyNeqEeEigkZg8rXHBtOKQAilrj_y0w4uASAO0EY7vUR_Hr_YxPZzEF7TbOPtnsVvksNMIw3PCec1fDkOCfamPIo7qWfVA2OhCo8zIumdKoPfWqBX2N8",
+            "domain": ".google.com",
+            "path": "/",
+            "expires": 1775133521.093538,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "theme",
+            "value": "dark",
+            "domain": ".dev.roost.ai",
+            "path": "/",
+            "expires": 1759927209.8512,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Strict"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "rrX4Gn69.JttcKS9XtN9v2oUPyaPn21CJDGuv6IMH.Y-1759322332-1.0.1.1-12wmoXGANndaJLDH5ouXhcm.P7XYrk..yvTETNwPrgmX.hUmAskjHeaamuIhZG2l3t2k3OSzbXs5N2O956LPVcFUOLrcLm9Z4ZE3FU.hMJA",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1759324133.356525,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_cfuvid",
+            "value": "gH4HNUG3DxLXHdhPqnGDLjSwYI0vXPsdI0Rwy5U72nQ-1759322332502-0.0.1.1-604800000",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "DT",
+            "value": "DI1rHockQViRmuLvPYLnhyrHQ",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": 1793882387.404265,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "oktaStateToken",
+            "value": "00RPc7SuIKsxgvL5wsCYmRYJXmHL6EUTtFWnK-xqWv",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": 1759322707,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "ln",
+            "value": "playwright@zb.io",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": 1790858408,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "xids",
+            "value": "102LZryc5OMRJ2h2mjqYmhVAQ",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "sid",
+            "value": "1028j0aE5U9RjmGlKMzSuSoRA",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "JSESSIONID",
+            "value": "7BD485F453560A46121AE38ABCAF2474",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "auth",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBsYXl3cmlnaHQiLCJpYXQiOjE3NTkzMjI0MTEsImV4cCI6MTc1OTM1MTIxMX0.09mBVFea0loo6yRysO1uitQ0dybo1xbmYhGODJ96ICg",
+            "domain": ".dev.roost.ai",
+            "path": "/",
+            "expires": 1759927212.299985,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Strict"
+        },
+        {
+            "name": "NID",
+            "value": "525=mh9peIIJoHoXUppfUzIHs0L_SYo9SDdVHhyJAX-SicV-KvcXxLNa6vLqPDFdtlm-ME1g6aYus8xOkyNeqEeEigkZg8rXHBtOKQAilrj_y0w4uASAO0EY7vUR_Hr_YxPZzEF7TbOPtnsVvksNMIw3PCec1fDkOCfamPIo7qWfVA2OhCo8zIumdKoPfWqBX2N8",
+            "domain": ".google.com",
+            "path": "/",
+            "expires": 1775133521.093538,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "theme",
+            "value": "dark",
+            "domain": ".dev.roost.ai",
+            "path": "/",
+            "expires": 1759927345.568617,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Strict"
+        },
+        {
+            "name": "__cf_bm",
+            "value": "rrX4Gn69.JttcKS9XtN9v2oUPyaPn21CJDGuv6IMH.Y-1759322332-1.0.1.1-12wmoXGANndaJLDH5ouXhcm.P7XYrk..yvTETNwPrgmX.hUmAskjHeaamuIhZG2l3t2k3OSzbXs5N2O956LPVcFUOLrcLm9Z4ZE3FU.hMJA",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": 1759324133.356525,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "_cfuvid",
+            "value": "gH4HNUG3DxLXHdhPqnGDLjSwYI0vXPsdI0Rwy5U72nQ-1759322332502-0.0.1.1-604800000",
+            "domain": ".roost.ai",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "DT",
+            "value": "DI1rHockQViRmuLvPYLnhyrHQ",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": 1793882387.404265,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "ln",
+            "value": "playwright@zb.io",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": 1790858408,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "xids",
+            "value": "102LZryc5OMRJ2h2mjqYmhVAQ",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "sid",
+            "value": "1028j0aE5U9RjmGlKMzSuSoRA",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "None"
+        },
+        {
+            "name": "JSESSIONID",
+            "value": "7BD485F453560A46121AE38ABCAF2474",
+            "domain": "dev-53854943.okta.com",
+            "path": "/",
+            "expires": -1,
+            "httpOnly": true,
+            "secure": true,
+            "sameSite": "Lax"
+        },
+        {
+            "name": "auth",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InBsYXl3cmlnaHQiLCJpYXQiOjE3NTkzMjI0MTEsImV4cCI6MTc1OTM1MTIxMX0.09mBVFea0loo6yRysO1uitQ0dybo1xbmYhGODJ96ICg",
+            "domain": ".dev.roost.ai",
+            "path": "/",
+            "expires": 1759927212.299985,
+            "httpOnly": false,
+            "secure": true,
+            "sameSite": "Strict"
+        }
+    ],
+    "origins": [
+        {
+            "origin": "https://dev.roost.ai",
+            "localStorage": [
+                {
+                    "name": "redirectUrl",
+                    "value": "/roostgpt/tests"
+                },
+                {
+                    "name": "selectedProject",
+                    "value": "\"zbio\""
+                }
+            ]
+        },
+        {
+            "origin": "https://login.okta.com",
+            "localStorage": [
+                {
+                    "name": "okta_accounts",
+                    "value": "[{\"id\":\"https://dev-53854943.okta.com::playwright@zb.io\",\"login\":\"playwright@zb.io\",\"displayName\":\"Play Wright\",\"origin\":\"https://dev-53854943.okta.com\",\"lastUpdated\":\"2025-10-01T12:40:08.956Z\"}]"
+                }
+            ]
+        },
+        {
+            "origin": "https://dev.roost.ai",
+            "localStorage": [
+                {
+                    "name": "redirectUrl",
+                    "value": "/roostgpt/tests"
+                },
+                {
+                    "name": "selectedProject",
+                    "value": "\"zbio\""
+                }
+            ]
+        }
+    ]
+}

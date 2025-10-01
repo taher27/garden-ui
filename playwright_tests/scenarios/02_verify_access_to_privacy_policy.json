@@ -1,0 +1,82 @@
+{
+  "test_name": "Verify Access to Privacy Policy",
+  "description": "Tests the ability to navigate to the privacy policy page from the login page, ensuring the link works correctly.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://roost.ai/privacy-policy"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Locate the 'Privacy Policy' link in the footer.",
+    "Click on the 'Privacy Policy' link.",
+    "Redirect to the privacy policy page at https://roost.ai/privacy-policy.",
+    "Verify that the privacy policy page loads with the expected content."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "text": "Privacy Policy",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the privacy policy page upon clicking the link.",
+    "Privacy policy page displays the correct and complete content."
+  ],
+  "edge_cases": [
+    "Privacy policy link leads to a 404 error.",
+    "Network timeout while accessing the privacy policy page.",
+    "Footer link is not visible due to display issues.",
+    "Redirection loop prevents access to the privacy policy page.",
+    "Privacy policy page content fails to load completely."
+  ],
+  "data_requirements": [
+    "Footer link must be correctly configured.",
+    "Privacy policy page must exist and be accessible.",
+    "User should have internet access.",
+    "Application must have valid SSL certificates.",
+    "Browser cache settings should allow redirection."
+  ],
+  "dependencies": [
+    "Privacy policy page must be live and accessible.",
+    "Footer link must be correctly implemented in the HTML.",
+    "Browser compatibility for link navigation."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "None."
+  ],
+  "performance_metrics": [
+    "Time taken to load the privacy policy page.",
+    "Redirect latency after clicking the link."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'Privacy Policy' link is keyboard-accessible.",
+    "Validate ARIA labels for the footer link.",
+    "Confirm privacy policy content readability for screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "99c5fa16-d6fc-47b2-8320-01651c19018f",
+    "created_at": "2025-10-01T12:45:57.120051Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "error-handling",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 25,
+    "flakiness_potential": "high"
+  }
+}
