@@ -1,0 +1,84 @@
+{
+  "test_name": "Verify Navigation to Documentation Page",
+  "description": "This test ensures that users can navigate to the documentation page via the footer link and access API information.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://docs.roost.ai"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Scroll down to the footer section of the page.",
+    "Locate the Documentation link in the footer.",
+    "Click on the Documentation link.",
+    "Assert that the Documentation page loads successfully.",
+    "Verify that the API information is displayed on the Documentation page."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "text": "Documentation",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "The Documentation page is loaded successfully.",
+    "API information is visible on the Documentation page."
+  ],
+  "edge_cases": [
+    "Documentation link is not visible.",
+    "Clicking the Documentation link results in a 404 error.",
+    "Page load times out due to network issues.",
+    "User's browser blocks navigation to external links.",
+    "Documentation page is inaccessible due to server downtime."
+  ],
+  "data_requirements": [
+    "Functional Documentation link in the footer.",
+    "Active internet connection.",
+    "Access to the Documentation server.",
+    "Valid API information displayed on the Documentation page."
+  ],
+  "dependencies": [
+    "Footer section is correctly rendered on the login page.",
+    "Documentation server is up and running.",
+    "All external links are accessible."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "None for this test case."
+  ],
+  "performance_metrics": [
+    "Time taken to navigate to the Documentation page.",
+    "Page load time for the Documentation page."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Documentation link is accessible via keyboard navigation.",
+    "Provide descriptive text for the Documentation link.",
+    "Verify that the Documentation page meets WCAG 2.1 standards."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "0a89bcaf-8d9d-4fcd-9958-5706b59b7ff0",
+    "created_at": "2025-10-01T10:31:37.035291Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "cross-browser",
+      "error-handling",
+      "form-submission",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "high"
+  }
+}

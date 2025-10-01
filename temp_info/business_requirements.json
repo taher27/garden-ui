@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "Provide automated environments for software testing and development, enabling faster and more efficient workflows for DevOps teams.",
+        "business_requirements": [
+            "Users must be able to create and manage virtual environments for software testing with minimal manual configuration.",
+            "Users must be able to integrate the platform with popular CI/CD tools for seamless deployment workflows.",
+            "Users must be able to monitor the status and performance of active environments via a dashboard interface.",
+            "Users must be able to schedule or trigger automated environment creation based on predefined rules or events.",
+            "Users must be able to clone or replicate existing environments to test multiple use cases simultaneously.",
+            "Users must have access to usage analytics and reporting features to assess environment utilization and efficiency.",
+            "Users must be able to securely manage access permissions for team members and external collaborators."
+        ]
+    }
+}

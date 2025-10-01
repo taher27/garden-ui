@@ -1,0 +1,89 @@
+{
+  "test_name": "Verify Google Authentication Login Flow",
+  "description": "This test validates that a user can successfully log in using Google authentication and is redirected to the dashboard.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Locate the Google authentication button.",
+    "Click on the Google authentication button.",
+    "Assert that the Google login interface is displayed.",
+    "Enter valid Google credentials and complete the login process.",
+    "Verify that the user is redirected to the dashboard page.",
+    "Validate that the dashboard displays the correct user information."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "Google login interface is displayed.",
+    "The user is authenticated and redirected to the dashboard.",
+    "The dashboard displays user-specific information."
+  ],
+  "edge_cases": [
+    "User enters invalid Google credentials.",
+    "Google authentication service is unavailable.",
+    "User closes the Google login interface before completing authentication.",
+    "User's Google account lacks the necessary permissions.",
+    "Network disruption occurs during authentication."
+  ],
+  "data_requirements": [
+    "Valid Google account credentials.",
+    "Access to the Google authentication service.",
+    "Predefined user profile in the system linked to the Google account.",
+    "Access to the dashboard page after login.",
+    "Valid client ID and redirect URI for Google OAuth."
+  ],
+  "dependencies": [
+    "Google authentication integration is correctly configured.",
+    "The user has an active internet connection.",
+    "The dashboard page is accessible after successful login."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "Google OAuth API for user authentication.",
+    "Internal API to fetch user-specific dashboard data after login."
+  ],
+  "performance_metrics": [
+    "Time taken to load the Google login interface.",
+    "Authentication completion time.",
+    "Dashboard loading time post-login."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Google authentication button is accessible via keyboard navigation.",
+    "Provide alternative text for the authentication button.",
+    "Verify that the Google login interface is screen-reader friendly."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "160c6804-6e82-4f56-92e0-128ffe0e7ddb",
+    "created_at": "2025-10-01T10:31:37.034294Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "network-resilience",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "high"
+  }
+}

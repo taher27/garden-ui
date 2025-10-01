@@ -1,0 +1,40 @@
+{
+  "url": "https://dev.roost.ai/login",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Third-party Authentication",
+          "scenario_description": "User selects a third-party authentication option to log into the platform.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Google authentication button."
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Google login interface appears."
+            }
+          ],
+          "expected_outcome": ["User is authenticated and redirected to their dashboard."]
+        },
+        {
+          "scenario_name": "Access Documentation",
+          "scenario_description": "User navigates to the documentation page to learn about API integration.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Documentation link in the footer."
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Documentation page loads with API information."
+            }
+          ],
+          "expected_outcome": ["User gains knowledge on API usage."]
+        }
+      ]
+    }
+  ]
+}

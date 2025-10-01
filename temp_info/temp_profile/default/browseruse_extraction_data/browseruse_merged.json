@@ -1,0 +1,109 @@
+{
+  "https://dev.roost.ai/gptCLIForm": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost.ai GPT CLI Form",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Configure Testing Parameters",
+            "scenario_description": "The user configures advanced testing parameters, including environment variables and testing frameworks, for comprehensive validation.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Input field for the test suite name (e.g., 'Unit Test')."
+              },
+              {
+                "action": "select",
+                "element_description": "Dropdown for selecting test framework (e.g., 'JUnit5')."
+              },
+              {
+                "action": "type",
+                "element_description": "Input field for defining environment variables."
+              }
+            ],
+            "expected_outcome": [
+              "The test suite is successfully configured for execution."
+            ]
+          },
+          {
+            "scenario_name": "Integrate Code Repository",
+            "scenario_description": "The user integrates their code repository by providing necessary access tokens and selecting repository types.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Input field for Github token."
+              },
+              {
+                "action": "select",
+                "element_description": "Radio button for choosing repository type (e.g., 'Cloud' or 'Enterprise')."
+              }
+            ],
+            "expected_outcome": [
+              "The code repository is successfully linked to the testing framework."
+            ]
+          },
+          {
+            "scenario_name": "Optimize AI Model Integration",
+            "scenario_description": "User optimizes integration of AI models by configuring API tokens and selecting AI providers.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Input field for Open AI token."
+              },
+              {
+                "action": "type",
+                "element_description": "URL field for Open AI base API URL."
+              }
+            ],
+            "expected_outcome": [
+              "AI models are successfully integrated for enhanced testing capabilities."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/login": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost Enterprise Login",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Third-party Authentication",
+            "scenario_description": "User selects a third-party authentication option to log into the platform.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Google authentication button."
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "Google login interface appears."
+              }
+            ],
+            "expected_outcome": [
+              "User is authenticated and redirected to their dashboard."
+            ]
+          },
+          {
+            "scenario_name": "Access Documentation",
+            "scenario_description": "User navigates to the documentation page to learn about API integration.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Documentation link in the footer."
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "Documentation page loads with API information."
+              }
+            ],
+            "expected_outcome": [
+              "User gains knowledge on API usage."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

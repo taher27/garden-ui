@@ -1,0 +1,117 @@
+{
+  "test_name": "Configure Testing Parameters with Advanced Options",
+  "description": "Validate the ability to configure advanced testing parameters such as environment variables, test frameworks, and suite names.",
+  "type": "configuration",
+  "pages": [
+    "https://dev.roost.ai/gptCLIForm"
+  ],
+  "steps": [
+    "Navigate to the RoostGPT Config page using the 'RoostGPT Config' link.",
+    "Enter a test suite name in the input field with the test ID '[data-testid=\"test-name-input\"]'.",
+    "Select the radio button for 'Cloud' repository type using the test ID '[data-testid=\"cloud-git-type-radio-button-selected\"]'.",
+    "Type an environment variable in the input field '[data-testid=\"new-custom-tag-input\"]'.",
+    "Click on the 'Download Env Config' button to save the environment configuration."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+      "text": "RoostGPT Config",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"test-name-input\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"cloud-git-type-radio-button-selected\"]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"new-custom-tag-input\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"download-env-config-button\"]",
+      "text": "Download Env Config",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    }
+  ],
+  "expected_results": [
+    "The test suite name is saved successfully.",
+    "Environment variables are correctly added and displayed.",
+    "Configuration options for 'Cloud' repository type are successfully applied.",
+    "Environment configuration is downloaded without errors."
+  ],
+  "edge_cases": [
+    "Empty test suite name input.",
+    "Invalid characters in environment variable input.",
+    "Environment configuration download fails due to network issues.",
+    "Configuration options are applied but not saved due to server-side errors.",
+    "Radio button selection does not reflect correctly."
+  ],
+  "data_requirements": [
+    "Valid test suite name (e.g., 'Unit Test').",
+    "Environment variables (e.g., 'TEST_ENV=true').",
+    "Repository type selection ('Cloud').",
+    "Correct permissions to download configuration files.",
+    "Access to RoostGPT Config page."
+  ],
+  "dependencies": [
+    "User must be logged in.",
+    "RoostGPT Config page must be accessible.",
+    "Environment configuration options must be enabled.",
+    "API for saving configurations must be functional."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "POST /api/config/environment",
+    "GET /api/config/download",
+    "PUT /api/config/test-suite"
+  ],
+  "performance_metrics": [
+    "Time taken to save test suite name.",
+    "Response time for downloading environment configuration.",
+    "Latency in applying repository type options."
+  ],
+  "accessibility_requirements": [
+    "All input fields must be navigable via keyboard.",
+    "Radio button selection must have ARIA attributes.",
+    "Download button must have accessible labels."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "cea1c412-97ab-4473-99fa-eb7fcde51325",
+    "created_at": "2025-10-01T10:31:37.036289Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "configuration",
+      "data-validation",
+      "error-handling",
+      "file-download",
+      "form-submission",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 25,
+    "flakiness_potential": "high"
+  }
+}

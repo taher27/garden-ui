@@ -1,0 +1,39 @@
+[
+  {
+    "scenario_description": "Sign in using Google",
+    "steps": {
+      "1": "Click on the Google icon",
+      "2": "Authenticate via the Google login page",
+      "3": "Return to the Roost.ai page after authentication"
+    }
+  },
+  {
+    "scenario_description": "Sign in using GitHub",
+    "steps": {
+      "1": "Click on the GitHub icon",
+      "2": "Authenticate via the GitHub login page",
+      "3": "Return to the Roost.ai page after authentication"
+    }
+  },
+  {
+    "scenario_description": "Access Documentation",
+    "steps": {
+      "1": "Click on the Documentation link at the bottom",
+      "2": "Browse documentation resources"
+    }
+  },
+  {
+    "scenario_description": "Install VS Code extension",
+    "steps": {
+      "1": "Click on the Install VS Code extension link",
+      "2": "Follow instructions to add the extension"
+    }
+  },
+  {
+    "scenario_description": "Explore Privacy Policy",
+    "steps": {
+      "1": "Click on the Privacy Policy link",
+      "2": "Read through the privacy information"
+    }
+  }
+]
