@@ -1,0 +1,84 @@
+2025-10-04 03:49:26,998 - INFO - Roost UI Test Generator: Beginning automated test creation process.
+2025-10-04 03:49:26,999 - INFO - Using Azure OpenAI deployment
+2025-10-04 03:49:26,999 - INFO - No user scenario file found or path not set.
+2025-10-04 03:49:27,000 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-04 03:49:35,357 - INFO - Filtered 5 UI_ prefixed variables for form filling from 26 total variables
+2025-10-04 03:49:35,358 - INFO - AI detected 2 form fields in environment
+2025-10-04 03:49:35,358 - INFO - Found email: SITE_USERNAME (confidence: 1.00)
+2025-10-04 03:49:35,359 - INFO - Found username: **** (confidence: 1.00)
+2025-10-04 03:49:35,359 - INFO - Using credentials for user: playwright@zb.io
+2025-10-04 03:49:35,364 - INFO - [extract_sensitive_data_from_env_analysis_json] Sensitive data extracted: ['x_site_password']
+2025-10-04 03:49:35,365 - INFO - Detected credentials. Running agent to conduct login
+2025-10-04 03:49:35,420 - INFO - 🧠 Starting a browser-use agent unknown with base_model=gpt-4o +vision extraction_model=gpt-4o +file_system
+2025-10-04 03:49:35,450 - INFO - 🚀 Starting task: 
+GOAL:
+Your mission is to perform a detailed login test for the website: https://dev.roost.ai.
+
+### --- Phase 1: Initial Page Analysis --- ###
+1.  **Navigate & Capture URL:** Go to https://dev.roost.ai and immediately capture the final URL after all initial loads and redirects. This is the `login_url`.
+2.  **Capture User Scenarios:** Before any login actions, explore the initial login page. Identify and describe 5 distinct user actions or "scenarios" a user might take on this page and format them as a JSON string.
+
+### --- Phase 2: Login Execution --- ###
+3.  **Locate & Execute Login:** Find the login form for the method "okta". Fill it with the secure credentials `x_username` and `x_password`. If you see a "Remember me" option, check it.
+4.  **Handle Third-Party Logins:** If the process involves redirects to Google, GitHub, Okta, etc., follow the flow as instructed.
+
+### --- Phase 3: Verification & State Saving --- ###
+5.  **Confirm Login Success (CRITICAL):** After submitting, you MUST determine if the login was successful by looking for POSITIVE indicators like a "Dashboard", "PROFILE" icon or a "Logout" button. A change in URL also means login has been completed, use that to confirm login. 
+6.  **Save Authentication State:** Once login is completed, you MUST immediately call the `save_auth_state` function.
+
+### --- Phase 4: Final Reporting --- ###
+7.  **Report Your Findings:** As your absolute final action, you MUST call the `report_and_save_login_results` function. You need to provide it with all the information you gathered, including the `user_scenarios_json_string` you prepared.
+
+CRITICAL RULES:
+- The 5 user scenarios must be from the initial login landing page only.
+- The scenarios must be provided as a single, valid JSON formatted string.
+- You must call `report_and_save_login_results` in all situations at the end, whether the login succeeded or failed.
+
+CLOSING CONDITIONS:
+- IF LOGIN IS SUCCESSFUL, `report_and_save_login_results` AND `save_auth_state` HAVE BEEN CALLED AT LEAST ONCE, TERMINATE THE BROWSER.
+
+2025-10-04 03:49:39,155 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= <incognito>
+2025-10-04 03:49:39,342 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60204/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-26rfudtt
+2025-10-04 03:49:39,377 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-26rfudtt (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:40,621 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-26rfudtt
+2025-10-04 03:49:40,789 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60205/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7et8z874
+2025-10-04 03:49:40,819 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7et8z874 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:40,820 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:49:41,833 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7et8z874
+2025-10-04 03:49:41,986 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60207/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7xgfjmea
+2025-10-04 03:49:42,019 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7xgfjmea (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:42,020 - ERROR - setup_new_browser_context failed after 3 attempts over 2.9s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:42,020 - WARNING - Full state retrieval failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:42,021 - WARNING - 🔄 Falling back to minimal state summary
+2025-10-04 03:49:42,152 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7xgfjmea
+2025-10-04 03:49:42,306 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60208/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-3kcgferz
+2025-10-04 03:49:42,334 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-3kcgferz (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:43,340 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-3kcgferz
+2025-10-04 03:49:43,477 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60209/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-zxt3uled
+2025-10-04 03:49:43,507 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-zxt3uled (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:43,508 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
