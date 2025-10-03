@@ -1,0 +1,47 @@
+{
+  "url": "https://dev.roost.ai/login",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Login using an Integration",
+          "scenario_description": "User selects one of the integration options like Google or Github to log in.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Integration button, e.g., Google or Github"
+            }
+          ],
+          "expected_outcome": ["Redirected to the respective integration login page"]
+        },
+        {
+          "scenario_name": "Access Documentation",
+          "scenario_description": "User navigates to the API Reference or Documentation to explore the capabilities of Roost.ai.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "API Reference link at the bottom of the page"
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Documentation contents"
+            }
+          ],
+          "expected_outcome": ["User gains insights into API usage and platform documentation"]
+        },
+        {
+          "scenario_name": "Download CLI Tool",
+          "scenario_description": "User clicks download to obtain the CLI tool for configuration and management.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Download CLI button"
+            }
+          ],
+          "expected_outcome": ["CLI tool is downloaded"]
+        }
+      ]
+    }
+  ]
+}

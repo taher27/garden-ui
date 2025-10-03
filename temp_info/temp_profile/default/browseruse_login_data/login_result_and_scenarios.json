@@ -1,0 +1,44 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": false,
+    "final_page_url": "https://dev.roost.ai/roostgpt/tests",
+    "outcome_message": "Login process completed, but no positive login indicators were found on the subsequent page.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "User logs in using Google integration",
+            "steps": {
+                "1": "Click on the Google login option",
+                "2": "Authenticate through Google"
+            }
+        },
+        {
+            "scenario_description": "User logs in using GitHub integration",
+            "steps": {
+                "1": "Click on the GitHub login option",
+                "2": "Authenticate through GitHub"
+            }
+        },
+        {
+            "scenario_description": "User logs in using Microsoft integration",
+            "steps": {
+                "1": "Click on the Microsoft login option",
+                "2": "Authenticate through Microsoft"
+            }
+        },
+        {
+            "scenario_description": "User logs in using Okta integration",
+            "steps": {
+                "1": "Click on the Okta login option",
+                "2": "Authenticate through Okta"
+            }
+        },
+        {
+            "scenario_description": "User logs in using Auth0 integration",
+            "steps": {
+                "1": "Click on the Auth0 login option",
+                "2": "Authenticate through Auth0"
+            }
+        }
+    ]
+}
