@@ -1,0 +1,27 @@
+{
+  "url": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "API Documentation - TestGptController",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "View All Tests",
+          "scenario_description": "Users view all test cases associated with their account.",
+          "steps": [
+            {
+              "action": "navigate",
+              "element_description": "Click on the 'Get All Tests' button to view test cases."
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Ensure the test list table is displayed."
+            }
+          ],
+          "expected_outcome": [
+            "Test cases are displayed in a tabular format with details like test ID, name, and status."
+          ]
+        }
+      ]
+    }
+  ]
+}

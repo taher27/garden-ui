@@ -1,0 +1,29 @@
+{
+  "url": "https://dev.roost.ai/docs/api",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "RoostAI API Documentation",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Explore API Documentation",
+          "scenario_description": "A user navigates the API documentation to understand available endpoints and their functionalities.",
+          "steps": [
+            {"action": "scroll_down", "element_description": "Scroll through the API documentation sections to review details."},
+            {"action": "click", "element_description": "Click on 'Download OpenAPI specification' link to download the API reference."}
+          ],
+          "expected_outcome": ["User obtains the OpenAPI specification document and understands the API endpoints."]
+        },
+        {
+          "scenario_name": "Generate Test Cases",
+          "scenario_description": "A user utilizes the 'Create Test App' functionality to define and generate test cases.",
+          "steps": [
+            {"action": "click", "element_description": "Click on 'Create Test App' button."},
+            {"action": "fill_form", "element_description": "Fill out the application configuration form with necessary details."},
+            {"action": "submit", "element_description": "Submit the form to create a test application."}
+          ],
+          "expected_outcome": ["Test application is successfully created with the specified configurations."]
+        }
+      ]
+    }
+  ]
+}

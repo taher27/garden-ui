@@ -1,0 +1,4 @@
+- [x] Extract structured data from https://dev.roost.ai/docs/api.
+- [x] Craft user scenarios for API documentation page.
+- [ ] Finalize remaining URLs and repeat the process.- [x] Drafted and saved user journey scenarios for https://dev.roost.ai/docs/api.- [x] Drafted and saved user journey scenarios for https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest.
+- [x] Drafted and saved user journey scenarios for https://dev.roost.ai/docs/api.

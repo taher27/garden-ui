@@ -1,0 +1,25 @@
+{
+  "url": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost API Documentation",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Explore API Endpoints",
+          "scenario_description": "User navigates through the API documentation to understand and utilize the available endpoints.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Link to the OpenAPI specification download"
+            },
+            {
+              "action": "assert_visibility",
+              "element_description": "Detailed API endpoint information for TestGptController"
+            }
+          ],
+          "expected_outcome": ["User identifies relevant API endpoints and their usage details."]
+        }
+      ]
+    }
+  ]
+}

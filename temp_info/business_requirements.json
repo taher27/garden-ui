@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "The site provides an environment for automating, managing, and scaling development and testing workflows with ephemeral environments tailored for DevOps and agile teams.",
+        "business_requirements": [
+            "Users must be able to create and launch ephemeral environments for development and testing purposes.",
+            "Users must be able to integrate the platform with their existing CI/CD pipelines for automated workflows.",
+            "Users must be able to manage multiple projects and environments through a centralized dashboard.",
+            "Users must be able to view real-time status and logs of environments for monitoring and debugging purposes.",
+            "Users must be able to configure environment parameters, such as resource allocation and dependencies, during setup.",
+            "Users must be able to invite team members and assign roles with specific permissions for collaboration.",
+            "Users must be able to delete or terminate environments when they are no longer needed to optimize resource usage."
+        ]
+    }
+}

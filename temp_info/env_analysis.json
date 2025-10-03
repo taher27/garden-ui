@@ -1,0 +1,86 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents the domain for setting cookies in the application.",
+      "empty_value": true
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure this value is set to the appropriate domain for cookie scoping.",
+      "Validate that it matches the domain of your application to avoid issues with cookie storage."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "The name of the cookie used in the application.",
+      "empty_value": true
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Provide a meaningful and unique name to avoid potential conflicts with other cookies.",
+      "Ensure this value is set to avoid runtime issues with cookie handling."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Represents the login provider or authentication method being used.",
+      "possible_values": [
+        "okta",
+        "saml",
+        "oauth",
+        "ldap"
+      ]
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure this value matches the configured authentication provider.",
+      "If additional login types are supported, document the valid options."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "A password for accessing the site or application.",
+      "strength": "medium",
+      "issues": [
+        "Contains a mix of characters but could be stronger."
+      ]
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this value securely in an environment management tool or secret manager.",
+      "Consider enforcing stronger password rules if security policies allow.",
+      "Avoid hardcoding passwords in the environment."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "An email address used as a username for authentication.",
+      "valid_email": true
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Ensure this email address is associated with the application's authentication system.",
+      "Store sensitive credentials securely and avoid hardcoding."
+    ]
+  }
+}

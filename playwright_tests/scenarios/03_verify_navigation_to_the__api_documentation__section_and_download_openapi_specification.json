@@ -1,0 +1,93 @@
+{
+  "test_name": "Verify navigation to the 'API Documentation' section and download OpenAPI specification",
+  "description": "This test validates that a user can navigate to the API Documentation section and successfully download the OpenAPI specification file.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai.",
+    "Click on the 'API docs by Redocly' link.",
+    "Ensure the page navigates to the API documentation section.",
+    "Locate the 'Download' button under the OpenAPI specification section.",
+    "Click the 'Download' button.",
+    "Verify that the OpenAPI specification file starts downloading."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//div[@id='redoc-container']/div/div[1]/div[2]/div[1]/a",
+      "text": "API docs by Redocly",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+    },
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://dev.roost.ai/api/swagger-json' and contains(@class, 'sc-ktJbId')]",
+      "text": "Download",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+    }
+  ],
+  "expected_results": [
+    "User is navigated to the API documentation section.",
+    "OpenAPI specification file starts downloading successfully."
+  ],
+  "edge_cases": [
+    "The 'API docs by Redocly' link is not visible or clickable.",
+    "The 'Download' button fails to trigger download.",
+    "The file is downloaded but is corrupted or incomplete.",
+    "Network interruptions prevent the file download.",
+    "Incorrect file format is downloaded instead of JSON."
+  ],
+  "data_requirements": [
+    "Valid URL for the API documentation page.",
+    "Accessible and functional OpenAPI specification file hosted on the server.",
+    "A browser supporting file downloads.",
+    "Active internet connection.",
+    "User permissions to access the API documentation."
+  ],
+  "dependencies": [
+    "Server hosting the OpenAPI specification file is operational.",
+    "API documentation page is accessible.",
+    "User browser has JavaScript enabled.",
+    "No ad-blocking or script-blocking extensions interfering.",
+    "Internet connection is stable."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "None"
+  ],
+  "performance_metrics": [
+    "Time taken for the OpenAPI specification file to start downloading.",
+    "Page load time for the API documentation section."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'API docs by Redocly' link is readable by screen readers.",
+    "Verify that the 'Download' button is keyboard-navigable.",
+    "Check for proper color contrast for the 'Download' button."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "fe901afe-779f-4742-be62-415d7d70b1b0",
+    "created_at": "2025-10-03T18:21:26.615944Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "file-download",
+      "file-upload",
+      "form-submission",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "high"
+  }
+}

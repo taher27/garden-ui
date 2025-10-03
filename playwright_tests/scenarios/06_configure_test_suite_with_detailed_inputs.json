@@ -1,0 +1,102 @@
+{
+  "test_name": "Configure Test Suite with Detailed Inputs",
+  "description": "This test validates that a user can configure a test suite by providing all required inputs, including suite name, test type, language, framework, and build tool, and save the configuration successfully.",
+  "type": "configuration",
+  "pages": [
+    "https://dev.roost.ai/gptCLIForm"
+  ],
+  "steps": [
+    "Navigate to the RoostGPT Config page.",
+    "Click the Test Suite tab to open configuration options.",
+    "Type a test suite name into the input field.",
+    "Select a test type from the dropdown.",
+    "Select a programming language from the dropdown.",
+    "Select a testing framework from the dropdown.",
+    "Select a build tool from the dropdown.",
+    "Click the Save button to save the test suite configuration.",
+    "Verify that a confirmation message is displayed indicating the test suite was saved successfully."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+      "text": "RoostGPT Config",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"test-name-input\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"radio-button\"]",
+      "text": "",
+      "action": "select",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    }
+  ],
+  "expected_results": [
+    "Test suite is saved with the provided configuration.",
+    "A confirmation message appears indicating success."
+  ],
+  "edge_cases": [
+    "User enters an invalid test suite name (e.g., empty or special characters).",
+    "User selects a combination of test type and framework that is incompatible.",
+    "User tries to save without selecting a build tool.",
+    "User navigates away without saving and loses changes.",
+    "User encounters a network failure during the save operation."
+  ],
+  "data_requirements": [
+    "Valid test suite name.",
+    "List of supported programming languages.",
+    "List of supported frameworks.",
+    "List of supported build tools.",
+    "Predefined dropdown options for test type."
+  ],
+  "dependencies": [
+    "Test Suite tab must be accessible.",
+    "Dropdowns must be populated with valid options.",
+    "Save button must be enabled only when valid inputs are provided."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "POST /api/test-suite/config to save configuration."
+  ],
+  "performance_metrics": [
+    "Response time for saving the configuration.",
+    "Load time for the Test Suite tab."
+  ],
+  "accessibility_requirements": [
+    "All dropdowns must have ARIA roles.",
+    "Input fields must have associated labels.",
+    "Confirmation message must be screen-reader accessible."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "312dd128-c266-472a-9df2-248066dff256",
+    "created_at": "2025-10-03T18:21:26.619046Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "configuration",
+      "data-validation",
+      "drag-and-drop",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 45,
+    "flakiness_potential": "high"
+  }
+}
