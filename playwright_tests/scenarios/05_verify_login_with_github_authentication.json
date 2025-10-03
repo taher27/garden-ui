@@ -1,0 +1,88 @@
+{
+  "test_name": "Verify Login with GitHub Authentication",
+  "description": "This test verifies that a user can successfully log in using their GitHub account through the provided GitHub authentication link.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Verify the presence of the GitHub authentication link using its stable selector.",
+    "Click on the GitHub authentication link.",
+    "Wait for the redirection to GitHub's login page.",
+    "On the GitHub login page, enter valid credentials and submit.",
+    "Wait for the redirection back to the Roost dashboard page.",
+    "Verify that the user is successfully logged in by checking the presence of dashboard elements."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the GitHub login page.",
+    "User is able to enter credentials and log in.",
+    "User is redirected back to Roost and sees the dashboard."
+  ],
+  "edge_cases": [
+    "User enters invalid credentials on the GitHub login page.",
+    "User cancels the GitHub authentication process.",
+    "GitHub authentication service is down.",
+    "Network issues during redirection to the dashboard.",
+    "User's GitHub account lacks the required permissions."
+  ],
+  "data_requirements": [
+    "A valid GitHub account.",
+    "GitHub credentials (username and password).",
+    "Roost account linked to a GitHub account.",
+    "Access to the GitHub authentication service.",
+    "Stable internet connection."
+  ],
+  "dependencies": [
+    "GitHub authentication service is operational.",
+    "Roost dashboard is accessible.",
+    "User has a valid Roost account linked to GitHub."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "Call to GitHub's OAuth2 authentication API.",
+    "Roost backend API to validate the authentication token."
+  ],
+  "performance_metrics": [
+    "Time taken to load the GitHub login page.",
+    "Time taken to redirect back to the Roost dashboard."
+  ],
+  "accessibility_requirements": [
+    "GitHub authentication link is accessible via screen readers.",
+    "Keyboard navigation to the GitHub authentication link is supported.",
+    "Color contrast of the GitHub link meets WCAG guidelines."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "857c87dd-1f20-4990-be58-f62d2f3d4b70",
+    "created_at": "2025-10-03T11:18:42.854372Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "high"
+  }
+}

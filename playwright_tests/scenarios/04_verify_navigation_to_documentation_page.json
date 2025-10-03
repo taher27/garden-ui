@@ -1,0 +1,80 @@
+{
+  "test_name": "Verify Navigation to Documentation Page",
+  "description": "This test ensures that users can navigate to the Documentation page from the footer link and access the content.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://docs.roost.ai"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Scroll to the footer section of the page.",
+    "Verify the presence of the Documentation link using its stable selector.",
+    "Click on the Documentation link.",
+    "Wait for the redirection to the Documentation page.",
+    "Verify that the Documentation page is loaded successfully.",
+    "Check for the presence of API reference content on the page."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "text": "Documentation",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the Documentation page.",
+    "API references and guides are accessible."
+  ],
+  "edge_cases": [
+    "Documentation page fails to load.",
+    "Documentation link is not clickable.",
+    "User's internet connection is interrupted during navigation.",
+    "Broken link to the Documentation page.",
+    "User's browser blocks the redirection."
+  ],
+  "data_requirements": [
+    "Functional Documentation URL.",
+    "Access to the internet.",
+    "Browser capable of rendering the Documentation page.",
+    "User permissions to access the Documentation content."
+  ],
+  "dependencies": [
+    "Documentation page is operational.",
+    "Footer links are correctly configured.",
+    "Roost login page is accessible."
+  ],
+  "complexity": "low",
+  "api_interactions": [],
+  "performance_metrics": [
+    "Time taken to load the Documentation page."
+  ],
+  "accessibility_requirements": [
+    "Documentation link is accessible via screen readers.",
+    "Keyboard navigation to the Documentation link is supported.",
+    "Color contrast of the footer links meets WCAG guidelines."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "e45b8d04-70f4-4645-ab8c-83e6c93dee8e",
+    "created_at": "2025-10-03T11:18:42.854372Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "cross-browser",
+      "keyboard-navigation",
+      "navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "medium"
+  }
+}

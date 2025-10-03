@@ -1,0 +1,81 @@
+{
+  "test_name": "Validate External Navigation to Swagger API Page",
+  "description": "Verify that clicking the link to the Swagger API page navigates the user to the correct external URL.",
+  "type": "external_navigation",
+  "pages": [
+    "https://dev.roost.ai/docs/api",
+    "https://dev.roost.ai/api/swagger"
+  ],
+  "steps": [
+    "Navigate to the API documentation page at https://dev.roost.ai/docs/api.",
+    "Locate the link pointing to the Swagger API page.",
+    "Verify that the link is visible and enabled.",
+    "Click on the Swagger API link.",
+    "Wait for the external page to load completely.",
+    "Verify that the user is navigated to the Swagger API page at https://dev.roost.ai/api/swagger.",
+    "Confirm the presence of Swagger interface elements such as endpoint lists and interactive testing tools."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://dev.roost.ai/api/swagger' and contains(@class, 'roost-icon')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api"
+    }
+  ],
+  "expected_results": [
+    "The user is successfully redirected to the Swagger API page.",
+    "All Swagger interface elements are visible and functional."
+  ],
+  "edge_cases": [
+    "The Swagger API link is not visible or enabled.",
+    "The Swagger API link redirects to an incorrect page.",
+    "The external Swagger API page fails to load.",
+    "The browser blocks external navigation due to security settings.",
+    "The Swagger interface elements are not displayed on the destination page."
+  ],
+  "data_requirements": [
+    "Access to the API documentation page at https://dev.roost.ai/docs/api.",
+    "A valid user session (if authentication is required).",
+    "Stable network connectivity.",
+    "Browser configuration allowing external navigation.",
+    "No ad-blockers or extensions interfering with navigation."
+  ],
+  "dependencies": [
+    "The Swagger API link must be implemented on the API documentation page.",
+    "The external Swagger API page must be accessible and functional.",
+    "Navigation to external URLs must be configured correctly in the application."
+  ],
+  "complexity": "medium",
+  "api_interactions": [],
+  "performance_metrics": [
+    "Page load time for the external Swagger API page.",
+    "Time taken for the link to respond to the click event."
+  ],
+  "accessibility_requirements": [
+    "The Swagger API link must have a descriptive aria-label.",
+    "The navigation action must be accessible via keyboard (e.g., Tab and Enter keys).",
+    "The external page must support screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "65430a68-a58c-4545-b736-d326e853b4d4",
+    "created_at": "2025-10-03T11:18:42.857373Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "cross-browser",
+      "external_navigation",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "medium"
+  }
+}

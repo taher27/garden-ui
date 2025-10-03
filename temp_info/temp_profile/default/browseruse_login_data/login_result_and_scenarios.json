@@ -1,0 +1,49 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": false,
+    "final_page_url": "https://dev.roost.ai/login",
+    "outcome_message": "User scenarios prepared but login not yet attempted.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "A user logs in using their Google account.",
+            "steps": {
+                "1": "Navigate to login page",
+                "2": "Select Google login",
+                "3": "Authenticate via Google"
+            }
+        },
+        {
+            "scenario_description": "A user logs in using their Github account.",
+            "steps": {
+                "1": "Navigate to login page",
+                "2": "Select Github login",
+                "3": "Authenticate via Github"
+            }
+        },
+        {
+            "scenario_description": "A user logs in using their Microsoft account.",
+            "steps": {
+                "1": "Navigate to login page",
+                "2": "Select Microsoft login",
+                "3": "Authenticate via Microsoft"
+            }
+        },
+        {
+            "scenario_description": "A user logs in using an enterprise identity provider like Okta or PingID.",
+            "steps": {
+                "1": "Navigate to login page",
+                "2": "Select Okta or PingID login",
+                "3": "Authenticate via provider"
+            }
+        },
+        {
+            "scenario_description": "A user downloads the CLI or installs the VS Code extension after logging in.",
+            "steps": {
+                "1": "Navigate to login page",
+                "2": "Authenticate",
+                "3": "Download CLI or VS Code extension"
+            }
+        }
+    ]
+}

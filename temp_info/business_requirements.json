@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "The site provides automated testing environments for software development teams to streamline deployment processes and minimize manual intervention.",
+        "business_requirements": [
+            "Users must be able to create and configure isolated testing environments for software applications.",
+            "Users must be able to integrate the platform with their existing CI/CD pipelines.",
+            "Users must be able to view real-time status updates and logs of testing environments.",
+            "Users must be able to manage access control and permissions for team members within the platform.",
+            "Users must be able to clone or replicate testing environments for parallel testing or debugging purposes.",
+            "Users must be able to schedule automated environment setups based on predefined triggers or timelines.",
+            "Users must be able to delete or shut down testing environments once they are no longer needed."
+        ]
+    }
+}

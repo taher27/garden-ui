@@ -1,0 +1,43 @@
+{
+  "url": "https://dev.roost.ai/login",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost Enterprise Login | Software as a Service",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "User Login via Third-party Integration",
+          "scenario_description": "A user logs in using a supported third-party authentication provider.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Login button for selected third-party integration."
+            }
+          ],
+          "expected_outcome": ["User successfully logs in and accesses their Roost Enterprise dashboard."]
+        },
+        {
+          "scenario_name": "Access Documentation and Resources",
+          "scenario_description": "A user navigates to the Documentation page to review API references and guides.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Documentation link in the footer."
+            }
+          ],
+          "expected_outcome": ["User is redirected to the Documentation page and can review API references."]
+        },
+        {
+          "scenario_name": "Download CLI Tool",
+          "scenario_description": "A user downloads the CLI tool to integrate with Roost Enterprise services.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Download CLI link in the footer."
+            }
+          ],
+          "expected_outcome": ["User downloads the CLI tool and begins setup for integration."]
+        }
+      ]
+    }
+  ]
+}

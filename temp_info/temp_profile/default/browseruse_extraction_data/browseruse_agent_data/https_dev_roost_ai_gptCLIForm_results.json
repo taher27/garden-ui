@@ -1,0 +1,38 @@
+{
+ "url": "https://dev.roost.ai/gptCLIForm",
+ "explored_pages_and_scenarios": [
+     {
+     "page_title": "RoostGPT Config",
+     "potential_user_journeys": [
+         {
+         "scenario_name": "Configure Test Suite",
+         "scenario_description": "User configures a new test suite with parameters such as test name, type, framework, and language settings.",
+         "steps": [
+             {"action": "type", "element_description": "Enter test suite name."},
+             {"action": "select", "element_description": "Choose test type from options."},
+             {"action": "select", "element_description": "Select Java language version."}
+         ],
+         "expected_outcome": ["Test suite is configured with selected parameters."]
+         },
+         {
+         "scenario_name": "Integrate AI Model",
+         "scenario_description": "User integrates an AI model for the test suite using Open AI settings.",
+         "steps": [
+             {"action": "type", "element_description": "Enter Open AI base URL."},
+             {"action": "type", "element_description": "Provide access token for API integration."}
+         ],
+         "expected_outcome": ["AI model is successfully integrated for testing."]
+         },
+         {
+         "scenario_name": "Verify Code Repository",
+         "scenario_description": "User links a GitHub repository and verifies integration for testing purposes.",
+         "steps": [
+             {"action": "type", "element_description": "Enter GitHub token."},
+             {"action": "click", "element_description": "Click on Verify button."}
+         ],
+         "expected_outcome": ["GitHub repository is linked and verified."]
+         }
+     ]
+     }
+ ]
+}

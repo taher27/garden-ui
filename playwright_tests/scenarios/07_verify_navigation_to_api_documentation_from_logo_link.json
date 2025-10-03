@@ -1,0 +1,81 @@
+{
+  "test_name": "Verify Navigation to API Documentation from Logo Link",
+  "description": "Ensure that clicking the 'roost.ai' logo link navigates the user to the API documentation page.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai",
+    "https://dev.roost.ai/docs/api"
+  ],
+  "steps": [
+    "Navigate to the main dashboard at https://dev.roost.ai.",
+    "Locate the 'roost.ai' logo link with the text 'roost.ai'.",
+    "Verify that the logo link is visible and enabled.",
+    "Click on the 'roost.ai' logo link.",
+    "Wait for the page to load completely.",
+    "Verify that the user is navigated to the API documentation page at https://dev.roost.ai/docs/api.",
+    "Confirm the presence of API documentation elements such as endpoint descriptions and sample requests."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/docs/api' and contains(@class, 'logo')]",
+      "text": "roost.ai",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    }
+  ],
+  "expected_results": [
+    "The user is successfully redirected to the API documentation page.",
+    "All API documentation elements are visible and functional."
+  ],
+  "edge_cases": [
+    "The 'roost.ai' logo link is not visible or enabled.",
+    "The 'roost.ai' logo link redirects to an incorrect page.",
+    "The page fails to load after clicking the logo link.",
+    "The API documentation elements are not displayed on the destination page.",
+    "The browser loses network connectivity during navigation."
+  ],
+  "data_requirements": [
+    "Access to the https://dev.roost.ai main dashboard.",
+    "A valid user session (if authentication is required).",
+    "Stable network connectivity.",
+    "Browser with JavaScript enabled.",
+    "No ad-blockers or extensions interfering with navigation."
+  ],
+  "dependencies": [
+    "The 'roost.ai' logo link must be implemented on the dashboard page.",
+    "The API documentation page must be accessible and functional.",
+    "Navigation between pages must be configured correctly in the application."
+  ],
+  "complexity": "low",
+  "api_interactions": [],
+  "performance_metrics": [
+    "Page load time for the API documentation page.",
+    "Time taken for the logo link to respond to the click event."
+  ],
+  "accessibility_requirements": [
+    "The 'roost.ai' logo link must have a descriptive alt text or aria-label.",
+    "The navigation action must be accessible via keyboard (e.g., Tab and Enter keys).",
+    "The link must be compatible with screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "51eeb707-234c-40f9-92ef-207992018b1a",
+    "created_at": "2025-10-03T11:18:42.857373Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "cross-browser",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "high"
+  }
+}
