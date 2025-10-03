@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "The site provides automated cloud environments for software development and testing, enabling users to rapidly deploy, test, and iterate applications without manual provisioning.",
+        "business_requirements": [
+            "Users must be able to create and manage cloud-based environments for software testing and development.",
+            "Users must be able to deploy applications to cloud environments with minimal setup time and effort.",
+            "Users must be able to view and monitor the status of active environments, including resource usage and application performance.",
+            "Users must be able to integrate the platform with CI/CD workflows for seamless deployment and testing automation.",
+            "Users must be able to duplicate or clone environments to recreate testing scenarios or troubleshoot issues.",
+            "Users must be able to schedule or set expiration times for environments to optimize resource utilization.",
+            "Users must have role-based access control to ensure secure and appropriate usage of environments within teams."
+        ]
+    }
+}
