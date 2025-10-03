@@ -1,0 +1,165 @@
+{
+  "https://dev.roost.ai/docs/api": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "API Documentation",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Explore API Endpoints",
+            "scenario_description": "User navigates through the API documentation to gather information about available endpoints and their usage.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Click on the 'Download OpenAPI Specification' link."
+              },
+              {
+                "action": "navigate",
+                "element_description": "Explore listed API endpoints and their descriptions."
+              },
+              {
+                "action": "review",
+                "element_description": "Review sample requests and responses provided for the API endpoints."
+              }
+            ],
+            "expected_outcome": [
+              "User understands the API capabilities and how to integrate them into their workflows."
+            ]
+          },
+          {
+            "scenario_name": "Test API Integration",
+            "scenario_description": "User tests API integration by setting up authentication and sending requests to the endpoints.",
+            "steps": [
+              {
+                "action": "configure",
+                "element_description": "Set up authentication details for API access."
+              },
+              {
+                "action": "send_request",
+                "element_description": "Send requests to test endpoints and review responses."
+              },
+              {
+                "action": "validate",
+                "element_description": "Validate the integration by analyzing the API's response accuracy."
+              }
+            ],
+            "expected_outcome": [
+              "Successful API integration with validated results."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/gptCLIForm": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "RoostGPT Config",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Configure Test Suite",
+            "scenario_description": "User configures a new test suite with parameters such as test name, type, framework, and language settings.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Enter test suite name."
+              },
+              {
+                "action": "select",
+                "element_description": "Choose test type from options."
+              },
+              {
+                "action": "select",
+                "element_description": "Select Java language version."
+              }
+            ],
+            "expected_outcome": [
+              "Test suite is configured with selected parameters."
+            ]
+          },
+          {
+            "scenario_name": "Integrate AI Model",
+            "scenario_description": "User integrates an AI model for the test suite using Open AI settings.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Enter Open AI base URL."
+              },
+              {
+                "action": "type",
+                "element_description": "Provide access token for API integration."
+              }
+            ],
+            "expected_outcome": [
+              "AI model is successfully integrated for testing."
+            ]
+          },
+          {
+            "scenario_name": "Verify Code Repository",
+            "scenario_description": "User links a GitHub repository and verifies integration for testing purposes.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Enter GitHub token."
+              },
+              {
+                "action": "click",
+                "element_description": "Click on Verify button."
+              }
+            ],
+            "expected_outcome": [
+              "GitHub repository is linked and verified."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/login": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost Enterprise Login | Software as a Service",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "User Login via Third-party Integration",
+            "scenario_description": "A user logs in using a supported third-party authentication provider.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Login button for selected third-party integration."
+              }
+            ],
+            "expected_outcome": [
+              "User successfully logs in and accesses their Roost Enterprise dashboard."
+            ]
+          },
+          {
+            "scenario_name": "Access Documentation and Resources",
+            "scenario_description": "A user navigates to the Documentation page to review API references and guides.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Documentation link in the footer."
+              }
+            ],
+            "expected_outcome": [
+              "User is redirected to the Documentation page and can review API references."
+            ]
+          },
+          {
+            "scenario_name": "Download CLI Tool",
+            "scenario_description": "A user downloads the CLI tool to integrate with Roost Enterprise services.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Download CLI link in the footer."
+              }
+            ],
+            "expected_outcome": [
+              "User downloads the CLI tool and begins setup for integration."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

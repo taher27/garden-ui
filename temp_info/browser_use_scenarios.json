@@ -1,0 +1,86 @@
+{
+  "https://dev.roost.ai/login": {
+    "page_content": {
+      "title": "Roost Enterprise Login | Software as a Service",
+      "main_features": [
+        "Provides a login interface for Roost Enterprise users.",
+        "Sign-in options include integrations with Google, Github, Microsoft, Okta, Auth0, and PingID.",
+        "Includes links to resources such as About Roost, Privacy Policy, Documentation, and API Reference.",
+        "Provides options to download CLI and install VS Code extension."
+      ],
+      "technical_requirement": "JavaScript must be enabled to use the app."
+    },
+    "query_analysis": {
+      "purpose": "The page's purpose appears to be providing a login interface for Roost Enterprise users and offering access to related resources and tools.",
+      "use_cases": [
+        "Authentication and login for Roost Enterprise users.",
+        "Accessing documentation, API references, and other resources.",
+        "Downloading CLI tools and integrating with VS Code for development."
+      ],
+      "interactive_elements": [
+        "Login interface with third-party sign-in integrations (e.g., Google, Github, Microsoft, etc.).",
+        "Options to download CLI and install VS Code extension."
+      ],
+      "missing_information": null
+    }
+  },
+  "https://dev.roost.ai/gptCLIForm": {
+    "purpose": "The website appears to be a platform for automated testing powered by generative AI and large language models. It aims to assist users in setting up and managing test suites, integrating AI models, accessing code repositories, and performing advanced testing configurations.",
+    "use_cases": [
+      "Automated unit testing for software development.",
+      "Integration of generative AI models with testing workflows.",
+      "Code repository integration for seamless testing of source code.",
+      "Advanced testing options like vulnerability testing and custom configurations."
+    ],
+    "interactive_elements": [
+      {
+        "name": "RoostGPT Config",
+        "description": "Allows users to configure settings related to the generative AI-powered testing assistant."
+      },
+      {
+        "name": "Test Suite Setup",
+        "description": "Interactive fields for specifying details about test suites, including test type, code language, framework, and build tools."
+      },
+      {
+        "name": "Gen AI Models Configuration",
+        "description": "Fields for setting up AI model integrations, including provider details and authentication tokens."
+      },
+      {
+        "name": "Code Repositories Integration",
+        "description": "Options for connecting GitHub repositories, including token verification and repository type selection."
+      },
+      {
+        "name": "Advanced Testing Configurations",
+        "description": "Settings for enabling or disabling advanced testing features, such as skipping methods with existing tests, environment variables, maximum depth traversal, and vulnerability testing."
+      },
+      {
+        "name": "Download Options",
+        "description": "Interactive buttons for downloading environment configurations, CLI tools, and VS Code extensions."
+      },
+      {
+        "name": "Additional Prompt Settings",
+        "description": "Fields for customizing user input type, language, timeout duration, iterations, and functions to test."
+      }
+    ]
+  },
+  "https://dev.roost.ai/docs/api": {
+    "message": "The requested information could not be fully extracted from the webpage due to its focus on API documentation and technical details.",
+    "page_content": {
+      "purpose": "The webpage serves as an OpenAPI reference for RoostAI, providing detailed API documentation for testing automation processes using RoostGPT powered by generative AI and large language models.",
+      "use_cases": [
+        "Automated test case generation through RoostGPT using large language models.",
+        "Integration with various git platforms such as GitHub, GitLab, Bitbucket, and Azure.",
+        "Creating, managing, and executing test plans for applications.",
+        "Triggering tests, retriggering tests, and aborting test executions.",
+        "Event management and log retrieval for tests.",
+        "Sending event diagnostics to Slack for debugging purposes."
+      ],
+      "interactive_elements": [
+        "API endpoints for creating, editing, and deleting tests and test plans.",
+        "Query parameters for filtering tests and events.",
+        "Payload samples for constructing API requests.",
+        "Response samples for understanding API outputs."
+      ]
+    }
+  }
+}

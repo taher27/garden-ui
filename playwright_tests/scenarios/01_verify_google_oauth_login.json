@@ -1,0 +1,95 @@
+{
+  "test_name": "Verify Google OAuth Login",
+  "description": "Test the functionality of logging in with a Google account, ensuring redirection to the Google OAuth page, proper authentication, and returning to the platform dashboard.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login",
+    "https://accounts.google.com/o/oauth2/v2/auth",
+    "https://dev.roost.ai"
+  ],
+  "steps": [
+    "Navigate to the login page at https://dev.roost.ai/login.",
+    "Locate and click the 'Sign in with Google' button.",
+    "Verify redirection to the Google OAuth page.",
+    "Enter valid Google account credentials (email and password).",
+    "Complete any two-factor authentication if prompted.",
+    "Consent to the requested permissions for the Roost application.",
+    "Verify redirection back to the dashboard at https://dev.roost.ai.",
+    "Check that the user is logged in by verifying the presence of a user-specific element on the dashboard."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "User is redirected to the Google OAuth page.",
+    "User successfully authenticates using Google credentials.",
+    "User is redirected back to the Roost dashboard.",
+    "A user-specific element is visible, confirming successful login."
+  ],
+  "edge_cases": [
+    "User enters incorrect Google credentials.",
+    "User cancels the OAuth process midway.",
+    "User does not consent to requested permissions.",
+    "Network issues occur during redirection.",
+    "The Google OAuth service is temporarily unavailable."
+  ],
+  "data_requirements": [
+    "A valid Google account with access to the platform.",
+    "Google credentials for testing.",
+    "Two-factor authentication setup for the test account.",
+    "Pre-configured permissions for the Roost application in the Google account.",
+    "A clean session with no existing cookies."
+  ],
+  "dependencies": [
+    "Google OAuth service must be operational.",
+    "Test account must be active and accessible.",
+    "Roost application must be registered with Google OAuth.",
+    "Browser must allow third-party cookies.",
+    "Stable internet connection."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "Google OAuth API for authentication.",
+    "Roost API for user session creation.",
+    "Roost dashboard endpoint for user-specific data."
+  ],
+  "performance_metrics": [
+    "Time taken to redirect to Google OAuth.",
+    "Time taken to authenticate and return to the dashboard.",
+    "Response time of the Roost dashboard after login."
+  ],
+  "accessibility_requirements": [
+    "Ensure the 'Sign in with Google' button is accessible via keyboard navigation.",
+    "Verify that the button has an appropriate ARIA label.",
+    "Confirm high-contrast mode compatibility.",
+    "Ensure screen readers announce the button correctly.",
+    "Check that error messages are accessible and descriptive."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "d7be9ae5-3be5-46a5-8a56-9df0ada84391",
+    "created_at": "2025-10-03T11:18:42.852000Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "form-submission",
+      "network-resilience",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "high"
+  }
+}
