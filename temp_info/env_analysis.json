@@ -1,0 +1,86 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Likely represents the domain for cookies used in the UI.",
+      "requirements": "Should be a valid domain string or left empty if cookies are not domain-specific."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Provide a valid domain if cookies need to be scoped to a specific domain.",
+      "If left empty intentionally, ensure downstream systems can handle it."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Likely represents the name of the cookie used in the UI.",
+      "requirements": "Should be a valid cookie name or left empty if cookies are not used."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Provide a unique and descriptive cookie name.",
+      "If left empty intentionally, ensure downstream systems can handle it."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Specifies the login type or authentication provider used in the UI.",
+      "examples": [
+        "okta",
+        "google",
+        "custom"
+      ],
+      "requirements": "Should match one of the supported login types."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure 'okta' is correctly configured in the authentication system.",
+      "Document all supported login types for consistency."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Represents a password for the site or application.",
+      "security_risks": "Passwords should always be stored securely and never hardcoded or exposed as plaintext.",
+      "requirements": "Should be kept secret and follow secure password practices."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this value securely in a secrets management system.",
+      "Avoid hardcoding sensitive information in environment variables.",
+      "Rotate passwords periodically and enforce complexity rules."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Represents a username, likely in the form of an email address.",
+      "security_risks": "Email addresses can be considered sensitive if tied to user accounts or authentication.",
+      "requirements": "Should be valid and protected if used for sensitive purposes."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this value securely if it is tied to a sensitive account.",
+      "Consider using a service account or non-personal email for automation.",
+      "Document its purpose and access restrictions clearly."
+    ]
+  }
+}
