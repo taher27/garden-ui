@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "Roost.ai provides users with an automated environment orchestration platform for rapid deployment and testing of applications, enabling efficient software development workflows.",
+        "business_requirements": [
+            "Users must be able to create, manage, and delete automated environments for application testing.",
+            "Users must be able to integrate version control systems (e.g., Git) to synchronize codebase changes with the environments.",
+            "Users must be able to trigger environment creation based on specific events, such as code commits or pipeline executions.",
+            "Users must have the ability to monitor the status and resource utilization of active environments in real-time.",
+            "Users must be able to access and interact with application environments via browser-based interfaces or terminal commands.",
+            "Administrators must be able to configure role-based access control to manage permissions for team members.",
+            "Users must be able to schedule environment deployments for specific times to optimize resource usage and testing workflows."
+        ]
+    }
+}

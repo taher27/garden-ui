@@ -1,0 +1,74 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents the domain for cookies used by the UI. An empty value suggests it might need to be configured."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Set this to a valid domain or subdomain to ensure proper cookie handling.",
+      "Use a placeholder like 'localhost' for local development."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents the name of the cookie used by the UI. An empty value suggests it might need to be configured."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Set this to a meaningful cookie name to avoid conflicts and ensure clarity.",
+      "Ensure the name adheres to cookie naming conventions."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 0.9,
+    "metadata": {
+      "description": "Represents the login type or authentication provider used by the UI. 'okta' indicates the use of Okta's authentication services."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure the login type matches the configured authentication provider in your system.",
+      "Consider documenting this variable for clarity in setup instructions."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Contains a password that should be treated as sensitive information. Likely used for authentication purposes."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this securely in a secrets manager rather than an environment variable.",
+      "Rotate this password regularly and ensure strong password policies.",
+      "Avoid exposing this value in logs or publicly accessible files."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 0.95,
+    "metadata": {
+      "description": "Represents a username, formatted as an email address, likely used for authentication purposes."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Store this in a secure location if it is sensitive.",
+      "Consider whether this username should be configurable or hardcoded.",
+      "Ensure the email address corresponds to a valid account in your system."
+    ]
+  }
+}
