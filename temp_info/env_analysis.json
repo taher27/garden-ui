@@ -1,0 +1,90 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents the domain for setting cookies in the UI.",
+      "required": false,
+      "default_value": "An empty string may indicate that this variable is not configured."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Ensure this value is set to the appropriate domain for cookie functionality.",
+      "Update to a meaningful domain name if cookies need to be scoped to a specific domain."
+    ]
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.8,
+    "metadata": {
+      "description": "Likely represents the name of the cookie used by the UI.",
+      "required": false,
+      "default_value": "An empty string may indicate that this variable is not configured."
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Set this value to a descriptive and unique name for the cookie.",
+      "Ensure the cookie name aligns with your application's cookie strategy."
+    ]
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Indicates the type of login mechanism used by the UI.",
+      "valid_values": [
+        "okta",
+        "oauth",
+        "basic",
+        "saml",
+        "custom"
+      ],
+      "current_value": "okta"
+    },
+    "is_sensitive": false,
+    "suggestions": [
+      "Verify that 'okta' is the correct login type for your application.",
+      "Ensure all necessary configurations for Okta integration are completed."
+    ]
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Appears to be a password used by the UI for authentication purposes.",
+      "security_risks": "Passwords should never be stored in plain text in environment variables.",
+      "recommendation": "Use a secrets management service or encrypted storage for sensitive credentials."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Move this password to a secure secrets manager or encrypted storage.",
+      "Periodically rotate the password to ensure security best practices.",
+      "Ensure that this value is not exposed in logs or error messages."
+    ]
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "email",
+    "confidence": 1.0,
+    "metadata": {
+      "description": "Appears to be a username in the form of an email address, likely used for UI authentication.",
+      "email_domain": "zb.io",
+      "security_risks": "Email-based usernames may be sensitive and should be protected to prevent unauthorized access."
+    },
+    "is_sensitive": true,
+    "suggestions": [
+      "Ensure this email is used in conjunction with secure password authentication.",
+      "Consider masking this value in logs or other public outputs.",
+      "Verify that the domain ('zb.io') is correct and matches your application's expected domain."
+    ]
+  }
+}

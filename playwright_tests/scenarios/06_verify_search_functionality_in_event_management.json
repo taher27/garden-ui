@@ -1,0 +1,88 @@
+{
+  "test_name": "Verify Search Functionality in Event Management",
+  "description": "Tests the ability of a user to search for specific events in the Event Management dashboard and verify that the results match the search criteria.",
+  "type": "functional",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/events"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/roostgpt/events.",
+    "Verify that the page loads correctly and the search bar is visible.",
+    "Click on the search bar identified by the selector '[data-testid=\"events-search-box\"].",
+    "Type 'test-event-123' into the search bar.",
+    "Simulate pressing the Enter key.",
+    "Wait for the results to load on the page.",
+    "Verify that the displayed events include 'test-event-123' in the event name or details.",
+    "Verify that no unrelated events are displayed in the results.",
+    "Clear the search input field and verify that the full list of events is displayed again."
+  ],
+  "selectors": [
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"events-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/roostgpt/events"
+    }
+  ],
+  "expected_results": [
+    "Matching search results appear based on the input query.",
+    "No unrelated events are displayed in the search results.",
+    "Clearing the search field restores the full list of events."
+  ],
+  "edge_cases": [
+    "Search with special characters.",
+    "Search with an empty string.",
+    "Search with a very long string.",
+    "Search for a non-existent event.",
+    "Search immediately after clearing the search bar."
+  ],
+  "data_requirements": [
+    "At least one event named 'test-event-123' exists in the system.",
+    "A list of other events for testing unrelated results.",
+    "Access to the Event Management dashboard.",
+    "Valid user credentials for accessing the dashboard.",
+    "Clear instructions for search input format."
+  ],
+  "dependencies": [
+    "Event Management page must be accessible.",
+    "User must be logged in and authorized.",
+    "Test environment must be loaded with test data.",
+    "Search functionality must be enabled.",
+    "No ongoing backend issues affecting search."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "API call to fetch event data based on search query.",
+    "API call to load default event list when search is cleared."
+  ],
+  "performance_metrics": [
+    "Search results load within 2 seconds.",
+    "API response time for search query is under 1 second.",
+    "No noticeable UI lags during typing in the search bar."
+  ],
+  "accessibility_requirements": [
+    "Search bar must be navigable using the Tab key.",
+    "Search results must be screen-reader accessible.",
+    "Proper ARIA roles must be defined for the search bar and results."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "b0093ec4-4b99-4122-a28f-c7f18bac8d96",
+    "created_at": "2025-10-03T05:49:44.766480Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "form-submission",
+      "functional",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 45,
+    "flakiness_potential": "medium"
+  }
+}

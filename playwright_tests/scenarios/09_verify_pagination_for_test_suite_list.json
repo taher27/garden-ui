@@ -1,0 +1,107 @@
+{
+  "test_name": "Verify Pagination for Test Suite List",
+  "description": "Ensure that users can navigate through multiple pages of test suites using pagination controls.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests"
+  ],
+  "steps": [
+    "Navigate to the Test Suites page.",
+    "Verify the presence of pagination controls.",
+    "Click on the '2' button to navigate to the second page.",
+    "Verify that the second page of test suites is displayed.",
+    "Click the 'Next' arrow button to go to the next page.",
+    "Validate that pagination updates correctly.",
+    "Click the 'Last' button to navigate to the last page.",
+    "Verify that the last page of test suites is displayed.",
+    "Click the 'First' button to navigate to the first page.",
+    "Ensure that the first page of test suites is displayed."
+  ],
+  "selectors": [
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()=\"2\"]",
+      "text": "2",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"arrow-icon\"]",
+      "text": "\u00bb",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"paginator-last-page-button\"]",
+      "text": "Last",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"paginator-first-page-button\"]",
+      "text": "First",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    }
+  ],
+  "expected_results": [
+    "Pagination controls are displayed correctly.",
+    "Users can navigate between pages seamlessly.",
+    "The correct page of test suites is displayed after navigation.",
+    "Edge buttons ('First' and 'Last') work as expected."
+  ],
+  "edge_cases": [
+    "Navigate to a page with no test suites.",
+    "Test pagination with a very large dataset.",
+    "Validate behavior when clicking disabled pagination buttons.",
+    "Ensure buttons are accessible with keyboard navigation.",
+    "Check behavior when rapidly clicking pagination buttons."
+  ],
+  "data_requirements": [
+    "Multiple pages of test suites data.",
+    "Dataset with varying number of test suites per page.",
+    "Test data to validate edge cases (e.g., empty pages).",
+    "Pagination configuration settings."
+  ],
+  "dependencies": [
+    "Pagination controls are implemented on the page.",
+    "Backend API supports pagination.",
+    "Test suite data is correctly divided across pages."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET requests to fetch test suites for the specific page."
+  ],
+  "performance_metrics": [
+    "Page navigation should complete within 1 second.",
+    "Pagination controls should remain responsive during interactions."
+  ],
+  "accessibility_requirements": [
+    "Ensure pagination buttons have ARIA roles.",
+    "Verify keyboard accessibility for pagination controls.",
+    "Pagination should be readable by screen readers."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "2cdc06e5-c4a9-4633-bae5-4241a3a7be7a",
+    "created_at": "2025-10-03T05:49:44.767487Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "keyboard-navigation",
+      "navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "medium"
+  }
+}

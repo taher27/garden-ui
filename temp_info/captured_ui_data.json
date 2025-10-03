@@ -1,0 +1,975 @@
+{
+  "https://dev.roost.ai/login": [
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"RoostGPT Config\"",
+      "stable_selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+      "tag_name": "a",
+      "text_content": "RoostGPT Config",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Login\"",
+      "stable_selector": "//a[@href='/login' and contains(@class, 'nav-link')]",
+      "tag_name": "a",
+      "text_content": "Login",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://github.com/login/oauth/authorize?scope=user%3Aemail&client_id=0fc11ea1f52d5e2a8dcf&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'git')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://login.microsoftonline.com/common/oauth2/v2.0/authorize?response_type=code&scope=user.read&state=azure&client_id=946156a9-5142-4469-b79f-bdcc9e76cf7f&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'azure')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://dev-53854943.okta.com/oauth2/default/v1/authorize?response_type=code&scope=openid%20profile%20email%20address&state=okta&client_id=0oa3x8katznHWlHeD5d7&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'okta')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://dev-mhrflm8cktpvkqq5.us.auth0.com/authorize?response_type=code&scope=openid%20profile%20email&state=auth0&client_id=1IoDt4wUDOKHcpnYKCaNVhG4XWl3jJHR&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'auth0')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='https://ping.tryroost.link/as/authorization.oauth2?response_type=code&scope=openid%20profile%20email&state=pingFederate&client_id=roost-dev&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'pingFederate')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"About Roost\"",
+      "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "About Roost",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Privacy Policy\"",
+      "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Privacy Policy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Documentation\"",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Documentation",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API Reference\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "API Reference",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/roostgpt/tests": [
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"RoostGPT\"",
+      "stable_selector": "[data-testid=\"roostGPT-tab\"]",
+      "tag_name": "a",
+      "text_content": "RoostGPT",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Admin\"",
+      "stable_selector": "[data-testid=\"admin-tab\"]",
+      "tag_name": "a",
+      "text_content": "Admin",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Connectors\"",
+      "stable_selector": "[data-testid=\"connectors-tab\"]",
+      "tag_name": "a",
+      "text_content": "Connectors",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"PW\"",
+      "stable_selector": "#collapsible-nav-dropdown",
+      "tag_name": "a",
+      "text_content": "PW",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Test Suites\"",
+      "stable_selector": "//a[@href='/roostgpt/tests' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "tag_name": "a",
+      "text_content": "Test Suites",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Analysis\"",
+      "stable_selector": "//a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "tag_name": "a",
+      "text_content": "Analysis",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Generations\"",
+      "stable_selector": "//a[@href='/roostgpt/events' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "tag_name": "a",
+      "text_content": "Generations",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"tests-search-box\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "#knowledge-base-dropdown",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"bhavya.shah\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "bhavya.shah",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"afsal\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[2]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "afsal",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"divyesh\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[3]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "divyesh",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"divyesh\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[4]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "divyesh",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"afsal\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[5]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "afsal",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"taher\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[6]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "taher",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"taher\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[7]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "taher",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"bhhavya.sureka\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[8]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "bhhavya.sureka",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"taher\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[9]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "taher",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"bhavya.shah\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[10]/td[2]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "bhavya.shah",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"First\"",
+      "stable_selector": "[data-testid=\"paginator-first-page-button\"]",
+      "tag_name": "button",
+      "text_content": "First",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"\u00ab\"",
+      "stable_selector": "[data-testid=\"arrow-left\"]",
+      "tag_name": "button",
+      "text_content": "\u00ab",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"1\"",
+      "stable_selector": "//button[normalize-space()=\"1\"]",
+      "tag_name": "button",
+      "text_content": "1",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"2\"",
+      "stable_selector": "//button[normalize-space()=\"2\"]",
+      "tag_name": "button",
+      "text_content": "2",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"3\"",
+      "stable_selector": "//button[normalize-space()=\"3\"]",
+      "tag_name": "button",
+      "text_content": "3",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"4\"",
+      "stable_selector": "//button[normalize-space()=\"4\"]",
+      "tag_name": "button",
+      "text_content": "4",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"5\"",
+      "stable_selector": "//button[normalize-space()=\"5\"]",
+      "tag_name": "button",
+      "text_content": "5",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"\u00bb\"",
+      "stable_selector": "[data-testid=\"arrow-icon\"]",
+      "tag_name": "button",
+      "text_content": "\u00bb",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Last\"",
+      "stable_selector": "[data-testid=\"paginator-last-page-button\"]",
+      "tag_name": "button",
+      "text_content": "Last",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"About Roost\"",
+      "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "About Roost",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Privacy Policy\"",
+      "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Privacy Policy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Documentation\"",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Documentation",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API Reference\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "API Reference",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/admin/app": [
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"RoostGPT\"",
+      "stable_selector": "[data-testid=\"roostGPT-tab\"]",
+      "tag_name": "a",
+      "text_content": "RoostGPT",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Admin\"",
+      "stable_selector": "[data-testid=\"admin-tab\"]",
+      "tag_name": "a",
+      "text_content": "Admin",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Connectors\"",
+      "stable_selector": "[data-testid=\"connectors-tab\"]",
+      "tag_name": "a",
+      "text_content": "Connectors",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"PW\"",
+      "stable_selector": "#collapsible-nav-dropdown",
+      "tag_name": "a",
+      "text_content": "PW",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"test\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"bhhavya.sureka\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "bhhavya.sureka",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"harish\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[2]/td[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "harish",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"chaitra\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[3]/td[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "chaitra",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"aishwarya\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[4]/td[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "aishwarya",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"bhavya.shah\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[5]/td[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "bhavya.shah",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"aman.tripathi\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[6]/td[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "aman.tripathi",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"taher\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[7]/td[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "taher",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"akshit.mathur\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[8]/td[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "akshit.mathur",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"bhhavya.sureka\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[3]/div/div[1]/div[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "bhhavya.sureka",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"harish\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[3]/div/div[2]/div[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "harish",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"chaitra\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[3]/div/div[3]/div[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "chaitra",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"aishwarya\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[3]/div/div[4]/div[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "aishwarya",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"bhavya.shah\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[3]/div/div[5]/div[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "bhavya.shah",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"aman.tripathi\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[3]/div/div[6]/div[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "aman.tripathi",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"taher\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[3]/div/div[7]/div[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "taher",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"akshit.mathur\"",
+      "stable_selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[3]/div/div[8]/div[1]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "akshit.mathur",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"About Roost\"",
+      "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "About Roost",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Privacy Policy\"",
+      "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Privacy Policy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Documentation\"",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Documentation",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API Reference\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "API Reference",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/roostgpt/events": [
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"RoostGPT\"",
+      "stable_selector": "[data-testid=\"roostGPT-tab\"]",
+      "tag_name": "a",
+      "text_content": "RoostGPT",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Admin\"",
+      "stable_selector": "[data-testid=\"admin-tab\"]",
+      "tag_name": "a",
+      "text_content": "Admin",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Connectors\"",
+      "stable_selector": "[data-testid=\"connectors-tab\"]",
+      "tag_name": "a",
+      "text_content": "Connectors",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"PW\"",
+      "stable_selector": "#collapsible-nav-dropdown",
+      "tag_name": "a",
+      "text_content": "PW",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Test Suites\"",
+      "stable_selector": "//a[@href='/roostgpt/tests' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "tag_name": "a",
+      "text_content": "Test Suites",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Analysis\"",
+      "stable_selector": "//a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "tag_name": "a",
+      "text_content": "Analysis",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Generations\"",
+      "stable_selector": "//a[@href='/roostgpt/events' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "tag_name": "a",
+      "text_content": "Generations",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"events-search-box\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"bhavyashah1226/java-cucumber\"",
+      "stable_selector": "//div[@id='tooltip']/div/a",
+      "tag_name": "a",
+      "text_content": "bhavyashah1226/java-cucumber",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"divyesh\"",
+      "stable_selector": "//div/div/table/tbody/tr[1]/td[6]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "divyesh",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"divyesh\"",
+      "stable_selector": "//div/div/table/tbody/tr[2]/td[6]/div/div[2]/div[2]/a",
+      "tag_name": "a",
+      "text_content": "divyesh",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ],
+  "https://dev.roost.ai/connectors": [
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'brand-logo-container')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"RoostGPT\"",
+      "stable_selector": "[data-testid=\"roostGPT-tab\"]",
+      "tag_name": "a",
+      "text_content": "RoostGPT",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Admin\"",
+      "stable_selector": "[data-testid=\"admin-tab\"]",
+      "tag_name": "a",
+      "text_content": "Admin",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Connectors\"",
+      "stable_selector": "[data-testid=\"connectors-tab\"]",
+      "tag_name": "a",
+      "text_content": "Connectors",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"PW\"",
+      "stable_selector": "#collapsible-nav-dropdown",
+      "tag_name": "a",
+      "text_content": "PW",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "input",
+      "stable_selector": "[data-testid=\"Connector-search-box\"]",
+      "tag_name": "input",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"First\"",
+      "stable_selector": "[data-testid=\"paginator-first-page-button\"]",
+      "tag_name": "button",
+      "text_content": "First",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"\u00ab\"",
+      "stable_selector": "[data-testid=\"arrow-left\"]",
+      "tag_name": "button",
+      "text_content": "\u00ab",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"1\"",
+      "stable_selector": "//button[normalize-space()=\"1\"]",
+      "tag_name": "button",
+      "text_content": "1",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"2\"",
+      "stable_selector": "//button[normalize-space()=\"2\"]",
+      "tag_name": "button",
+      "text_content": "2",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"3\"",
+      "stable_selector": "//button[normalize-space()=\"3\"]",
+      "tag_name": "button",
+      "text_content": "3",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"4\"",
+      "stable_selector": "//button[normalize-space()=\"4\"]",
+      "tag_name": "button",
+      "text_content": "4",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"5\"",
+      "stable_selector": "//button[normalize-space()=\"5\"]",
+      "tag_name": "button",
+      "text_content": "5",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"\u00bb\"",
+      "stable_selector": "[data-testid=\"arrow-icon\"]",
+      "tag_name": "button",
+      "text_content": "\u00bb",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "button with text \"Last\"",
+      "stable_selector": "[data-testid=\"paginator-last-page-button\"]",
+      "tag_name": "button",
+      "text_content": "Last",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a",
+      "stable_selector": "//a[@href='/' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"About Roost\"",
+      "stable_selector": "//a[@href='https://roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "About Roost",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Privacy Policy\"",
+      "stable_selector": "//a[@href='https://roost.ai/privacy-policy' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Privacy Policy",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"Documentation\"",
+      "stable_selector": "//a[@href='https://docs.roost.ai' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "Documentation",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    },
+    {
+      "description": "a with text \"API Reference\"",
+      "stable_selector": "//a[@href='/docs/api' and contains(@class, 'footer-item')]",
+      "tag_name": "a",
+      "text_content": "API Reference",
+      "is_enabled": true,
+      "is_editable": false,
+      "is_checked": false
+    }
+  ]
+}

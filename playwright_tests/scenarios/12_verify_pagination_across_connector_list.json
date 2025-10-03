@@ -1,0 +1,116 @@
+{
+  "test_name": "Verify Pagination Across Connector List",
+  "description": "Test the functionality of pagination controls to navigate through multiple pages of listed connectors.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/connectors"
+  ],
+  "steps": [
+    "Navigate to the Connectors page using the 'Connectors' tab.",
+    "Verify the visibility of pagination controls, including buttons for 'First', '\u00ab', '\u00bb', 'Last', and numbered pages.",
+    "Click on the button for page '2' and verify that the connectors list updates to display page 2 results.",
+    "Click on the '\u00bb' button and verify that the next page of connectors is displayed.",
+    "Click on the 'Last' button and verify that the last page of connectors is displayed.",
+    "Click on the 'First' button and verify that the first page of connectors is displayed.",
+    "Click on the '\u00ab' button to navigate back to the previous page and verify results."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"connectors-tab\"]",
+      "text": "Connectors",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    },
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()=\"2\"]",
+      "text": "2",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/connectors"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"arrow-icon\"]",
+      "text": "\u00bb",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/connectors"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"paginator-last-page-button\"]",
+      "text": "Last",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/connectors"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"paginator-first-page-button\"]",
+      "text": "First",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/connectors"
+    }
+  ],
+  "expected_results": [
+    "Each pagination button navigates to the correct page.",
+    "Connector list updates correctly based on page selection.",
+    "No duplicate or missing connectors are displayed."
+  ],
+  "edge_cases": [
+    "Navigating to a non-existent page returns an error gracefully.",
+    "Rapid clicking on pagination buttons does not break the UI.",
+    "Empty pages are handled without crashing.",
+    "Pagination buttons are disabled for out-of-bound pages.",
+    "Last page button works correctly for varying numbers of pages."
+  ],
+  "data_requirements": [
+    "A list of connectors spanning multiple pages.",
+    "At least 5 connectors per page.",
+    "Valid user session with access to pagination controls.",
+    "Database connection for fetching paginated data.",
+    "UI design supporting dynamic pagination."
+  ],
+  "dependencies": [
+    "User must be logged in.",
+    "Connectors page must be accessible.",
+    "System must contain multiple pages of connectors.",
+    "Pagination controls must be functional.",
+    "Database must support paginated queries."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET request to fetch connectors for specific pages."
+  ],
+  "performance_metrics": [
+    "Loading time for each page.",
+    "UI responsiveness during pagination changes.",
+    "Memory usage while rendering paginated data."
+  ],
+  "accessibility_requirements": [
+    "Pagination buttons must be operable using keyboard controls.",
+    "Buttons must have descriptive ARIA labels.",
+    "Focus state should be visible for all buttons.",
+    "Paginated content must be navigable using screen readers.",
+    "Contrast ratio for pagination controls must meet WCAG standards."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "0a4da5cb-9cd0-4fb4-9d16-a7a40529a011",
+    "created_at": "2025-10-03T05:49:44.768490Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "keyboard-navigation",
+      "navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "medium"
+  }
+}

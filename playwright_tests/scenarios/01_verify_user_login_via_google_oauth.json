@@ -1,0 +1,92 @@
+{
+  "test_name": "Verify User Login via Google OAuth",
+  "description": "This test verifies that users can log in using their Google account via OAuth integration on the login page.",
+  "type": "authentication",
+  "pages": [
+    "https://dev.roost.ai/login"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/login.",
+    "Locate the Google OAuth login button using the stable selector.",
+    "Click on the Google OAuth login button.",
+    "Ensure the browser is redirected to the Google OAuth login page.",
+    "Enter valid Google account credentials and submit.",
+    "Verify that the user is redirected back to the application dashboard.",
+    "Check that the user's session is authenticated and a valid token is received.",
+    "Verify the presence of user-specific data on the dashboard (e.g., username or account details)."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='https://accounts.google.com/o/oauth2/v2/auth?scope=email%20profile%20openid&openid.realm&include_granted_scopes=true&response_type=token&client_id=985988082020-h5fipp07abkqn9qer08dtc6ve33dan9i.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin' and contains(@class, 'google')]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/login"
+    }
+  ],
+  "expected_results": [
+    "The user is redirected to the Google OAuth login page.",
+    "The user is redirected back to the application dashboard after successful authentication.",
+    "The user's session is authenticated and a valid token is available.",
+    "User-specific data is displayed on the dashboard."
+  ],
+  "edge_cases": [
+    "Invalid Google account credentials.",
+    "Canceling the Google login process midway.",
+    "Network issues during the OAuth redirection.",
+    "Google account lacks required permissions.",
+    "Token expiration before redirection to the app."
+  ],
+  "data_requirements": [
+    "Valid Google account credentials.",
+    "OAuth client ID and secret for Google integration.",
+    "Redirect URI configured in Google OAuth settings.",
+    "Session storage or cookies to store authentication tokens.",
+    "User profile data for verification on the dashboard."
+  ],
+  "dependencies": [
+    "Google OAuth service must be active and configured correctly.",
+    "The application must be registered with Google APIs.",
+    "The dashboard page must be accessible after login."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "Google OAuth token generation API.",
+    "Application's backend session validation API.",
+    "Fetch user profile data API."
+  ],
+  "performance_metrics": [
+    "Time taken to load the Google OAuth login page.",
+    "Time taken to redirect back to the application.",
+    "Response time of the user profile API."
+  ],
+  "accessibility_requirements": [
+    "Ensure the Google login button is keyboard navigable.",
+    "Verify proper ARIA roles for the login button.",
+    "Check for color contrast compliance on the login button."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "363fb2cf-b457-4753-af84-5b092f9c1504",
+    "created_at": "2025-10-03T05:49:44.764888Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "authentication",
+      "auto-generated",
+      "cross-browser",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "security",
+      "ui-test"
+    ],
+    "estimated_execution_time": 40,
+    "flakiness_potential": "high"
+  }
+}

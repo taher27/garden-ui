@@ -1,0 +1,13 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": true,
+    "final_page_url": "https://dev.roost.ai/roostgpt/tests",
+    "outcome_message": "Successfully logged in based on dashboard-like functionalities displayed on the page.",
+    "challenge_details": "",
+    "user_scenarios_login_page": {
+        "scenario_description": "...",
+        "steps": {
+            "1": "..."
+        }
+    }
+}
