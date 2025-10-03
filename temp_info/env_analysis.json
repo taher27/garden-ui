@@ -1,0 +1,47 @@
+{
+  "COOKIE_DOMAIN": {
+    "key": "COOKIE_DOMAIN",
+    "value": "",
+    "type": "string",
+    "confidence": 0.5,
+    "metadata": {},
+    "is_sensitive": false,
+    "suggestions": null
+  },
+  "COOKIE_NAME": {
+    "key": "COOKIE_NAME",
+    "value": "",
+    "type": "string",
+    "confidence": 0.5,
+    "metadata": {},
+    "is_sensitive": false,
+    "suggestions": null
+  },
+  "LOGIN_TYPE": {
+    "key": "LOGIN_TYPE",
+    "value": "okta",
+    "type": "string",
+    "confidence": 0.5,
+    "metadata": {},
+    "is_sensitive": false,
+    "suggestions": null
+  },
+  "SITE_PASSWORD": {
+    "key": "SITE_PASSWORD",
+    "value": "Roost#123",
+    "type": "string",
+    "confidence": 0.5,
+    "metadata": {},
+    "is_sensitive": true,
+    "suggestions": null
+  },
+  "SITE_USERNAME": {
+    "key": "SITE_USERNAME",
+    "value": "playwright@zb.io",
+    "type": "string",
+    "confidence": 0.5,
+    "metadata": {},
+    "is_sensitive": false,
+    "suggestions": null
+  }
+}

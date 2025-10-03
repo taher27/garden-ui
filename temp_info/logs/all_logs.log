@@ -1,0 +1,106 @@
+2025-10-04 03:49:26,997 - DEBUG - ui-test-generator - setup_logging:143 - Starting the ROOST-ui-test-generator
+2025-10-04 03:49:26,997 - DEBUG - ui-test-generator - setup_logging:144 - === LOGGING SESSION STARTED ===
+2025-10-04 03:49:26,997 - DEBUG - ui-test-generator - setup_logging:145 - All logs (unfiltered) saved to: all_logs.log
+2025-10-04 03:49:26,997 - DEBUG - ui-test-generator - setup_logging:146 - Client-facing logs saved to: client.log
+2025-10-04 03:49:26,998 - DEBUG - ui-test-generator - setup_logging:147 - Client log level set to: INFO
+2025-10-04 03:49:26,998 - DEBUG - ui-test-generator - setup_logging:148 - Timestamp: 2025-10-04 03:49:26.998681
+2025-10-04 03:49:26,998 - DEBUG - ui-test-generator - setup_logging:149 - Logging configured. Logs are being saved to the 'C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529925\source\garden-ui\temp_info\logs' directory.
+2025-10-04 03:49:26,998 - INFO - ui-test-generator - setup_logging:150 - Roost UI Test Generator: Beginning automated test creation process.
+2025-10-04 03:49:26,999 - INFO - browser_use_module - get_llm:76 - Using Azure OpenAI deployment
+2025-10-04 03:49:26,999 - INFO - browser_use_module - extract_data_from_protected_url:400 - No user scenario file found or path not set.
+2025-10-04 03:49:27,000 - INFO - llm_invoke - get_llm_client:28 - Using Azure OpenAI: gpt-4o
+2025-10-04 03:49:35,357 - INFO - browser_use_module - extract_data_from_protected_url:408 - Filtered 5 UI_ prefixed variables for form filling from 26 total variables
+2025-10-04 03:49:35,358 - INFO - browser_use_module - extract_data_from_protected_url:421 - AI detected 2 form fields in environment
+2025-10-04 03:49:35,358 - INFO - browser_use_module - extract_data_from_protected_url:423 - Found email: SITE_USERNAME (confidence: 1.00)
+2025-10-04 03:49:35,359 - INFO - browser_use_module - extract_data_from_protected_url:423 - Found username: **** (confidence: 1.00)
+2025-10-04 03:49:35,359 - INFO - browser_use_module - extract_data_from_protected_url:431 - Using credentials for user: playwright@zb.io
+2025-10-04 03:49:35,364 - INFO - browser_use_module - extract_sensitive_data_from_env_analysis_json:62 - [extract_sensitive_data_from_env_analysis_json] Sensitive data extracted: ['x_site_password']
+2025-10-04 03:49:35,365 - INFO - browser_use_module - extract_data_from_protected_url:451 - Detected credentials. Running agent to conduct login
+2025-10-04 03:49:35,370 - DEBUG - browser_use.tokens.service - register_llm:314 - LLM instance 1730944618128 (azure_gpt-4o) is already registered
+2025-10-04 03:49:35,378 - INFO - browser_use.agent.service - _set_file_system:550 - 💾 File system path: C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529925\source\garden-ui\temp_info\temp_profile\default\browseruse_login_data
+2025-10-04 03:49:35,420 - DEBUG - browser_use.utils - get_browser_use_version:573 - Error detecting browser-use version: PackageNotFoundError: No package metadata was found for browser-use
+2025-10-04 03:49:35,420 - INFO - browser_use.Agent🅰 ab53 on 🆂 ab53 🅟 48 - __init__:282 - 🧠 Starting a browser-use agent unknown with base_model=gpt-4o +vision extraction_model=gpt-4o +file_system
+2025-10-04 03:49:35,450 - INFO - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - _log_agent_run:990 - 🚀 Starting task: 
+GOAL:
+Your mission is to perform a detailed login test for the website: https://dev.roost.ai.
+
+### --- Phase 1: Initial Page Analysis --- ###
+1.  **Navigate & Capture URL:** Go to https://dev.roost.ai and immediately capture the final URL after all initial loads and redirects. This is the `login_url`.
+2.  **Capture User Scenarios:** Before any login actions, explore the initial login page. Identify and describe 5 distinct user actions or "scenarios" a user might take on this page and format them as a JSON string.
+
+### --- Phase 2: Login Execution --- ###
+3.  **Locate & Execute Login:** Find the login form for the method "okta". Fill it with the secure credentials `x_username` and `x_password`. If you see a "Remember me" option, check it.
+4.  **Handle Third-Party Logins:** If the process involves redirects to Google, GitHub, Okta, etc., follow the flow as instructed.
+
+### --- Phase 3: Verification & State Saving --- ###
+5.  **Confirm Login Success (CRITICAL):** After submitting, you MUST determine if the login was successful by looking for POSITIVE indicators like a "Dashboard", "PROFILE" icon or a "Logout" button. A change in URL also means login has been completed, use that to confirm login. 
+6.  **Save Authentication State:** Once login is completed, you MUST immediately call the `save_auth_state` function.
+
+### --- Phase 4: Final Reporting --- ###
+7.  **Report Your Findings:** As your absolute final action, you MUST call the `report_and_save_login_results` function. You need to provide it with all the information you gathered, including the `user_scenarios_json_string` you prepared.
+
+CRITICAL RULES:
+- The 5 user scenarios must be from the initial login landing page only.
+- The scenarios must be provided as a single, valid JSON formatted string.
+- You must call `report_and_save_login_results` in all situations at the end, whether the login succeeded or failed.
+
+CLOSING CONDITIONS:
+- IF LOGIN IS SUCCESSFUL, `report_and_save_login_results` AND `save_auth_state` HAVE BEEN CALLED AT LEAST ONCE, TERMINATE THE BROWSER.
+
+2025-10-04 03:49:35,453 - DEBUG - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - _log_agent_run:992 - 🤖 Browser-Use Library Version unknown (pip)
+2025-10-04 03:49:35,453 - DEBUG - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - run:1168 - 🔧 Agent setup: Task ID ab53, Session ID a813, Browser Session ID 6068
+2025-10-04 03:49:35,453 - DEBUG - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - run:1176 - 📡 Dispatching CreateAgentSessionEvent...
+2025-10-04 03:49:35,454 - DEBUG - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - run:1180 - 📡 Dispatching CreateAgentTaskEvent...
+2025-10-04 03:49:35,458 - DEBUG - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - run:1191 - 🔄 Starting main execution loop with max 30 steps...
+2025-10-04 03:49:35,459 - DEBUG - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - run:1220 - 🚶 Starting step 1/30...
+2025-10-04 03:49:35,459 - DEBUG - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - _prepare_context:686 - 🌐 Step 2: Getting browser state...
+2025-10-04 03:49:39,155 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1097 - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= <incognito>
+2025-10-04 03:49:39,342 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1164 -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60204/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-26rfudtt
+2025-10-04 03:49:39,377 - ERROR - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1294 - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-26rfudtt (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:40,621 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1097 - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-26rfudtt
+2025-10-04 03:49:40,630 - DEBUG - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1117 - 🗑️ Cleaning up old tmp user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-26rfudtt and using fresh one:~\AppData\Local\Temp\browseruse-tmp-7et8z874
+2025-10-04 03:49:40,789 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1164 -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60205/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7et8z874
+2025-10-04 03:49:40,819 - ERROR - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1294 - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7et8z874 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:40,820 - WARNING - bubus.helpers - _execute_with_retries:380 - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:49:41,833 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1097 - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7et8z874
+2025-10-04 03:49:41,841 - DEBUG - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1117 - 🗑️ Cleaning up old tmp user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7et8z874 and using fresh one:~\AppData\Local\Temp\browseruse-tmp-7xgfjmea
+2025-10-04 03:49:41,986 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1164 -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60207/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7xgfjmea
+2025-10-04 03:49:42,019 - ERROR - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1294 - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7xgfjmea (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:42,020 - ERROR - bubus.helpers - _execute_with_retries:396 - setup_new_browser_context failed after 3 attempts over 2.9s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:42,020 - WARNING - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - _get_browser_state_with_recovery:648 - Full state retrieval failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:42,021 - WARNING - browser_use.Agent🅰 ab53 on 🆂 6068 🅟 48 - _get_browser_state_with_recovery:650 - 🔄 Falling back to minimal state summary
+2025-10-04 03:49:42,152 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1097 - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7xgfjmea
+2025-10-04 03:49:42,160 - DEBUG - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1117 - 🗑️ Cleaning up old tmp user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7xgfjmea and using fresh one:~\AppData\Local\Temp\browseruse-tmp-3kcgferz
+2025-10-04 03:49:42,306 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1164 -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60208/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-3kcgferz
+2025-10-04 03:49:42,334 - ERROR - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1294 - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-3kcgferz (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:43,340 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1097 - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-3kcgferz
+2025-10-04 03:49:43,347 - DEBUG - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1117 - 🗑️ Cleaning up old tmp user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-3kcgferz and using fresh one:~\AppData\Local\Temp\browseruse-tmp-zxt3uled
+2025-10-04 03:49:43,477 - INFO - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1164 -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60209/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-zxt3uled
+2025-10-04 03:49:43,507 - ERROR - browser_use.BrowserSession🆂 6068:None #80 - _unsafe_setup_new_browser_context:1294 - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-zxt3uled (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:49:43,508 - WARNING - bubus.helpers - _execute_with_retries:380 - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:49:44,867 - DEBUG - browser_use.telemetry.service - flush:89 - PostHog client telemetry queue flushed.
