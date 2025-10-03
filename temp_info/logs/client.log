@@ -1,0 +1,888 @@
+2025-10-04 03:44:06,364 - INFO - Roost UI Test Generator: Beginning automated test creation process.
+2025-10-04 03:44:06,364 - INFO - Using Azure OpenAI deployment
+2025-10-04 03:44:06,365 - INFO - No user scenario file found or path not set.
+2025-10-04 03:44:06,366 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-04 03:44:13,556 - INFO - Filtered 5 UI_ prefixed variables for form filling from 26 total variables
+2025-10-04 03:44:13,556 - INFO - AI detected 2 form fields in environment
+2025-10-04 03:44:13,556 - INFO - Found email: SITE_USERNAME (confidence: 1.00)
+2025-10-04 03:44:13,557 - INFO - Found username: **** (confidence: 1.00)
+2025-10-04 03:44:13,557 - INFO - Using credentials for user: playwright@zb.io
+2025-10-04 03:44:13,559 - INFO - [extract_sensitive_data_from_env_analysis_json] Sensitive data extracted: ['x_site_password', 'x_site_username']
+2025-10-04 03:44:13,570 - INFO - Detected credentials. Running agent to conduct login
+2025-10-04 03:44:13,615 - INFO - 🧠 Starting a browser-use agent unknown with base_model=gpt-4o +vision extraction_model=gpt-4o +file_system
+2025-10-04 03:44:13,646 - INFO - 🚀 Starting task: 
+GOAL:
+Your mission is to perform a detailed login test for the website: https://dev.roost.ai.
+
+### --- Phase 1: Initial Page Analysis --- ###
+1.  **Navigate & Capture URL:** Go to https://dev.roost.ai and immediately capture the final URL after all initial loads and redirects. This is the `login_url`.
+2.  **Capture User Scenarios:** Before any login actions, explore the initial login page. Identify and describe 5 distinct user actions or "scenarios" a user might take on this page and format them as a JSON string.
+
+### --- Phase 2: Login Execution --- ###
+3.  **Locate & Execute Login:** Find the login form for the method "okta". Fill it with the secure credentials `x_username` and `x_password`. If you see a "Remember me" option, check it.
+4.  **Handle Third-Party Logins:** If the process involves redirects to Google, GitHub, Okta, etc., follow the flow as instructed.
+
+### --- Phase 3: Verification & State Saving --- ###
+5.  **Confirm Login Success (CRITICAL):** After submitting, you MUST determine if the login was successful by looking for POSITIVE indicators like a "Dashboard", "PROFILE" icon or a "Logout" button. A change in URL also means login has been completed, use that to confirm login. 
+6.  **Save Authentication State:** Once login is completed, you MUST immediately call the `save_auth_state` function.
+
+### --- Phase 4: Final Reporting --- ###
+7.  **Report Your Findings:** As your absolute final action, you MUST call the `report_and_save_login_results` function. You need to provide it with all the information you gathered, including the `user_scenarios_json_string` you prepared.
+
+CRITICAL RULES:
+- The 5 user scenarios must be from the initial login landing page only.
+- The scenarios must be provided as a single, valid JSON formatted string.
+- You must call `report_and_save_login_results` in all situations at the end, whether the login succeeded or failed.
+
+CLOSING CONDITIONS:
+- IF LOGIN IS SUCCESSFUL, `report_and_save_login_results` AND `save_auth_state` HAVE BEEN CALLED AT LEAST ONCE, TERMINATE THE BROWSER.
+
+2025-10-04 03:44:17,358 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= <incognito>
+2025-10-04 03:44:17,546 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60070/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7aqf4yu_
+2025-10-04 03:44:17,586 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7aqf4yu_ (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:18,807 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7aqf4yu_
+2025-10-04 03:44:19,043 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60071/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-h83nis2h
+2025-10-04 03:44:19,088 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-h83nis2h (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:19,089 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:20,102 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-h83nis2h
+2025-10-04 03:44:20,326 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60074/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-c52dlv_d
+2025-10-04 03:44:20,363 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-c52dlv_d (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:20,365 - ERROR - setup_new_browser_context failed after 3 attempts over 3.0s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:20,366 - WARNING - Full state retrieval failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:20,367 - WARNING - 🔄 Falling back to minimal state summary
+2025-10-04 03:44:20,521 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-c52dlv_d
+2025-10-04 03:44:20,750 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60075/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-nrhrwxs8
+2025-10-04 03:44:20,785 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-nrhrwxs8 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:21,806 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-nrhrwxs8
+2025-10-04 03:44:22,051 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60077/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-p3giyjp7
+2025-10-04 03:44:22,093 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-p3giyjp7 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:22,094 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:23,111 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-p3giyjp7
+2025-10-04 03:44:23,251 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60080/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-0q8txfv3
+2025-10-04 03:44:23,275 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-0q8txfv3 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:23,275 - ERROR - setup_new_browser_context failed after 3 attempts over 2.8s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:23,321 - ERROR - ❌ Result failed 1/3 times:
+ [WinError 2] The system cannot find the file specified
+Stacktrace:
+Traceback (most recent call last):
+  File "browser_use\agent\service.py", line 664, in step
+  File "browser_use\agent\service.py", line 687, in _prepare_context
+  File "browser_use\agent\service.py", line 651, in _get_browser_state_with_recovery
+  File "browser_use\browser\session.py", line 112, in wrapper
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+2025-10-04 03:44:23,323 - INFO - 📍 Step 1: Ran 1 actions in 9.67s: ❌ 1
+2025-10-04 03:44:23,324 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-04 03:44:23,351 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-0q8txfv3
+2025-10-04 03:44:23,495 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60081/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-tronwsub
+2025-10-04 03:44:23,521 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-tronwsub (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:24,530 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-tronwsub
+2025-10-04 03:44:24,668 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60082/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-f9ws9nxu
+2025-10-04 03:44:24,696 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-f9ws9nxu (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:24,697 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:25,725 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-f9ws9nxu
+2025-10-04 03:44:25,877 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60083/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-_prtcfzt
+2025-10-04 03:44:25,903 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-_prtcfzt (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:25,903 - ERROR - setup_new_browser_context failed after 3 attempts over 2.6s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:25,905 - ERROR - --- Hook Error: An unexpected error occurred: [WinError 2] The system cannot find the file specified ---
+Traceback (most recent call last):
+  File "lifecycle_hook_extraction.py", line 157, in capture_ui_state_for_llm
+  File "browser_use\browser\session.py", line 1945, in get_current_page
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:26,048 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-_prtcfzt
+2025-10-04 03:44:26,234 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60084/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-rh3h1sp0
+2025-10-04 03:44:26,267 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-rh3h1sp0 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:27,285 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-rh3h1sp0
+2025-10-04 03:44:27,451 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60085/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-gue_8wc7
+2025-10-04 03:44:27,491 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-gue_8wc7 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:27,494 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:28,502 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-gue_8wc7
+2025-10-04 03:44:28,675 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60086/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-r4yq3ogj
+2025-10-04 03:44:28,703 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-r4yq3ogj (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:28,704 - ERROR - setup_new_browser_context failed after 3 attempts over 2.7s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:28,704 - WARNING - Full state retrieval failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:28,705 - WARNING - 🔄 Falling back to minimal state summary
+2025-10-04 03:44:28,735 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-r4yq3ogj
+2025-10-04 03:44:28,862 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60087/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ky9ngyx6
+2025-10-04 03:44:28,886 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ky9ngyx6 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:29,906 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ky9ngyx6
+2025-10-04 03:44:30,016 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60088/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-m8mtqar3
+2025-10-04 03:44:30,035 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-m8mtqar3 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:30,037 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:31,052 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-m8mtqar3
+2025-10-04 03:44:31,204 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60091/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-njyymcxn
+2025-10-04 03:44:31,228 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-njyymcxn (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:31,229 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:31,235 - ERROR - ❌ Result failed 2/3 times:
+ [WinError 2] The system cannot find the file specified
+Stacktrace:
+Traceback (most recent call last):
+  File "browser_use\agent\service.py", line 664, in step
+  File "browser_use\agent\service.py", line 687, in _prepare_context
+  File "browser_use\agent\service.py", line 651, in _get_browser_state_with_recovery
+  File "browser_use\browser\session.py", line 112, in wrapper
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+2025-10-04 03:44:31,238 - INFO - 📍 Step 1: Ran 1 actions in 5.33s: ❌ 1
+2025-10-04 03:44:31,239 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-04 03:44:31,370 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-njyymcxn
+2025-10-04 03:44:31,507 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60092/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ph2bqds2
+2025-10-04 03:44:31,527 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ph2bqds2 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:32,540 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ph2bqds2
+2025-10-04 03:44:32,686 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60093/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-omoadi5q
+2025-10-04 03:44:32,714 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-omoadi5q (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:32,716 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:33,738 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-omoadi5q
+2025-10-04 03:44:33,879 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60094/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xxy8slm2
+2025-10-04 03:44:33,901 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xxy8slm2 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:33,902 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:33,902 - ERROR - --- Hook Error: An unexpected error occurred: [WinError 2] The system cannot find the file specified ---
+Traceback (most recent call last):
+  File "lifecycle_hook_extraction.py", line 157, in capture_ui_state_for_llm
+  File "browser_use\browser\session.py", line 1945, in get_current_page
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:33,937 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xxy8slm2
+2025-10-04 03:44:34,090 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60095/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-y8_o0nms
+2025-10-04 03:44:34,118 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-y8_o0nms (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:35,096 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-y8_o0nms
+2025-10-04 03:44:35,242 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60096/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-64nywbgp
+2025-10-04 03:44:35,263 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-64nywbgp (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:35,265 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:36,282 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-64nywbgp
+2025-10-04 03:44:36,400 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60098/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4mvb2r7b
+2025-10-04 03:44:36,421 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4mvb2r7b (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:36,422 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:36,422 - WARNING - Full state retrieval failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:36,424 - WARNING - 🔄 Falling back to minimal state summary
+2025-10-04 03:44:36,552 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4mvb2r7b
+2025-10-04 03:44:36,692 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60099/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-6kmmomz7
+2025-10-04 03:44:36,714 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-6kmmomz7 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:37,735 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-6kmmomz7
+2025-10-04 03:44:37,852 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60100/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-idn33fq5
+2025-10-04 03:44:37,876 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-idn33fq5 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:37,877 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:38,873 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-idn33fq5
+2025-10-04 03:44:38,993 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60101/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-rxe4vl28
+2025-10-04 03:44:39,018 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-rxe4vl28 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:39,019 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:39,022 - ERROR - ❌ Result failed 3/3 times:
+ [WinError 2] The system cannot find the file specified
+Stacktrace:
+Traceback (most recent call last):
+  File "browser_use\agent\service.py", line 664, in step
+  File "browser_use\agent\service.py", line 687, in _prepare_context
+  File "browser_use\agent\service.py", line 651, in _get_browser_state_with_recovery
+  File "browser_use\browser\session.py", line 112, in wrapper
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+2025-10-04 03:44:39,023 - INFO - 📍 Step 1: Ran 1 actions in 5.11s: ❌ 1
+2025-10-04 03:44:39,024 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-04 03:44:39,052 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-rxe4vl28
+2025-10-04 03:44:39,176 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60102/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xjx5uybe
+2025-10-04 03:44:39,196 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xjx5uybe (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:40,204 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xjx5uybe
+2025-10-04 03:44:40,372 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60103/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xee3x5aq
+2025-10-04 03:44:40,398 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xee3x5aq (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:40,399 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:41,406 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xee3x5aq
+2025-10-04 03:44:41,561 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60104/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-0orq4yli
+2025-10-04 03:44:41,585 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-0orq4yli (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:41,586 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:41,586 - ERROR - --- Hook Error: An unexpected error occurred: [WinError 2] The system cannot find the file specified ---
+Traceback (most recent call last):
+  File "lifecycle_hook_extraction.py", line 157, in capture_ui_state_for_llm
+  File "browser_use\browser\session.py", line 1945, in get_current_page
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:41,592 - ERROR - ❌ Stopping due to 3 consecutive failures
+2025-10-04 03:44:43,637 - ERROR - Error reading C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529607\source\garden-ui\temp_info\temp_profile\default\browseruse_login_data\login_result_and_scenarios.json: [Errno 2] No such file or directory: 'C:\\var\\tmp\\Roost\\RoostGPT\\tr-ui-test-garden-ui\\1759529607\\source\\garden-ui\\temp_info\\temp_profile\\default\\browseruse_login_data\\login_result_and_scenarios.json'
+2025-10-04 03:44:43,652 - INFO - [browser_use_module.runLoginAgent] Added login results to data
+2025-10-04 03:44:43,652 - INFO - Closing login agent's browser session...
+2025-10-04 03:44:43,654 - INFO - Login agent's session closed.
+2025-10-04 03:44:43,658 - WARNING - Login failed or skipped. Continuing
+2025-10-04 03:44:43,658 - INFO - 🚀 Starting scraper for https://dev.roost.ai...
+2025-10-04 03:44:44,870 - INFO - Using existing state
+2025-10-04 03:44:44,928 - INFO - 🧠 Starting a browser-use agent unknown with base_model=gpt-4o +vision extraction_model=gpt-4o +file_system
+2025-10-04 03:44:44,960 - INFO - Starting extraction process...
+2025-10-04 03:44:44,961 - INFO - 🚀 Starting task: 
+        # Primary Goal
+        Your objective is to explore the web application starting at `https://dev.roost.ai`. You will navigate through the site to **identify and document exactly 5 unique internal pages**. For each page, you will also document 1-2 primary user interaction scenarios.
+
+        # Form Interaction During Exploration
+        **IMPORTANT**: While exploring each page, also check for forms and fill them as part of natural user interaction:
+        - If you encounter forms (contact, create, edit, search, etc.), fill them using environment values
+        - Use appropriate values for each field type, or reasonable defaults if env data unavailable
+        - Submit forms after filling to see the complete user flow
+        - Document form interactions as part of your page scenarios
+        - Pay attention to "Add Test", "Create Test", or similar forms relevant to the application
+        # Termination Condition
+        You MUST stop browsing and output the final JSON **immediately after you have documented the 5th unique page**. Do not explore any further.
+
+        # Documenting Goals
+        First understand the webpage's purpose well (its business use cases, it's actual user use cases). Then document potential user journeys for the webpage in the JSON format below.
+        Ensure your user journeys are robust and test functionalities of ONLY that URL well (Please ensure you do not document user journeys that require traversing other URLs or pages of which UI element data isnt clear)
+        Do not expect the webpage to document its user interaction scenarios and workflows, you have to be creative and generate some from the knowledge acquired by the page
+        # Execution Plan
+        1.  **State Management**: Maintain a running list of already visited URLs to avoid duplicates.
+        2.  **Navigate & Document**:
+            * Go to `https://dev.roost.ai`.
+            * This is your first page. Document its URL, title, user scenarios and every internal link. Add the URL to your list of visited URLs.
+        3.  **Exploration Loop (Repeat 4 times)**:
+            * From your **current page**, find the most promising, **unvisited** internal link. Prioritize links that lead to new features (e.g., "Dashboard", "Products", "Settings") over utility links (e.g., "Privacy Policy").
+            * Navigate to that link.
+            * This is a new unique page. Document its URL, title, and 1-2 primary user scenarios. Add the URL to your visited list.
+            * **Form Interaction**: If this page contains forms, fill them with available environment values and submit them. Document the form interaction as part of the user scenarios.
+        4.  **Final Output**: After documenting the final page, assemble all collected information into a single JSON object matching the `FINAL OUTPUT FORMAT` and terminate the process.
+        ---
+
+        ### FINAL OUTPUT FORMAT (JSON - EXACT STRUCTURE)
+
+        Your entire output **MUST** be a single, valid JSON object conforming to this structure. Do not include any other text or explanation.
+        
+        ```json
+        {
+        "url":,
+        "explored_pages_and_scenarios": [
+            {
+            "page_title": "Title of the page",
+            "scenarios_on_page": [
+                {
+                "scenario_name": "Concise name for a potential user journey",
+                "scenario_description": "A brief summary of a user flow and its purpose.",
+                "steps": [
+                    {
+                    "action": "e.g., click, type, assert_visibility",
+                    "element_description": "Natural language description of the element",
+                    }
+                ],
+                "expected_outcome": ["Description of what should happen after the steps"]
+                }
+            ]
+            }
+            "selector_for_scenario": [
+                    {
+                        "Name of element":- page 2 button
+                    }
+            ]
+        ],
+        }
+
+2025-10-04 03:44:45,131 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= <incognito>
+2025-10-04 03:44:45,303 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60113/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xi48c1mf
+2025-10-04 03:44:46,140 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xi48c1mf (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:47,808 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-xi48c1mf
+2025-10-04 03:44:47,937 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60116/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-uvxp81gn
+2025-10-04 03:44:47,958 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-uvxp81gn (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:47,958 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:48,970 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-uvxp81gn
+2025-10-04 03:44:49,108 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60119/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-tru0zf8y
+2025-10-04 03:44:49,149 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-tru0zf8y (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:49,150 - ERROR - setup_new_browser_context failed after 3 attempts over 4.0s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:49,151 - WARNING - Full state retrieval failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:49,151 - WARNING - 🔄 Falling back to minimal state summary
+2025-10-04 03:44:49,182 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-tru0zf8y
+2025-10-04 03:44:49,359 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60120/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-9x0gma9v
+2025-10-04 03:44:49,402 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-9x0gma9v (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:50,418 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-9x0gma9v
+2025-10-04 03:44:50,695 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60121/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-sldtv1hi
+2025-10-04 03:44:50,738 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-sldtv1hi (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:50,739 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:51,759 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-sldtv1hi
+2025-10-04 03:44:51,887 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60122/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-zq5krgk1
+2025-10-04 03:44:51,911 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-zq5krgk1 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:51,912 - ERROR - setup_new_browser_context failed after 3 attempts over 2.7s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:51,919 - ERROR - ❌ Result failed 1/3 times:
+ [WinError 2] The system cannot find the file specified
+Stacktrace:
+Traceback (most recent call last):
+  File "browser_use\agent\service.py", line 664, in step
+  File "browser_use\agent\service.py", line 687, in _prepare_context
+  File "browser_use\agent\service.py", line 651, in _get_browser_state_with_recovery
+  File "browser_use\browser\session.py", line 112, in wrapper
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+2025-10-04 03:44:51,921 - INFO - 📍 Step 1: Ran 1 actions in 6.95s: ❌ 1
+2025-10-04 03:44:51,922 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-04 03:44:52,053 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-zq5krgk1
+2025-10-04 03:44:52,183 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60123/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-6savg8c0
+2025-10-04 03:44:52,202 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-6savg8c0 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:53,221 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-6savg8c0
+2025-10-04 03:44:53,369 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60124/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-fakc7zj1
+2025-10-04 03:44:53,396 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-fakc7zj1 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:53,396 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:54,411 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-fakc7zj1
+2025-10-04 03:44:54,536 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60125/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-5atm9s_u
+2025-10-04 03:44:54,560 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-5atm9s_u (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:54,561 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:54,561 - ERROR - --- Hook Error: An unexpected error occurred: [WinError 2] The system cannot find the file specified ---
+Traceback (most recent call last):
+  File "lifecycle_hook_extraction.py", line 157, in capture_ui_state_for_llm
+  File "browser_use\browser\session.py", line 1945, in get_current_page
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:54,599 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-5atm9s_u
+2025-10-04 03:44:54,723 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60126/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7dr4vxjn
+2025-10-04 03:44:54,745 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7dr4vxjn (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:55,771 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7dr4vxjn
+2025-10-04 03:44:55,917 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60127/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-bkr87lki
+2025-10-04 03:44:55,943 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-bkr87lki (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:55,944 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:56,965 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-bkr87lki
+2025-10-04 03:44:57,078 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60128/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-e6gs0m_n
+2025-10-04 03:44:57,098 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-e6gs0m_n (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:57,099 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:57,099 - WARNING - Full state retrieval failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:57,099 - WARNING - 🔄 Falling back to minimal state summary
+2025-10-04 03:44:57,225 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-e6gs0m_n
+2025-10-04 03:44:57,346 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60129/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-49h_g09t
+2025-10-04 03:44:57,372 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-49h_g09t (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:58,384 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-49h_g09t
+2025-10-04 03:44:58,542 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60131/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-cswy5dgo
+2025-10-04 03:44:58,573 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-cswy5dgo (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:58,574 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:44:59,605 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-cswy5dgo
+2025-10-04 03:44:59,726 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60132/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-j15fvhv1
+2025-10-04 03:44:59,750 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-j15fvhv1 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:59,752 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:44:59,755 - ERROR - ❌ Result failed 2/3 times:
+ [WinError 2] The system cannot find the file specified
+Stacktrace:
+Traceback (most recent call last):
+  File "browser_use\agent\service.py", line 664, in step
+  File "browser_use\agent\service.py", line 687, in _prepare_context
+  File "browser_use\agent\service.py", line 651, in _get_browser_state_with_recovery
+  File "browser_use\browser\session.py", line 112, in wrapper
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+2025-10-04 03:44:59,757 - INFO - 📍 Step 1: Ran 1 actions in 5.19s: ❌ 1
+2025-10-04 03:44:59,759 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-04 03:44:59,782 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-j15fvhv1
+2025-10-04 03:44:59,914 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60133/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-9wtgdazj
+2025-10-04 03:44:59,940 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-9wtgdazj (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:00,962 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-9wtgdazj
+2025-10-04 03:45:01,082 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60136/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-raorl6ih
+2025-10-04 03:45:01,104 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-raorl6ih (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:01,106 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:45:02,121 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-raorl6ih
+2025-10-04 03:45:02,230 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60137/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-k7tid170
+2025-10-04 03:45:02,255 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-k7tid170 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:02,257 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:02,258 - ERROR - --- Hook Error: An unexpected error occurred: [WinError 2] The system cannot find the file specified ---
+Traceback (most recent call last):
+  File "lifecycle_hook_extraction.py", line 157, in capture_ui_state_for_llm
+  File "browser_use\browser\session.py", line 1945, in get_current_page
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:02,391 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-k7tid170
+2025-10-04 03:45:02,509 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60139/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-pbql5gnk
+2025-10-04 03:45:02,535 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-pbql5gnk (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:03,517 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-pbql5gnk
+2025-10-04 03:45:03,638 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60140/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ox2p6yj6
+2025-10-04 03:45:03,657 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ox2p6yj6 (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:03,658 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:45:04,680 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ox2p6yj6
+2025-10-04 03:45:04,784 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60141/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-_xkpbqpv
+2025-10-04 03:45:04,804 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-_xkpbqpv (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:04,806 - ERROR - setup_new_browser_context failed after 3 attempts over 2.4s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:04,806 - WARNING - Full state retrieval failed: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:04,807 - WARNING - 🔄 Falling back to minimal state summary
+2025-10-04 03:45:04,828 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-_xkpbqpv
+2025-10-04 03:45:04,964 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60142/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7z1nvcjq
+2025-10-04 03:45:04,984 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7z1nvcjq (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:05,997 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-7z1nvcjq
+2025-10-04 03:45:06,148 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60143/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4l_y8bwb
+2025-10-04 03:45:06,174 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4l_y8bwb (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:06,176 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:45:07,190 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4l_y8bwb
+2025-10-04 03:45:07,318 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60144/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4ah8n9c_
+2025-10-04 03:45:07,341 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4ah8n9c_ (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:07,341 - ERROR - setup_new_browser_context failed after 3 attempts over 2.5s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:07,346 - ERROR - ❌ Result failed 3/3 times:
+ [WinError 2] The system cannot find the file specified
+Stacktrace:
+Traceback (most recent call last):
+  File "browser_use\agent\service.py", line 664, in step
+  File "browser_use\agent\service.py", line 687, in _prepare_context
+  File "browser_use\agent\service.py", line 651, in _get_browser_state_with_recovery
+  File "browser_use\browser\session.py", line 112, in wrapper
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+
+2025-10-04 03:45:07,350 - INFO - 📍 Step 1: Ran 1 actions in 5.09s: ❌ 1
+2025-10-04 03:45:07,351 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-04 03:45:07,474 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-4ah8n9c_
+2025-10-04 03:45:07,609 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60145/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-wk2bypay
+2025-10-04 03:45:07,630 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-wk2bypay (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:08,638 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-wk2bypay
+2025-10-04 03:45:08,764 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60146/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-80xyga7s
+2025-10-04 03:45:08,788 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-80xyga7s (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:08,788 - WARNING - setup_new_browser_context failed (attempt 2/3): FileNotFoundError: [WinError 2] The system cannot find the file specified. Waiting 1.0s before retry...
+2025-10-04 03:45:09,762 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-80xyga7s
+2025-10-04 03:45:09,884 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60147/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-w4gpxghy
+2025-10-04 03:45:09,902 - ERROR - ❌ Launching new local browser playwright:chromium (v???) failed!
+	Failed for unknown reason with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-w4gpxghy (created with v???)
+	Try using a different browser version/channel or delete the user_data_dir to start over with a fresh profile.
+	(can happen if different versions of Chrome/Chromium/Brave/etc. tried to share one dir)
+
+FileNotFoundError [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:09,903 - ERROR - setup_new_browser_context failed after 3 attempts over 2.4s. Final error: FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:09,903 - ERROR - --- Hook Error: An unexpected error occurred: [WinError 2] The system cannot find the file specified ---
+Traceback (most recent call last):
+  File "lifecycle_hook_extraction.py", line 157, in capture_ui_state_for_llm
+  File "browser_use\browser\session.py", line 1945, in get_current_page
+  File "browser_use\browser\session.py", line 382, in start
+  File "browser_use\browser\session.py", line 779, in _connect_or_launch_browser
+  File "bubus\helpers.py", line 507, in wrapper
+  File "bubus\helpers.py", line 367, in _execute_with_retries
+  File "browser_use\browser\session.py", line 1060, in setup_new_browser_context
+  File "browser_use\browser\session.py", line 1167, in _unsafe_setup_new_browser_context
+  File "asyncio\subprocess.py", line 224, in create_subprocess_exec
+  File "asyncio\base_events.py", line 1744, in subprocess_exec
+  File "asyncio\windows_events.py", line 400, in _make_subprocess_transport
+  File "asyncio\base_subprocess.py", line 36, in __init__
+  File "asyncio\windows_events.py", line 878, in _start
+  File "asyncio\windows_utils.py", line 153, in __init__
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-10-04 03:45:09,908 - ERROR - ❌ Stopping due to 3 consecutive failures
+2025-10-04 03:45:11,591 - WARNING - No captured_ui_states found to write to file.
+2025-10-04 03:45:11,591 - INFO - Agent run complete. Processing agent history...
+2025-10-04 03:45:11,598 - WARNING - Extraction returned empty or null JSON.
+2025-10-04 03:45:11,599 - INFO - Closing login agent's browser session...
+2025-10-04 03:45:11,600 - INFO - Login agent's session closed.
+2025-10-04 03:45:11,602 - INFO - Data extraction completed successfully. Results saved to C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529607\source\garden-ui\temp_info\merged_scenarios.json
+2025-10-04 03:45:11,602 - INFO -  Continuing to test generation using extracted data...
+2025-10-04 03:45:11,603 - INFO - 🧹 Cleaning up scenarios directory before generation: C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529607\source\garden-ui\playwright_tests\scenarios
+2025-10-04 03:45:11,606 - INFO - Starting scenario generation process...
+2025-10-04 03:45:11,606 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-04 03:45:15,940 - INFO -   -> Saved business requirement to: business_requirements.json
+2025-10-04 03:45:15,940 - ERROR - No prompts were generated for processing
+2025-10-04 03:45:15,941 - ERROR - ❌ No valid scenarios could be generated across all URLs.
+2025-10-04 03:45:15,941 - INFO - 🧹 Cleaning up tests directory before generation: C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529607\source\garden-ui\playwright_tests\tests
+2025-10-04 03:45:15,942 - INFO - Directory 'C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529607\source\garden-ui\playwright_tests\tests' does not exist. Skipping cleanup.
+2025-10-04 03:45:15,943 - INFO -  Step 2: Generating Playwright tests from scenarios...
+2025-10-04 03:45:15,943 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-04 03:45:17,031 - INFO - Loading and validating all scenario files...
+2025-10-04 03:45:17,032 - WARNING - No scenario JSON files found in the specified directory.
+2025-10-04 03:45:17,032 - INFO -  Generated tests saved to C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529607\source\garden-ui\playwright_tests/
+2025-10-04 03:45:17,033 - INFO -  All done! You can now run the tests with:
+2025-10-04 03:45:17,034 - INFO - cd C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759529607\source\garden-ui\playwright_tests
+2025-10-04 03:45:17,034 - INFO - npm install
+2025-10-04 03:45:17,035 - INFO - npx playwright install
+2025-10-04 03:45:17,035 - INFO - npx playwright test
