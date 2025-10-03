@@ -1,0 +1,90 @@
+{
+  "test_name": "Verify navigation to 'TestGptController_getAllTest' endpoint details",
+  "description": "This test ensures a user can navigate to the 'TestGptController_getAllTest' endpoint section and interact with its details.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai.",
+    "Locate the 'tag/RoostGPT/operation/TestGptController_getAllTest' link.",
+    "Click the link to navigate to the endpoint details.",
+    "Verify the endpoint details are visible.",
+    "Locate the 'GET /test' button.",
+    "Click the 'GET /test' button.",
+    "Verify the sample payload and response details are displayed."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='#tag/RoostGPT/operation/TestGptController_getAllTest' and contains(@class, 'sc-jlZhew')]",
+      "text": "tag/RoostGPT/operation/TestGptController_getAllTest",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+    },
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()='GET\\n/test']",
+      "text": "GET /test",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+    }
+  ],
+  "expected_results": [
+    "User navigates to the 'TestGptController_getAllTest' endpoint section.",
+    "Sample payload and response details are displayed for the 'GET /test' button."
+  ],
+  "edge_cases": [
+    "The 'tag/RoostGPT/operation/TestGptController_getAllTest' link is broken.",
+    "Endpoint details fail to load.",
+    "The 'GET /test' button is unresponsive.",
+    "Payload details are incomplete or corrupted.",
+    "Browser cache causes outdated data to be displayed."
+  ],
+  "data_requirements": [
+    "Valid URL for the API documentation page.",
+    "Functional 'GET /test' button and endpoint details.",
+    "Sample payload and response data available.",
+    "JavaScript enabled in the browser.",
+    "Stable internet connection."
+  ],
+  "dependencies": [
+    "API documentation page is accessible.",
+    "Endpoint details are available.",
+    "JavaScript is functional for the button.",
+    "Browser supports dynamic UI actions."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET /test API endpoint."
+  ],
+  "performance_metrics": [
+    "Time taken to load endpoint details.",
+    "Responsiveness of the 'GET /test' button."
+  ],
+  "accessibility_requirements": [
+    "Ensure the link and button are keyboard-navigable.",
+    "Verify proper ARIA roles for the elements.",
+    "Check for sufficient color contrast for readability."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "79c03d78-9a87-4ed6-bf80-d82754d81200",
+    "created_at": "2025-10-03T18:21:26.617045Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "cross-browser",
+      "mobile",
+      "navigation",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "medium"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "test_name": "Integrate OpenAI Model with Token Validation",
+  "description": "This test ensures that a user can integrate an OpenAI model by providing a valid base URL and token, and verifying the integration.",
+  "type": "integration",
+  "pages": [
+    "https://dev.roost.ai/gptCLIForm"
+  ],
+  "steps": [
+    "Navigate to the RoostGPT Config page.",
+    "Click the Gen AI Models tab to view integration options.",
+    "Type the OpenAI Base URL into the input field.",
+    "Type the OpenAI Token into the input field.",
+    "Click the Verify button to validate the integration.",
+    "Check that a success message is displayed confirming the integration."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/gptCLIForm' and contains(@class, 'nav-link')]",
+      "text": "RoostGPT Config",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"openai-token\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    },
+    {
+      "element_type": "button",
+      "selector": "[data-testid=\"openai-token-unMask-icon\"]",
+      "text": "",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/gptCLIForm"
+    }
+  ],
+  "expected_results": [
+    "Integration is validated successfully with a success message.",
+    "Errors are displayed for invalid base URL or token."
+  ],
+  "edge_cases": [
+    "User enters an invalid base URL format.",
+    "User enters an expired or revoked token.",
+    "User tries to verify without entering a base URL.",
+    "User tries to verify without entering a token.",
+    "Network timeout during the verification process."
+  ],
+  "data_requirements": [
+    "Valid OpenAI Base URL.",
+    "Valid OpenAI Token.",
+    "Mock data to simulate invalid credentials.",
+    "API endpoint for integration verification.",
+    "Success and error response messages from the API."
+  ],
+  "dependencies": [
+    "OpenAI Base URL and Token fields must be accessible.",
+    "Verify button must be enabled only when both fields are filled.",
+    "Backend API for token validation must be available."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "POST /api/openai/integration to validate credentials."
+  ],
+  "performance_metrics": [
+    "Response time for token validation.",
+    "Load time for the Gen AI Models tab."
+  ],
+  "accessibility_requirements": [
+    "Input fields must have ARIA labels.",
+    "Success and error messages must be screen-reader accessible.",
+    "Verify button must be usable via keyboard navigation."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "145db37e-3e69-4abd-862f-d3406115806b",
+    "created_at": "2025-10-03T18:21:26.620153Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "integration",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "high"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "url": "https://dev.roost.ai/docs/api",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost AI API Documentation",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Explore API Endpoints",
+          "scenario_description": "User navigates through the API documentation to understand the available endpoints and their functionalities.",
+          "steps": [
+            {"action": "click", "element_description": "Link to API documentation"},
+            {"action": "assert_visibility", "element_description": "API endpoint details and request samples"}
+          ],
+          "expected_outcome": ["User gains understanding of the API endpoints and their usage."]
+        },
+        {
+          "scenario_name": "Download OpenAPI Specification",
+          "scenario_description": "User downloads the OpenAPI specification for offline review or integration.",
+          "steps": [
+            {"action": "click", "element_description": "Download OpenAPI specification link"}
+          ],
+          "expected_outcome": ["OpenAPI specification is downloaded to the user's device."]
+        },
+        {
+          "scenario_name": "Test API Integration",
+          "scenario_description": "User tests API integration by sending requests to various endpoints.",
+          "steps": [
+            {"action": "type", "element_description": "Input field for API request parameters"},
+            {"action": "click", "element_description": "Send request button"}
+          ],
+          "expected_outcome": ["User sees the response from the API and confirms integration functionality."]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+    "login_url": "https://dev.roost.ai/login",
+    "login_success": false,
+    "final_page_url": "https://dev.roost.ai/login",
+    "outcome_message": "User scenarios identified and formatted successfully. Login not yet attempted.",
+    "challenge_details": "",
+    "user_scenarios_login_page": [
+        {
+            "scenario_description": "Login using Google account",
+            "steps": {
+                "1": "Click on the Google login icon.",
+                "2": "Authorize access using Google credentials.",
+                "3": "Redirect back to the Roost.ai platform."
+            }
+        },
+        {
+            "scenario_description": "Login using GitHub account",
+            "steps": {
+                "1": "Click on the GitHub login icon.",
+                "2": "Authorize access using GitHub credentials.",
+                "3": "Redirect back to the Roost.ai platform."
+            }
+        },
+        {
+            "scenario_description": "Login using Microsoft account",
+            "steps": {
+                "1": "Click on the Microsoft login icon.",
+                "2": "Authorize access using Microsoft credentials.",
+                "3": "Redirect back to the Roost.ai platform."
+            }
+        },
+        {
+            "scenario_description": "Login using Okta authentication",
+            "steps": {
+                "1": "Click on the Okta login icon.",
+                "2": "Provide Okta credentials and complete authentication.",
+                "3": "Redirect back to the Roost.ai platform."
+            }
+        },
+        {
+            "scenario_description": "Access documentation",
+            "steps": {
+                "1": "Click on the 'Documentation' link at the bottom of the page.",
+                "2": "Navigate the documentation resources for Roost.ai."
+            }
+        }
+    ]
+}

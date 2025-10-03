@@ -1,0 +1,91 @@
+{
+  "test_name": "Verify 'Expand all' and 'Collapse all' functionality for API endpoint details",
+  "description": "This test ensures a user can expand and collapse all API endpoint details using the respective buttons.",
+  "type": "functional",
+  "pages": [
+    "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+  ],
+  "steps": [
+    "Navigate to https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest.",
+    "Locate the 'Expand all' button.",
+    "Click the 'Expand all' button.",
+    "Verify that all API endpoint details are expanded.",
+    "Locate the 'Collapse all' button.",
+    "Click the 'Collapse all' button.",
+    "Verify that all API endpoint details are collapsed."
+  ],
+  "selectors": [
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()='Expand all']",
+      "text": "Expand all",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+    },
+    {
+      "element_type": "button",
+      "selector": "//button[normalize-space()='Collapse all']",
+      "text": "Collapse all",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest"
+    }
+  ],
+  "expected_results": [
+    "All API endpoint details expand when 'Expand all' is clicked.",
+    "All API endpoint details collapse when 'Collapse all' is clicked."
+  ],
+  "edge_cases": [
+    "The 'Expand all' button is not visible or clickable.",
+    "The 'Collapse all' button is not visible or clickable.",
+    "Only some API endpoint details expand or collapse.",
+    "Buttons are unresponsive due to JavaScript errors.",
+    "Expanded details are unreadable or improperly formatted."
+  ],
+  "data_requirements": [
+    "Valid URL for the API documentation page.",
+    "API endpoint details must be available and expandable.",
+    "Functional 'Expand all' and 'Collapse all' buttons.",
+    "JavaScript enabled in the browser.",
+    "Stable internet connection."
+  ],
+  "dependencies": [
+    "API documentation page is accessible.",
+    "JavaScript is functional for the buttons.",
+    "Browser supports dynamic UI actions.",
+    "No UI blockers are present."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "None"
+  ],
+  "performance_metrics": [
+    "Time taken to expand or collapse all details.",
+    "Responsiveness of the buttons under load."
+  ],
+  "accessibility_requirements": [
+    "Ensure buttons are accessible via keyboard navigation.",
+    "Check for proper ARIA roles for 'Expand all' and 'Collapse all' buttons.",
+    "Verify sufficient color contrast for the buttons."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "c0a0d642-e8e0-4cce-bad1-d57a539ec46c",
+    "created_at": "2025-10-03T18:21:26.615944Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "form-submission",
+      "functional",
+      "mobile",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "medium"
+  }
+}

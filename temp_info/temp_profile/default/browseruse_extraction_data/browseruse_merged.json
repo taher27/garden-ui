@@ -1,0 +1,99 @@
+{
+  "https://dev.roost.ai/docs/api#tag/RoostGPT/operation/TestGptController_getAllTest": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost API Documentation",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Explore API Endpoints",
+            "scenario_description": "User navigates through the API documentation to understand and utilize the available endpoints.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Link to the OpenAPI specification download"
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "Detailed API endpoint information for TestGptController"
+              }
+            ],
+            "expected_outcome": [
+              "User identifies relevant API endpoints and their usage details."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/gptCLIForm": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Roost GPT CLI Form",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Configure Test Suite",
+            "scenario_description": "User configures a test suite by selecting options for test type, language, framework, and build tools, providing necessary details for integration.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Test Suite tab to open configuration options"
+              },
+              {
+                "action": "type",
+                "element_description": "Input field for test suite name"
+              },
+              {
+                "action": "select",
+                "element_description": "Dropdown for selecting test type"
+              },
+              {
+                "action": "select",
+                "element_description": "Dropdown for selecting language"
+              },
+              {
+                "action": "select",
+                "element_description": "Dropdown for selecting framework"
+              },
+              {
+                "action": "select",
+                "element_description": "Dropdown for selecting build tool"
+              },
+              {
+                "action": "click",
+                "element_description": "Save button to finalize configuration"
+              }
+            ],
+            "expected_outcome": [
+              "The test suite is saved with the specified configurations and ready for execution."
+            ]
+          },
+          {
+            "scenario_name": "Integrate AI Models",
+            "scenario_description": "User integrates AI models by providing API details and authentication tokens.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Gen AI Models tab to view integration options"
+              },
+              {
+                "action": "type",
+                "element_description": "Input field for OpenAI Base URL"
+              },
+              {
+                "action": "type",
+                "element_description": "Input field for OpenAI Token"
+              },
+              {
+                "action": "click",
+                "element_description": "Verify button to confirm integration"
+              }
+            ],
+            "expected_outcome": [
+              "The AI model is successfully integrated and verified."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
