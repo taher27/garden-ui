@@ -1,0 +1,89 @@
+{
+  "test_name": "Verify Test Suite Search Functionality",
+  "description": "Ensure users can search for test suites using the search functionality and the results are correctly filtered.",
+  "type": "search",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests"
+  ],
+  "steps": [
+    "Navigate to the Test Suites page.",
+    "Locate the search input field.",
+    "Type a search query into the input field.",
+    "Press 'Enter' to execute the search.",
+    "Wait for the search results to load.",
+    "Verify that the displayed test suites match the search criteria.",
+    "Attempt to search for a test suite that does not exist.",
+    "Check that no results are displayed for invalid queries.",
+    "Clear the search box and ensure all test suites are displayed again.",
+    "Validate that pagination works correctly for filtered results, if applicable."
+  ],
+  "selectors": [
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"tests-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    }
+  ],
+  "expected_results": [
+    "Results are filtered according to the search query.",
+    "Search results update dynamically as the query changes.",
+    "No results are displayed for invalid queries.",
+    "Clearing the search box restores the full list of test suites."
+  ],
+  "edge_cases": [
+    "Search with special characters.",
+    "Search with empty input.",
+    "Search for partial matches.",
+    "Search for very long strings.",
+    "Ensure case-insensitive matching."
+  ],
+  "data_requirements": [
+    "Pre-existing test suites in the database.",
+    "Unique names for test suites.",
+    "Test data for invalid search queries.",
+    "Data to verify empty search results.",
+    "Pagination data for large result sets."
+  ],
+  "dependencies": [
+    "Test Suites page is accessible.",
+    "Search functionality is implemented correctly.",
+    "Backend API for search filtering is operational."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET request to fetch filtered test suites based on the search query."
+  ],
+  "performance_metrics": [
+    "Search results should load within 2 seconds.",
+    "Input typing should not cause noticeable delays.",
+    "Pagination should load results efficiently for large datasets."
+  ],
+  "accessibility_requirements": [
+    "Search input field should have an accessible label.",
+    "Search results should be navigable via keyboard.",
+    "Ensure proper ARIA roles are assigned for search and results."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "63258cd5-b859-440e-8e16-8658720e3379",
+    "created_at": "2025-10-03T05:49:44.767487Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "data-validation",
+      "error-handling",
+      "form-submission",
+      "performance",
+      "search",
+      "ui-test"
+    ],
+    "estimated_execution_time": 50,
+    "flakiness_potential": "medium"
+  }
+}

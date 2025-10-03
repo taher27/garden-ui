@@ -1,0 +1,91 @@
+{
+  "test_name": "Search and Filter Users in Admin Dashboard",
+  "description": "Verifies that the search functionality in the Admin dashboard filters users accurately based on input criteria.",
+  "type": "search_functionality",
+  "pages": [
+    "https://dev.roost.ai/admin/app"
+  ],
+  "steps": [
+    "Navigate to the Admin tab using the link with the text 'Admin'.",
+    "Locate the search bar labeled 'Search for the users'.",
+    "Type 'harish' into the search bar.",
+    "Click the 'Apply' button next to the search bar.",
+    "Verify that the user list is filtered to show only users matching 'harish'.",
+    "Clear the search criteria and verify the full user list is displayed."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"admin-tab\"]",
+      "text": "Admin",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    },
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"test\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    }
+  ],
+  "expected_results": [
+    "User list is successfully filtered based on the search criteria.",
+    "Clearing the search criteria restores the full user list."
+  ],
+  "edge_cases": [
+    "Search bar fails to accept input due to UI issues.",
+    "Search criteria does not filter users correctly.",
+    "Apply button is non-functional due to JavaScript errors.",
+    "Filtered results do not match the expected criteria.",
+    "Clearing search input fails to restore the full user list."
+  ],
+  "data_requirements": [
+    "Pre-existing users including 'harish'.",
+    "Search bar labeled 'Search for the users'.",
+    "Apply button for search functionality.",
+    "Backend API for user filtering."
+  ],
+  "dependencies": [
+    "Search bar functionality implemented correctly.",
+    "Apply button linked to the filtering logic.",
+    "Backend API accessible and functional.",
+    "User list correctly populated."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET request to fetch filtered user list.",
+    "POST request to apply search criteria.",
+    "GET request to reset user list."
+  ],
+  "performance_metrics": [
+    "Time taken to filter users based on search criteria.",
+    "Time taken to restore full user list after clearing search."
+  ],
+  "accessibility_requirements": [
+    "Ensure search bar is accessible via keyboard.",
+    "Verify ARIA roles and labels for the Apply button.",
+    "Check contrast of text in the search bar."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "d4d4dd8f-f7b7-4b16-9d12-504ea1517c8c",
+    "created_at": "2025-10-03T05:49:44.764888Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "performance",
+      "search_functionality",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "medium"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "test_name": "Verify Admin Role Assignment and Removal Workflow",
+  "description": "Ensures that an admin can successfully assign and remove user roles such as 'Admin' and verify updates to the system.",
+  "type": "user_role_management",
+  "pages": [
+    "https://dev.roost.ai/admin/app"
+  ],
+  "steps": [
+    "Navigate to the Admin tab using the link with the text 'Admin'.",
+    "Locate the user named 'bhhavya.sureka' in the user table.",
+    "Click the 'Remove Admin' button next to the user 'bhhavya.sureka'.",
+    "Verify a confirmation prompt appears and click the 'Confirm' button.",
+    "Locate the same user 'bhhavya.sureka' and click the 'Make Admin' button.",
+    "Verify that the user's role is updated to 'Admin' in the user table."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"admin-tab\"]",
+      "text": "Admin",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    },
+    {
+      "element_type": "a",
+      "selector": "//div[@id='layout']/div[1]/div/div/div[2]/div/div/div[2]/div/div/table/tbody/tr[1]/td[1]/div/div[2]/div[2]/a",
+      "text": "bhhavya.sureka",
+      "action": "verify",
+      "url_on_page": "https://dev.roost.ai/admin/app"
+    }
+  ],
+  "expected_results": [
+    "User 'bhhavya.sureka' is successfully removed as an admin.",
+    "User 'bhhavya.sureka' is successfully re-assigned as an admin."
+  ],
+  "edge_cases": [
+    "User table fails to load due to network issues.",
+    "Confirmation prompt does not appear after clicking 'Remove Admin'.",
+    "Role assignment fails due to backend API issues.",
+    "User role remains unchanged despite action confirmation.",
+    "Role assignment button becomes non-functional due to UI bugs."
+  ],
+  "data_requirements": [
+    "Pre-existing user 'bhhavya.sureka' with an admin role.",
+    "Access to the admin dashboard.",
+    "Role assignment buttons available in the user table.",
+    "Confirmation prompts for role changes.",
+    "Backend API for user role updates."
+  ],
+  "dependencies": [
+    "Admin privileges to access the role management page.",
+    "User table correctly populated with user data.",
+    "Functional role assignment buttons.",
+    "Backend API accessible and functional."
+  ],
+  "complexity": "high",
+  "api_interactions": [
+    "GET request to fetch user roles.",
+    "POST request to update user roles.",
+    "GET request to verify role changes."
+  ],
+  "performance_metrics": [
+    "Time taken to update user role via API.",
+    "Time taken for confirmation prompts to appear.",
+    "Page load time for the Admin dashboard."
+  ],
+  "accessibility_requirements": [
+    "Ensure all role assignment buttons are accessible via keyboard navigation.",
+    "Verify ARIA roles and labels for confirmation prompts.",
+    "Check color contrast for role change buttons."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "273a5c2b-bc0a-476b-b82f-8bcee836d810",
+    "created_at": "2025-10-03T05:49:44.764888Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "keyboard-navigation",
+      "network-resilience",
+      "performance",
+      "ui-test",
+      "user_role_management"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "high"
+  }
+}

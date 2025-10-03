@@ -1,0 +1,216 @@
+{
+  "https://dev.roost.ai/admin/app": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Admin View",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Manage User Roles",
+            "scenario_description": "Allows an admin to assign or remove user roles such as admin or regular user.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Button labeled 'Remove Admin' next to a user entry."
+              },
+              {
+                "action": "click",
+                "element_description": "Button labeled 'Make Admin' next to a user entry."
+              }
+            ],
+            "expected_outcome": [
+              "The user's role is updated in the system."
+            ]
+          },
+          {
+            "scenario_name": "Delete User",
+            "scenario_description": "Enables admins to permanently remove a user from the system.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Button labeled 'Delete User' next to a user entry."
+              },
+              {
+                "action": "confirm_action",
+                "element_description": "Confirmation dialog for deleting the user."
+              }
+            ],
+            "expected_outcome": [
+              "The user is deleted from the database."
+            ]
+          },
+          {
+            "scenario_name": "Search Users",
+            "scenario_description": "Allows admins to search for specific users using the search bar.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Input text into search bar labeled 'Search for the users'."
+              },
+              {
+                "action": "click",
+                "element_description": "Button labeled 'Apply'."
+              }
+            ],
+            "expected_outcome": [
+              "The list of users is filtered based on the search criteria."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/connectors": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Connectors Management",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Search for a specific connector",
+            "scenario_description": "A user searches for a connector using the provided search bar to quickly locate it among the list.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Search bar located at the top of the page."
+              },
+              {
+                "action": "assert_visibility",
+                "element_description": "Filtered list of connectors matching the search criteria."
+              }
+            ],
+            "expected_outcome": [
+              "The list updates to display only connectors that match the search input."
+            ]
+          },
+          {
+            "scenario_name": "Edit Connector Details",
+            "scenario_description": "A user updates details of an existing connector to ensure accuracy or resolve configuration issues.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Edit button adjacent to the connector's details."
+              },
+              {
+                "action": "type",
+                "element_description": "Form fields for connector details."
+              },
+              {
+                "action": "click",
+                "element_description": "Save button to confirm changes."
+              }
+            ],
+            "expected_outcome": [
+              "The connector's details are updated and displayed correctly."
+            ]
+          },
+          {
+            "scenario_name": "Add a New Connector",
+            "scenario_description": "A user adds a new connector to integrate it into the Roost.ai system.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Add Connector button at the top of the page."
+              },
+              {
+                "action": "type",
+                "element_description": "Form fields to input connector name and type."
+              },
+              {
+                "action": "click",
+                "element_description": "Save button to finalize the new connector."
+              }
+            ],
+            "expected_outcome": [
+              "The new connector appears in the list with the provided details."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/roostgpt/events": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Events Management",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "View Event Details",
+            "scenario_description": "A user views details of a specific event to understand its status and associated tests.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "An event entry in the events table."
+              }
+            ],
+            "expected_outcome": [
+              "Detailed information of the selected event is displayed"
+            ]
+          },
+          {
+            "scenario_name": "Search for Specific Events",
+            "scenario_description": "A user searches for specific events using filters or search functionality to find details efficiently.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Search bar at the top of the page."
+              },
+              {
+                "action": "click",
+                "element_description": "Search button next to the search bar."
+              }
+            ],
+            "expected_outcome": [
+              "Events matching the search criteria are displayed."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "https://dev.roost.ai/roostgpt/tests": {
+    "explored_pages_and_scenarios": [
+      {
+        "page_title": "Test Suites Management",
+        "potential_user_journeys": [
+          {
+            "scenario_name": "Search for a Test Suite",
+            "scenario_description": "Users can search for specific test suites using the search functionality provided on the page.",
+            "steps": [
+              {
+                "action": "type",
+                "element_description": "Input field with placeholder 'Search for Test...'"
+              },
+              {
+                "action": "press_enter",
+                "element_description": "Keyboard interaction to execute the search"
+              }
+            ],
+            "expected_outcome": [
+              "The list of test suites is filtered to match the search criteria."
+            ]
+          },
+          {
+            "scenario_name": "Add a New Test Suite",
+            "scenario_description": "Users can add a new test suite by interacting with the 'Add Test Suite' button and filling out the required details.",
+            "steps": [
+              {
+                "action": "click",
+                "element_description": "Button labeled 'Add Test Suite'"
+              },
+              {
+                "action": "type",
+                "element_description": "Input fields for test suite details in the popup form"
+              },
+              {
+                "action": "submit",
+                "element_description": "Submit button to save the new test suite"
+              }
+            ],
+            "expected_outcome": [
+              "The new test suite is created and displayed in the list."
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

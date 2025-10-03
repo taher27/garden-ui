@@ -1,0 +1,39 @@
+{
+  "url": "https://dev.roost.ai/connectors",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Connectors Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for a specific connector",
+          "scenario_description": "A user searches for a connector using the provided search bar to quickly locate it among the list.",
+          "steps": [
+            {"action": "type", "element_description": "Search bar located at the top of the page."},
+            {"action": "assert_visibility", "element_description": "Filtered list of connectors matching the search criteria."}
+          ],
+          "expected_outcome": ["The list updates to display only connectors that match the search input."]
+        },
+        {
+          "scenario_name": "Edit Connector Details",
+          "scenario_description": "A user updates details of an existing connector to ensure accuracy or resolve configuration issues.",
+          "steps": [
+            {"action": "click", "element_description": "Edit button adjacent to the connector's details."},
+            {"action": "type", "element_description": "Form fields for connector details."},
+            {"action": "click", "element_description": "Save button to confirm changes."}
+          ],
+          "expected_outcome": ["The connector's details are updated and displayed correctly."]
+        },
+        {
+          "scenario_name": "Add a New Connector",
+          "scenario_description": "A user adds a new connector to integrate it into the Roost.ai system.",
+          "steps": [
+            {"action": "click", "element_description": "Add Connector button at the top of the page."},
+            {"action": "type", "element_description": "Form fields to input connector name and type."},
+            {"action": "click", "element_description": "Save button to finalize the new connector."}
+          ],
+          "expected_outcome": ["The new connector appears in the list with the provided details."]
+        }
+      ]
+    }
+  ]
+}

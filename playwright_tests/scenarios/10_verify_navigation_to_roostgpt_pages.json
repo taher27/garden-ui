@@ -1,0 +1,99 @@
+{
+  "test_name": "Verify Navigation to RoostGPT Pages",
+  "description": "Validate that users can navigate between the RoostGPT tabs seamlessly.",
+  "type": "navigation",
+  "pages": [
+    "https://dev.roost.ai/roostgpt/tests",
+    "https://dev.roost.ai/roostgpt/analyses",
+    "https://dev.roost.ai/roostgpt/events"
+  ],
+  "steps": [
+    "Navigate to the Test Suites page.",
+    "Click on the 'Analysis' tab.",
+    "Verify that the Analysis page is displayed.",
+    "Click on the 'Generations' tab.",
+    "Ensure that the Generations page is loaded.",
+    "Return to the Test Suites tab.",
+    "Verify that the Test Suites page is displayed again."
+  ],
+  "selectors": [
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/roostgpt/analyses' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "text": "Analysis",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/tests"
+    },
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/roostgpt/events' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "text": "Generations",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/analyses"
+    },
+    {
+      "element_type": "a",
+      "selector": "//a[@href='/roostgpt/tests' and contains(@class, 'headerButton_collabButton__1E3Qx')]",
+      "text": "Test Suites",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai/roostgpt/events"
+    }
+  ],
+  "expected_results": [
+    "Users can navigate seamlessly between tabs.",
+    "Each tab displays its respective content correctly.",
+    "The browser URL updates to reflect the selected tab."
+  ],
+  "edge_cases": [
+    "Navigate to a tab during high traffic.",
+    "Validate navigation with browser caching disabled.",
+    "Verify behavior when tabs are clicked rapidly.",
+    "Ensure tab navigation works on mobile devices.",
+    "Test navigation with slow network conditions."
+  ],
+  "data_requirements": [
+    "Tab-specific content and data.",
+    "Test data to verify correct rendering.",
+    "Network conditions to simulate edge cases."
+  ],
+  "dependencies": [
+    "Tabs are correctly linked to their respective pages.",
+    "Backend APIs provide content for each tab.",
+    "User permissions allow access to all tabs."
+  ],
+  "complexity": "low",
+  "api_interactions": [
+    "GET requests for tab-specific data."
+  ],
+  "performance_metrics": [
+    "Tab navigation should complete within 1 second.",
+    "Content loading should not block other interactions."
+  ],
+  "accessibility_requirements": [
+    "Tabs should have ARIA roles and labels.",
+    "Ensure tabs are navigable via keyboard."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "63acf73f-3895-43b0-aeb5-a8056525d840",
+    "created_at": "2025-10-03T05:49:44.768490Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "cross-browser",
+      "data-validation",
+      "keyboard-navigation",
+      "mobile",
+      "navigation",
+      "network-resilience",
+      "performance",
+      "ui-test"
+    ],
+    "estimated_execution_time": 35,
+    "flakiness_potential": "high"
+  }
+}

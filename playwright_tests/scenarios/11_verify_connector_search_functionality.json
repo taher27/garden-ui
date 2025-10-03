@@ -1,0 +1,95 @@
+{
+  "test_name": "Verify Connector Search Functionality",
+  "description": "Test the functionality of the search bar to ensure users can locate connectors efficiently using specific keywords.",
+  "type": "search",
+  "pages": [
+    "https://dev.roost.ai/connectors"
+  ],
+  "steps": [
+    "Navigate to the Connectors page using the 'Connectors' tab.",
+    "Verify the visibility of the search bar identified by the stable selector [data-testid=\"Connector-search-box\"].",
+    "Type 'test-connector' into the search bar.",
+    "Press Enter or wait for the search results to populate.",
+    "Verify that the list of connectors updates and displays only those matching the search term.",
+    "Assert that the displayed connectors contain the term 'test-connector' in their names or descriptions."
+  ],
+  "selectors": [
+    {
+      "element_type": "input",
+      "selector": "[data-testid=\"Connector-search-box\"]",
+      "text": "",
+      "action": "type",
+      "url_on_page": "https://dev.roost.ai/connectors"
+    },
+    {
+      "element_type": "a",
+      "selector": "[data-testid=\"connectors-tab\"]",
+      "text": "Connectors",
+      "action": "click",
+      "url_on_page": "https://dev.roost.ai"
+    }
+  ],
+  "expected_results": [
+    "Search results update dynamically to display only matching connectors.",
+    "No connectors are displayed if no match is found.",
+    "Search functionality works without performance degradation."
+  ],
+  "edge_cases": [
+    "Empty search query returns all connectors.",
+    "Search with special characters does not break the UI.",
+    "Search with whitespace-only input does not produce unexpected results.",
+    "Search with case-insensitive terms returns expected results.",
+    "Invalid keywords return an empty result gracefully."
+  ],
+  "data_requirements": [
+    "At least one connector with the name 'test-connector'.",
+    "A populated list of connectors in the system.",
+    "Valid user session with access to the Connectors page.",
+    "No active filters interfering with the search results.",
+    "Support for dynamic updates in the search feature."
+  ],
+  "dependencies": [
+    "User must be logged in.",
+    "Connectors page must be accessible.",
+    "System must contain at least one connector.",
+    "Search functionality must be enabled.",
+    "The database must be reachable for query execution."
+  ],
+  "complexity": "medium",
+  "api_interactions": [
+    "GET request to fetch connectors based on search query."
+  ],
+  "performance_metrics": [
+    "Response time for search results.",
+    "UI responsiveness during typing in the search bar.",
+    "Memory usage while rendering search results."
+  ],
+  "accessibility_requirements": [
+    "Search bar must be focusable using the Tab key.",
+    "Search results should be navigable using keyboard controls.",
+    "Text in the search bar must have sufficient contrast ratio.",
+    "Search functionality should work with screen readers.",
+    "No elements should obstruct the visibility of the search bar."
+  ],
+  "additional_data": {},
+  "metadata": {
+    "uuid": "97d4a723-7070-4af7-8828-51bb85ddb554",
+    "created_at": "2025-10-03T05:49:44.768490Z",
+    "complexity": "high",
+    "risk_level": "high",
+    "priority": "high",
+    "tags": [
+      "accessibility",
+      "api-integration",
+      "auto-generated",
+      "error-handling",
+      "form-submission",
+      "keyboard-navigation",
+      "performance",
+      "search",
+      "ui-test"
+    ],
+    "estimated_execution_time": 30,
+    "flakiness_potential": "medium"
+  }
+}

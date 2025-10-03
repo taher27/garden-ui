@@ -1,0 +1,901 @@
+2025-10-03 11:13:50,359 - INFO - Roost UI Test Generator: Beginning automated test creation process.
+2025-10-03 11:13:50,360 - INFO - Using Azure OpenAI deployment
+2025-10-03 11:13:50,362 - INFO - No user scenario file found or path not set.
+2025-10-03 11:13:50,363 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:14:00,777 - INFO - Filtered 5 UI_ prefixed variables for form filling from 26 total variables
+2025-10-03 11:14:00,778 - INFO - AI detected 2 form fields in environment
+2025-10-03 11:14:00,778 - INFO - Found email: SITE_USERNAME (confidence: 0.95)
+2025-10-03 11:14:00,779 - INFO - Found username: **** (confidence: 0.95)
+2025-10-03 11:14:00,779 - INFO - Using credentials for user: playwright@zb.io
+2025-10-03 11:14:00,782 - INFO - [extract_sensitive_data_from_env_analysis_json] Sensitive data extracted: ['x_site_password', 'x_site_username']
+2025-10-03 11:14:00,805 - INFO - Detected credentials. Running agent to conduct login
+2025-10-03 11:14:00,885 - INFO - 🧠 Starting a browser-use agent unknown with base_model=gpt-4o +vision extraction_model=gpt-4o +file_system
+2025-10-03 11:14:00,941 - INFO - 🚀 Starting task: 
+GOAL:
+Your mission is to perform a detailed login test for the website: https://dev.roost.ai.
+
+### --- Phase 1: Initial Page Analysis --- ###
+1.  **Navigate & Capture URL:** Go to https://dev.roost.ai and immediately capture the final URL after all initial loads and redirects. This is the `login_url`.
+2.  **Capture User Scenarios:** Before any login actions, explore the initial login page. Identify and describe 5 distinct user actions or "scenarios" a user might take on this page and format them as a JSON string.
+
+### --- Phase 2: Login Execution --- ###
+3.  **Locate & Execute Login:** Find the login form for the method "okta". Fill it with the secure credentials `x_username` and `x_password`. If you see a "Remember me" option, check it.
+4.  **Handle Third-Party Logins:** If the process involves redirects to Google, GitHub, Okta, etc., follow the flow as instructed.
+
+### --- Phase 3: Verification & State Saving --- ###
+5.  **Confirm Login Success (CRITICAL):** After submitting, you MUST determine if the login was successful by looking for POSITIVE indicators like a "Dashboard", "PROFILE" icon or a "Logout" button. A change in URL also means login has been completed, use that to confirm login. 
+6.  **Save Authentication State:** Once login is completed, you MUST immediately call the `save_auth_state` function.
+
+### --- Phase 4: Final Reporting --- ###
+7.  **Report Your Findings:** As your absolute final action, you MUST call the `report_and_save_login_results` function. You need to provide it with all the information you gathered, including the `user_scenarios_json_string` you prepared.
+
+CRITICAL RULES:
+- The 5 user scenarios must be from the initial login landing page only.
+- The scenarios must be provided as a single, valid JSON formatted string.
+- You must call `report_and_save_login_results` in all situations at the end, whether the login succeeded or failed.
+
+CLOSING CONDITIONS:
+- IF LOGIN IS SUCCESSFUL, `report_and_save_login_results` AND `save_auth_state` HAVE BEEN CALLED AT LEAST ONCE, TERMINATE THE BROWSER.
+
+2025-10-03 11:14:04,117 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= <incognito>
+2025-10-03 11:14:04,205 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60106/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-ibhq3w8e
+2025-10-03 11:14:07,788 - INFO - 🌎 Connecting to newly spawned browser via CDP http://127.0.0.1:60106/ -> browser_pid=3544 (local)
+2025-10-03 11:14:09,789 - INFO - ➡️ Page navigation [0]about:blank took 0.57s
+2025-10-03 11:14:10,024 - WARNING - ▫️ Sending LLM 1px placeholder instead of real screenshot of: about:blank (page empty)
+2025-10-03 11:14:10,113 - INFO - 📍 Step 2: Evaluating page with 0 interactive elements on: about:blank
+2025-10-03 11:14:14,876 - INFO - 💡 Thinking:
+To begin the login test process, I need to navigate to the specified website and analyze the initial page and its scenarios.
+2025-10-03 11:14:14,877 - INFO - ❔ Eval: No prior actions have been taken.
+2025-10-03 11:14:14,878 - INFO - 🧠 Memory: Initializing the login test for the website https://dev.roost.ai.
+2025-10-03 11:14:14,879 - INFO - 🎯 Next goal: Navigate to https://dev.roost.ai to access the login page and capture the resulting URL.
+
+2025-10-03 11:14:14,879 - INFO - ☝️ Decided next action: go_to_url(url="https://dev.roost.ai", new_tab=False)
+2025-10-03 11:14:14,998 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m5.5k[0m | 📤 [92m99[0m
+2025-10-03 11:14:17,400 - INFO - 🔗 Navigated to https://dev.roost.ai
+2025-10-03 11:14:17,402 - INFO - ☑️ Executed action 1/1: go_to_url()
+2025-10-03 11:14:17,404 - INFO - 📍 Step 2: Ran 1 actions in 16.46s: ✅ 1
+2025-10-03 11:14:17,406 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:14:17,407 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/login to ensure page is fully rendered... ---
+2025-10-03 11:14:18,577 - INFO - [Depth 0] Found 14 potential interactive elements.
+2025-10-03 11:14:18,831 - INFO - --- Hook SUCCESS: Captured 14 unique elements from https://dev.roost.ai/login ---
+2025-10-03 11:14:19,388 - INFO - ➡️ Page navigation [0]dev.roost.ai/login took 0.55s
+2025-10-03 11:14:19,929 - INFO - 📍 Step 3: Evaluating page with 17 interactive elements on: https://dev.roost.ai/login
+2025-10-03 11:14:20,632 - INFO - ────────────────────────────────────────
+2025-10-03 11:14:20,633 - INFO - 🌐  View the details of this run in Browser Use Cloud:
+2025-10-03 11:14:20,634 - INFO -     👉  https://cloud.browser-use.com/hotlink?user_code=3GTRERS29466XZT7
+2025-10-03 11:14:20,634 - INFO - ────────────────────────────────────────
+
+2025-10-03 11:14:29,584 - INFO - 💡 Thinking:
+The browser successfully navigated to the login page. Now, I will capture the current URL and analyze the page for potential user scenarios.
+2025-10-03 11:14:29,585 - INFO - 👍 Eval: Successfully navigated to the login page, with the final URL captured.
+2025-10-03 11:14:29,585 - INFO - 🧠 Memory: Final URL of the login page captured. Beginning analysis of user scenarios on this page.
+2025-10-03 11:14:29,585 - INFO - 🎯 Next goal: Extract the current URL from the browser for the login page and analyze the page for five distinct user scenarios.
+
+2025-10-03 11:14:29,588 - INFO - ☝️ Decided next action: extract_structured_data(query=Capture the current URL and an..., extract_links=False)
+2025-10-03 11:14:29,591 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m8.0k[0m | 📤 [92m119[0m
+2025-10-03 11:14:34,537 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m172[0m | 📤 [92m390[0m
+2025-10-03 11:14:34,540 - INFO - 📄 Extracted content from https://dev.roost.ai/login
+<query>Capture the current URL and analyze the page for user scenarios.
+</query>
+<extracted_content>
+Page Link: https://dev.roost.ai/login
+Query: Capture the current URL and analyze the page for user scenarios.
+Extracted Content:
+```json
+{
+  "query": "Capture the current URL and analyze the page for user scenarios.",
+  "analysis": {
+36 more lines...
+</extracted_content>
+<file_system>Extracted content saved to file extracted_content_0.md successfully.</file_system>
+2025-10-03 11:14:34,542 - INFO - ☑️ Executed action 1/1: extract_structured_data()
+2025-10-03 11:14:34,544 - INFO - 📍 Step 3: Ran 1 actions in 15.71s: ✅ 1
+2025-10-03 11:14:34,547 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:14:34,548 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/login to ensure page is fully rendered... ---
+2025-10-03 11:14:34,594 - INFO - --- Hook Skip: URL https://dev.roost.ai/login has already been captured. ---
+2025-10-03 11:14:36,293 - INFO - ➡️ Page navigation [0]dev.roost.ai/login took 0.58s
+2025-10-03 11:14:36,912 - INFO - 📍 Step 4: Evaluating page with 17 interactive elements on: https://dev.roost.ai/login
+2025-10-03 11:14:43,196 - INFO - 💡 Thinking:
+I have analyzed the initial login page and identified user scenarios. Next, I will format these into JSON and proceed with login execution.
+2025-10-03 11:14:43,197 - INFO - 👍 Eval: Successfully extracted page details and identified user scenarios.
+2025-10-03 11:14:43,198 - INFO - 🧠 Memory: User scenarios on the login page identified and documented. Preparing for login execution.
+2025-10-03 11:14:43,198 - INFO - 🎯 Next goal: Format the identified user scenarios into a JSON string and prepare for the login execution phase.
+
+2025-10-03 11:14:43,200 - INFO - ✌️ Decided next 2 multi-actions:
+          1. write_file(file_name=user_scenarios.json, content=[{"scenario_description": "Use...)
+          2. click_element_by_index(#7)
+2025-10-03 11:14:43,203 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m9.1k[0m | 📤 [92m300[0m
+2025-10-03 11:14:43,373 - INFO - 💾 Data written to file user_scenarios.json successfully.
+2025-10-03 11:14:43,373 - INFO - ☑️ Executed action 1/2: write_file()
+2025-10-03 11:14:44,481 - INFO - ➡️ Page navigation [0]dev.roost.ai/login took 0.57s
+2025-10-03 11:14:47,382 - INFO - 🖱️ Clicked button with index 7: 
+2025-10-03 11:14:47,385 - INFO - ☑️ Executed action 2/2: click_element_by_index()
+2025-10-03 11:14:47,388 - INFO - 📍 Step 4: Ran 2 actions in 12.79s: ✅ 2
+2025-10-03 11:14:47,393 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:14:47,394 - INFO - --- Hook: Waiting for network idle on https://dev-53854943.okta.com/oauth2/default/v1/authorize?response_type=code&scope=openid%20profile%20email%20address&state=okta&client_id=0oa3x8katznHWlHeD5d7&redirect_uri=https%3A%2F%2Fdev.roost.ai%2Flogin to ensure page is fully rendered... ---
+2025-10-03 11:14:47,432 - INFO - --- Hook Skip: Skipping auth domain dev-53854943.okta.com. ---
+2025-10-03 11:14:49,174 - INFO - ➡️ Page navigation [0]dev-53854943.okta.com/ took 0.59s
+2025-10-03 11:14:49,794 - INFO - 📍 Step 5: Evaluating page with 20 interactive elements on: https://dev-53854943.okta.com/
+2025-10-03 11:14:59,952 - INFO - 💡 Thinking:
+Proceeding to execute the login scenario for the current page by filling the form fields and submitting.
+2025-10-03 11:14:59,954 - INFO - 👍 Eval: The login page and its interactive elements were identified successfully. Verdict: Success.
+2025-10-03 11:14:59,956 - INFO - 🧠 Memory: Login page analysis completed. Proceeding with the login execution scenario.
+2025-10-03 11:14:59,960 - INFO - 🎯 Next goal: Fill the username and password fields, check the 'Remember me' option, and submit the form using the 'Sign In' button.
+
+2025-10-03 11:14:59,961 - INFO - ✌️ Decided next 4 multi-actions:
+          1. input_text(#5, text="<secret>x_username</secret>")
+          2. input_text(#8, text="<secret>x_password</secret>")
+          3. click_element_by_index(#10)
+          4. click_element_by_index(#12)
+2025-10-03 11:14:59,964 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m9.3k[0m | 📤 [92m145[0m
+2025-10-03 11:15:00,114 - INFO - 🔒 Using sensitive data placeholders: x_username on https://dev-53854943.okta.com/
+2025-10-03 11:15:00,954 - INFO - ⌨️  Input sensitive data into index 5
+2025-10-03 11:15:00,956 - INFO - ☑️ Executed action 1/4: input_text()
+2025-10-03 11:15:02,073 - INFO - ➡️ Page navigation [0]dev-53854943.okta.com/ took 0.60s
+2025-10-03 11:15:02,549 - INFO - 🔒 Using sensitive data placeholders: x_password on https://dev-53854943.okta.com/
+2025-10-03 11:15:03,294 - INFO - ⌨️  Input sensitive data into index 8
+2025-10-03 11:15:03,296 - INFO - ☑️ Executed action 2/4: input_text()
+2025-10-03 11:15:04,434 - INFO - ➡️ Page navigation [0]dev-53854943.okta.com/ took 0.60s
+2025-10-03 11:15:06,639 - INFO - 🖱️ Clicked button with index 10: 
+2025-10-03 11:15:06,640 - INFO - ☑️ Executed action 3/4: click_element_by_index()
+2025-10-03 11:15:07,765 - INFO - ➡️ Page navigation [0]dev-53854943.okta.com/ took 0.59s
+2025-10-03 11:15:08,680 - INFO - 🖱️ Clicked button with index 12: 
+2025-10-03 11:15:08,680 - INFO - ☑️ Executed action 4/4: click_element_by_index()
+2025-10-03 11:15:08,684 - INFO - 📍 Step 5: Ran 4 actions in 21.25s: ✅ 4
+2025-10-03 11:15:08,686 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:15:08,688 - INFO - --- Hook: Waiting for network idle on https://dev-53854943.okta.com/ to ensure page is fully rendered... ---
+2025-10-03 11:15:08,733 - INFO - --- Hook Skip: Skipping auth domain dev-53854943.okta.com. ---
+2025-10-03 11:15:11,715 - INFO - ➡️ Page navigation [0]dev.roost.ai/login?code=yWkmpOgF4hOyOz99… took 1.78s
+2025-10-03 11:15:12,217 - INFO - 📍 Step 6: Evaluating page with 11 interactive elements on: https://dev.roost.ai/login?code=yWkmpOgF4hOyOz99Dl...
+2025-10-03 11:15:20,415 - INFO - 💡 Thinking:
+The login flow appears to have completed without clear indicators of success. To confirm the outcome, I will analyze the page for elements that indicate login success, such as a dashboard or profile icon.
+2025-10-03 11:15:20,416 - INFO - 👍 Eval: Successfully executed the login form inputs and observed the resulting state.
+2025-10-03 11:15:20,416 - INFO - 🧠 Memory: Executed the login scenario, providing credentials and interacting with the login form. Observing the resulting page for success indicators.
+2025-10-03 11:15:20,417 - INFO - 🎯 Next goal: Analyze the current page for elements or indicators of successful login, such as a dashboard, profile, or logout button.
+
+2025-10-03 11:15:20,418 - INFO - ☝️ Decided next action: extract_structured_data(query=Check for elements indicating ..., extract_links=False)
+2025-10-03 11:15:20,423 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m4.7k[0m + 💾 [94m5.0k[0m | 📤 [92m143[0m
+2025-10-03 11:15:23,994 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m815[0m | 📤 [92m251[0m
+2025-10-03 11:15:23,997 - INFO - 📄 Extracted content from https://dev.roost.ai/roostgpt/tests
+<query>Check for elements indicating login success, such as a dashboard, user profile, or logout button.
+</query>
+<extracted_content>
+Page Link: https://dev.roost.ai/roostgpt/tests
+Query: Check for elements indicating login success, such as a dashboard, user profile, or logout button.
+Extracted Content:
+```json
+{
+  "query": "Check for elements indicating login success, such as a dashboard, user profile, or logout button.",
+  "result": {
+10 more lines...
+</extracted_content>
+<file_system>Extracted content saved to file extracted_content_1.md successfully.</file_system>
+2025-10-03 11:15:23,999 - INFO - ☑️ Executed action 1/1: extract_structured_data()
+2025-10-03 11:15:24,000 - INFO - 📍 Step 6: Ran 1 actions in 15.27s: ✅ 1
+2025-10-03 11:15:24,004 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:15:24,004 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/roostgpt/tests to ensure page is fully rendered... ---
+2025-10-03 11:15:25,117 - INFO - [Depth 0] Found 34 potential interactive elements.
+2025-10-03 11:15:26,453 - INFO - --- Hook SUCCESS: Captured 34 unique elements from https://dev.roost.ai/roostgpt/tests ---
+2025-10-03 11:15:27,053 - INFO - ➡️ Page navigation [0]dev.roost.ai/roostgpt/tests took 0.59s
+2025-10-03 11:15:27,818 - INFO - 📍 Step 7: Evaluating page with 155 interactive elements on: https://dev.roost.ai/roostgpt/tests
+2025-10-03 11:15:38,078 - INFO - 💡 Thinking:
+The page analysis indicates a logged-in state due to the presence of dashboard-like functionalities, but explicit confirmation elements such as a logout button or profile section are absent.
+2025-10-03 11:15:38,079 - INFO - 👍 Eval: Analyzed the page for login success indicators based on the extracted content and screenshot. Verdict: Partial success.
+2025-10-03 11:15:38,080 - INFO - 🧠 Memory: The page shows dashboard-like functionalities implying a logged-in state but lacks explicit confirmation elements like a logout or profile section. User scenarios for initial login page are stored.
+2025-10-03 11:15:38,081 - INFO - 🎯 Next goal: Save the browser authentication state as the login appears successful, then report and save the login results including scenarios and indicators observed.
+
+2025-10-03 11:15:38,083 - INFO - ✌️ Decided next 2 multi-actions:
+          1. save_auth_state
+          2. report_and_save_login_results(login_url=https://dev.roost.ai/login, login_success=True, final_page_url=https://dev.roost.ai/roostgpt/..., outcome_message=Successfully logged in based o..., user_scenarios_json_string={"scenario_description":"...",..., challenge_details=)
+2025-10-03 11:15:38,085 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m12.4k[0m | 📤 [92m213[0m
+2025-10-03 11:15:38,233 - INFO - Controller action 'save_auth_state' called by agent.
+2025-10-03 11:15:38,631 - INFO - Authentication state saved successfully via controller action.
+2025-10-03 11:15:38,633 - INFO - ☑️ Executed action 1/2: save_auth_state()
+2025-10-03 11:15:39,141 - INFO - Controller action 'report_and_save_login_results' called by agent.
+2025-10-03 11:15:39,143 - INFO - Successfully saved login report to C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\temp_info\temp_profile\default\browseruse_login_data\login_result_and_scenarios.json
+2025-10-03 11:15:39,145 - INFO - ☑️ Executed action 2/2: report_and_save_login_results()
+2025-10-03 11:15:39,148 - INFO - 📄 Result: Final report has been successfully generated and saved. Task is complete.
+2025-10-03 11:15:39,148 - INFO - 📍 Step 7: Ran 2 actions in 12.69s: ✅ 2
+2025-10-03 11:15:39,152 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:15:39,154 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/roostgpt/tests to ensure page is fully rendered... ---
+2025-10-03 11:15:39,200 - INFO - --- Hook Skip: URL https://dev.roost.ai/roostgpt/tests has already been captured. ---
+2025-10-03 11:15:39,200 - INFO - ❌ Task completed without success
+2025-10-03 11:15:39,203 - INFO - 📊 [1mPer-Model Usage Breakdown[0m:
+2025-10-03 11:15:39,203 - INFO -   🤖 [96mgpt-4o[0m: [94m56.7k tokens[0m | ⬅️ [93m55.1k[0m | ➡️ [92m1.7k[0m | 📞 8 calls | 📈 7.1k/call
+2025-10-03 11:15:47,566 - INFO - 🛑 Closing cdp_url=http://127.0.0.1:60106/ browser context  <Browser type=<BrowserType name=chromium executable_path=C:\Users\Mariya\AppData\Local\ms-playwright\chromium-1169\chrome-win\chrome.exe> version=136.0.7103.25>
+2025-10-03 11:15:47,649 - INFO -  ↳ Killing browser_pid=3544 ~\AppData\Local\ms-playwright\chromium-1169\chrome-win\chrome.exe (terminate() called)
+2025-10-03 11:15:49,087 - INFO - [browser_use_module.runLoginAgent] Added login results to data
+2025-10-03 11:15:49,089 - INFO - Closing login agent's browser session...
+2025-10-03 11:15:49,090 - INFO - Login agent's session closed.
+2025-10-03 11:15:49,095 - INFO - Login successful
+2025-10-03 11:15:49,095 - INFO - 🚀 Starting scraper for https://dev.roost.ai...
+2025-10-03 11:15:57,642 - INFO - Waiting for page content to render...
+2025-10-03 11:15:57,942 - INFO - Found 0 iframes to search for links.
+2025-10-03 11:15:57,942 - INFO - Found 10 unique URLs.
+2025-10-03 11:15:57,943 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:15:58,895 - INFO - 🤖 Sending URLs to AI for analysis...
+2025-10-03 11:16:01,272 - INFO - 
+✅ AI has identified the following top URLs for testing:
+2025-10-03 11:16:01,273 - INFO - 1. https://dev.roost.ai/admin/app
+2025-10-03 11:16:01,273 - INFO - 2. https://dev.roost.ai/roostgpt
+2025-10-03 11:16:01,274 - INFO - 3. https://dev.roost.ai/roostgpt/events
+2025-10-03 11:16:01,274 - INFO - 4. https://dev.roost.ai/roostgpt/tests
+2025-10-03 11:16:01,274 - INFO - 5. https://dev.roost.ai/connectors
+2025-10-03 11:16:01,436 - INFO - Using existing state
+2025-10-03 11:16:01,450 - INFO - 🧠 Starting a browser-use agent unknown with base_model=gpt-4o +vision extraction_model=gpt-4o +file_system
+2025-10-03 11:16:01,456 - INFO - Starting extraction process...
+2025-10-03 11:16:01,456 - INFO - 🚀 Starting task: 
+Go to these URLS:
+[["https://dev.roost.ai/admin/app", "https://dev.roost.ai/roostgpt", "https://dev.roost.ai/roostgpt/events", "https://dev.roost.ai/roostgpt/tests", "https://dev.roost.ai/connectors"]]
+
+On each URL conduct these steps:
+1. Observe all the elements and identify the use case of the website
+2. Use observed knowledge to craft expert user journey scenarios (Consider things like, what would a user typically do after accessing this website? What are the most common functionalities of sites with such use case?)
+3. Capture your findings in a JSON file with file name url(replace "/" or "." or ":" with "_") append with _results.json. utilise the structure provided below for the file.
+
+```json
+{
+"url": "current_url_here",
+"explored_pages_and_scenarios": [
+    {
+    "page_title": "Title of the page",
+    "potential_user_journeys": [
+        {
+        "scenario_name": "Concise name for a potential user journey",
+        "scenario_description": "A brief summary of a user flow and its purpose.",
+        "steps": [
+            {
+            "action": "e.g., click, type, assert_visibility",
+            "element_description": "Natural language description of the element"
+            }
+        ],
+        "expected_outcome": ["Description of what should happen after the steps"]
+        }
+    ]
+    }
+]
+}
+```
+
+2025-10-03 11:16:01,570 - INFO - 🎭 Launching new local browser playwright:chromium keep_alive=False user_data_dir= <incognito>
+2025-10-03 11:16:01,636 - INFO -  ↳ Spawning Chrome subprocess listening on CDP http://127.0.0.1:60204/ with user_data_dir= ~\AppData\Local\Temp\browseruse-tmp-fxskbn1w
+2025-10-03 11:16:05,001 - INFO - 🌎 Connecting to newly spawned browser via CDP http://127.0.0.1:60204/ -> browser_pid=7156 (local)
+2025-10-03 11:16:06,125 - INFO - 🍪 Loaded 13 cookies from storage_state=
+2025-10-03 11:16:07,025 - INFO - ➡️ Page navigation [0]about:blank took 0.60s
+2025-10-03 11:16:07,224 - WARNING - ▫️ Sending LLM 1px placeholder instead of real screenshot of: about:blank (page empty)
+2025-10-03 11:16:07,343 - INFO - 📍 Step 2: Evaluating page with 0 interactive elements on: about:blank
+2025-10-03 11:16:12,227 - INFO - 💡 Thinking:
+The task involves visiting multiple URLs, analyzing the content and interactivity of each page, and documenting potential user journey scenarios in a structured JSON format.
+2025-10-03 11:16:12,227 - INFO - 👍 Eval: Initialization successful; no actions attempted yet.
+2025-10-03 11:16:12,229 - INFO - 🧠 Memory: The task requires visiting five specified URLs, analyzing their pages, and creating structured JSON files describing user journeys for each URL.
+2025-10-03 11:16:12,230 - INFO - 🎯 Next goal: Navigate to the first URL provided in the list and begin analysis.
+
+2025-10-03 11:16:12,231 - INFO - ☝️ Decided next action: go_to_url(url="https://dev.roost.ai/admin/app", new_tab=True)
+2025-10-03 11:16:12,345 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m717[0m + 💾 [94m4.6k[0m | 📤 [92m111[0m
+2025-10-03 11:16:12,346 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m717[0m + 💾 [94m4.6k[0m | 📤 [92m111[0m
+2025-10-03 11:16:15,017 - INFO - 🔗  Opened new tab #1 with url https://dev.roost.ai/admin/app
+2025-10-03 11:16:15,020 - INFO - ☑️ Executed action 1/1: go_to_url()
+2025-10-03 11:16:15,022 - INFO - 📍 Step 2: Ran 1 actions in 13.56s: ✅ 1
+2025-10-03 11:16:15,025 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:16:15,026 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/admin/app to ensure page is fully rendered... ---
+2025-10-03 11:16:16,024 - INFO - [Depth 0] Found 27 potential interactive elements.
+2025-10-03 11:16:16,557 - INFO - --- Hook SUCCESS: Captured 27 unique elements from https://dev.roost.ai/admin/app ---
+2025-10-03 11:16:17,156 - INFO - ➡️ Page navigation [1]dev.roost.ai/admin/app took 0.59s
+2025-10-03 11:16:18,011 - INFO - 📍 Step 3: Evaluating page with 55 interactive elements on: https://dev.roost.ai/admin/app
+2025-10-03 11:16:19,351 - INFO - ────────────────────────────────────────
+2025-10-03 11:16:19,352 - INFO - 🌐  View the details of this run in Browser Use Cloud:
+2025-10-03 11:16:19,352 - INFO -     👉  https://cloud.browser-use.com/hotlink?user_code=S94CCHSF8DUWA2UU
+2025-10-03 11:16:19,352 - INFO - ────────────────────────────────────────
+
+2025-10-03 11:16:44,351 - INFO - 💡 Thinking:
+I will analyze the current page's elements and functionality to identify potential user journeys and summarize findings in a JSON file.
+2025-10-03 11:16:44,352 - INFO - 👍 Eval: Successfully navigated to the first URL and observed its elements and structure.
+2025-10-03 11:16:44,352 - INFO - 🧠 Memory: The current page is the administrative view of Roost.ai, displaying user management functionalities such as adding/removing admins and deleting users.
+2025-10-03 11:16:44,353 - INFO - 🎯 Next goal: Craft user journey scenarios for this page and save the structured findings in a JSON file.
+
+2025-10-03 11:16:44,353 - INFO - ✌️ Decided next 2 multi-actions:
+          1. write_file(file_name=https_dev_roost_ai_admin_app_r..., content={
+  "url": "https://dev.roost....)
+          2. go_to_url(url="https://dev.roost.ai/roostgpt", new_tab=False)
+2025-10-03 11:16:44,356 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m4.3k[0m + 💾 [94m5.0k[0m | 📤 [92m614[0m
+2025-10-03 11:16:44,356 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m4.3k[0m + 💾 [94m5.0k[0m | 📤 [92m614[0m
+2025-10-03 11:16:44,495 - INFO - 💾 Data written to file https_dev_roost_ai_admin_app_results.json successfully.
+2025-10-03 11:16:44,496 - INFO - ☑️ Executed action 1/2: write_file()
+2025-10-03 11:16:46,267 - INFO - 🔗 Navigated to https://dev.roost.ai/roostgpt
+2025-10-03 11:16:46,270 - INFO - ☑️ Executed action 2/2: go_to_url()
+2025-10-03 11:16:46,271 - INFO - 📍 Step 3: Ran 2 actions in 29.71s: ✅ 2
+2025-10-03 11:16:46,275 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:16:46,277 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/roostgpt/tests to ensure page is fully rendered... ---
+2025-10-03 11:16:46,325 - INFO - --- Hook Skip: URL https://dev.roost.ai/roostgpt/tests has already been captured. ---
+2025-10-03 11:16:47,419 - INFO - ➡️ Page navigation [1]dev.roost.ai/roostgpt/tests took 0.59s
+2025-10-03 11:16:48,355 - INFO - 📍 Step 4: Evaluating page with 155 interactive elements on: https://dev.roost.ai/roostgpt/tests
+2025-10-03 11:16:58,733 - INFO - 💡 Thinking:
+Analyzing the current page for its functionalities and potential user journeys. This involves observing the elements and determining typical user interactions.
+2025-10-03 11:16:58,734 - INFO - 👍 Eval: Navigated to the second URL and analyzed the page structure successfully.
+2025-10-03 11:16:58,734 - INFO - 🧠 Memory: The current page focuses on managing and analyzing test suites, including functionalities for filtering, creating, and viewing test suite details.
+2025-10-03 11:16:58,735 - INFO - 🎯 Next goal: Craft user journey scenarios for the current page and save the findings in a structured JSON file.
+
+2025-10-03 11:16:58,735 - INFO - ☝️ Decided next action: write_file(file_name=https_dev_roost_ai_roostgpt_te..., content={
+"url": "https://dev.roost.ai...)
+2025-10-03 11:16:58,736 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m5.0k[0m + 💾 [94m5.1k[0m | 📤 [92m573[0m
+2025-10-03 11:16:58,737 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m5.0k[0m + 💾 [94m5.1k[0m | 📤 [92m573[0m
+2025-10-03 11:16:58,894 - INFO - 💾 Data written to file https_dev_roost_ai_roostgpt_tests_results.json successfully.
+2025-10-03 11:16:58,895 - INFO - ☑️ Executed action 1/1: write_file()
+2025-10-03 11:16:58,897 - INFO - 📍 Step 4: Ran 1 actions in 12.57s: ✅ 1
+2025-10-03 11:16:58,901 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:16:58,902 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/roostgpt/tests to ensure page is fully rendered... ---
+2025-10-03 11:16:58,943 - INFO - --- Hook Skip: URL https://dev.roost.ai/roostgpt/tests has already been captured. ---
+2025-10-03 11:17:00,050 - INFO - ➡️ Page navigation [1]dev.roost.ai/roostgpt/tests took 0.58s
+2025-10-03 11:17:00,998 - INFO - 📍 Step 5: Evaluating page with 155 interactive elements on: https://dev.roost.ai/roostgpt/tests
+2025-10-03 11:17:13,373 - INFO - 💡 Thinking:
+The third URL is being analyzed to determine its purpose and potential user journey scenarios. A structured JSON file will be generated.
+2025-10-03 11:17:13,374 - INFO - 👍 Eval: Successfully navigated to the page and gathered information on its structure.
+2025-10-03 11:17:13,375 - INFO - 🧠 Memory: Analyzed the Test Suites management page, including its functionalities and user interface elements. Preparing to document user scenarios.
+2025-10-03 11:17:13,375 - INFO - 🎯 Next goal: Generate a structured JSON file detailing user scenarios for this page based on its observed functionality.
+
+2025-10-03 11:17:13,375 - INFO - ☝️ Decided next action: write_file(file_name=https_dev_roost_ai_roostgpt_te..., content={
+  "url": "https://dev.roost....)
+2025-10-03 11:17:13,377 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m5.7k[0m + 💾 [94m5.0k[0m | 📤 [92m481[0m
+2025-10-03 11:17:13,377 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m5.7k[0m + 💾 [94m5.0k[0m | 📤 [92m481[0m
+2025-10-03 11:17:13,527 - INFO - 💾 Data written to file https_dev_roost_ai_roostgpt_tests_results.json successfully.
+2025-10-03 11:17:13,529 - INFO - ☑️ Executed action 1/1: write_file()
+2025-10-03 11:17:13,529 - INFO - 📍 Step 5: Ran 1 actions in 14.59s: ✅ 1
+2025-10-03 11:17:13,534 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:17:13,534 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/roostgpt/tests to ensure page is fully rendered... ---
+2025-10-03 11:17:13,574 - INFO - --- Hook Skip: URL https://dev.roost.ai/roostgpt/tests has already been captured. ---
+2025-10-03 11:17:14,577 - INFO - ➡️ Page navigation [1]dev.roost.ai/roostgpt/tests took 0.57s
+2025-10-03 11:17:15,605 - INFO - 📍 Step 6: Evaluating page with 155 interactive elements on: https://dev.roost.ai/roostgpt/tests
+2025-10-03 11:17:25,816 - INFO - 💡 Thinking:
+I will analyze the elements and use case of the current page, "https://dev.roost.ai/roostgpt/tests", to craft structured user journey scenarios.
+2025-10-03 11:17:25,817 - INFO - 👍 Eval: Successfully navigated to the page and prepared to analyze its elements and functionalities.
+2025-10-03 11:17:25,817 - INFO - 🧠 Memory: The current page is focused on managing test suites, including filtering and creating new ones. Users interact with these functionalities to streamline their testing processes.
+2025-10-03 11:17:25,817 - INFO - 🎯 Next goal: Draft structured user journey scenarios for this page and save findings in a JSON file.
+
+2025-10-03 11:17:25,818 - INFO - ✌️ Decided next 2 multi-actions:
+          1. write_file(file_name=https_dev_roost_ai_roostgpt_te..., content={
+  "url": "https://dev.roost....)
+          2. go_to_url(url="https://dev.roost.ai/roostgpt/events", new_tab=False)
+2025-10-03 11:17:25,819 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m11.2k[0m | 📤 [92m547[0m
+2025-10-03 11:17:25,819 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m11.2k[0m | 📤 [92m547[0m
+2025-10-03 11:17:25,974 - INFO - 💾 Data written to file https_dev_roost_ai_roostgpt_tests_results.json successfully.
+2025-10-03 11:17:25,980 - INFO - ☑️ Executed action 1/2: write_file()
+2025-10-03 11:17:26,851 - INFO - 🔗 Navigated to https://dev.roost.ai/roostgpt/events
+2025-10-03 11:17:26,854 - INFO - ☑️ Executed action 2/2: go_to_url()
+2025-10-03 11:17:26,856 - INFO - 📍 Step 6: Ran 2 actions in 13.28s: ✅ 2
+2025-10-03 11:17:26,861 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:17:26,863 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/roostgpt/events to ensure page is fully rendered... ---
+2025-10-03 11:17:27,402 - INFO - [Depth 0] Found 14 potential interactive elements.
+2025-10-03 11:17:28,038 - INFO - --- Deduplication: Removed 2 duplicate elements. ---
+2025-10-03 11:17:28,038 - INFO - --- Hook SUCCESS: Captured 12 unique elements from https://dev.roost.ai/roostgpt/events ---
+2025-10-03 11:17:28,626 - INFO - ➡️ Page navigation [1]dev.roost.ai/roostgpt/events took 0.57s
+2025-10-03 11:17:29,661 - INFO - 📍 Step 7: Evaluating page with 223 interactive elements on: https://dev.roost.ai/roostgpt/events
+2025-10-03 11:17:39,490 - INFO - 💡 Thinking:
+Analyzing the page to identify elements and create user journey scenarios.
+2025-10-03 11:17:39,491 - INFO - 👍 Eval: Successfully navigated to the 'Events' page for analysis.
+2025-10-03 11:17:39,491 - INFO - 🧠 Memory: The current page pertains to the 'Events' section of Roost.ai, displaying details on activities and their statuses. It's the third URL in the list.
+2025-10-03 11:17:39,492 - INFO - 🎯 Next goal: Craft user journey scenarios for the 'Events' page, and save the findings in a structured JSON file.
+
+2025-10-03 11:17:39,492 - INFO - ☝️ Decided next action: write_file(file_name=https_dev_roost_ai_roostgpt_ev..., content={
+"url": "https://dev.roost.ai...)
+2025-10-03 11:17:39,492 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m7.3k[0m + 💾 [94m5.0k[0m | 📤 [92m403[0m
+2025-10-03 11:17:39,492 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m7.3k[0m + 💾 [94m5.0k[0m | 📤 [92m403[0m
+2025-10-03 11:17:39,628 - INFO - 💾 Data written to file https_dev_roost_ai_roostgpt_events_results.json successfully.
+2025-10-03 11:17:39,628 - INFO - ☑️ Executed action 1/1: write_file()
+2025-10-03 11:17:39,630 - INFO - 📍 Step 7: Ran 1 actions in 11.59s: ✅ 1
+2025-10-03 11:17:39,632 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:17:39,633 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/roostgpt/events to ensure page is fully rendered... ---
+2025-10-03 11:17:39,679 - INFO - --- Hook Skip: URL https://dev.roost.ai/roostgpt/events has already been captured. ---
+2025-10-03 11:17:40,653 - INFO - ➡️ Page navigation [1]dev.roost.ai/roostgpt/events took 0.57s
+2025-10-03 11:17:41,759 - INFO - 📍 Step 8: Evaluating page with 223 interactive elements on: https://dev.roost.ai/roostgpt/events
+2025-10-03 11:17:49,526 - INFO - 💡 Thinking:
+I will utilize the observed details of the current 'Events' page to draft structured user journey scenarios, capturing them in a JSON file as per the instructed format.
+2025-10-03 11:17:49,526 - INFO - 👍 Eval: Observed elements and functionalities of the 'Events' page successfully, ready for scenario drafting.
+2025-10-03 11:17:49,526 - INFO - 🧠 Memory: The 'Events' page was analyzed for functionalities such as detailed event viewing, filtering, and status monitoring. Next step involves scenario documentation.
+2025-10-03 11:17:49,526 - INFO - 🎯 Next goal: Document structured scenarios based on the observed functionalities of the 'Events' page and save them as JSON.
+
+2025-10-03 11:17:49,527 - INFO - ✌️ Decided next 2 multi-actions:
+          1. write_file(file_name=https_dev_roost_ai_roostgpt_ev..., content={
+  "url": "https://dev.roost....)
+          2. go_to_url(url="https://dev.roost.ai/connectors", new_tab=False)
+2025-10-03 11:17:49,528 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m7.9k[0m + 💾 [94m5.0k[0m | 📤 [92m463[0m
+2025-10-03 11:17:49,528 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m7.9k[0m + 💾 [94m5.0k[0m | 📤 [92m463[0m
+2025-10-03 11:17:49,662 - INFO - 💾 Data written to file https_dev_roost_ai_roostgpt_events_results.json successfully.
+2025-10-03 11:17:49,663 - INFO - ☑️ Executed action 1/2: write_file()
+2025-10-03 11:17:50,491 - INFO - 🔗 Navigated to https://dev.roost.ai/connectors
+2025-10-03 11:17:50,492 - INFO - ☑️ Executed action 2/2: go_to_url()
+2025-10-03 11:17:50,495 - INFO - 📍 Step 8: Ran 2 actions in 10.81s: ✅ 2
+2025-10-03 11:17:50,501 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:17:50,502 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/connectors to ensure page is fully rendered... ---
+2025-10-03 11:17:51,101 - INFO - [Depth 0] Found 20 potential interactive elements.
+2025-10-03 11:17:51,588 - INFO - --- Hook SUCCESS: Captured 20 unique elements from https://dev.roost.ai/connectors ---
+2025-10-03 11:17:52,142 - INFO - ➡️ Page navigation [1]dev.roost.ai/connectors took 0.55s
+2025-10-03 11:17:52,963 - INFO - 📍 Step 9: Evaluating page with 69 interactive elements on: https://dev.roost.ai/connectors
+2025-10-03 11:18:04,076 - INFO - 💡 Thinking:
+I will analyze the current page, extract its functionalities and significant user interactions, and create structured JSON scenarios based on this analysis.
+2025-10-03 11:18:04,076 - INFO - 👍 Eval: Successfully navigated to the 'Connectors' page for analysis.
+2025-10-03 11:18:04,077 - INFO - 🧠 Memory: Currently exploring the 'Connectors' page of Roost.ai, focusing on managing and analyzing connector integrations.
+2025-10-03 11:18:04,078 - INFO - 🎯 Next goal: Draft user journey scenarios for the 'Connectors' page and save them as a structured JSON file.
+
+2025-10-03 11:18:04,078 - INFO - ☝️ Decided next action: write_file(file_name=https_dev_roost_ai_connectors_..., content={
+  "url": "https://dev.roost....)
+2025-10-03 11:18:04,079 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m6.6k[0m + 💾 [94m5.5k[0m | 📤 [92m569[0m
+2025-10-03 11:18:04,079 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m6.6k[0m + 💾 [94m5.5k[0m | 📤 [92m569[0m
+2025-10-03 11:18:04,208 - INFO - 💾 Data written to file https_dev_roost_ai_connectors_results.json successfully.
+2025-10-03 11:18:04,209 - INFO - ☑️ Executed action 1/1: write_file()
+2025-10-03 11:18:04,211 - INFO - 📍 Step 9: Ran 1 actions in 12.62s: ✅ 1
+2025-10-03 11:18:04,213 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:18:04,213 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/connectors to ensure page is fully rendered... ---
+2025-10-03 11:18:04,253 - INFO - --- Hook Skip: URL https://dev.roost.ai/connectors has already been captured. ---
+2025-10-03 11:18:05,235 - INFO - ➡️ Page navigation [1]dev.roost.ai/connectors took 0.56s
+2025-10-03 11:18:05,902 - INFO - 📍 Step 10: Evaluating page with 69 interactive elements on: https://dev.roost.ai/connectors
+2025-10-03 11:18:15,685 - INFO - 💡 Thinking:
+I have successfully navigated to the 'Connectors' page of Roost.ai and reviewed its functionalities and structure. Now, I need to draft detailed user journey scenarios based on the observed elements and functionalities and save the findings as a JSON file.
+2025-10-03 11:18:15,685 - INFO - 👍 Eval: Successfully navigated to the 'Connectors' page and observed its structure and functionalities.
+2025-10-03 11:18:15,686 - INFO - 🧠 Memory: Analyzed the functionalities of the 'Connectors' page, including connector management and actions like edit, delete, and add new connectors.
+2025-10-03 11:18:15,686 - INFO - 🎯 Next goal: Create and save a JSON file documenting potential user journeys for the 'Connectors' page.
+
+2025-10-03 11:18:15,687 - INFO - ☝️ Decided next action: write_file(file_name=https_dev_roost_ai_connectors_..., content={
+  "url": "https://dev.roost....)
+2025-10-03 11:18:15,688 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m7.1k[0m + 💾 [94m5.6k[0m | 📤 [92m641[0m
+2025-10-03 11:18:15,688 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m7.1k[0m + 💾 [94m5.6k[0m | 📤 [92m641[0m
+2025-10-03 11:18:15,826 - INFO - 💾 Data written to file https_dev_roost_ai_connectors_results.json successfully.
+2025-10-03 11:18:15,826 - INFO - ☑️ Executed action 1/1: write_file()
+2025-10-03 11:18:15,828 - INFO - 📍 Step 10: Ran 1 actions in 11.58s: ✅ 1
+2025-10-03 11:18:15,832 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:18:15,833 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/connectors to ensure page is fully rendered... ---
+2025-10-03 11:18:15,875 - INFO - --- Hook Skip: URL https://dev.roost.ai/connectors has already been captured. ---
+2025-10-03 11:18:16,888 - INFO - ➡️ Page navigation [1]dev.roost.ai/connectors took 0.57s
+2025-10-03 11:18:17,613 - INFO - 📍 Step 11: Evaluating page with 69 interactive elements on: https://dev.roost.ai/connectors
+2025-10-03 11:18:24,690 - INFO - 💡 Thinking:
+I have completed analyzing the 'Connectors' page and documenting the relevant user journey scenarios as per the structured format.
+2025-10-03 11:18:24,691 - INFO - 👍 Eval: Successfully documented user journey scenarios for the 'Connectors' page and saved the results.
+2025-10-03 11:18:24,692 - INFO - 🧠 Memory: All specified URLs have been analyzed and their corresponding user journey scenarios were documented and saved in JSON files. The task is now ready to be concluded.
+2025-10-03 11:18:24,693 - INFO - 🎯 Next goal: Review and confirm all necessary JSON files are created and their content aligns with the request, then finalize the task.
+
+2025-10-03 11:18:24,693 - INFO - ✌️ Decided next 4 multi-actions:
+          1. read_file(file_name=https_dev_roost_ai_admin_app_r...)
+          2. read_file(file_name=https_dev_roost_ai_roostgpt_te...)
+          3. read_file(file_name=https_dev_roost_ai_roostgpt_ev...)
+          4. read_file(file_name=https_dev_roost_ai_connectors_...)
+2025-10-03 11:18:24,696 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m7.7k[0m + 💾 [94m5.5k[0m | 📤 [92m180[0m
+2025-10-03 11:18:24,696 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m7.7k[0m + 💾 [94m5.5k[0m | 📤 [92m180[0m
+2025-10-03 11:18:24,833 - INFO - 💾 Read from file https_dev_roost_ai_admin_app_results.json.
+<content>
+{
+  "url": "https://dev.roost.ai/admin/app",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Admin View",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Manage User Roles",
+          "scenario_description": "Allows an admin to assign or remove user roles such as admin or regular user.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Button labeled 'Remove Admin' next to a user entry."
+            },
+            {
+              "action": "click",
+              "element_description": "Button labeled 'Make Admin' next to a user entry."
+            }
+          ],
+          "expected_outcome": ["The user's role is updated in the system."]
+        },
+        {
+          "scenario_name": "Delete User",
+          "scenario_description": "Enables admins to permanently remove a user from the system.",
+          "steps": [
+31 more lines...
+2025-10-03 11:18:24,835 - INFO - ☑️ Executed action 1/4: read_file()
+2025-10-03 11:18:25,343 - INFO - 💾 Read from file https_dev_roost_ai_roostgpt_tests_results.json.
+<content>
+{
+  "url": "https://dev.roost.ai/roostgpt/tests",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Test Suites Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for a Test Suite",
+          "scenario_description": "Users can search for specific test suites using the search functionality provided on the page.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Input field with placeholder 'Search for Test...'"
+            },
+            {
+              "action": "press_enter",
+              "element_description": "Keyboard interaction to execute the search"
+            }
+          ],
+          "expected_outcome": ["The list of test suites is filtered to match the search criteria."]
+        },
+        {
+          "scenario_name": "Add a New Test Suite",
+22 more lines...
+2025-10-03 11:18:25,345 - INFO - ☑️ Executed action 2/4: read_file()
+2025-10-03 11:18:25,856 - INFO - 💾 Read from file https_dev_roost_ai_roostgpt_events_results.json.
+<content>
+{
+  "url": "https://dev.roost.ai/roostgpt/events",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Events Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "View Event Details",
+          "scenario_description": "A user views details of a specific event to understand its status and associated tests.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "An event entry in the events table."
+            }
+          ],
+          "expected_outcome": ["Detailed information of the selected event is displayed"]
+        },
+        {
+          "scenario_name": "Search for Specific Events",
+          "scenario_description": "A user searches for specific events using filters or search functionality to find details efficiently.",
+          "steps": [
+            {
+              "action": "type",
+14 more lines...
+2025-10-03 11:18:25,859 - INFO - ☑️ Executed action 3/4: read_file()
+2025-10-03 11:18:26,354 - INFO - 💾 Read from file https_dev_roost_ai_connectors_results.json.
+<content>
+{
+  "url": "https://dev.roost.ai/connectors",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Connectors Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for a specific connector",
+          "scenario_description": "A user searches for a connector using the provided search bar to quickly locate it among the list.",
+          "steps": [
+            {"action": "type", "element_description": "Search bar located at the top of the page."},
+            {"action": "assert_visibility", "element_description": "Filtered list of connectors matching the search criteria."}
+          ],
+          "expected_outcome": ["The list updates to display only connectors that match the search input."]
+        },
+        {
+          "scenario_name": "Edit Connector Details",
+23 more lines...
+2025-10-03 11:18:26,355 - INFO - ☑️ Executed action 4/4: read_file()
+2025-10-03 11:18:26,356 - INFO - 📍 Step 11: Ran 4 actions in 10.48s: ✅ 4
+2025-10-03 11:18:26,361 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:18:26,362 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/connectors to ensure page is fully rendered... ---
+2025-10-03 11:18:26,401 - INFO - --- Hook Skip: URL https://dev.roost.ai/connectors has already been captured. ---
+2025-10-03 11:18:27,341 - INFO - ➡️ Page navigation [1]dev.roost.ai/connectors took 0.56s
+2025-10-03 11:18:28,115 - INFO - 📍 Step 12: Evaluating page with 69 interactive elements on: https://dev.roost.ai/connectors
+2025-10-03 11:18:35,385 - INFO - 💡 Thinking:
+The task involves reviewing the available user journey scenarios and ensuring they meet the requirements specified in the user request.
+2025-10-03 11:18:35,385 - INFO - 👍 Eval: Reviewed the JSON files for correctness and content completeness. Verdict: Success.
+2025-10-03 11:18:35,386 - INFO - 🧠 Memory: All the specified URLs have been analyzed, and user journey scenarios have been documented in JSON files. The review process is underway.
+2025-10-03 11:18:35,387 - INFO - 🎯 Next goal: Review the content of the JSON files to ensure all user journey scenarios are covered and meet the required structure, then finalize the task.
+
+2025-10-03 11:18:35,388 - INFO - ☝️ Decided next action: read_file(file_name=https_dev_roost_ai_connectors_...)
+2025-10-03 11:18:35,388 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m10.0k[0m + 💾 [94m6.0k[0m | 📤 [92m118[0m
+2025-10-03 11:18:35,390 - INFO - 🧠 [96mgpt-4o[0m | 🆕 [93m10.0k[0m + 💾 [94m6.0k[0m | 📤 [92m118[0m
+2025-10-03 11:18:35,528 - INFO - 💾 Read from file https_dev_roost_ai_connectors_results.json.
+<content>
+{
+  "url": "https://dev.roost.ai/connectors",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Connectors Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for a specific connector",
+          "scenario_description": "A user searches for a connector using the provided search bar to quickly locate it among the list.",
+          "steps": [
+            {"action": "type", "element_description": "Search bar located at the top of the page."},
+            {"action": "assert_visibility", "element_description": "Filtered list of connectors matching the search criteria."}
+          ],
+          "expected_outcome": ["The list updates to display only connectors that match the search input."]
+        },
+        {
+          "scenario_name": "Edit Connector Details",
+23 more lines...
+2025-10-03 11:18:35,532 - INFO - ☑️ Executed action 1/1: read_file()
+2025-10-03 11:18:35,533 - INFO - 📍 Step 12: Ran 1 actions in 9.13s: ✅ 1
+2025-10-03 11:18:35,535 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:18:35,537 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/connectors to ensure page is fully rendered... ---
+2025-10-03 11:18:35,575 - INFO - --- Hook Skip: URL https://dev.roost.ai/connectors has already been captured. ---
+2025-10-03 11:18:36,531 - INFO - ➡️ Page navigation [1]dev.roost.ai/connectors took 0.56s
+2025-10-03 11:18:37,312 - INFO - 📍 Step 13: Evaluating page with 69 interactive elements on: https://dev.roost.ai/connectors
+2025-10-03 11:18:43,615 - INFO - 💡 Thinking:
+Reviewing the structured user journey JSON files collected for each URL and preparing a final summary for the user.
+2025-10-03 11:18:43,617 - INFO - 👍 Eval: Successfully reviewed the JSON files for all URLs and verified their content against the user request.
+2025-10-03 11:18:43,617 - INFO - 🧠 Memory: All specified URLs have been analyzed, and user journey scenarios are documented in JSON files. Finalizing task review.
+2025-10-03 11:18:43,619 - INFO - 🎯 Next goal: Finalize the summary task by preparing a comprehensive output for the user.
+
+2025-10-03 11:18:43,619 - INFO - ☝️ Decided next action: done(text="I have successfully analyzed t...", success=True)
+2025-10-03 11:18:43,621 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m15.6k[0m | 📤 [92m183[0m
+2025-10-03 11:18:43,621 - INFO - 🧠 [96mgpt-4o[0m | 📥 [93m15.6k[0m | 📤 [92m183[0m
+2025-10-03 11:18:43,758 - INFO - ☑️ Executed action 1/1: done()
+2025-10-03 11:18:43,761 - INFO - 📄 Result: I have successfully analyzed the specified URLs and created structured JSON files capturing user journey scenarios for each page. The files are named appropriately based on the URLs and are ready for review.
+
+Attachments:
+
+https_dev_roost_ai_admin_app_results.json:
+{
+  "url": "https://dev.roost.ai/admin/app",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Admin View",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Manage User Roles",
+          "scenario_description": "Allows an admin to assign or remove user roles such as admin or regular user.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Button labeled 'Remove Admin' next to a user entry."
+            },
+            {
+              "action": "click",
+              "element_description": "Button labeled 'Make Admin' next to a user entry."
+            }
+          ],
+          "expected_outcome": ["The user's role is updated in the system."]
+        },
+        {
+          "scenario_name": "Delete User",
+          "scenario_description": "Enables admins to permanently remove a user from the system.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Button labeled 'Delete User' next to a user entry."
+            },
+            {
+              "action": "confirm_action",
+              "element_description": "Confirmation dialog for deleting the user."
+            }
+          ],
+          "expected_outcome": ["The user is deleted from the database."]
+        },
+        {
+          "scenario_name": "Search Users",
+          "scenario_description": "Allows admins to search for specific users using the search bar.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Input text into search bar labeled 'Search for the users'."
+            },
+            {
+              "action": "click",
+              "element_description": "Button labeled 'Apply'."
+            }
+          ],
+          "expected_outcome": ["The list of users is filtered based on the search criteria."]
+        }
+      ]
+    }
+  ]
+}
+
+https_dev_roost_ai_roostgpt_tests_results.json:
+{
+  "url": "https://dev.roost.ai/roostgpt/tests",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Test Suites Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for a Test Suite",
+          "scenario_description": "Users can search for specific test suites using the search functionality provided on the page.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Input field with placeholder 'Search for Test...'"
+            },
+            {
+              "action": "press_enter",
+              "element_description": "Keyboard interaction to execute the search"
+            }
+          ],
+          "expected_outcome": ["The list of test suites is filtered to match the search criteria."]
+        },
+        {
+          "scenario_name": "Add a New Test Suite",
+          "scenario_description": "Users can add a new test suite by interacting with the 'Add Test Suite' button and filling out the required details.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "Button labeled 'Add Test Suite'"
+            },
+            {
+              "action": "type",
+              "element_description": "Input fields for test suite details in the popup form"
+            },
+            {
+              "action": "submit",
+              "element_description": "Submit button to save the new test suite"
+            }
+          ],
+          "expected_outcome": ["The new test suite is created and displayed in the list."]
+        }
+      ]
+    }
+  ]
+}
+
+https_dev_roost_ai_roostgpt_events_results.json:
+{
+  "url": "https://dev.roost.ai/roostgpt/events",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Events Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "View Event Details",
+          "scenario_description": "A user views details of a specific event to understand its status and associated tests.",
+          "steps": [
+            {
+              "action": "click",
+              "element_description": "An event entry in the events table."
+            }
+          ],
+          "expected_outcome": ["Detailed information of the selected event is displayed"]
+        },
+        {
+          "scenario_name": "Search for Specific Events",
+          "scenario_description": "A user searches for specific events using filters or search functionality to find details efficiently.",
+          "steps": [
+            {
+              "action": "type",
+              "element_description": "Search bar at the top of the page."
+            },
+            {
+              "action": "click",
+              "element_description": "Search button next to the search bar."
+            }
+          ],
+          "expected_outcome": ["Events matching the search criteria are displayed."]
+        }
+      ]
+    }
+  ]
+}
+
+https_dev_roost_ai_connectors_results.json:
+{
+  "url": "https://dev.roost.ai/connectors",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Connectors Management",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Search for a specific connector",
+          "scenario_description": "A user searches for a connector using the provided search bar to quickly locate it among the list.",
+          "steps": [
+            {"action": "type", "element_description": "Search bar located at the top of the page."},
+            {"action": "assert_visibility", "element_description": "Filtered list of connectors matching the search criteria."}
+          ],
+          "expected_outcome": ["The list updates to display only connectors that match the search input."]
+        },
+        {
+          "scenario_name": "Edit Connector Details",
+          "scenario_description": "A user updates details of an existing connector to ensure accuracy or resolve configuration issues.",
+          "steps": [
+            {"action": "click", "element_description": "Edit button adjacent to the connector's details."},
+            {"action": "type", "element_description": "Form fields for connector details."},
+            {"action": "click", "element_description": "Save button to confirm changes."}
+          ],
+          "expected_outcome": ["The connector's details are updated and displayed correctly."]
+        },
+        {
+          "scenario_name": "Add a New Connector",
+          "scenario_description": "A user adds a new connector to integrate it into the Roost.ai system.",
+          "steps": [
+            {"action": "click", "element_description": "Add Connector button at the top of the page."},
+            {"action": "type", "element_description": "Form fields to input connector name and type."},
+            {"action": "click", "element_description": "Save button to finalize the new connector."}
+          ],
+          "expected_outcome": ["The new connector appears in the list with the provided details."]
+        }
+      ]
+    }
+  ]
+}
+2025-10-03 11:18:43,774 - INFO - 📎 Click links below to access the attachments:
+2025-10-03 11:18:43,774 - INFO - 👉 C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\temp_info\temp_profile\default\browseruse_extraction_data\browseruse_agent_data\https_dev_roost_ai_admin_app_results.json
+2025-10-03 11:18:43,775 - INFO - 👉 C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\temp_info\temp_profile\default\browseruse_extraction_data\browseruse_agent_data\https_dev_roost_ai_roostgpt_tests_results.json
+2025-10-03 11:18:43,777 - INFO - 👉 C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\temp_info\temp_profile\default\browseruse_extraction_data\browseruse_agent_data\https_dev_roost_ai_roostgpt_events_results.json
+2025-10-03 11:18:43,777 - INFO - 👉 C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\temp_info\temp_profile\default\browseruse_extraction_data\browseruse_agent_data\https_dev_roost_ai_connectors_results.json
+2025-10-03 11:18:43,779 - INFO - 📍 Step 13: Ran 1 actions in 8.20s: ✅ 1
+2025-10-03 11:18:43,782 - INFO - --- Hook: Capturing UI state at step end ---
+2025-10-03 11:18:43,783 - INFO - --- Hook: Waiting for network idle on https://dev.roost.ai/connectors to ensure page is fully rendered... ---
+2025-10-03 11:18:43,814 - INFO - --- Hook Skip: URL https://dev.roost.ai/connectors has already been captured. ---
+2025-10-03 11:18:43,815 - INFO - ✅ Task completed successfully
+2025-10-03 11:18:43,817 - INFO - 📊 [1mPer-Model Usage Breakdown[0m:
+2025-10-03 11:18:43,819 - INFO -   🤖 [96mgpt-4o[0m: [94m146.2k tokens[0m | ⬅️ [93m141.3k[0m | ➡️ [92m4.9k[0m | 📞 12 calls | 📈 12.2k/call
+2025-10-03 11:18:50,779 - INFO - 🍪 Saved 12 cookies to storage_state= C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\temp_info\state.json
+2025-10-03 11:18:50,780 - INFO - 🛑 Closing cdp_url=http://127.0.0.1:60204/ browser context  <Browser type=<BrowserType name=chromium executable_path=C:\Users\Mariya\AppData\Local\ms-playwright\chromium-1169\chrome-win\chrome.exe> version=136.0.7103.25>
+2025-10-03 11:18:50,802 - INFO -  ↳ Killing browser_pid=7156 ~\AppData\Local\ms-playwright\chromium-1169\chrome-win\chrome.exe (terminate() called)
+2025-10-03 11:18:51,637 - INFO - Agent run complete. Processing agent history...
+2025-10-03 11:18:51,737 - INFO - Closing login agent's browser session...
+2025-10-03 11:18:51,740 - INFO - Login agent's session closed.
+2025-10-03 11:18:51,754 - INFO - Data extraction completed successfully. Results saved to C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\temp_info\merged_scenarios.json
+2025-10-03 11:18:51,754 - INFO -  Continuing to test generation using extracted data...
+2025-10-03 11:18:51,756 - INFO - 🧹 Cleaning up scenarios directory before generation: C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\playwright_tests\scenarios
+2025-10-03 11:18:51,758 - INFO - Starting scenario generation process...
+2025-10-03 11:18:51,759 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:18:56,938 - INFO -   -> Saved business requirement to: business_requirements.json
+2025-10-03 11:18:56,939 - INFO - Generating scenario for: https://dev.roost.ai/login
+2025-10-03 11:18:56,940 - INFO - Generating scenario for: https://dev.roost.ai/admin/app
+2025-10-03 11:18:56,940 - INFO - Generating scenario for: https://dev.roost.ai/roostgpt/events
+2025-10-03 11:18:56,941 - INFO - Generating scenario for: https://dev.roost.ai/roostgpt/tests
+2025-10-03 11:18:56,942 - INFO - Generating scenario for: https://dev.roost.ai/connectors
+2025-10-03 11:18:56,943 - INFO - Creating 5 concurrent scenario generation tasks...
+2025-10-03 11:18:56,944 - INFO - Submitting all tasks to the LLM for concurrent processing...
+2025-10-03 11:18:56,944 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:18:57,799 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:18:58,645 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:18:59,516 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:19:00,428 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:19:44,763 - INFO - All LLM responses received.
+2025-10-03 11:19:44,763 - INFO - Found 3 scenarios in response 1
+2025-10-03 11:19:44,764 - INFO - Successfully processed scenario: Verify User Login via Google OAuth
+2025-10-03 11:19:44,764 - INFO - Successfully processed scenario: Verify Navigation to Privacy Policy from Login Page
+2025-10-03 11:19:44,764 - INFO - Successfully processed scenario: Verify Login via GitHub OAuth
+2025-10-03 11:19:44,764 - INFO - Found 2 scenarios in response 2
+2025-10-03 11:19:44,764 - INFO - Successfully processed scenario: Verify Admin Role Assignment and Removal Workflow
+2025-10-03 11:19:44,764 - INFO - Successfully processed scenario: Search and Filter Users in Admin Dashboard
+2025-10-03 11:19:44,766 - INFO - Found 2 scenarios in response 3
+2025-10-03 11:19:44,766 - INFO - Successfully processed scenario: Verify Search Functionality in Event Management
+2025-10-03 11:19:44,766 - INFO - Successfully processed scenario: Verify Navigation Between Tabs
+2025-10-03 11:19:44,767 - INFO - Found 3 scenarios in response 4
+2025-10-03 11:19:44,767 - INFO - Successfully processed scenario: Verify Test Suite Search Functionality
+2025-10-03 11:19:44,767 - INFO - Successfully processed scenario: Verify Pagination for Test Suite List
+2025-10-03 11:19:44,768 - INFO - Successfully processed scenario: Verify Navigation to RoostGPT Pages
+2025-10-03 11:19:44,768 - INFO - Found 2 scenarios in response 5
+2025-10-03 11:19:44,768 - INFO - Successfully processed scenario: Verify Connector Search Functionality
+2025-10-03 11:19:44,768 - INFO - Successfully processed scenario: Verify Pagination Across Connector List
+2025-10-03 11:19:44,768 - INFO - Total scenarios processed: 12
+2025-10-03 11:19:44,769 - INFO - 💾 Saving 12 total generated scenarios...
+2025-10-03 11:19:44,770 - INFO -   -> Saved scenario to: 01_verify_user_login_via_google_oauth.json
+2025-10-03 11:19:44,794 - INFO -   -> Saved scenario to: 02_verify_navigation_to_privacy_policy_from_login_page.json
+2025-10-03 11:19:44,797 - INFO -   -> Saved scenario to: 03_verify_login_via_github_oauth.json
+2025-10-03 11:19:44,801 - INFO -   -> Saved scenario to: 04_verify_admin_role_assignment_and_removal_workflow.json
+2025-10-03 11:19:44,805 - INFO -   -> Saved scenario to: 05_search_and_filter_users_in_admin_dashboard.json
+2025-10-03 11:19:44,808 - INFO -   -> Saved scenario to: 06_verify_search_functionality_in_event_management.json
+2025-10-03 11:19:44,812 - INFO -   -> Saved scenario to: 07_verify_navigation_between_tabs.json
+2025-10-03 11:19:44,816 - INFO -   -> Saved scenario to: 08_verify_test_suite_search_functionality.json
+2025-10-03 11:19:44,819 - INFO -   -> Saved scenario to: 09_verify_pagination_for_test_suite_list.json
+2025-10-03 11:19:44,822 - INFO -   -> Saved scenario to: 10_verify_navigation_to_roostgpt_pages.json
+2025-10-03 11:19:44,824 - INFO -   -> Saved scenario to: 11_verify_connector_search_functionality.json
+2025-10-03 11:19:44,829 - INFO -   -> Saved scenario to: 12_verify_pagination_across_connector_list.json
+2025-10-03 11:19:44,830 - INFO - Creating scenarios summary file at: C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\playwright_tests\scenarios\scenarios_summary.md
+2025-10-03 11:19:44,833 - INFO - ✅ Summary file created successfully.
+2025-10-03 11:19:44,833 - INFO - ✅ Successfully generated and saved 12 scenarios in `C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\playwright_tests\scenarios`
+2025-10-03 11:19:44,836 - INFO - 🧹 Cleaning up tests directory before generation: C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\playwright_tests\tests
+2025-10-03 11:19:44,837 - INFO - Directory 'C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\playwright_tests\tests' does not exist. Skipping cleanup.
+2025-10-03 11:19:44,839 - INFO -  Step 2: Generating Playwright tests from scenarios...
+2025-10-03 11:19:44,840 - INFO - Using Azure OpenAI: gpt-4o
+2025-10-03 11:19:45,684 - INFO - Loading and validating all scenario files...
+2025-10-03 11:19:45,687 - INFO - Found 12 valid scenarios. Creating concurrent generation tasks...
+2025-10-03 11:19:45,687 - INFO - Submitting all tasks to the LLM for concurrent processing...
+2025-10-03 11:20:03,287 - INFO - All LLM responses received.
+2025-10-03 11:20:03,288 - INFO - Successfully saved Playwright test: verify_user_login_via_google_oauth.spec.js
+2025-10-03 11:20:03,290 - INFO - Successfully saved Playwright test: verify_navigation_to_privacy_policy_from_login_page.spec.js
+2025-10-03 11:20:03,316 - INFO - Successfully saved Playwright test: verify_login_via_github_oauth.spec.js
+2025-10-03 11:20:03,319 - INFO - Successfully saved Playwright test: verify_admin_role_assignment_and_removal_workflow.spec.js
+2025-10-03 11:20:03,322 - INFO - Successfully saved Playwright test: search_and_filter_users_in_admin_dashboard.spec.js
+2025-10-03 11:20:03,325 - INFO - Successfully saved Playwright test: verify_search_functionality_in_event_management.spec.js
+2025-10-03 11:20:03,327 - INFO - Successfully saved Playwright test: verify_navigation_between_tabs.spec.js
+2025-10-03 11:20:03,329 - INFO - Successfully saved Playwright test: verify_test_suite_search_functionality.spec.js
+2025-10-03 11:20:03,332 - INFO - Successfully saved Playwright test: verify_pagination_for_test_suite_list.spec.js
+2025-10-03 11:20:03,338 - INFO - Successfully saved Playwright test: verify_navigation_to_roostgpt_pages.spec.js
+2025-10-03 11:20:03,340 - INFO - Successfully saved Playwright test: verify_connector_search_functionality.spec.js
+2025-10-03 11:20:03,344 - INFO - Successfully saved Playwright test: verify_pagination_across_connector_list.spec.js
+2025-10-03 11:20:03,349 - INFO - Creating test summary index at: C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\playwright_tests\tests\test_summary.md
+2025-10-03 11:20:03,352 - INFO - 📘 Test summary index created successfully.
+2025-10-03 11:20:03,352 - INFO -  Generated tests saved to C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\playwright_tests/
+2025-10-03 11:20:03,358 - INFO -  All done! You can now run the tests with:
+2025-10-03 11:20:03,359 - INFO - cd C:\var\tmp\Roost\RoostGPT\tr-ui-test-garden-ui\1759470058\source\garden-ui\playwright_tests
+2025-10-03 11:20:03,360 - INFO - npm install
+2025-10-03 11:20:03,361 - INFO - npx playwright install
+2025-10-03 11:20:03,361 - INFO - npx playwright test
