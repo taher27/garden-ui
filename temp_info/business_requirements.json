@@ -1,0 +1,14 @@
+{
+    "https://dev.roost.ai": {
+        "core_purpose": "The site provides automated, on-demand cloud environments for development, testing, and deployment, enabling teams to streamline their workflows and reduce infrastructure setup time.",
+        "business_requirements": [
+            "Users must be able to create and manage cloud-based development environments on demand.",
+            "Users must be able to integrate the platform with their existing CI/CD pipelines and tools.",
+            "Users must be able to configure environment parameters, such as resource allocation and software dependencies, during setup.",
+            "Administrators must have the ability to monitor usage metrics and manage access controls for team members.",
+            "Users must be able to clone and replicate existing environments to test specific scenarios or features.",
+            "The platform must provide real-time status updates and notifications for environment setup and deployment processes.",
+            "Users must be able to archive or delete unused environments to optimize resource usage and reduce costs."
+        ]
+    }
+}
