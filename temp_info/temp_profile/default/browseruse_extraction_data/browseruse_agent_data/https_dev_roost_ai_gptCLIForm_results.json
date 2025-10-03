@@ -1,0 +1,33 @@
+{
+  "url": "https://dev.roost.ai/gptCLIForm",
+  "explored_pages_and_scenarios": [
+    {
+      "page_title": "Roost GPT CLI Form",
+      "potential_user_journeys": [
+        {
+          "scenario_name": "Configure Roost GPT CLI",
+          "scenario_description": "User navigates to the CLI configuration page to set up and download CLI tools.",
+          "steps": [
+            {
+              "action": "assert_visibility",
+              "element_description": "Roost GPT Config link"
+            },
+            {
+              "action": "click",
+              "element_description": "Roost Token input field"
+            },
+            {
+              "action": "type",
+              "element_description": "Text field to enter token"
+            },
+            {
+              "action": "click",
+              "element_description": "Download Env Config button"
+            }
+          ],
+          "expected_outcome": ["User downloads the configuration file successfully."]
+        }
+      ]
+    }
+  ]
+}
