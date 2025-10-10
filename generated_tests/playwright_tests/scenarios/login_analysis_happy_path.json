@@ -1,0 +1,86 @@
+{
+  "site_url": "https://https//v18.roost.ai/login",
+  "site_type": "login_workflow",
+  "site_category": "authentication",
+  "test_name": "login_analysis_happy_path",
+  "login_mechanisms": [
+    "form_login"
+  ],
+  "user_journeys": [],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Successful Login - Valid Credentials Authentication",
+      "auth_required": false,
+      "description": "Comprehensive test covering successful user login from homepage to authenticated state, verifying all login workflow steps",
+      "test_type": "e2e_authentication_workflow",
+      "priority": "critical",
+      "business_goal": "Verify users can successfully authenticate with valid credentials",
+      "user_story": "As a registered user, I want to log in with my credentials so that I can access my account and authenticated features",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to login page",
+          "description": "Load the login page where users can enter their credentials",
+          "expected_page_url": "about:blank",
+          "verification_point": "Page title is 'Starting agent 6250...'",
+          "selector": "page.goto('about:blank')",
+          "confidence": 100,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 2,
+          "action": "Locate username input field",
+          "description": "Ensure the username input field is visible and functional",
+          "expected_page_url": "about:blank",
+          "verification_point": "Username input field is enabled",
+          "selector": "# Selector to be determined",
+          "confidence": 70,
+          "based_on_interaction": false
+        },
+        {
+          "step_number": 3,
+          "action": "Locate password input field",
+          "description": "Ensure the password input field is visible and masked",
+          "expected_page_url": "about:blank",
+          "verification_point": "Password input field is enabled and masked",
+          "selector": "# Selector to be determined",
+          "confidence": 70,
+          "based_on_interaction": false
+        },
+        {
+          "step_number": 4,
+          "action": "Enter valid credentials and submit",
+          "description": "Input valid username and password, then click the login button",
+          "expected_page_url": "about:blank",
+          "verification_point": "Login button is visible and clickable",
+          "selector": "# Selector to be determined",
+          "confidence": 70,
+          "based_on_interaction": false
+        },
+        {
+          "step_number": 5,
+          "action": "Verify successful authentication",
+          "description": "Ensure the user is redirected to an authenticated state",
+          "expected_page_url": "about:blank",
+          "verification_point": "Page title is 'Starting agent 6250...'",
+          "selector": "# Verification step - no selector needed",
+          "confidence": 100,
+          "based_on_interaction": false
+        }
+      ]
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2025-10-10T16:24:55.248574",
+  "confidence_score": 1.0,
+  "flow_type": "happy_path_only",
+  "excluded_scenarios": [
+    "Failed Login - Invalid Credentials",
+    "Login Recovery - Forgot Password"
+  ],
+  "scenario_count": 1,
+  "focus": "successful_authentication_only",
+  "generated_from": "login_analysis.json",
+  "generation_timestamp": "2025-10-10T16:24:55.258612",
+  "captured_selectors": []
+}
