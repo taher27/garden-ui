@@ -1,0 +1,245 @@
+{
+  "site_url": "https://aahanashopeinternational2.my.salesforce.com/",
+  "site_type": "unknown",
+  "site_category": "general",
+  "test_name": "navigation_flow_-_successful_login",
+  "login_mechanisms": [
+    "site_navigation",
+    "content_browsing"
+  ],
+  "user_journeys": [
+    {
+      "workflow_type": "navigation_flow",
+      "path": [
+        "homepage"
+      ],
+      "success_rate": "discovered_site_navigation",
+      "scenario_priority": "medium",
+      "description": "General website navigation and content discovery"
+    }
+  ],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Discovered Workflow: navigation_flow - Successful Login",
+      "description": "Comprehensive test covering the entire login process, ensuring users can access the dashboard successfully",
+      "test_type": "e2e_business_workflow",
+      "priority": "critical",
+      "business_goal": "Verify that users can successfully log into the Salesforce dashboard",
+      "user_story": "As a sales representative, I want to log into my CRM dashboard so that I can manage customer data and sales workflows",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to website homepage",
+          "description": "Load the main website homepage and verify all critical elements are present",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/",
+          "verification_points": [
+            "Homepage loads within 3 seconds",
+            "Login form is visible with username and password fields",
+            "Page title and branding are correct",
+            "No console errors or broken elements"
+          ],
+          "business_impact": "First impression and site accessibility",
+          "selector": "page.goto('https://aahanashopeinternational2.my.salesforce.com/')",
+          "confidence": 100,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 2,
+          "action": "Insert text into username field",
+          "description": "Input the username into the login form",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/",
+          "verification_points": [
+            "Username field accepts input",
+            "No validation errors appear"
+          ],
+          "business_impact": "Allows users to input their credentials",
+          "selector": "page.locator(\"#username\")",
+          "confidence": 80,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 3,
+          "action": "Insert text into password field",
+          "description": "Input the password into the login form",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/",
+          "verification_points": [
+            "Password field accepts input",
+            "No validation errors appear"
+          ],
+          "business_impact": "Allows users to input their credentials",
+          "selector": "page.locator(\"#password\")",
+          "confidence": 80,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 4,
+          "action": "Click on login button",
+          "description": "Click the login button to attempt authentication",
+          "expected_page_url": "URL of the dashboard or next page after login",
+          "verification_points": [
+            "Login button is clickable",
+            "User is redirected to the dashboard upon successful authentication or appropriate error is displayed"
+          ],
+          "business_impact": "Initiates authentication process",
+          "selector": "page.locator(\"#Login\")",
+          "confidence": 80,
+          "based_on_interaction": true
+        }
+      ],
+      "expected_results": [
+        "User successfully logs into the dashboard",
+        "Dashboard elements like user-specific data and navigation menu are visible",
+        "No unexpected errors occur during the login process"
+      ],
+      "edge_cases_to_test": [
+        "What happens if the username field is left blank",
+        "What happens if the password field is left blank",
+        "How does the system respond to incorrect credentials",
+        "What happens if the login form is submitted multiple times in quick succession"
+      ],
+      "data_requirements": [
+        "Valid test user accounts with known credentials",
+        "Invalid credentials for error handling testing",
+        "Test browser configurations"
+      ],
+      "prerequisites": [
+        "Website is accessible and functional",
+        "Test user accounts are pre-created in the system",
+        "All dependent services (e.g., authentication server) are running"
+      ]
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2025-10-10T12:28:18.951127",
+  "confidence_score": 0.5,
+  "captured_selectors": [
+    {
+      "selector": "page.locator(\"#username\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:49.997987"
+    },
+    {
+      "selector": "page.locator(\"#password\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:51.680903"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:53.708618"
+    },
+    {
+      "selector": "page.locator(\"#rememberUn\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:55.771732"
+    },
+    {
+      "selector": "page.getByRole(\"link\", { name: \"Forgot Your Password?\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'Forgot Your Password?'",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:57.638602"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:06.508763"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:17.156125"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:24.383291"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:34.393878"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:44.344345"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:52.440638"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:58.975991"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:27:08.500243"
+    },
+    {
+      "selector": "page.locator(\"#username\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:27:20.305648"
+    },
+    {
+      "selector": "page.locator(\"#password\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:27:22.298070"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:27:29.159961"
+    }
+  ]
+}

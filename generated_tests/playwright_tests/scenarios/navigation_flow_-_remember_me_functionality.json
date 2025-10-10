@@ -1,0 +1,227 @@
+{
+  "site_url": "https://aahanashopeinternational2.my.salesforce.com/",
+  "site_type": "unknown",
+  "site_category": "general",
+  "test_name": "navigation_flow_-_remember_me_functionality",
+  "login_mechanisms": [
+    "site_navigation",
+    "content_browsing"
+  ],
+  "user_journeys": [
+    {
+      "workflow_type": "navigation_flow",
+      "path": [
+        "homepage"
+      ],
+      "success_rate": "discovered_site_navigation",
+      "scenario_priority": "medium",
+      "description": "General website navigation and content discovery"
+    }
+  ],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Discovered Workflow: navigation_flow - Remember Me Functionality",
+      "description": "Test the 'Remember Me' checkbox functionality to verify that user credentials are remembered on subsequent visits",
+      "test_type": "functional_validation",
+      "priority": "medium",
+      "business_goal": "Verify the 'Remember Me' functionality for user convenience during login",
+      "user_story": "As a user, I want the system to remember my login details so that I don’t have to enter them again on subsequent visits",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to website homepage",
+          "description": "Load the main website homepage and verify all critical elements are present",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/",
+          "verification_points": [
+            "Homepage loads within 3 seconds",
+            "'Remember Me' checkbox is visible and functional",
+            "No console errors or broken elements"
+          ],
+          "business_impact": "Provides convenience to users by remembering their credentials",
+          "selector": "page.goto('https://aahanashopeinternational2.my.salesforce.com/')",
+          "confidence": 100,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 2,
+          "action": "Click on 'Remember Me' checkbox",
+          "description": "Enable the 'Remember Me' functionality by selecting the checkbox",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/",
+          "verification_points": [
+            "'Remember Me' checkbox is selectable",
+            "Checkbox remains selected after the page reloads"
+          ],
+          "business_impact": "Allows users to enable the 'Remember Me' functionality",
+          "selector": "page.locator(\"#rememberUn\")",
+          "confidence": 80,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 3,
+          "action": "Click on login button",
+          "description": "Log into the system with 'Remember Me' enabled",
+          "expected_page_url": "URL of the dashboard or next page after login",
+          "verification_points": [
+            "User credentials are remembered on subsequent visits",
+            "No unexpected errors occur"
+          ],
+          "business_impact": "Enhances user convenience during login",
+          "selector": "page.locator(\"#Login\")",
+          "confidence": 80,
+          "based_on_interaction": true
+        }
+      ],
+      "expected_results": [
+        "User credentials are remembered on subsequent visits",
+        "No unexpected errors occur during the login process"
+      ],
+      "edge_cases_to_test": [
+        "What happens if 'Remember Me' is enabled but the browser cache is cleared",
+        "What happens if the user logs in from a different browser or device",
+        "How does the system handle multiple users enabling 'Remember Me' on the same browser"
+      ],
+      "data_requirements": [
+        "Test accounts for verifying 'Remember Me' functionality",
+        "Browser configurations with cache enabled"
+      ],
+      "prerequisites": [
+        "Website is accessible and functional",
+        "'Remember Me' functionality is enabled",
+        "Dependent services (e.g., session management) are running"
+      ]
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2025-10-10T12:28:18.951127",
+  "confidence_score": 0.5,
+  "captured_selectors": [
+    {
+      "selector": "page.locator(\"#username\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:49.997987"
+    },
+    {
+      "selector": "page.locator(\"#password\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:51.680903"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:53.708618"
+    },
+    {
+      "selector": "page.locator(\"#rememberUn\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:55.771732"
+    },
+    {
+      "selector": "page.getByRole(\"link\", { name: \"Forgot Your Password?\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'Forgot Your Password?'",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:25:57.638602"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:06.508763"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:17.156125"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:24.383291"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:34.393878"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:44.344345"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:52.440638"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:26:58.975991"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:27:08.500243"
+    },
+    {
+      "selector": "page.locator(\"#username\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:27:20.305648"
+    },
+    {
+      "selector": "page.locator(\"#password\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:27:22.298070"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/",
+      "timestamp": "2025-10-10T12:27:29.159961"
+    }
+  ]
+}
