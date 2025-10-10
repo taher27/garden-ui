@@ -1,0 +1,67 @@
+{
+  "site_url": "https://https//v18.roost.ai/",
+  "site_type": "unknown",
+  "site_category": "general",
+  "test_name": "navigation_flow_-_complete_user_journey",
+  "login_mechanisms": [
+    "site_navigation",
+    "content_browsing"
+  ],
+  "user_journeys": [
+    {
+      "workflow_type": "navigation_flow",
+      "path": [],
+      "success_rate": "discovered_site_navigation",
+      "scenario_priority": "medium",
+      "description": "General website navigation and content discovery"
+    }
+  ],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Discovered Workflow: navigation_flow - Complete User Journey",
+      "description": "Test the general navigation workflow based on the discovered data, ensuring users can access and explore the website's homepage",
+      "test_type": "e2e_navigation_workflow",
+      "priority": "medium",
+      "business_goal": "Verify users can successfully access and navigate the homepage as the first step in exploring the website",
+      "user_story": "As a general user, I want to access the homepage so that I can explore the website's content and features",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to website homepage",
+          "description": "Load the main website homepage and verify all critical elements are present",
+          "expected_page_url": "https://https//v18.roost.ai/",
+          "verification_point": "Homepage URL is 'https://https//v18.roost.ai/'",
+          "business_impact": "Ensures the website is accessible and the homepage loads correctly",
+          "selector": "page.goto('https://https//v18.roost.ai/')",
+          "confidence": 100,
+          "based_on_interaction": true
+        }
+      ],
+      "expected_results": [
+        "User successfully accesses the homepage",
+        "Critical elements of the homepage are verified",
+        "Navigation to the homepage functions as expected"
+      ],
+      "edge_cases_to_test": [
+        "What happens if the homepage takes a long time to load",
+        "How does the homepage behave on different screen sizes",
+        "What happens if the user navigates to the homepage with an invalid query parameter"
+      ],
+      "data_requirements": [
+        "Valid network connection",
+        "Access to the production website",
+        "Support for multiple browsers and devices"
+      ],
+      "prerequisites": [
+        "Website is live and accessible",
+        "No ongoing maintenance or downtime",
+        "Browser and device compatibility verified"
+      ],
+      "auth_required": true
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2025-10-10T16:26:45.407506",
+  "confidence_score": 0.5,
+  "captured_selectors": []
+}
