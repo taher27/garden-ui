@@ -1,0 +1,144 @@
+{
+  "site_url": "https://aahanashopeinternational2.my.salesforce.com/",
+  "site_type": "unknown",
+  "site_category": "general",
+  "test_name": "navigation_flow_-_login_process",
+  "login_mechanisms": [
+    "content_browsing",
+    "site_navigation"
+  ],
+  "user_journeys": [
+    {
+      "workflow_type": "navigation_flow",
+      "path": [
+        "blank"
+      ],
+      "success_rate": "discovered_site_navigation",
+      "scenario_priority": "medium",
+      "description": "General website navigation and content discovery"
+    }
+  ],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Discovered Workflow: navigation_flow - Login Process",
+      "description": "Comprehensive test covering the user login process from entering credentials to accessing the dashboard",
+      "test_type": "e2e_business_workflow",
+      "priority": "critical",
+      "business_goal": "Verify that users can successfully log in to access the dashboard",
+      "user_story": "As an authorized user, I want to log in to the website so that I can access organizational tools and data securely",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to website homepage",
+          "description": "Load the main website homepage and verify the URL is correct",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/",
+          "verification_point": "Page URL is https://aahanashopeinternational2.my.salesforce.com/",
+          "business_impact": "Ensures the site is accessible and ready for login",
+          "selector": "page.goto('https://aahanashopeinternational2.my.salesforce.com/')",
+          "confidence": 100,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 2,
+          "action": "Enter username",
+          "description": "Insert the username into the username input field",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/",
+          "verification_point": "Username input field contains the entered value",
+          "business_impact": "Allows the user to provide authentication details",
+          "selector": "page.locator(\"#username\").fill('test_user')",
+          "confidence": 80,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 3,
+          "action": "Enter password",
+          "description": "Insert the password into the password input field",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/",
+          "verification_point": "Password input field contains the entered value",
+          "business_impact": "Allows the user to complete authentication credentials",
+          "selector": "page.locator(\"#password\").fill('test_password')",
+          "confidence": 80,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 4,
+          "action": "Click login button",
+          "description": "Submit the login form by clicking the login button",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/home",
+          "verification_point": "Page URL changes to /home after login",
+          "business_impact": "Authenticates the user and grants access to the dashboard",
+          "selector": "page.locator(\"#Login\").click()",
+          "confidence": 80,
+          "based_on_interaction": true
+        }
+      ],
+      "expected_results": [
+        "User successfully logs in and transitions to the dashboard page",
+        "All login-related UI elements function correctly",
+        "System handles login workflow without errors"
+      ],
+      "edge_cases_to_test": [
+        "What happens when incorrect credentials are entered",
+        "How the system behaves if the login button is clicked multiple times",
+        "What happens if the user navigates away mid-login",
+        "How the system handles slow internet during login"
+      ],
+      "data_requirements": [
+        "Valid test user accounts with known credentials",
+        "Secure storage of test passwords",
+        "Access to the Salesforce environment for testing"
+      ],
+      "prerequisites": [
+        "Website is accessible and functional",
+        "Test accounts are pre-configured in the system",
+        "No issues with the Salesforce backend during testing"
+      ],
+      "auth_required": true
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2025-10-10T13:13:54.461554",
+  "confidence_score": 0.5,
+  "captured_selectors": [
+    {
+      "selector": "page.locator(\"#username\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "about:blank",
+      "timestamp": "2025-10-10T13:12:11.480377"
+    },
+    {
+      "selector": "page.locator(\"#password\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "about:blank",
+      "timestamp": "2025-10-10T13:12:31.847862"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "about:blank",
+      "timestamp": "2025-10-10T13:12:41.408809"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "about:blank",
+      "timestamp": "2025-10-10T13:12:50.045181"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "about:blank",
+      "timestamp": "2025-10-10T13:13:03.811007"
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "site_url": "https://aahanashopeinternational2.my.salesforce.com/login",
+  "site_type": "login_workflow",
+  "site_category": "authentication",
+  "test_name": "login_analysis_happy_path",
+  "login_mechanisms": [
+    "form_login"
+  ],
+  "user_journeys": [],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Successful Login - Valid Credentials Authentication",
+      "auth_required": false,
+      "description": "Comprehensive test covering successful user login from homepage to authenticated state, verifying all login workflow steps.",
+      "test_type": "e2e_authentication_workflow",
+      "priority": "critical",
+      "business_goal": "Verify users can successfully authenticate with valid credentials.",
+      "user_story": "As a registered user, I want to log in with my credentials to access my account and authenticated features.",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to login page",
+          "description": "User accesses the main login page.",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/login/",
+          "verification_point": "Page URL contains '/login/'",
+          "selector": "page.goto('https://aahanashopeinternational2.my.salesforce.com/login/')",
+          "confidence": 100,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 2,
+          "action": "Enter valid credentials",
+          "description": "User enters their registered username/email and password.",
+          "expected_page_url": "https://login.salesforce.com/",
+          "verification_point": "Username input field is enabled",
+          "selector": "page.locator(\"#username\")",
+          "confidence": 80,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 3,
+          "action": "Submit login form",
+          "description": "User clicks the login button to authenticate.",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+          "verification_point": "Login submit button is clickable",
+          "selector": "page.locator(\"#password\")",
+          "confidence": 80,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 4,
+          "action": "Verify successful login",
+          "description": "User sees the authenticated dashboard or welcome page.",
+          "expected_page_url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+          "verification_point": "Page title contains 'Verify Your Identity | Salesforce'",
+          "selector": "# Verification step - no selector needed",
+          "confidence": 100,
+          "based_on_interaction": false
+        }
+      ]
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2025-10-10T13:11:28.873136",
+  "confidence_score": 1.0,
+  "flow_type": "happy_path_only",
+  "excluded_scenarios": [
+    "Failed Login - Invalid Credentials Handling",
+    "Login Recovery - Forgot Password Workflow"
+  ],
+  "scenario_count": 1,
+  "focus": "successful_authentication_only",
+  "generated_from": "login_analysis.json",
+  "generation_timestamp": "2025-10-10T13:11:28.892729",
+  "captured_selectors": [
+    {
+      "selector": "page.locator(\"#username\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:07:31.915886"
+    },
+    {
+      "selector": "page.locator(\"#password\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:07:41.870721"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:07:50.640357"
+    },
+    {
+      "selector": "page.locator(\"#rememberUn\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:07:59.681622"
+    },
+    {
+      "selector": "page.getByRole(\"link\", { name: \"Forgot Your Password?\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'Forgot Your Password?'",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:08:07.614983"
+    },
+    {
+      "selector": "page.locator(\"#username\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:08:16.468914"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:08:29.145756"
+    },
+    {
+      "selector": "page.locator(\"#username\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:08:37.680117"
+    },
+    {
+      "selector": "page.locator(\"#password\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:08:39.248300"
+    },
+    {
+      "selector": "page.locator(\"#Login\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://login.salesforce.com/",
+      "timestamp": "2025-10-10T13:08:40.741147"
+    },
+    {
+      "selector": "page.locator(\"#emc\")",
+      "confidence": 80,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e?vcsrf=klRDShuNTEC_Nj8PQdssjudez94TRvOpE038RuZXCyX-_2ZNOOortb1mW28XJjAY8_6CwfiTifOI6jW-IcNEBc5JbvNRym5dO1Ha5gn2kOLzrogtHbbcrS_It5vt9bT5Ni-bTA5Sde810jugyNv6z_KnIShGF2_9ZFGmQEmoGMbpOHG09lLoFHodcJ-1PrqgBKMk586BlibpCIrtUPa5dSJzyJOFmpEPRztPLxEUKIdefla_JXXYz-XLDYSnnEw3M6LIoRee2gX98G1ogLzsKLSoydmHXRo1jZtYCVROQnZMiVaMWbFCCzUk7wP4FKdDSH05BNsys_xl9Ndo6pDrlUD1MVlpXQ83u_x6674iNrwoxgYqqgj-HvG4n7RBM-TYJjV9UWk2tBC0lG1l6qWH9LWhwl2l7AOjXN4sirn3UVPr0XsNiOMuc-5bnR1k2-T59EaG6JrOx1oOvPA5FO7nnhgZF4C8HmUqFeAS-OdUKWJznIauUAn5keBHtEbn6EIcC2HbuYYFWQEsuTNnaIykpt59gWDO8M99AIzcoyDH6y80nSs2N7bvI07iV6QLTgwMdfN1yA30CeIeNjdlNy0rql27xNcJguNyPPJHOEZUxWAF7seoFxZ7eu8YgNrAG_-55DbX04LJVwW4p0J2CUvy1a4fmL2bMseWIAackSAwkBA%3D&vpol=ic&vflid=0&vfgrp=1296256456&retURL=%2Fsecur%2Ffrontdoor.jsp%3Fallp%3D1%26cshc%3DN0000085hSlN00000neu4G%26apv%3D1%26display%3Dpage%26ucs%3D1",
+      "timestamp": "2025-10-10T13:08:56.815272"
+    },
+    {
+      "selector": "page.getByRole(\"button\", { name: \"Verify\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e?vcsrf=klRDShuNTEC_Nj8PQdssjudez94TRvOpE038RuZXCyX-_2ZNOOortb1mW28XJjAY8_6CwfiTifOI6jW-IcNEBc5JbvNRym5dO1Ha5gn2kOLzrogtHbbcrS_It5vt9bT5Ni-bTA5Sde810jugyNv6z_KnIShGF2_9ZFGmQEmoGMbpOHG09lLoFHodcJ-1PrqgBKMk586BlibpCIrtUPa5dSJzyJOFmpEPRztPLxEUKIdefla_JXXYz-XLDYSnnEw3M6LIoRee2gX98G1ogLzsKLSoydmHXRo1jZtYCVROQnZMiVaMWbFCCzUk7wP4FKdDSH05BNsys_xl9Ndo6pDrlUD1MVlpXQ83u_x6674iNrwoxgYqqgj-HvG4n7RBM-TYJjV9UWk2tBC0lG1l6qWH9LWhwl2l7AOjXN4sirn3UVPr0XsNiOMuc-5bnR1k2-T59EaG6JrOx1oOvPA5FO7nnhgZF4C8HmUqFeAS-OdUKWJznIauUAn5keBHtEbn6EIcC2HbuYYFWQEsuTNnaIykpt59gWDO8M99AIzcoyDH6y80nSs2N7bvI07iV6QLTgwMdfN1yA30CeIeNjdlNy0rql27xNcJguNyPPJHOEZUxWAF7seoFxZ7eu8YgNrAG_-55DbX04LJVwW4p0J2CUvy1a4fmL2bMseWIAackSAwkBA%3D&vpol=ic&vflid=0&vfgrp=1296256456&retURL=%2Fsecur%2Ffrontdoor.jsp%3Fallp%3D1%26cshc%3DN0000085hSlN00000neu4G%26apv%3D1%26display%3Dpage%26ucs%3D1",
+      "timestamp": "2025-10-10T13:09:05.604512"
+    },
+    {
+      "selector": "page.locator(\"#emc\")",
+      "confidence": 80,
+      "action": "input_text",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e?vcsrf=klRDShuNTEC_Nj8PQdssjudez94TRvOpE038RuZXCyX-_2ZNOOortb1mW28XJjAY8_6CwfiTifOI6jW-IcNEBc5JbvNRym5dO1Ha5gn2kOLzrogtHbbcrS_It5vt9bT5Ni-bTA5Sde810jugyNv6z_KnIShGF2_9ZFGmQEmoGMbpOHG09lLoFHodcJ-1PrqgBKMk586BlibpCIrtUPa5dSJzyJOFmpEPRztPLxEUKIdefla_JXXYz-XLDYSnnEw3M6LIoRee2gX98G1ogLzsKLSoydmHXRo1jZtYCVROQnZMiVaMWbFCCzUk7wP4FKdDSH05BNsys_xl9Ndo6pDrlUD1MVlpXQ83u_x6674iNrwoxgYqqgj-HvG4n7RBM-TYJjV9UWk2tBC0lG1l6qWH9LWhwl2l7AOjXN4sirn3UVPr0XsNiOMuc-5bnR1k2-T59EaG6JrOx1oOvPA5FO7nnhgZF4C8HmUqFeAS-OdUKWJznIauUAn5keBHtEbn6EIcC2HbuYYFWQEsuTNnaIykpt59gWDO8M99AIzcoyDH6y80nSs2N7bvI07iV6QLTgwMdfN1yA30CeIeNjdlNy0rql27xNcJguNyPPJHOEZUxWAF7seoFxZ7eu8YgNrAG_-55DbX04LJVwW4p0J2CUvy1a4fmL2bMseWIAackSAwkBA%3D&vpol=ic&vflid=0&vfgrp=1296256456&retURL=%2Fsecur%2Ffrontdoor.jsp%3Fallp%3D1%26cshc%3DN0000085hSlN00000neu4G%26apv%3D1%26display%3Dpage%26ucs%3D1",
+      "timestamp": "2025-10-10T13:09:15.053433"
+    },
+    {
+      "selector": "page.getByRole(\"button\", { name: \"Verify\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e?vcsrf=klRDShuNTEC_Nj8PQdssjudez94TRvOpE038RuZXCyX-_2ZNOOortb1mW28XJjAY8_6CwfiTifOI6jW-IcNEBc5JbvNRym5dO1Ha5gn2kOLzrogtHbbcrS_It5vt9bT5Ni-bTA5Sde810jugyNv6z_KnIShGF2_9ZFGmQEmoGMbpOHG09lLoFHodcJ-1PrqgBKMk586BlibpCIrtUPa5dSJzyJOFmpEPRztPLxEUKIdefla_JXXYz-XLDYSnnEw3M6LIoRee2gX98G1ogLzsKLSoydmHXRo1jZtYCVROQnZMiVaMWbFCCzUk7wP4FKdDSH05BNsys_xl9Ndo6pDrlUD1MVlpXQ83u_x6674iNrwoxgYqqgj-HvG4n7RBM-TYJjV9UWk2tBC0lG1l6qWH9LWhwl2l7AOjXN4sirn3UVPr0XsNiOMuc-5bnR1k2-T59EaG6JrOx1oOvPA5FO7nnhgZF4C8HmUqFeAS-OdUKWJznIauUAn5keBHtEbn6EIcC2HbuYYFWQEsuTNnaIykpt59gWDO8M99AIzcoyDH6y80nSs2N7bvI07iV6QLTgwMdfN1yA30CeIeNjdlNy0rql27xNcJguNyPPJHOEZUxWAF7seoFxZ7eu8YgNrAG_-55DbX04LJVwW4p0J2CUvy1a4fmL2bMseWIAackSAwkBA%3D&vpol=ic&vflid=0&vfgrp=1296256456&retURL=%2Fsecur%2Ffrontdoor.jsp%3Fallp%3D1%26cshc%3DN0000085hSlN00000neu4G%26apv%3D1%26display%3Dpage%26ucs%3D1",
+      "timestamp": "2025-10-10T13:09:18.437178"
+    },
+    {
+      "selector": "page.getByRole(\"link\", { name: \"Resend Code\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'Resend Code'",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+      "timestamp": "2025-10-10T13:09:29.937085"
+    },
+    {
+      "selector": "page.locator(\"#RememberDeviceCheckbox\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+      "timestamp": "2025-10-10T13:09:37.480851"
+    },
+    {
+      "selector": "page.locator(\"#RememberDeviceCheckbox\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+      "timestamp": "2025-10-10T13:09:47.670841"
+    },
+    {
+      "selector": "page.getByRole(\"button\", { name: \"Verify\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+      "timestamp": "2025-10-10T13:09:52.987630"
+    },
+    {
+      "selector": "page.getByRole(\"button\", { name: \"Verify\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+      "timestamp": "2025-10-10T13:10:02.317747"
+    },
+    {
+      "selector": "page.getByRole(\"button\", { name: \"Verify\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+      "timestamp": "2025-10-10T13:10:22.420156"
+    },
+    {
+      "selector": "page.getByRole(\"button\", { name: \"Verify\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+      "timestamp": "2025-10-10T13:10:32.692004"
+    },
+    {
+      "selector": "page.getByRole(\"button\", { name: \"Verify\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://aahanashopeinternational2.my.salesforce.com/_ui/identity/verification/method/EmailVerificationFinishUi/e",
+      "timestamp": "2025-10-10T13:10:41.100594"
+    }
+  ]
+}
