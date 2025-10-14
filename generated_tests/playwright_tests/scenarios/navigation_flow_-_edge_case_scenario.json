@@ -1,0 +1,685 @@
+{
+  "site_url": "https://dev.roost.ai/login",
+  "site_type": "unknown",
+  "site_category": "general",
+  "test_name": "navigation_flow_-_edge_case_scenario",
+  "login_mechanisms": [
+    "content_browsing",
+    "site_navigation"
+  ],
+  "user_journeys": [
+    {
+      "workflow_type": "navigation_flow",
+      "path": [
+        "roostgpt"
+      ],
+      "success_rate": "discovered_site_navigation",
+      "scenario_priority": "medium",
+      "description": "General website navigation and content discovery"
+    }
+  ],
+  "proposed_scenarios": [
+    {
+      "scenario_name": "Discovered Workflow: navigation_flow - Edge Case Scenario",
+      "description": "Test edge cases for navigation interruptions and page reload scenarios.",
+      "test_type": "e2e_navigation_edge_case",
+      "priority": "high",
+      "business_goal": "Verify the system handles navigation interruptions and reloads without breaking the workflow.",
+      "user_story": "As a QA engineer, I want to ensure navigation remains functional even during interruptions or reloads.",
+      "detailed_steps": [
+        {
+          "step_number": 1,
+          "action": "Navigate to website homepage",
+          "description": "Load the main website homepage and verify all critical elements are present.",
+          "expected_page_url": "https://dev.roost.ai/login",
+          "verification_points": [
+            "Homepage loads within 3 seconds",
+            "Main navigation menu is visible and functional",
+            "Primary call-to-action buttons are present",
+            "Page title and branding are correct",
+            "No console errors or broken elements"
+          ],
+          "business_impact": "First impression and site accessibility",
+          "selector": "page.goto('https://dev.roost.ai/login')",
+          "confidence": 100,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 2,
+          "action": "Click RoostGPT tab",
+          "description": "Navigate to the RoostGPT tab to access AI-driven testing features.",
+          "expected_page_url": "https://dev.roost.ai/roostgpt/tests",
+          "verification_points": [
+            "RoostGPT tab loads successfully",
+            "RoostGPT features are visible",
+            "No broken elements or errors"
+          ],
+          "business_impact": "Access AI-driven testing features for enhanced productivity",
+          "selector": "page.getByTestId(\"roostGPT-tab\")",
+          "confidence": 95,
+          "based_on_interaction": true
+        },
+        {
+          "step_number": 3,
+          "action": "Refresh the page",
+          "description": "Refresh the RoostGPT tab page and verify all elements reload correctly.",
+          "expected_page_url": "https://dev.roost.ai/roostgpt/tests",
+          "verification_points": [
+            "Page reloads within 3 seconds",
+            "All elements are visible and functional",
+            "No broken elements or errors"
+          ],
+          "business_impact": "Ensures the page withstands interruptions and reloads",
+          "selector": "page.reload()",
+          "confidence": 100,
+          "based_on_interaction": false
+        }
+      ],
+      "expected_results": [
+        "Navigation remains functional after page reloads.",
+        "System handles interruptions without errors."
+      ],
+      "edge_cases_to_test": [
+        "Test page reload with slow internet connection.",
+        "Verify system behavior when a user navigates away and returns to the RoostGPT tab.",
+        "Check if elements load correctly on different browsers and devices."
+      ],
+      "data_requirements": [
+        "Valid test user account credentials."
+      ],
+      "prerequisites": [
+        "Website is accessible and functional.",
+        "All dependent services are running correctly."
+      ]
+    }
+  ],
+  "login_completion_state": "successful",
+  "analysis_timestamp": "2025-10-14T11:34:11.708445",
+  "confidence_score": 0.5,
+  "captured_selectors": [
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:21:16.925204"
+    },
+    {
+      "selector": "page.getByTestId(\"roostGPT-tab\")",
+      "confidence": 95,
+      "action": "click",
+      "element": "<a> 'RoostGPT'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:21:23.576824"
+    },
+    {
+      "selector": "page.getByTestId(\"admin-tab\")",
+      "confidence": 95,
+      "action": "click",
+      "element": "<a> 'Admin'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:21:29.102505"
+    },
+    {
+      "selector": "page.getByTestId(\"connectors-tab\")",
+      "confidence": 95,
+      "action": "click",
+      "element": "<a> 'Connectors'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:21:37.594618"
+    },
+    {
+      "selector": "page.getByRole(\"button\", { name: \"PW\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'PW'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:21:44.500984"
+    },
+    {
+      "selector": "page.getByRole(\"link\", { name: \"Test Suites\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'Test Suites'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:21:53.022772"
+    },
+    {
+      "selector": "page.getByRole(\"link\", { name: \"Analysis\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'Analysis'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:01.390517"
+    },
+    {
+      "selector": "page.getByRole(\"link\", { name: \"Generations\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'Generations'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:09.822406"
+    },
+    {
+      "selector": "page.getByTestId(\"tests-search-box\")",
+      "confidence": 95,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:18.650436"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:24.714681"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<div> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:33.450127"
+    },
+    {
+      "selector": "page.getByText(\"Show My Test Suites\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<div> 'Show My Test Suites'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:39.598954"
+    },
+    {
+      "selector": "page.getByText(\"Add Test Suite\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<div> 'Add Test Suite'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:47.054551"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[4]\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<div> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:53.503846"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[4]\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<div> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:22:59.850685"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[1]/div[4]\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<div> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:23:05.138770"
+    },
+    {
+      "selector": "page.locator(\"#knowledge-base-dropdown\")",
+      "confidence": 80,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:23:14.576039"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<tr> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:23:20.890514"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[1]\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<td> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:23:28.884119"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[1]\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<td> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:23:36.586851"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[2]/div\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<div> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:23:44.926956"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[2]/div\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<div> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:23:52.054675"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[2]/div\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<div> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:24:01.456978"
+    },
+    {
+      "selector": "page.getByRole(\"link\", { name: \"taher\" })",
+      "confidence": 90,
+      "action": "click",
+      "element": "<a> 'taher'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:24:09.876400"
+    },
+    {
+      "selector": "page.getByText(\"Open AI (gpt-4o)\").nth(0)",
+      "confidence": 77,
+      "action": "click",
+      "element": "<td> 'Open AI (gpt-4o)'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:24:18.564529"
+    },
+    {
+      "selector": "page.getByText(\"Unit (Java)\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<td> 'Unit (Java)'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:24:28.153561"
+    },
+    {
+      "selector": "page.getByText(\"Unit (Java)\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<td> 'Unit (Java)'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:24:37.360260"
+    },
+    {
+      "selector": "page.getByText(\"Unit (Java)\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<td> 'Unit (Java)'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:24:45.645088"
+    },
+    {
+      "selector": "page.getByText(\"Unit (Java)\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<td> 'Unit (Java)'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:24:54.476507"
+    },
+    {
+      "selector": "page.getByText(\"Unit (Java)\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<td> 'Unit (Java)'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:25:04.086228"
+    },
+    {
+      "selector": "page.getByText(\"Unit (Java)\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<td> 'Unit (Java)'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:25:11.271514"
+    },
+    {
+      "selector": "page.getByText(\"Unit (Java)\")",
+      "confidence": 85,
+      "action": "click",
+      "element": "<td> 'Unit (Java)'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:25:21.285630"
+    },
+    {
+      "selector": "page.getByText(\"Oct 14 2025 10:48\").nth(0)",
+      "confidence": 77,
+      "action": "click",
+      "element": "<td> 'Oct 14 2025 10:48'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:25:31.040981"
+    },
+    {
+      "selector": "page.getByText(\"Oct 14 2025 10:48\").nth(0)",
+      "confidence": 77,
+      "action": "click",
+      "element": "<td> 'Oct 14 2025 10:48'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:25:41.090156"
+    },
+    {
+      "selector": "page.getByText(\"Oct 14 2025 10:48\").nth(1)",
+      "confidence": 77,
+      "action": "click",
+      "element": "<td> 'Oct 14 2025 10:48'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:25:51.253882"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:25:59.407896"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:26:07.879736"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[2]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:26:17.411454"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:26:23.775203"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:26:32.790712"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:26:39.174028"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:26:52.193882"
+    },
+    {
+      "selector": "page.getByText(\"Oct 14 2025 10:48\").nth(1)",
+      "confidence": 77,
+      "action": "click",
+      "element": "<td> 'Oct 14 2025 10:48'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:27:02.015102"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:27:09.031806"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:27:27.361753"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:27:37.341042"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:27:47.043701"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:27:57.689788"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/header/div/nav/div[1]/div/label/div/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:28:06.543974"
+    },
+    {
+      "selector": "page.getByText(\"Oct 14 2025 10:48\").nth(1)",
+      "confidence": 77,
+      "action": "click",
+      "element": "<td> 'Oct 14 2025 10:48'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:28:14.209170"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:28:34.965946"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:28:41.642979"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[2]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:28:52.592754"
+    },
+    {
+      "selector": "page.locator(\"xpath=html/body/div[1]/div[2]/div[1]/div/div/div[2]/div[2]/div/table/tbody/tr[1]/td[7]/div/div[1]/img\")",
+      "confidence": 30,
+      "action": "click",
+      "element": "<img> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:29:03.950650"
+    },
+    {
+      "selector": "page.getByTestId(\"tests-search-box\")",
+      "confidence": 95,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:29:11.123229"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:29:33.915710"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:29:45.393902"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:29:52.618775"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:30:07.078164"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:30:18.917115"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:30:42.909765"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:30:54.387087"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:31:07.947081"
+    },
+    {
+      "selector": "page.getByTestId(\"roostGPT-tab\")",
+      "confidence": 95,
+      "action": "click",
+      "element": "<a> 'RoostGPT'",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:31:19.052813"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:31:31.883355"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:31:41.020950"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:31:53.414254"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:32:08.257196"
+    },
+    {
+      "selector": "page.getByTestId(\"tests-search-box\")",
+      "confidence": 95,
+      "action": "insert",
+      "element": "<input> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:32:20.300222"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:32:27.841806"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:32:46.386422"
+    },
+    {
+      "selector": "page.locator(\"a.brand-logo-container\")",
+      "confidence": 70,
+      "action": "click",
+      "element": "<a> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:33:10.757113"
+    },
+    {
+      "selector": "page.getByTestId(\"tests-search-box\")",
+      "confidence": 95,
+      "action": "click",
+      "element": "<input> ''",
+      "url": "https://dev.roost.ai/roostgpt/tests",
+      "timestamp": "2025-10-14T11:33:18.064924"
+    }
+  ]
+}
